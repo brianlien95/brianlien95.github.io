@@ -18,4 +18,106 @@
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
   </entry>
+  <entry>
+    <title>資安鑑識課程-系列Ⅰ初級課程</title>
+    <url>/2024/08/03/FhCTF-writeup/</url>
+    <content><![CDATA[<ol>
+<li><p><strong>资讯安全七大需求</strong>：包括稽核(Audit)、机密(Confidentiality)、鉴別(Authentication)、完整性(Integrity)、不可否认(Non-repudiation)、存取控制(Access Control)和可用性(Availability)。</p>
+</li>
+<li><p><strong>资讯安全七大需求详解</strong>：</p>
+<ul>
+<li><strong>机密性</strong>：确保信息不被未授权用户获取，可通过数据加密实现。</li>
+<li><strong>完整性</strong>：确保数据在传输过程中不被篡改，可通过数字签名或哈希函数保证。</li>
+<li><strong>鉴別性</strong>：确认信息来源和用户身份，防止恶意发送者假冒。</li>
+<li><strong>不可否认性</strong>：确保传输双方不能否认数据传输或接收行为，通常通过数字签名和PKI实现。</li>
+<li><strong>可用性</strong>：确保信息系统正常运作，防止恶意破坏或延迟。</li>
+<li><strong>存取控制</strong>：根据用户服务等级授予不同权限，防止未授权访问。</li>
+<li><strong>稽核</strong>：通过审计日志追踪非法用户，以便在入侵事件发生时快速响应。</li>
+</ul>
+</li>
+<li><p><strong>HASH函数与消息鉴别码介绍</strong>：</p>
+<ul>
+<li>哈希函数将可变长度信息生成固定长度的哈希码，具备错误检测能力。</li>
+<li>哈希函数的主要特性包括单向性、弱碰撞抵抗力和强碰撞抵抗力。</li>
+<li>常见的哈希函数有MD5、SHA-1、SHA-2、SHA-3、RIPEMD、BLAKE2和Whirlpool。</li>
+</ul>
+</li>
+<li><p><strong>对称式&#x2F;非对称式密码系统介绍</strong>：</p>
+<ul>
+<li>对称式密码系统使用单一密钥进行加密和解密。</li>
+<li>非对称式密码系统使用一对公私钥，适用于安全通信和数字签名。</li>
+</ul>
+</li>
+<li><p><strong>公私钥对的制作与下载</strong>：介绍了使用Kleopatra软件进行公私钥对的制作和下载。</p>
+</li>
+<li><p><strong>明文加密与密文解密</strong>：讨论了加密和解密的过程。</p>
+</li>
+<li><p><strong>数字签名的生成与验证</strong>：介绍了如何使用私钥生成数字签名以及如何使用公钥验证签名。</p>
+</li>
+<li><p><strong>钓鱼网站制作</strong>：使用WinHTTrack Website copier软件制作钓鱼网站。</p>
+</li>
+<li><p><strong>参考资料</strong>：提供了参考书籍《资讯与网路安全概论-第六版》的信息。</p>
+</li>
+<li><p><strong>联系信息</strong>：提供了李俊达教授的电子邮件和个人网站链接。</p>
+</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>CTF</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>對憑證的保護不足</title>
+    <url>/2024/08/03/%E5%B0%8D%E6%86%91%E8%AD%89%E7%9A%84%E4%BF%9D%E8%AD%B7%E4%B8%8D%E8%B6%B3/</url>
+    <content><![CDATA[<h1 id="密碼-對憑證的保護不足"><a href="#密碼-對憑證的保護不足" class="headerlink" title="密碼-對憑證的保護不足"></a>密碼-對憑證的保護不足</h1><p>硬編碼秘密是一種常見的安全漏洞，可能會暴露關鍵信息並損害系統完整性。適當的秘密管理對於維持安全的開發和運營環境至關重要。</p>
+<h3 id="秘密定義"><a href="#秘密定義" class="headerlink" title="秘密定義"></a>秘密定義</h3><p>秘密是任何允許用戶或系統進行身份驗證或授權的東西，例如密碼、API密鑰、加密金鑰、私鑰（SSH、TLS、GPG）等。</p>
+<h3 id="硬編碼風險"><a href="#硬編碼風險" class="headerlink" title="硬編碼風險"></a>硬編碼風險</h3><ul>
+<li>硬編碼秘密是指直接將秘密以明文或易於恢復的格式（如Base64編碼）嵌入到源代碼或編譯二進制文件中。</li>
+<li>即使在編譯過程中插入秘密，如果二進制文件洩漏，也可能導致秘密暴露，因為二進制文件可以被逆向工程。</li>
+<li>硬編碼秘密可能會意外保存在版本控制系統（如Git）中，即使從代碼庫中移除，它們可能仍然存在於代碼的版本歷史中。</li>
+</ul>
+<h3 id="常見陷阱"><a href="#常見陷阱" class="headerlink" title="常見陷阱"></a>常見陷阱</h3><ul>
+<li><strong>開發環境中的硬編碼</strong>：即使在開發環境中，也應避免硬編碼憑據，這不僅設置了風險安全的先例，還可能使測試變得複雜。</li>
+<li><strong>秘密分散管理</strong>：秘密分散在容器文件、雲系統、配置文件、管道甚至直接在代碼中，缺乏集中管理可能使審計變得困難。</li>
+<li><strong>缺乏加密</strong>：秘密以明文形式存在時，無論在何處都容易遭受未經授權的訪問。</li>
+<li><strong>長壽命秘密的共享</strong>：在多個系統中重複使用相同的秘密並允許它們長期存在，可能暴露關鍵漏洞。</li>
+</ul>
+<h3 id="減緩措施"><a href="#減緩措施" class="headerlink" title="減緩措施"></a>減緩措施</h3><ul>
+<li>根據風險評估和實施的易用性，選擇合適的系統保護措施，並持續評估和調整以應對新興威脅和技術進步。</li>
+</ul>
+<h3 id="使用秘密管理器或金鑰管理服務（KMS）"><a href="#使用秘密管理器或金鑰管理服務（KMS）" class="headerlink" title="使用秘密管理器或金鑰管理服務（KMS）"></a>使用秘密管理器或金鑰管理服務（KMS）</h3><ul>
+<li>秘密管理和KMS確保秘密的集中和安全管理、訪問控制、輪替和審計能力。</li>
+</ul>
+<h3 id="集成"><a href="#集成" class="headerlink" title="集成"></a>集成</h3><ul>
+<li>與開發環境有效集成秘密管理和KMS，增強安全性，確保在開發生命周期中適當處理敏感信息。</li>
+</ul>
+<h3 id="環境變量和配置文件"><a href="#環境變量和配置文件" class="headerlink" title="環境變量和配置文件"></a>環境變量和配置文件</h3><ul>
+<li>使用環境變量或配置文件是一種廣泛採用的方法，用於配置應用程序設置，而不需要直接將秘密嵌入到代碼庫中。</li>
+</ul>
+<h3 id="CI-CD工具"><a href="#CI-CD工具" class="headerlink" title="CI&#x2F;CD工具"></a>CI&#x2F;CD工具</h3><ul>
+<li>大多数CI&#x2F;CD工具提供了專門且安全的方法來管理構建和部署過程中所需的秘密。</li>
+</ul>
+<h3 id="確保訪問控制策略"><a href="#確保訪問控制策略" class="headerlink" title="確保訪問控制策略"></a>確保訪問控制策略</h3><ul>
+<li>確保應用程序安全訪問秘密並遵循訪問控制原則。</li>
+</ul>
+<h3 id="實施秘密輪替和更新機制"><a href="#實施秘密輪替和更新機制" class="headerlink" title="實施秘密輪替和更新機制"></a>實施秘密輪替和更新機制</h3><ul>
+<li>定期輪替秘密是減輕被泄露或洩露的憑據相關風險的關鍵。</li>
+</ul>
+<h3 id="靜態分析和代碼掃描"><a href="#靜態分析和代碼掃描" class="headerlink" title="靜態分析和代碼掃描"></a>靜態分析和代碼掃描</h3><ul>
+<li>實施定期的靜態代碼分析和掃描，使用安全工具在開發過程中識別和標記硬編碼秘密。</li>
+</ul>
+<h3 id="無密碼身份驗證"><a href="#無密碼身份驗證" class="headerlink" title="無密碼身份驗證"></a>無密碼身份驗證</h3><ul>
+<li>利用雲主機提供商提供的無密碼選項，顯著減少直接存儲和管理秘密的需要。</li>
+</ul>
+<h3 id="單元測試"><a href="#單元測試" class="headerlink" title="單元測試"></a>單元測試</h3><ul>
+<li>在常見的應用程序位置實施單元測試以掃描秘密，是一種主動措施。如果秘密意外提交到版本控制並推送，這些測試將在持續集成（CI）期間失敗，作為團隊的快速警報機制。</li>
+</ul>
+<h3 id="事例-MD5、SHA-1、SHA-2、SHA-3-、SHA都不要用太弱-不要用"><a href="#事例-MD5、SHA-1、SHA-2、SHA-3-、SHA都不要用太弱-不要用" class="headerlink" title="事例: MD5、SHA-1、SHA-2、SHA-3 、SHA都不要用太弱 不要用~"></a>事例: MD5、SHA-1、SHA-2、SHA-3 、SHA都不要用太弱 不要用~</h3><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">PASSWORD_HASHERS = (</span><br><span class="line"></span><br><span class="line"> &#x27;django.contrib.auth.hashers.UnsaltedMD5PasswordHasher&#x27;, </span><br><span class="line"></span><br><span class="line">)</span><br></pre></td></tr></table></figure></div>
+
+<p>在這行程式碼中，密碼雜湊演算法配置為無鹽 MD5 演算法。這是一種弱哈希演算法。如果攻擊者獲得了使用者密碼雜湊的存取權限，他們就可以輕鬆地從密碼雜湊中取得純文字。</p>
+<h3 id="事例-Argon2-或-PBKDF2-、AES比較有用"><a href="#事例-Argon2-或-PBKDF2-、AES比較有用" class="headerlink" title="事例:Argon2 或 PBKDF2 、AES比較有用~"></a>事例:Argon2 或 PBKDF2 、AES比較有用~</h3><div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">SSWORD_HASHERS = (</span><br><span class="line"></span><br><span class="line"> &#x27;django.contrib.auth.hashers.PBKDF2PasswordHasher&#x27;, </span><br><span class="line"></span><br><span class="line">)</span><br></pre></td></tr></table></figure></div>
+
+<p>在此解決方案中，使用具有動態加鹽功能的強密碼雜湊演算法“PBKDF2PasswordHasher”。</p>
+]]></content>
+  </entry>
 </search>

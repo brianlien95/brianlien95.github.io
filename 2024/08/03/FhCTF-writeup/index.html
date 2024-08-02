@@ -13,17 +13,22 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="http://example.com/404.html"/>
+    <link rel="canonical" href="http://example.com/2024/08/03/fhctf-writeup/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta property="og:type" content="website">
-<meta property="og:title" content="Page Not Found">
-<meta property="og:url" content="http://example.com/404.html">
+        <meta name="description" content="资讯安全七大需求：包括稽核(Audit)、机密(Confidentiality)、鉴別(Authentication)、完整性(Integrity)、不可否认(Non-repudiation)、存取控制(Access Control)和可用性(Availability)。  资讯安全七大需求详解：  机密性：确保信息不被未授权用户获取，可通过数据加密实现。 完整性：确保数据在传输过程中不被篡改，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="資安鑑識課程-系列Ⅰ初級課程">
+<meta property="og:url" content="http://example.com/2024/08/03/FhCTF-writeup/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="资讯安全七大需求：包括稽核(Audit)、机密(Confidentiality)、鉴別(Authentication)、完整性(Integrity)、不可否认(Non-repudiation)、存取控制(Access Control)和可用性(Availability)。  资讯安全七大需求详解：  机密性：确保信息不被未授权用户获取，可通过数据加密实现。 完整性：确保数据在传输过程中不被篡改，">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-08-02T17:24:09.000Z">
+<meta property="article:modified_time" content="2024-08-02T18:20:36.334Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="CTF">
 <meta name="twitter:card" content="summary">
     
     
@@ -36,7 +41,7 @@
     
     <title>
         
-            Page Not Found -
+            資安鑑識課程-系列Ⅰ初級課程 -
         
         Brian&#39;s Blog
     </title>
@@ -615,14 +620,272 @@
             <div class="main-content">
 
                 
-                    <div class="nf-container">
-    <div class="nf-text">
-        <h1>404 Page Not Found</h1>
+                    <div class="post-page-container flex relative justify-between box-border w-full h-full">
+    <div class="article-content-container">
+
+        <div class="article-title relative w-full">
+            
+                <div class="w-full flex items-center pt-6 justify-start">
+                    <h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">資安鑑識課程-系列Ⅰ初級課程</h1>
+                </div>
+            
+            </div>
+
+        
+            <div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+                <div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+                    <img src="https://scontent.ftpe8-1.fna.fbcdn.net/v/t39.30808-6/428052326_3542300342648223_4136764501731171986_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=j2TU1GD5kCYQ7kNvgHBQuQB&_nc_ht=scontent.ftpe8-1.fna&oh=00_AYCZyzA34mRqoOaUXE3uKCh0Ni-osNwdUggT1b8QryMYfw&oe=66AFB2D1">
+                </div>
+                <div class="info flex flex-col justify-between">
+                    <div class="author flex items-center">
+                        <span class="name text-default-text-color text-lg font-semibold">Brianlien</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2024-08-03 01:24:09</span>
+        <span class="mobile">2024-08-03 01:24:09</span>
+        <span class="hover-info">Created</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2024-08-03 02:20:36</span>
+            <span class="mobile">2024-08-03 02:20:36</span>
+            <span class="hover-info">Updated</span>
+        </span>
+    
+
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/CTF/">CTF</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>542 Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>1 Mins</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        
+
+
+        <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+            <ol>
+<li><p><strong>资讯安全七大需求</strong>：包括稽核(Audit)、机密(Confidentiality)、鉴別(Authentication)、完整性(Integrity)、不可否认(Non-repudiation)、存取控制(Access Control)和可用性(Availability)。</p>
+</li>
+<li><p><strong>资讯安全七大需求详解</strong>：</p>
+<ul>
+<li><strong>机密性</strong>：确保信息不被未授权用户获取，可通过数据加密实现。</li>
+<li><strong>完整性</strong>：确保数据在传输过程中不被篡改，可通过数字签名或哈希函数保证。</li>
+<li><strong>鉴別性</strong>：确认信息来源和用户身份，防止恶意发送者假冒。</li>
+<li><strong>不可否认性</strong>：确保传输双方不能否认数据传输或接收行为，通常通过数字签名和PKI实现。</li>
+<li><strong>可用性</strong>：确保信息系统正常运作，防止恶意破坏或延迟。</li>
+<li><strong>存取控制</strong>：根据用户服务等级授予不同权限，防止未授权访问。</li>
+<li><strong>稽核</strong>：通过审计日志追踪非法用户，以便在入侵事件发生时快速响应。</li>
+</ul>
+</li>
+<li><p><strong>HASH函数与消息鉴别码介绍</strong>：</p>
+<ul>
+<li>哈希函数将可变长度信息生成固定长度的哈希码，具备错误检测能力。</li>
+<li>哈希函数的主要特性包括单向性、弱碰撞抵抗力和强碰撞抵抗力。</li>
+<li>常见的哈希函数有MD5、SHA-1、SHA-2、SHA-3、RIPEMD、BLAKE2和Whirlpool。</li>
+</ul>
+</li>
+<li><p><strong>对称式&#x2F;非对称式密码系统介绍</strong>：</p>
+<ul>
+<li>对称式密码系统使用单一密钥进行加密和解密。</li>
+<li>非对称式密码系统使用一对公私钥，适用于安全通信和数字签名。</li>
+</ul>
+</li>
+<li><p><strong>公私钥对的制作与下载</strong>：介绍了使用Kleopatra软件进行公私钥对的制作和下载。</p>
+</li>
+<li><p><strong>明文加密与密文解密</strong>：讨论了加密和解密的过程。</p>
+</li>
+<li><p><strong>数字签名的生成与验证</strong>：介绍了如何使用私钥生成数字签名以及如何使用公钥验证签名。</p>
+</li>
+<li><p><strong>钓鱼网站制作</strong>：使用WinHTTrack Website copier软件制作钓鱼网站。</p>
+</li>
+<li><p><strong>参考资料</strong>：提供了参考书籍《资讯与网路安全概论-第六版》的信息。</p>
+</li>
+<li><p><strong>联系信息</strong>：提供了李俊达教授的电子邮件和个人网站链接。</p>
+</li>
+</ol>
+
+        </div>
+
+        
+            <div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li><strong>Title:</strong> 資安鑑識課程-系列Ⅰ初級課程</li>
+        <li><strong>Author:</strong> Brianlien</li>
+        <li><strong>Created at
+                :</strong> 2024-08-03 01:24:09</li>
+        
+            <li>
+                <strong>Updated at
+                    :</strong> 2024-08-03 02:20:36
+            </li>
+        
+        <li>
+            <strong>Link:</strong> https://redefine.ohevan.com/2024/08/03/FhCTF-writeup/
+        </li>
+        <li>
+            <strong>
+                License:
+            </strong>
+            
+
+            
+                This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY-NC-SA 4.0</a>.
+            
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+                
+                    <li class="tag-item mx-0.5">
+                        <a href="/tags/CTF/">#CTF</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+
+        
+            <div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+                
+                    <div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="prev"
+                        rel="prev"
+                        href="/2024/08/03/%E5%B0%8D%E6%86%91%E8%AD%89%E7%9A%84%E4%BF%9D%E8%AD%B7%E4%B8%8D%E8%B6%B3/"
+                        >
+                            <span class="left arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">對憑證的保護不足</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="next"
+                        rel="next"
+                        href="/2024/07/31/hello-world/"
+                        >
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">Hello World</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+
+        
+            <div class="comment-container px-2 sm:px-6 md:px-8 pb-8">
+                <div class="comments-container mt-10 w-full ">
+    <div id="comment-anchor" class="w-full h-2.5"></div>
+    <div class="comment-area-title w-full my-1.5 md:my-2.5 text-xl md:text-3xl font-bold">
+        Comments
     </div>
-    <div class="nf-button">
-        <a href="/" class="button large center"><i class="fa-regular fa-house"></i> Go Back Home</a>
+    
+
+        
+            
+    <div id="waline"></div>
+    <script type="module" data-swup-reload-script>
+      import { init } from '/js/libs/waline.mjs';
+
+      function loadWaline() {
+        init({
+          el: '#waline',
+          serverURL: 'https://example.example.com',
+          lang: 'zh-CN',
+          dark: 'body[class~="dark-mode"]',
+          reaction: false,
+          requiredMeta: ['nick', 'mail'],
+          emoji: [],
+          recaptchaV3Key: "wasd",
+          
+        });
+      }
+
+      if (typeof swup !== 'undefined') {
+        loadWaline();
+      } else {
+        window.addEventListener('DOMContentLoaded', loadWaline);
+      }
+    </script>
+
+
+
+        
+    
+</div>
+
+            </div>
+        
+    </div>
+
+    
+        <div class="toc-content-container">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">On this page</div>
+        <div class="page-title">資安鑑識課程-系列Ⅰ初級課程</div>
+        
+
     </div>
 </div>
+        </div>
+    
+</div>
+
+
 
                 
 
@@ -708,6 +971,27 @@
         </div>
     </div>
 
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fa-regular fa-comments"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
     
 
     <div class="right-side-tools-container">
