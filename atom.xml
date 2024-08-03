@@ -41,15 +41,15 @@
     <link href="http://example.com/2024/08/03/FhCTF-writeup/"/>
     <id>http://example.com/2024/08/03/FhCTF-writeup/</id>
     <published>2024-08-02T17:24:09.000Z</published>
-    <updated>2024-08-02T18:20:36.334Z</updated>
+    <updated>2024-08-02T19:12:29.506Z</updated>
     
-    <content type="html"><![CDATA[<ol><li><p><strong>资讯安全七大需求</strong>：包括稽核(Audit)、机密(Confidentiality)、鉴別(Authentication)、完整性(Integrity)、不可否认(Non-repudiation)、存取控制(Access Control)和可用性(Availability)。</p></li><li><p><strong>资讯安全七大需求详解</strong>：</p><ul><li><strong>机密性</strong>：确保信息不被未授权用户获取，可通过数据加密实现。</li><li><strong>完整性</strong>：确保数据在传输过程中不被篡改，可通过数字签名或哈希函数保证。</li><li><strong>鉴別性</strong>：确认信息来源和用户身份，防止恶意发送者假冒。</li><li><strong>不可否认性</strong>：确保传输双方不能否认数据传输或接收行为，通常通过数字签名和PKI实现。</li><li><strong>可用性</strong>：确保信息系统正常运作，防止恶意破坏或延迟。</li><li><strong>存取控制</strong>：根据用户服务等级授予不同权限，防止未授权访问。</li><li><strong>稽核</strong>：通过审计日志追踪非法用户，以便在入侵事件发生时快速响应。</li></ul></li><li><p><strong>HASH函数与消息鉴别码介绍</strong>：</p><ul><li>哈希函数将可变长度信息生成固定长度的哈希码，具备错误检测能力。</li><li>哈希函数的主要特性包括单向性、弱碰撞抵抗力和强碰撞抵抗力。</li><li>常见的哈希函数有MD5、SHA-1、SHA-2、SHA-3、RIPEMD、BLAKE2和Whirlpool。</li></ul></li><li><p><strong>对称式&#x2F;非对称式密码系统介绍</strong>：</p><ul><li>对称式密码系统使用单一密钥进行加密和解密。</li><li>非对称式密码系统使用一对公私钥，适用于安全通信和数字签名。</li></ul></li><li><p><strong>公私钥对的制作与下载</strong>：介绍了使用Kleopatra软件进行公私钥对的制作和下载。</p></li><li><p><strong>明文加密与密文解密</strong>：讨论了加密和解密的过程。</p></li><li><p><strong>数字签名的生成与验证</strong>：介绍了如何使用私钥生成数字签名以及如何使用公钥验证签名。</p></li><li><p><strong>钓鱼网站制作</strong>：使用WinHTTrack Website copier软件制作钓鱼网站。</p></li><li><p><strong>参考资料</strong>：提供了参考书籍《资讯与网路安全概论-第六版》的信息。</p></li><li><p><strong>联系信息</strong>：提供了李俊达教授的电子邮件和个人网站链接。</p></li></ol>]]></content>
+    <content type="html"><![CDATA[<ol><li><p><strong>資訊安全七大需求</strong>：包括稽核(Audit)、機密(Confidentiality)、鑑別(Authentication)、完整性(Integrity)、不可否認(Non-repudiation)、存取控制(Access Control)和可用性(Availability)。</p></li><li><p><strong>資訊安全七大需求詳解</strong>：</p></li></ol><ul><li><strong>機密性</strong>：確保資訊不被未授權使用者獲取，可透過資料加密實現。</li><li><strong>完整性</strong>：確保資料在傳輸過程中不會被竄改，可透過數位簽章或雜湊函數保證。</li><li><strong>鑑別性</strong>：確認資訊來源和使用者身份，防止惡意發送者假冒。</li><li><strong>不可否認性</strong>：確保傳輸雙方不能否認資料傳輸或接收行為，通常透過數位簽章和PKI實現。</li><li><strong>可用性</strong>：確保資訊系統正常運作，防止惡意破壞或延遲。</li><li><strong>存取控制</strong>：根據使用者服務等級授予不同權限，防止未授權存取。</li><li><strong>稽核</strong>：透過稽核日誌追蹤非法用戶，以便在入侵事件發生時快速回應。</li></ul><ol start="3"><li><strong>HASH函數與訊息鑑別碼介紹</strong>：</li></ol><ul><li>雜湊函數將可變長度資訊產生固定長度的雜湊碼，具備錯誤偵測能力。</li><li>雜湊函數的主要特性包括單向性、弱碰撞抵抗力和強碰撞抵抗力。</li><li>常見的雜湊函數有MD5、SHA-1、SHA-2、SHA-3、RIPEMD、BLAKE2和Whirlpool。</li></ul><ol start="4"><li><strong>對稱式&#x2F;非對稱式密碼系統介紹</strong>：</li></ol><ul><li>對稱式密碼系統使用單一金鑰進行加密和解密。</li><li>非對稱式密碼系統使用一對公私鑰，適用於安全通訊和數位簽章。</li></ul><ol start="5"><li><p><strong>公私鑰對的製作與下載</strong>：介紹了使用Kleopatra軟體進行公私鑰對的製作與下載。</p></li><li><p><strong>明文加密與密文解密</strong>：討論了加密和解密的過程。</p></li><li><p><strong>數位簽章的產生與驗證</strong>：介紹如何使用私鑰產生數位簽章以及如何使用公鑰驗證簽章。</p></li><li><p><strong>釣魚網站製作</strong>：使用WinHTTrack Website copier軟體製作釣魚網站。</p></li><li><p><strong>參考資料</strong>：提供了參考書籍《資訊與網路安全概論-第六版》的資訊。</p></li></ol>]]></content>
     
     
       
       
     <summary type="html">&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;资讯安全七大需求&lt;/strong&gt;：包括稽核(Audit)、机密(Confidentiality)、鉴別(Authentication)、完整性(Integrity)、不可否认(Non-repudiation)、存取控制(Access Co</summary>
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;資訊安全七大需求&lt;/strong&gt;：包括稽核(Audit)、機密(Confidentiality)、鑑別(Authentication)、完整性(Integrity)、不可否認(Non-repudiation)、存取控制(Access Co</summary>
       
     
     
