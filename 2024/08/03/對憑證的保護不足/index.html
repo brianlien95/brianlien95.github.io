@@ -18,16 +18,17 @@
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="密碼-對憑證的保護不足硬編碼秘密是一種常見的安全漏洞，可能會暴露關鍵信息並損害系統完整性。適當的秘密管理對於維持安全的開發和運營環境至關重要。 秘密定義秘密是任何允許用戶或系統進行身份驗證或授權的東西，例如密碼、API密鑰、加密金鑰、私鑰（SSH、TLS、GPG）等。 硬編碼風險 硬編碼秘密是指直接將秘密以明文或易於恢復的格式（如Base64編碼）嵌入到源代碼或編譯二進制文件中。 即使在編譯過程中">
+        <meta name="description" content="硬編碼秘密是一種常見的安全漏洞，可能會暴露關鍵信息並損害系統完整性。適當的秘密管理對於維持安全的開發和運營環境至關重要。 秘密定義秘密是任何允許用戶或系統進行身份驗證或授權的東西，例如密碼、API密鑰、加密金鑰、私鑰（SSH、TLS、GPG）等。 硬編碼風險 硬編碼秘密是指直接將秘密以明文或易於恢復的格式（如Base64編碼）嵌入到源代碼或編譯二進制文件中。 即使在編譯過程中插入秘密，如果二進制文">
 <meta property="og:type" content="article">
 <meta property="og:title" content="對憑證的保護不足">
 <meta property="og:url" content="http://example.com/2024/08/03/%E5%B0%8D%E6%86%91%E8%AD%89%E7%9A%84%E4%BF%9D%E8%AD%B7%E4%B8%8D%E8%B6%B3/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="密碼-對憑證的保護不足硬編碼秘密是一種常見的安全漏洞，可能會暴露關鍵信息並損害系統完整性。適當的秘密管理對於維持安全的開發和運營環境至關重要。 秘密定義秘密是任何允許用戶或系統進行身份驗證或授權的東西，例如密碼、API密鑰、加密金鑰、私鑰（SSH、TLS、GPG）等。 硬編碼風險 硬編碼秘密是指直接將秘密以明文或易於恢復的格式（如Base64編碼）嵌入到源代碼或編譯二進制文件中。 即使在編譯過程中">
+<meta property="og:site_name" content="Brian&#39;s Blog">
+<meta property="og:description" content="硬編碼秘密是一種常見的安全漏洞，可能會暴露關鍵信息並損害系統完整性。適當的秘密管理對於維持安全的開發和運營環境至關重要。 秘密定義秘密是任何允許用戶或系統進行身份驗證或授權的東西，例如密碼、API密鑰、加密金鑰、私鑰（SSH、TLS、GPG）等。 硬編碼風險 硬編碼秘密是指直接將秘密以明文或易於恢復的格式（如Base64編碼）嵌入到源代碼或編譯二進制文件中。 即使在編譯過程中插入秘密，如果二進制文">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2024-08-02T18:28:16.000Z">
-<meta property="article:modified_time" content="2024-08-02T18:29:32.263Z">
-<meta property="article:author" content="John Doe">
+<meta property="article:modified_time" content="2024-08-04T08:01:16.635Z">
+<meta property="article:author" content="Brianlien">
+<meta property="article:tag" content="密碼學">
 <meta name="twitter:card" content="summary">
     
     
@@ -72,8 +73,6 @@
     
     
     
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
-    
     
 
     
@@ -84,7 +83,7 @@
 
     <script id="hexo-configurations">
     window.config = {"hostname":"example.com","root":"/","language":"zh-TW","path":"search.xml"};
-    window.theme = {"articles":{"style":{"font_size":"18px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":false,"auto":false,"list":[]},"code_block":{"copy":true,"style":"simple","font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":true,"family":"Noto Sans SC","url":"https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap"},"english":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":true,"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"Brian's Blog","subtitle":{"text":["This is the first message","This is the second message","etc"],"hitokoto":{"enable":true,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":false,"smart_backspace":false},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":true,"style":"default","links":{"github":null,"instagram":"https://www.instagram.com/mlrm30_lien","zhihu":null,"twitter":null,"email":null,"facebook":"https://www.facebook.com/brian.lien.52"},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":true},"aplayer":{"enable":true,"type":"fixed","audios":[{"name":"reverse 1999","artist":"深藍科技","url":"https://re.bluepoch.com/home/mp3/bg/bgm.mp3","cover":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSltryvvVB8VkaQSBbWx0M5XVEVBS8M6Jyn2A&s","lrc":null}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.6.4","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Categories":{"path":"/categories","icon":"fa-regular fa-folder"},"Tags":{"path":"/tags","icon":"fa-regular fa-tags"},"About":{"path":"/about","icon":"fa-regular fa-user"},"Links":{"icon":"fa-regular fa-link","submenus":{"Kimi":"https://kimi.moonshot.cn/","Gamma":"https://gamma.app/","AIBot":"https://ai-bot.cn/"}}},"search":{"enable":true,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"show_on_mobile":false,"links":null},"article_date_format":"auto","categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2024/8/1 15:25:14"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":false,"auto":false,"list":[]},"code_block":{"copy":true,"style":"simple","font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":true,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":false,"family":"Noto Sans SC","url":"https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap"},"english":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":true,"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"Brian's Blog","subtitle":{"text":["This is the first message","This is the second message","etc"],"hitokoto":{"enable":true,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":false,"smart_backspace":false},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":true,"style":"default","links":{"github":null,"instagram":"https://www.instagram.com/mlrm30_lien","zhihu":null,"twitter":null,"email":null,"facebook":"https://www.facebook.com/brian.lien.52"},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":true},"aplayer":{"enable":true,"type":"fixed","audios":[{"name":"reverse 1999","artist":"深藍科技","url":"https://re.bluepoch.com/home/mp3/bg/bgm.mp3","cover":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSltryvvVB8VkaQSBbWx0M5XVEVBS8M6Jyn2A&s","lrc":null}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.6.4","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Categories":{"path":"/categories","icon":"fa-regular fa-folder"},"Tags":{"path":"/tags","icon":"fa-regular fa-tags"},"About":{"path":"/about","icon":"fa-regular fa-user"},"Links":{"icon":"fa-regular fa-link","submenus":{"Kimi":"https://kimi.moonshot.cn/","Gamma":"https://gamma.app/","AIBot":"https://ai-bot.cn/"}}},"search":{"enable":true,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"show_on_mobile":false,"links":null},"article_date_format":"auto","categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2024/8/1 15:25:14"};
     window.lang_ago = {"second":"%s 秒前","minute":"%s 分鐘前","hour":"%s 小時前","day":"%s 天前","week":"%s 周前","month":"%s 個月前","year":"%s 年前"};
     window.data = {"masonry":false};
   </script>
@@ -106,7 +105,7 @@
     
     
     
-<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Brian's Blog" type="application/atom+xml">
 </head>
 
 
@@ -588,15 +587,15 @@
 
         <div class="statistics flex justify-around my-2.5">
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">1</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">2</div>
         <div class="label text-third-text-color text-sm">標籤</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">0</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">2</div>
         <div class="label text-third-text-color text-sm">分類</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">3</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">20</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -648,13 +647,40 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-08-03 02:29:32</span>
-            <span class="mobile">2024-08-03 02:29:32</span>
+            <span class="desktop">2024-08-04 16:01:16</span>
+            <span class="mobile">2024-08-04 16:01:16</span>
             <span class="hover-info">更新</span>
         </span>
     
 
     
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/%E5%AE%89%E5%85%A8%E9%81%94%E4%BA%BA%E9%A4%8A%E6%88%90%E8%A8%88%E5%8A%83%E7%A0%94%E7%BF%92/">安全達人養成計劃研習</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E5%AF%86%E7%A2%BC%E5%AD%B8/">密碼學</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
     
 
     
@@ -684,7 +710,7 @@
 
 
         <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-            <h1 id="密碼-對憑證的保護不足"><a href="#密碼-對憑證的保護不足" class="headerlink" title="密碼-對憑證的保護不足"></a>密碼-對憑證的保護不足</h1><p>硬編碼秘密是一種常見的安全漏洞，可能會暴露關鍵信息並損害系統完整性。適當的秘密管理對於維持安全的開發和運營環境至關重要。</p>
+            <p>硬編碼秘密是一種常見的安全漏洞，可能會暴露關鍵信息並損害系統完整性。適當的秘密管理對於維持安全的開發和運營環境至關重要。</p>
 <h3 id="秘密定義"><a href="#秘密定義" class="headerlink" title="秘密定義"></a>秘密定義</h3><p>秘密是任何允許用戶或系統進行身份驗證或授權的東西，例如密碼、API密鑰、加密金鑰、私鑰（SSH、TLS、GPG）等。</p>
 <h3 id="硬編碼風險"><a href="#硬編碼風險" class="headerlink" title="硬編碼風險"></a>硬編碼風險</h3><ul>
 <li>硬編碼秘密是指直接將秘密以明文或易於恢復的格式（如Base64編碼）嵌入到源代碼或編譯二進制文件中。</li>
@@ -747,7 +773,7 @@
         
             <li>
                 <strong>更新于
-                    :</strong> 2024-08-03 02:29:32
+                    :</strong> 2024-08-04 16:01:16
             </li>
         
         <li>
@@ -770,27 +796,35 @@
         
 
         
+            <ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+                
+                    <li class="tag-item mx-0.5">
+                        <a href="/tags/%E5%AF%86%E7%A2%BC%E5%AD%B8/">#密碼學</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
 
         
 
         
             <div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
                 
-                
-                    <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
-                        <a class="next"
-                        rel="next"
-                        href="/2024/08/03/FhCTF-writeup/"
+                    <div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="prev"
+                        rel="prev"
+                        href="/2024/08/04/Url-%E5%BF%AB%E5%8F%96%E6%BC%8F%E6%B4%9E/"
                         >
-                            <span class="title flex justify-center items-center">
-                                <span class="post-nav-title-item">資安鑑識課程-系列Ⅰ初級課程</span>
-                                <span class="post-nav-item">下一篇</span>
+                            <span class="left arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-left"></i>
                             </span>
-                            <span class="right arrow-icon flex justify-center items-center">
-                                <i class="fa-solid fa-chevron-right"></i>
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">Url 快取漏洞</span>
+                                <span class="post-nav-item">上一篇</span>
                             </span>
                         </a>
                     </div>
+                
                 
             </div>
         
@@ -848,7 +882,7 @@
     <div class="post-toc">
         <div class="toc-title">此頁目錄</div>
         <div class="page-title">對憑證的保護不足</div>
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AF%86%E7%A2%BC-%E5%B0%8D%E6%86%91%E8%AD%89%E7%9A%84%E4%BF%9D%E8%AD%B7%E4%B8%8D%E8%B6%B3"><span class="nav-text">密碼-對憑證的保護不足</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A7%98%E5%AF%86%E5%AE%9A%E7%BE%A9"><span class="nav-text">秘密定義</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A1%AC%E7%B7%A8%E7%A2%BC%E9%A2%A8%E9%9A%AA"><span class="nav-text">硬編碼風險</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E8%A6%8B%E9%99%B7%E9%98%B1"><span class="nav-text">常見陷阱</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B8%9B%E7%B7%A9%E6%8E%AA%E6%96%BD"><span class="nav-text">減緩措施</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E7%A7%98%E5%AF%86%E7%AE%A1%E7%90%86%E5%99%A8%E6%88%96%E9%87%91%E9%91%B0%E7%AE%A1%E7%90%86%E6%9C%8D%E5%8B%99%EF%BC%88KMS%EF%BC%89"><span class="nav-text">使用秘密管理器或金鑰管理服務（KMS）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9B%86%E6%88%90"><span class="nav-text">集成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%92%B0%E5%A2%83%E8%AE%8A%E9%87%8F%E5%92%8C%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-text">環境變量和配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CI-CD%E5%B7%A5%E5%85%B7"><span class="nav-text">CI&#x2F;CD工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A2%BA%E4%BF%9D%E8%A8%AA%E5%95%8F%E6%8E%A7%E5%88%B6%E7%AD%96%E7%95%A5"><span class="nav-text">確保訪問控制策略</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%A6%E6%96%BD%E7%A7%98%E5%AF%86%E8%BC%AA%E6%9B%BF%E5%92%8C%E6%9B%B4%E6%96%B0%E6%A9%9F%E5%88%B6"><span class="nav-text">實施秘密輪替和更新機制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9D%9C%E6%85%8B%E5%88%86%E6%9E%90%E5%92%8C%E4%BB%A3%E7%A2%BC%E6%8E%83%E6%8F%8F"><span class="nav-text">靜態分析和代碼掃描</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%84%A1%E5%AF%86%E7%A2%BC%E8%BA%AB%E4%BB%BD%E9%A9%97%E8%AD%89"><span class="nav-text">無密碼身份驗證</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%96%AE%E5%85%83%E6%B8%AC%E8%A9%A6"><span class="nav-text">單元測試</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8B%E4%BE%8B-MD5%E3%80%81SHA-1%E3%80%81SHA-2%E3%80%81SHA-3-%E3%80%81SHA%E9%83%BD%E4%B8%8D%E8%A6%81%E7%94%A8%E5%A4%AA%E5%BC%B1-%E4%B8%8D%E8%A6%81%E7%94%A8"><span class="nav-text">事例: MD5、SHA-1、SHA-2、SHA-3 、SHA都不要用太弱 不要用~</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8B%E4%BE%8B-Argon2-%E6%88%96-PBKDF2-%E3%80%81AES%E6%AF%94%E8%BC%83%E6%9C%89%E7%94%A8"><span class="nav-text">事例:Argon2 或 PBKDF2 、AES比較有用~</span></a></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A7%98%E5%AF%86%E5%AE%9A%E7%BE%A9"><span class="nav-number">1.</span> <span class="nav-text">秘密定義</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A1%AC%E7%B7%A8%E7%A2%BC%E9%A2%A8%E9%9A%AA"><span class="nav-number">2.</span> <span class="nav-text">硬編碼風險</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E8%A6%8B%E9%99%B7%E9%98%B1"><span class="nav-number">3.</span> <span class="nav-text">常見陷阱</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B8%9B%E7%B7%A9%E6%8E%AA%E6%96%BD"><span class="nav-number">4.</span> <span class="nav-text">減緩措施</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E7%A7%98%E5%AF%86%E7%AE%A1%E7%90%86%E5%99%A8%E6%88%96%E9%87%91%E9%91%B0%E7%AE%A1%E7%90%86%E6%9C%8D%E5%8B%99%EF%BC%88KMS%EF%BC%89"><span class="nav-number">5.</span> <span class="nav-text">使用秘密管理器或金鑰管理服務（KMS）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9B%86%E6%88%90"><span class="nav-number">6.</span> <span class="nav-text">集成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%92%B0%E5%A2%83%E8%AE%8A%E9%87%8F%E5%92%8C%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-number">7.</span> <span class="nav-text">環境變量和配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CI-CD%E5%B7%A5%E5%85%B7"><span class="nav-number">8.</span> <span class="nav-text">CI&#x2F;CD工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A2%BA%E4%BF%9D%E8%A8%AA%E5%95%8F%E6%8E%A7%E5%88%B6%E7%AD%96%E7%95%A5"><span class="nav-number">9.</span> <span class="nav-text">確保訪問控制策略</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%A6%E6%96%BD%E7%A7%98%E5%AF%86%E8%BC%AA%E6%9B%BF%E5%92%8C%E6%9B%B4%E6%96%B0%E6%A9%9F%E5%88%B6"><span class="nav-number">10.</span> <span class="nav-text">實施秘密輪替和更新機制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9D%9C%E6%85%8B%E5%88%86%E6%9E%90%E5%92%8C%E4%BB%A3%E7%A2%BC%E6%8E%83%E6%8F%8F"><span class="nav-number">11.</span> <span class="nav-text">靜態分析和代碼掃描</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%84%A1%E5%AF%86%E7%A2%BC%E8%BA%AB%E4%BB%BD%E9%A9%97%E8%AD%89"><span class="nav-number">12.</span> <span class="nav-text">無密碼身份驗證</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%96%AE%E5%85%83%E6%B8%AC%E8%A9%A6"><span class="nav-number">13.</span> <span class="nav-text">單元測試</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8B%E4%BE%8B-MD5%E3%80%81SHA-1%E3%80%81SHA-2%E3%80%81SHA-3-%E3%80%81SHA%E9%83%BD%E4%B8%8D%E8%A6%81%E7%94%A8%E5%A4%AA%E5%BC%B1-%E4%B8%8D%E8%A6%81%E7%94%A8"><span class="nav-number">14.</span> <span class="nav-text">事例: MD5、SHA-1、SHA-2、SHA-3 、SHA都不要用太弱 不要用~</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8B%E4%BE%8B-Argon2-%E6%88%96-PBKDF2-%E3%80%81AES%E6%AF%94%E8%BC%83%E6%9C%89%E7%94%A8"><span class="nav-number">15.</span> <span class="nav-text">事例:Argon2 或 PBKDF2 、AES比較有用~</span></a></li></ol>
 
     </div>
 </div>
@@ -881,11 +915,11 @@
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        共 3 篇文章
+                        共 20 篇文章
                     </span>
                     
                         <span>
-                            共 1.6k 字
+                            共 8.3k 字
                         </span>
                     
                 </p>
