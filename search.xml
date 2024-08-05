@@ -886,4 +886,81 @@
         <tag>網路漏洞</tag>
       </tags>
   </entry>
+  <entry>
+    <title>CyberSecurity Summer Camp 2024 資訊安全暑訓營-逆向工程</title>
+    <url>/2024/08/05/CyberSecurity-Summer-Camp-2024-%E8%B3%87%E8%A8%8A%E5%AE%89%E5%85%A8%E6%9A%91%E8%A8%93%E7%87%9F-%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/</url>
+    <content><![CDATA[<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://i.imgur.com/fK2cMA6.png"
+                      alt="enter image description here"
+                ></p>
+<h2 id="課程筆記"><a href="#課程筆記" class="headerlink" title="課程筆記"></a>課程筆記</h2><h3 id="基礎-Linux-操作"><a href="#基礎-Linux-操作" class="headerlink" title="基礎 Linux 操作"></a>基礎 Linux 操作</h3><p><strong>終端機基礎操作</strong></p>
+<ul>
+<li>打開終端：通常可以通過快捷鍵 <code>Ctrl + Alt + T</code>。</li>
+</ul>
+<p><strong>命令行提示（Prompt）自定義</strong></p>
+<ul>
+<li>終端機上，可以⽤來輸入指令的地⽅</li>
+<li>指令執⾏結束後，會再次跳出 Prompt<ul>
+<li>此時才能繼續輸入下個指令</li>
+</ul>
+</li>
+</ul>
+<p><strong>快捷鍵操作</strong></p>
+<ul>
+<li>自動補全：輸入命令時按 <code>Tab</code> 鍵。</li>
+<li>歷史指令：使用上箭頭鍵訪問之前輸入的命令。</li>
+</ul>
+<p><strong>常用Linux命令示例</strong></p>
+<ul>
+<li>列出當前目錄下的文件和文件夾：<code>ls</code></li>
+<li>更改文件權限，例如給予所有用戶對文件的讀寫執行權限：<code>chmod 777 filename</code></li>
+<li>查看文件類型：<code>file filename</code></li>
+<li>下載文件：<code>wget http://example.com/file.txt</code></li>
+<li>顯示文件內容：<code>cat filename</code></li>
+<li>切換目錄：<code>cd /path/to/directory</code></li>
+<li>複製文件：<code>cp source_file destination_file</code></li>
+<li>移動或重命名文件：<code>mv old_name new_name</code></li>
+<li>刪除文件：<code>rm filename</code></li>
+<li>使用管道連接命令：<code>ls | grep &quot;pattern&quot;</code></li>
+</ul>
+<p><strong>文本編輯器 vim 使用</strong></p>
+<ul>
+<li>打開文件進行編輯：<code>vim filename</code></li>
+<li>保存並退出 vim：在 vim 的命令模式下輸入 <code>:wq</code></li>
+</ul>
+<h3 id="逆向工程簡介"><a href="#逆向工程簡介" class="headerlink" title="逆向工程簡介"></a>逆向工程簡介</h3><p><strong>逆向工程過程示例</strong></p>
+<ul>
+<li>反編譯程序：使用工具如 <code>objdump -d ./program</code></li>
+</ul>
+<h3 id="Linux-C-程式語言開發基礎"><a href="#Linux-C-程式語言開發基礎" class="headerlink" title="Linux C 程式語言開發基礎"></a>Linux C 程式語言開發基礎</h3><p><strong>C程式的編譯與執行</strong></p>
+<ul>
+<li>編譯 C 程式：<code>gcc -o output program.c</code></li>
+<li>執行編譯後的程式：<code>./output</code></li>
+</ul>
+<h3 id="Linux-執行檔分析"><a href="#Linux-執行檔分析" class="headerlink" title="Linux 執行檔分析"></a>Linux 執行檔分析</h3><p><strong>ELF文件格式分析</strong></p>
+<ul>
+<li>查看 ELF 程式頭：<code>readelf -l filename</code></li>
+</ul>
+<h3 id="解析組合語言"><a href="#解析組合語言" class="headerlink" title="解析組合語言"></a>解析組合語言</h3><p><strong>組合語言指令示例</strong></p>
+<ul>
+<li>移動數據：<code>mov eax, ebx</code></li>
+<li>減法操作：<code>sub eax, 5</code></li>
+<li>位運算 AND：<code>and eax, 0xFF</code></li>
+<li>條件跳轉如果相等：<code>je label</code></li>
+</ul>
+<h3 id="逆向工程實務"><a href="#逆向工程實務" class="headerlink" title="逆向工程實務"></a>逆向工程實務</h3><p><strong>逆向工程工具使用</strong></p>
+<ul>
+<li>使用 radare2 打開文件：<code>r2 ./binary</code></li>
+<li>使用 gdb 調試程式：<code>gdb ./program</code></li>
+</ul>
+]]></content>
+      <categories>
+        <category>資安課程</category>
+      </categories>
+      <tags>
+        <tag>逆向工程</tag>
+      </tags>
+  </entry>
 </search>
