@@ -23,11 +23,11 @@ info:
 # Docs: https://redefine-docs.ohevan.com/basic/defaults
 defaults:
   # Favicon
-  favicon: https://scontent.ftpe8-1.fna.fbcdn.net/v/t39.30808-6/428052326_3542300342648223_4136764501731171986_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=j2TU1GD5kCYQ7kNvgHBQuQB&_nc_ht=scontent.ftpe8-1.fna&oh=00_AYCZyzA34mRqoOaUXE3uKCh0Ni-osNwdUggT1b8QryMYfw&oe=66AFB2D1
+  favicon: https://i.imgur.com/h51F2ow.jpg
   # Site logo
   logo: 
   # Site avatar
-  avatar: https://scontent.ftpe8-1.fna.fbcdn.net/v/t39.30808-6/428052326_3542300342648223_4136764501731171986_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=j2TU1GD5kCYQ7kNvgHBQuQB&_nc_ht=scontent.ftpe8-1.fna&oh=00_AYCZyzA34mRqoOaUXE3uKCh0Ni-osNwdUggT1b8QryMYfw&oe=66AFB2D1
+  avatar: https://i.imgur.com/h51F2ow.jpg
 # IMAGE CONFIGURATION <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end
 
 
@@ -211,12 +211,17 @@ navbar:
         #Github: https://github.com/EvanNotFound/hexo-theme-redefine
         #Blog: https://ohevan.com
         #Friends: /friends
+    相冊: #取名随意
+        icon: fa-solid fa-image #图标
+        path: /masonry
+    
     Links: 
       icon: fa-regular fa-link
       submenus:
         Kimi: https://kimi.moonshot.cn/
         Gamma: https://gamma.app/
         AIBot: https://ai-bot.cn/
+
     # ...... # you can add more
   # Navbar search (local search). Requires hexo-generator-searchdb (npm i hexo-generator-searchdb). See https://github.com/theme-next/hexo-generator-searchdb
   search:
@@ -236,17 +241,17 @@ home:
     position: left # Sidebar position. left, right
     first_item: menu # First item in sidebar. menu, info
     announcement: # Announcement text
-    show_on_mobile: true # Whether to show sidebar navigation on mobile sheet menu
+    show_on_mobile: false # Whether to show sidebar navigation on mobile sheet menu
     links:
-      Archives: 
-        path: /archives 
-        icon: fa-regular fa-archive # can be empty
-      Tags: 
-        path: /tags 
-        icon: fa-regular fa-tags # can be empty
-      Categories: 
-        path: /categories 
-        icon: fa-regular fa-folder # can be empty
+      #Archives: 
+        #path: /archives 
+        #icon: fa-regular fa-archive # can be empty
+      #Tags: 
+        #path: /tags 
+        #icon: fa-regular fa-tags # can be empty
+      #Categories: 
+        #path: /categories 
+        #icon: fa-regular fa-folder # can be empty
       # ...... # you can add more
   # Article date format
   article_date_format: auto # auto, relative, YYYY-MM-DD, YYYY-MM-DD HH:mm:ss etc.
@@ -266,7 +271,7 @@ home:
 articles:
   # Set the styles of the article
   style:
-    font_size: 18px # Font size
+    font_size: 16px # Font size
     line_height: 1.5 # Line height
     image_border_radius: 14px # image border radius
     image_alignment: center # image alignment. left, center
@@ -302,7 +307,7 @@ articles:
   toc:
     enable: true # Whether to enable TOC
     max_depth: 3 # TOC depth
-    number: false # Whether to add number to TOC automatically
+    number: true # Whether to add number to TOC automatically
     expand: true # Whether to expand TOC
     init_open: true # Open toc by default
   # Whether to enable copyright notice
@@ -420,10 +425,45 @@ plugins:
   aplayer: # APlayer
     enable: true
     audios:
-      - name: reverse 1999 # audio name
+      - name: reverse1999 # audio name
         artist: 深藍科技 # audio artist
         url: https://re.bluepoch.com/home/mp3/bg/bgm.mp3 # audio url
-        cover: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSltryvvVB8VkaQSBbWx0M5XVEVBS8M6Jyn2A&s # audio cover
+        cover: https://i.imgur.com/Vn8rqzv.jpeg 
+
+      # - name: 後繼者 # audio name
+      #   artist: 任然 # audio artist
+      #   url: https://file.notion.so/f/f/dabcec09-e49e-4a3d-830d-753e8a8d3894/ec81886d-9a5c-4d00-8fbc-289bbf067f3f/%E4%BB%BB%E7%84%B6_-_%E5%BE%8C%E7%B9%BC%E8%80%85.mp3?table=block&id=50108eed-146e-4ec7-891c-36da2a352285&spaceId=dabcec09-e49e-4a3d-830d-753e8a8d3894&expirationTimestamp=1723377600000&signature=v0ZJT3z1F_oj2KsbQUKNLHweNCBABRaQYbfs40p_Zbc # audio url
+      #   cover: https://lineimg.omusic.com.tw/img/album/1401707.jpg?v=20230930211956 
+
+      # - name: 漂浮 # audio name
+      #   artist: 九姨太 # audio artist
+      #   url: https://file.notion.so/f/f/dabcec09-e49e-4a3d-830d-753e8a8d3894/943c2dcb-b827-4b96-97cf-2fb5737abc21/%E9%A3%84%E6%B5%AE_(2).mp3?table=block&id=ecccd3cf-2637-41ca-8ead-77d3ad185cbd&spaceId=dabcec09-e49e-4a3d-830d-753e8a8d3894&expirationTimestamp=1723377600000&signature=FKhNeCtfzLOEFlQpIidO8uYA6RUFzeq2cS18v7hd3DI # audio url
+      #   cover: https://i.kfs.io/album/global/151064058,0v1/fit/500x500.jpg
+
+      # - name: 踮起脚尖爱 # audio name
+      #   artist: 单依纯 # audio artist
+      #   url: https://file.notion.so/f/f/dabcec09-e49e-4a3d-830d-753e8a8d3894/9d648d70-83df-4094-94d9-9655077ad01e/%E5%8D%95%E4%BE%9D%E7%BA%AF%E3%80%8A%E8%B8%AE%E8%B5%B7%E8%84%9A%E5%B0%96%E7%88%B1%E3%80%8B_(2).mp3?table=block&id=a372c67a-76ae-47e8-8524-a70c852c18c5&spaceId=dabcec09-e49e-4a3d-830d-753e8a8d3894&expirationTimestamp=1723377600000&signature=9s2gNoxu0Dv5kEIn4VdBo6M6rCqAe8phCdODM7JiNRQ # audio url
+      #   cover: https://i.ytimg.com/vi/_hFt_ei9wr0/hqdefault.jpg
+
+      - name: フィナーレ。 # audio name
+        artist: eill # audio artist
+        url: music/eill _ フィナーレ.mp3 # audio url
+        cover: https://i.ytimg.com/vi/1lYb9nLO_FY/maxresdefault.jpg
+
+      # - name: 逾期 # audio name
+      #   artist: 云汐 # audio artist
+      #   url: https://file.notion.so/f/f/dabcec09-e49e-4a3d-830d-753e8a8d3894/a3612042-c55b-4df8-ab7a-32c1c2714505/%E4%BA%91%E6%B1%90-_%E9%80%BE%E6%9C%9F__(2).mp3?table=block&id=d116f540-40c3-40aa-8095-a15ef952111c&spaceId=dabcec09-e49e-4a3d-830d-753e8a8d3894&expirationTimestamp=1723377600000&signature=rSUBTmMLz-ys-fZfeAqOaTrZCHjWmZfnt6cevsyLjEE # audio url
+      #   cover: https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/bb/89/c5/bb89c587-ff47-e8cc-0c13-1dacef2c99aa/cover.jpg/600x600bf-60.jpg
+
+      # - name: 告一段落 # audio name
+      #   artist: 陳子晴 # audio artist
+      #   url: https://file.notion.so/f/f/dabcec09-e49e-4a3d-830d-753e8a8d3894/07cee586-42a6-4651-beea-3ac9de469b91/%E9%99%B3%E5%AD%90%E6%99%B4_-_%E5%91%8A%E4%B8%80%E6%AE%B5%E8%90%BD_(2).mp3?table=block&id=dc4b20c3-0332-4598-a16a-b66bb419fc61&spaceId=dabcec09-e49e-4a3d-830d-753e8a8d3894&expirationTimestamp=1723377600000&signature=LBqU_vtr1XHtP7V_G8Ouqjq5VtusUPg7d08K0TILgCg # audio url
+      #   cover: https://y.qq.com/music/photo_new/T002R300x300M0000020PYFh0IITRm_1.jpg?max_age=2592000
+
+      # - name: 疑心病 # audio name
+      #   artist: 任然  # audio artist
+      #   url: https://file.notion.so/f/f/dabcec09-e49e-4a3d-830d-753e8a8d3894/05d593d7-9378-4cb5-abaf-8bf92fc05192/%E4%BB%BB%E7%84%B6_-_%E7%96%91%E5%BF%83%E7%97%85_(2).mp3?table=block&id=3c7a027e-8fef-436b-823d-724061b85bbc&spaceId=dabcec09-e49e-4a3d-830d-753e8a8d3894&expirationTimestamp=1724047200000&signature=Ao9rkmzUACyrB2ssq3iwUYea4dwRuGRX0vAN7OjpxiU # audio url
+      #   cover: https://y.qq.com/music/photo_new/T002R300x300M0000020PYFh0IITRm_1.jpg?max_age=2592000
 
       # .... you can add more audios here
   # Mermaid JS. Requires hexo-filter-mermaid-diagrams (npm i hexo-filter-mermaid-diagrams). See https://mermaid.js.org/

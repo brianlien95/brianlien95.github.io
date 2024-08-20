@@ -25,17 +25,22 @@ About
 
 - 叡揚資訊資安戰士比賽 
 
+
 #### 課程參與
 ##### 2024
-- 3/13~3/17 SecurityFocus Online 2024 CTF解題 
+- 3/13 ~ 3/17 SecurityFocus Online 2024 CTF解題 
 
 - 5/18 臺灣尚青TAIWAN HolyYoung Training-網站安全 
 
-- 6/15~6/22 SecurityFocus Online2 
+- 6/15 ~ 6/22 SecurityFocus Online2 
 
 - 6/16 臺灣尚青TAIWAN HolyYoung Training Crypto 
 
-- 7/27~7/28 CyberSecurity Summer Camp 2024 資訊安全暑訓營
+- 7/27 ~ 7/28 CyberSecurity Summer Camp 2024 資訊安全暑訓營
+
+- 8/5 ~ 8/9 ISIP FinTech Summer CAMP
+
+- 8/15 ~ 8/18 AIS3-junior
 
 #### Link
 [MY Video](https://www.youtube.com/watch?v=IqFDF6Njj1w)

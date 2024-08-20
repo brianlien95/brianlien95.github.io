@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: Brian's Blog
 subtitle: ''
 description: ''
 keywords:
-author: John Doe
-language: en
+author: Brianlien
+language: zh-TW
 timezone: ''
 
 # URL
@@ -67,7 +67,9 @@ index_generator:
 # Category & Tag
 default_category: uncategorized
 category_map:
+  中文分類: english-category
 tag_map:
+  中文標籤: english-tag
 
 # Metadata elements
 ## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
@@ -103,9 +105,7 @@ theme: redefine
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: https://github.com/BrianLien09/BrianLien09.github.io   #仓库地址
-  branch: main  # 默认使用 master 分支(Github现在改名为main分支)
-  message: Update Hexo Static Content # 你可以自定义此次部署更新的说明说明
+
 
 aplayer:
   meting: true
