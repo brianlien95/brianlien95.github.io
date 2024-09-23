@@ -1,801 +1,239 @@
-<!DOCTYPE html>
-<html lang="zh-TW">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="Hexo Theme Redefine">
-    
-    <meta name="author" content="Brianlien">
-    <!-- preconnect -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    
-    <!--- Seo Part-->
-    
-    <link rel="canonical" href="http://example.com/"/>
-    <meta name="robots" content="index,follow">
-    <meta name="googlebot" content="index,follow">
-    <meta name="revisit-after" content="1 days">
-    
-        <meta property="og:type" content="website">
-<meta property="og:title" content="Brian&#39;s Blog">
-<meta property="og:url" content="http://example.com/index.html">
-<meta property="og:site_name" content="Brian&#39;s Blog">
-<meta property="og:locale" content="zh_TW">
-<meta property="article:author" content="Brianlien">
-<meta name="twitter:card" content="summary">
-    
-    
-    <!--- Icon Part-->
-    <link rel="icon" type="image/png" href="https://i.imgur.com/h51F2ow.jpg" sizes="192x192">
-    <link rel="apple-touch-icon" sizes="180x180" href="https://i.imgur.com/h51F2ow.jpg">
-    <meta name="theme-color" content="#A31F34">
-    <link rel="shortcut icon" href="https://i.imgur.com/h51F2ow.jpg">
-    <!--- Page Info-->
-    
-    <title>
-        
-        Brian&#39;s Blog
-    </title>
-
-    
-<link rel="stylesheet" href="/fonts/Chillax/chillax.css">
-
-
-    <!--- Inject Part-->
-    
-
-    
-<link rel="stylesheet" href="/css/style.css">
-
-
-    
-        
-<link rel="stylesheet" href="/assets/build/styles.css">
-
-    
-
-    
-<link rel="stylesheet" href="/fonts/GeistMono/geist-mono.css">
-
-    
-<link rel="stylesheet" href="/fonts/Geist/geist.css">
-
-    <!--- Font Part-->
-    
-    
-    
-    
-    
-    
-        
-<script src="/js/libs/anime.min.js"></script>
-
-    
-
-    <script id="hexo-configurations">
-    window.config = {"hostname":"example.com","root":"/","language":"zh-TW","path":"search.xml"};
-    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":true,"link_icon":true,"title_alignment":"center","headings_top_spacing":{"h1":"2.8rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":false,"auto":false,"list":[]},"code_block":{"copy":true,"style":"simple","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":true,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":false,"family":"Noto Sans SC","url":"https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap"},"english":{"enable":false,"family":null,"url":null},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":true,"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"Brian's Blog","subtitle":{"text":["This is the first message","This is the second message","etc"],"hitokoto":{"enable":true,"show_author":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":false,"smart_backspace":false},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":true,"style":"default","links":{"github":null,"instagram":"https://www.instagram.com/mlrm30_lien","zhihu":null,"twitter":null,"email":null,"facebook":"https://www.facebook.com/brian.lien.52"},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":true},"aplayer":{"enable":true,"type":"fixed","audios":[{"name":"reverse1999","artist":"深藍科技","url":"https://re.bluepoch.com/home/mp3/bg/bgm.mp3","cover":"https://i.imgur.com/Vn8rqzv.jpeg","lrc":null}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.7.1","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Categories":{"path":"/categories","icon":"fa-regular fa-folder"},"Tags":{"path":"/tags","icon":"fa-regular fa-tags"},"About":{"path":"/about","icon":"fa-regular fa-user"},"相冊":{"icon":"fa-solid fa-image","path":"/masonry"},"Links":{"icon":"fa-regular fa-link","submenus":{"Kimi":"https://kimi.moonshot.cn/","Gamma":"https://gamma.app/","AIBot":"https://ai-bot.cn/"}}},"search":{"enable":true,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"show_on_mobile":false,"links":null},"article_date_format":"auto","excerpt_length":200,"categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2024/8/1 15:25:14"};
-    window.lang_ago = {"second":"%s 秒前","minute":"%s 分鐘前","hour":"%s 小時前","day":"%s 天前","week":"%s 周前","month":"%s 個月前","year":"%s 年前"};
-    window.data = {"masonry":true};
-  </script>
-    
-    <!--- Fontawesome Part-->
-    
-<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
-
-    
-<link rel="stylesheet" href="/fontawesome/brands.min.css">
-
-    
-<link rel="stylesheet" href="/fontawesome/solid.min.css">
-
-    
-<link rel="stylesheet" href="/fontawesome/regular.min.css">
-
-    
-    
-    
-    
-<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Brian's Blog" type="application/atom+xml">
-</head>
-
-
-<body>
-<div class="progress-bar-container">
-    
-
-    
-        <span class="pjax-progress-bar"></span>
-<!--        <span class="swup-progress-icon">-->
-<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
-<!--        </span>-->
-    
-</div>
-
-
-
-    <style>
-    :root {
-        --preloader-background-color: #fff;
-        --preloader-text-color: #000;
+<!DOCTYPE html><html lang="zh-TW" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>Brian Blog - 命裡有劫保時捷</title><meta name="author" content="Brianlien"><meta name="copyright" content="Brianlien"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="Brian Blog"><meta name="application-name" content="Brian Blog"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="website"><meta property="og:title" content="Brian Blog"><meta property="og:url" content="http://example.com/index.html"><meta property="og:site_name" content="Brian Blog"><meta property="og:description"><meta property="og:locale" content="zh-TW"><meta property="og:image" content="https://i.imgur.com/h51F2ow.jpg"><meta property="article:author" content="Brianlien"><meta property="article:tag"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://i.imgur.com/h51F2ow.jpg"><meta name="description"><link rel="shortcut icon" href="https://i.imgur.com/h51F2ow.jpg"><link rel="canonical" href="http://example.com/"><link rel="preconnect" href="//cdn.cbd.int"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: {"enable":true,"img":"https://upload-bbs.miyoushe.com/upload/2023/09/03/125766904/ee23df8517f3c3e3efc4145658269c06_5714860933110284659.png"},
+  postHeadAiDescription: {"enable":true,"gptName":"AnZhiYu","mode":"local","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"xxxx","Referer":"https://xx.xx/"},
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)歡迎回來！"},
+  LA51: undefined,
+  greetingBox: undefined,
+  twikooEnvId: '',
+  commentBarrageConfig:undefined,
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: true,
+  mainTone: undefined,
+  authorStatus: {"skills":["🤖️ AI工具愛好者"]},
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查詢的內容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '複製成功',
+    error: '複製錯誤',
+    noSupport: '瀏覽器不支援'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '剛剛',
+    min: '分鐘前',
+    hour: '小時前',
+    day: '天前',
+    month: '個月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: Brianlien","link":"連結: ","source":"來源: Brian Blog","info":"著作權歸作者所有。商業轉載請聯絡作者獲得授權，非商業轉載請註明出處。","copySuccess":"複製成功，複製和轉載請標注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切換為繁體","cht_to_chs":"你已切換為簡體","day_to_night":"你已切換為深色模式","night_to_day":"你已切換為淺色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
     }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: 'Brian Blog',
+  title: 'Brian Blog',
+  postAI: '',
+  pageFillDescription: '',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2024-09-24 02:09:33',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
 
-    @media (prefers-color-scheme: dark) {
-        :root {
-            --preloader-background-color: #202124;
-            --preloader-text-color: #fff;
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
         }
-    }
-
-    @media (prefers-color-scheme: light) {
-        :root {
-            --preloader-background-color: #fff;
-            --preloader-text-color: #000;
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
         }
-    }
 
-    @media (max-width: 600px) {
-        .ml13 {
-            font-size: 2.6rem !important; /* Adjust this value as needed */
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
         }
-    }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
 
-    .preloader {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem; /* Tailwind 'gap-4' is 1rem */
-        align-items: center;
-        justify-content: center;
-        position: fixed;
-        padding: 12px;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh; /* 'h-screen' is 100% of the viewport height */
-        background-color: var(--preloader-background-color);
-        z-index: 1100; /* 'z-[1100]' sets the z-index */
-        transition: opacity 0.2s ease-in-out;
-    }
-
-    .ml13 {
-        font-size: 3.2rem;
-        /* text-transform: uppercase; */
-        color: var(--preloader-text-color);
-        letter-spacing: -1px;
-        font-weight: 500;
-        font-family: 'Chillax-Variable', sans-serif;
-        text-align: center;
-    }
-
-    .ml13 .word {
-        display: inline-flex;
-        flex-wrap: wrap;
-        white-space: nowrap;
-    }
-
-    .ml13 .letter {
-        display: inline-block;
-        line-height: 1em;
-    }
-</style>
-
-<div class="preloader">
-    <h2 class="ml13">
-        Brian&#39;s Blog
-    </h2>
-    <script>
-        var textWrapper = document.querySelector('.ml13');
-        // Split text into words
-        var words = textWrapper.textContent.trim().split(' ');
-
-        // Clear the existing content
-        textWrapper.innerHTML = '';
-
-        // Wrap each word and its letters in spans
-        words.forEach(function(word) {
-            var wordSpan = document.createElement('span');
-            wordSpan.classList.add('word');
-            wordSpan.innerHTML = word.replace(/\S/g, "<span class='letter'>$&</span>");
-            textWrapper.appendChild(wordSpan);
-            textWrapper.appendChild(document.createTextNode(' ')); // Add space between words
-        });
-
-        var animation = anime.timeline({loop: true})
-            .add({
-                targets: '.ml13 .letter',
-                translateY: [40,0],
-                translateZ: 0,
-                opacity: [0,1],
-                filter: ['blur(5px)', 'blur(0px)'], // Starting from blurred to unblurred
-                easing: "easeOutExpo",
-                duration: 1400,
-                delay: (el, i) => 300 + 30 * i,
-            }).add({
-                targets: '.ml13 .letter',
-                translateY: [0,-40],
-                opacity: [1,0],
-                filter: ['blur(0px)', 'blur(5px)'], // Ending from unblurred to blurred
-                easing: "easeInExpo",
-                duration: 1200,
-                delay: (el, i) => 100 + 30 * i,
-                complete: function() {
-                    hidePreloader(); // Call hidePreloader after the animation completes
-                }
-            });
-
-        let themeStatus = JSON.parse(localStorage.getItem('REDEFINE-THEME-STATUS'))?.isDark;
-
-        // If the theme status is not found in local storage, check the preferred color scheme
-        if (themeStatus === undefined || themeStatus === null) {
-            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                themeStatus = 'dark';
-            } else {
-                themeStatus = 'light';
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
             }
-        }
-
-        // Now you can use the themeStatus variable in your code
-        if (themeStatus) {
-            document.documentElement.style.setProperty('--preloader-background-color', '#202124');
-            document.documentElement.style.setProperty('--preloader-text-color', '#fff');
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
         } else {
-            document.documentElement.style.setProperty('--preloader-background-color', '#fff');
-            document.documentElement.style.setProperty('--preloader-text-color', '#000');
+          document.documentElement.classList.remove('hide-aside')
         }
-
-        window.addEventListener('load', function () {
-            setTimeout(hidePreloader, 5000); // Call hidePreloader after 5000 milliseconds if not already called by animation
-        });
-
-        function hidePreloader() {
-            var preloader = document.querySelector('.preloader');
-            preloader.style.opacity = '0';
-            setTimeout(function () {
-                preloader.style.display = 'none';
-            }, 200);
-        }
-    </script>
-</div>
-
-<main class="page-container" id="swup">
-
+      }
     
-        
-    <style>
-        .home-banner-container {
-            background: none !important;
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
         }
-        .home-article-item,
-        .sidebar-links,
-        .sidebar-content,
-        a.page-number,
-        a.extend,
-        .sidebar-links .links:hover,
-        .right-bottom-tools,
-        footer.footer {
-            background-color: var(--background-color-transparent-80) !important;
-        }
-        .right-bottom-tools:hover,
-        a.page-number:hover,
-        a.extend:hover {
-            background-color: var(--primary-color) !important;
-        }
-        .site-info,
-        .home-article-sticky-label {
-            background-color: var(--background-color-transparent-15) !important;
-        }
-        .home-article-sticky-label {
-            backdrop-filter: none !important;
-        }
-    </style>
-    <div class="home-banner-background transition-fade fixed top-0 left-0 w-screen h-screen scale-125 sm:scale-110 box-border will-change-transform bg-cover">
-        <img src="/images/wallhaven-wqery6-light.webp" alt="home-banner-background" class="w-full h-full object-cover dark:hidden">
-        <img src="/images/wallhaven-wqery6-dark.webp" alt="home-banner-background" class="w-full h-full object-cover hidden dark:block">
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Brian Blog" type="application/atom+xml">
+</head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://i.imgur.com/h51F2ow.jpg"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="page" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><div class="back-home-button"><i class="anzhiyufont anzhiyu-icon-grip-vertical"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">網頁</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://brianlien95.github.io/" title="部落格"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://i.imgur.com/h51F2ow.jpg" alt="部落格"/><span class="back-menu-item-text">部落格</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">AI工具</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://askmanyai.cn/index" title="AskmanyAI"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://ama-static.floatai.cn/askmanyai/prod/img/logo.f01cc1bc.svg" alt="AskmanyAI"/><span class="back-menu-item-text">AskmanyAI</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://ai-bot.cn/wp-content/uploads/2024/08/Photoroom-logo.png" title="AI工具集"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://ama-static.floatai.cn/askmanyai/prod/img/logo.f01cc1bc.svg" alt="AI工具集"/><span class="back-menu-item-text">AI工具集</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://notebooklm.google/" title="NotebookLM"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.woshipm.com/2024/09/19/9d75db98-7648-11ef-abf0-00163e0b5ff3.jpg" alt="NotebookLM"/><span class="back-menu-item-text">NotebookLM</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://kimi.moonshot.cn/" title="Kimi"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://gongwenguan.com/wp-content/uploads/2024/06/1717665098-Kimi-LOGO.jpg" alt="Kimi"/><span class="back-menu-item-text">Kimi</span></a></div></div></div></div><a id="site-name" href="/" accesskey="h"><div class="title">Brian Blog</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分類</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 標籤</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 關於</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 關於本人</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索🔍" accesskey="s"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span> 搜尋</span></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" target="_blank"><img class="post-qr-code-img" alt="微信" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" target="_blank"><img class="post-qr-code-img" alt="支付宝" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新評論</span></div><div class="aside-list"><span>正在載入中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/writeup/" style="font-size: 1.05rem;">writeup<sup>1</sup></a><a href="/tags/%E5%85%B1%E7%AD%86%E7%AD%86%E8%A8%98/" style="font-size: 1.05rem;">共筆筆記<sup>3</sup></a><a href="/tags/%E5%AF%86%E7%A2%BC%E5%AD%B8/" style="font-size: 1.05rem;">密碼學<sup>2</sup></a><a href="/tags/%E7%B6%B2%E8%B7%AF%E6%BC%8F%E6%B4%9E/" style="font-size: 1.05rem;">網路漏洞<sup>19</sup></a><a href="/tags/%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/" style="font-size: 1.05rem;">逆向工程<sup>1</sup></a><a href="/tags/%E9%87%91%E8%9E%8D/" style="font-size: 1.05rem;">金融<sup>1</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>歸檔</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/08/"><span class="card-archive-list-date">八月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">27</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav></header><main id="blog-container"><div id="home_top"><div class="swiper_container_card" style="height: auto;width: 100%"><div id="bannerGroup"><div id="random-banner"><canvas id="peoplecanvas"></canvas><a id="random-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-paper-plane"></i><div class="bannerText">随便逛逛<i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div></a></div><div class="categoryGroup"><div class="categoryItem" style="box-shadow:var(--anzhiyu-shadow-blue)"><a class="categoryButton blue" href="/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"><span class="categoryButtonText">前端</span><i class="anzhiyufont anzhiyu-icon-dove"></i></a></div><div class="categoryItem" style="box-shadow:var(--anzhiyu-shadow-red)"><a class="categoryButton red" href="/categories/%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%B6%AF/"><span class="categoryButtonText">大学</span><i class="anzhiyufont anzhiyu-icon-fire"></i></a></div><div class="categoryItem" style="box-shadow:var(--anzhiyu-shadow-green)"><a class="categoryButton green" href="/categories/%E7%94%9F%E6%B4%BB%E6%97%A5%E5%B8%B8/"><span class="categoryButtonText">生活</span><i class="anzhiyufont anzhiyu-icon-book"></i></a></div></div></div><div class="topGroup"><div class="recent-post-item" onclick="pjax.loadUrl(&quot;/2024/08/18/AIS3-junior-DAY3-%E4%B8%8B%E5%8D%88-AI-%E6%87%89%E7%94%A8%E5%AE%89%E5%85%A8%E5%AF%A6%E5%8B%99/&quot;)"><div class="post_cover left_radius"><a href="2024/08/18/AIS3-junior-DAY3-下午-AI-應用安全實務/" title="AIS3 junior DAY3 下午-AI 應用安全實務"><span class="recent-post-top-text">荐</span><img class="post_bg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="cover"></a></div><div class="recent-post-info"><a class="article-title" href="2024/08/18/AIS3-junior-DAY3-下午-AI-應用安全實務/" title="AIS3 junior DAY3 下午-AI 應用安全實務">AIS3 junior DAY3 下午-AI 應用安全實務</a></div></div><div class="recent-post-item" onclick="pjax.loadUrl(&quot;/2024/08/18/AIS3%20junior%20DAY1%20AI-%E6%87%89%E7%94%A8%E5%AE%89%E5%85%A8%E5%AF%A6%E5%8B%99-%E5%85%B1%E7%AD%86/&quot;)"><div class="post_cover left_radius"><a href="2024/08/18/AIS3 junior DAY1 AI-應用安全實務-共筆/" title="AIS3 junior DAY3-AI 應用安全實務"><span class="recent-post-top-text">荐</span><img class="post_bg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="cover"></a></div><div class="recent-post-info"><a class="article-title" href="2024/08/18/AIS3 junior DAY1 AI-應用安全實務-共筆/" title="AIS3 junior DAY3-AI 應用安全實務">AIS3 junior DAY3-AI 應用安全實務</a></div></div><div class="recent-post-item" onclick="pjax.loadUrl(&quot;/2024/08/18/AIS3-junior-DAY1-%E7%B6%B2%E8%B7%AF%E6%A6%82%E8%AB%96/&quot;)"><div class="post_cover left_radius"><a href="2024/08/18/AIS3-junior-DAY1-網路概論/" title="AIS3 junior DAY1-網路概論"><span class="recent-post-top-text">荐</span><img class="post_bg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="cover"></a></div><div class="recent-post-info"><a class="article-title" href="2024/08/18/AIS3-junior-DAY1-網路概論/" title="AIS3 junior DAY1-網路概論">AIS3 junior DAY1-網路概論</a></div></div><div class="recent-post-item" onclick="pjax.loadUrl(&quot;/2024/08/04/CSP%EF%BC%88%E5%85%A7%E5%AE%B9%E5%AE%89%E5%85%A8%E7%AD%96%E7%95%A5%EF%BC%89%E3%80%81SOP%EF%BC%88%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5%EF%BC%89%E5%92%8CCORS%EF%BC%88%E8%B7%A8%E6%BA%90%E8%B3%87%E6%BA%90%E5%85%B1%E4%BA%AB%EF%BC%89/&quot;)"><div class="post_cover left_radius"><a href="2024/08/04/CSP（內容安全策略）、SOP（同源策略）和CORS（跨源資源共享）/" title="CSP（內容安全策略）、SOP（同源策略）和CORS（跨源資源共享）"><span class="recent-post-top-text">荐</span><img class="post_bg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="cover"></a></div><div class="recent-post-info"><a class="article-title" href="2024/08/04/CSP（內容安全策略）、SOP（同源策略）和CORS（跨源資源共享）/" title="CSP（內容安全策略）、SOP（同源策略）和CORS（跨源資源共享）">CSP（內容安全策略）、SOP（同源策略）和CORS（跨源資源共享）</a></div></div><div class="recent-post-item" onclick="pjax.loadUrl(&quot;/2024/08/05/CyberSecurity-Summer-Camp-2024-%E8%B3%87%E8%A8%8A%E5%AE%89%E5%85%A8%E6%9A%91%E8%A8%93%E7%87%9F-%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/&quot;)"><div class="post_cover left_radius"><a href="2024/08/05/CyberSecurity-Summer-Camp-2024-資訊安全暑訓營-逆向工程/" title="CyberSecurity Summer Camp 2024 資訊安全暑訓營-逆向工程"><span class="recent-post-top-text">荐</span><img class="post_bg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="cover"></a></div><div class="recent-post-info"><a class="article-title" href="2024/08/05/CyberSecurity-Summer-Camp-2024-資訊安全暑訓營-逆向工程/" title="CyberSecurity Summer Camp 2024 資訊安全暑訓營-逆向工程">CyberSecurity Summer Camp 2024 資訊安全暑訓營-逆向工程</a></div></div><div class="recent-post-item" onclick="pjax.loadUrl(&quot;/2024/08/04/CSRF-%E6%94%BB%E6%93%8A/&quot;)"><div class="post_cover left_radius"><a href="2024/08/04/CSRF-攻擊/" title="CSRF 攻擊"><span class="recent-post-top-text">荐</span><img class="post_bg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="cover"></a></div><div class="recent-post-info"><a class="article-title" href="2024/08/04/CSRF-攻擊/" title="CSRF 攻擊">CSRF 攻擊</a></div></div><a class="todayCard" id="todayCard" target="_blank" rel="noopener" href="https://youtu.be/IqFDF6Njj1w" style="z-index: 1;"><div class="todayCard-info"><div class="todayCard-tips">影片</div><div class="todayCard-title">我的資安之路</div></div><img class="todayCard-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://i.imgur.com/onlnQz4.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="封面"><div class="banner-button-group"><div class="banner-button" onclick="event.stopPropagation();event.preventDefault();anzhiyu.hideTodayCard();"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i><span class="banner-button-text">更多推荐</span></div></div></a></div><link rel="stylesheet"></div></div><div class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div id="categoryBar"><div class="category-bar" id="category-bar"><div id="catalog-bar"><div id="catalog-list"><div class="catalog-list-item" id="首页"><a href="/">首页</a></div>
+    <div class="catalog-list-item" id="/categories/2024-AIS3-junior/">
+      <a href="/categories/2024-AIS3-junior/">
+        2024 AIS3 junior
+      </a>
     </div>
-
-
-<div class="home-banner-container flex justify-center items-center transition-fade relative">
     
-    <div class="content mt-8 flex flex-col justify-center items-center">
-        <div class="description flex flex-col justify-center items-center w-screen font-medium text-center"
-        
-        >
-            Brian's Blog
-            
-            
-                <p><i id="subtitle"></i></p>
-            
-        </div>
-        
-            
-            <div class="absolute bottom-0.5 flex flex-row justify-between max-w-[1340px] items-center w-full px-8 sm:px-12">
-                <div class="flex p-3 bg-gray-300/50 dark:bg-gray-500/40 backdrop-blur-lg border border-white/20 dark:border-gray-500/30 group rounded-full cursor-pointer flex justify-center items-center aspect-square h-full shadow-redefine-flat hover:shadow-redefine-flat-hover transition-shadow" onclick="scrollToMain()" >
-                    <i class="fa-solid fa-arrow-down fa-fw fa-lg group-hover:translate-y-1 transition-transform"></i>
-                </div>
-                <div class="social-contacts px-6 py-3 bg-gray-300/50 dark:bg-gray-500/40 backdrop-blur-lg border border-white/20 dark:border-gray-500/30 shadow-redefine-flat rounded-full flex flex-row gap-3 items-center">
-                    
-                        
-                    
-                        
-                            
-                                <span class="social-contact-item instagram">
-                                    <a target="_blank" href="https://www.instagram.com/mlrm30_lien">
-                                        <i class="fa-brands fa-fw fa-lg fa-instagram"></i>
-                                    </a>
-                                </span>
-                            
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                    
-                        
-                            
-                                <span class="social-contact-item facebook">
-                                    <a target="_blank" href="https://www.facebook.com/brian.lien.52">
-                                        <i class="fa-brands fa-fw fa-lg fa-facebook"></i>
-                                    </a>
-                                </span>
-                            
-                        
-                    
-                    
-                </div>
-            </div>
-        
+    <div class="catalog-list-item" id="/categories/安全達人養成計劃研習/">
+      <a href="/categories/安全達人養成計劃研習/">
+        安全達人養成計劃研習
+      </a>
     </div>
-    <script>
-        const scrollToMain = ()=> {
-            console.log('scroll');
-            const target = document.querySelector('.main-content-container');
-            target.scrollIntoView({ behavior: 'smooth'});
-        }
-    </script>
-</div>
     
-
-    <div class="main-content-container">
-
-
-        <div class="main-content-header">
-            <header class="navbar-container px-6 md:px-12">
-
-    <div class="navbar-content has-home-banner">
-        <div class="left">
-            
-            <a class="logo-title" href="/">
-                <h1>
-                Brian&#39;s Blog
-                </h1>
-            </a>
-        </div>
-
-        <div class="right">
-            <!-- PC -->
-            <div class="desktop">
-                <ul class="navbar-list">
-                    
-                        
-                            
-
-                            <li class="navbar-item">
-                                <!-- Menu -->
-                                <a class="active"
-                                   href="/"
-                                        >
-                                    <i class="fa-regular fa-house fa-fw"></i>
-                                    首頁
-                                    
-                                </a>
-
-                                <!-- Submenu -->
-                                
-                            </li>
-                    
-                        
-                            
-
-                            <li class="navbar-item">
-                                <!-- Menu -->
-                                <a class=""
-                                   href="/archives"
-                                        >
-                                    <i class="fa-regular fa-archive fa-fw"></i>
-                                    歸檔
-                                    
-                                </a>
-
-                                <!-- Submenu -->
-                                
-                            </li>
-                    
-                        
-                            
-
-                            <li class="navbar-item">
-                                <!-- Menu -->
-                                <a class=""
-                                   href="/categories"
-                                        >
-                                    <i class="fa-regular fa-folder fa-fw"></i>
-                                    分類
-                                    
-                                </a>
-
-                                <!-- Submenu -->
-                                
-                            </li>
-                    
-                        
-                            
-
-                            <li class="navbar-item">
-                                <!-- Menu -->
-                                <a class=""
-                                   href="/tags"
-                                        >
-                                    <i class="fa-regular fa-tags fa-fw"></i>
-                                    標籤
-                                    
-                                </a>
-
-                                <!-- Submenu -->
-                                
-                            </li>
-                    
-                        
-                            
-
-                            <li class="navbar-item">
-                                <!-- Menu -->
-                                <a class=""
-                                   href="/about"
-                                        >
-                                    <i class="fa-regular fa-user fa-fw"></i>
-                                    關於
-                                    
-                                </a>
-
-                                <!-- Submenu -->
-                                
-                            </li>
-                    
-                        
-                            
-
-                            <li class="navbar-item">
-                                <!-- Menu -->
-                                <a class=""
-                                   href="/masonry"
-                                        >
-                                    <i class="fa-solid fa-image fa-fw"></i>
-                                    相冊
-                                    
-                                </a>
-
-                                <!-- Submenu -->
-                                
-                            </li>
-                    
-                        
-                            
-
-                            <li class="navbar-item">
-                                <!-- Menu -->
-                                <a class="has-dropdown"
-                                   href="#"
-                                        onClick=&#34;return false;&#34;>
-                                    <i class="fa-regular fa-link fa-fw"></i>
-                                    鏈接
-                                    <i class="fa-solid fa-chevron-down fa-fw"></i>
-                                </a>
-
-                                <!-- Submenu -->
-                                
-                                    <ul class="sub-menu">
-                                        
-                                            <li>
-                                                <a target="_blank" rel="noopener" href="https://kimi.moonshot.cn/">
-                                                    KIMI
-                                                </a>
-                                            </li>
-                                        
-                                            <li>
-                                                <a target="_blank" rel="noopener" href="https://gamma.app/">
-                                                    GAMMA
-                                                </a>
-                                            </li>
-                                        
-                                            <li>
-                                                <a target="_blank" rel="noopener" href="https://ai-bot.cn/">
-                                                    AIBOT
-                                                </a>
-                                            </li>
-                                        
-                                    </ul>
-                                
-                            </li>
-                    
-                    
-                        <li class="navbar-item search search-popup-trigger">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </li>
-                    
-                </ul>
-            </div>
-            <!-- Mobile -->
-            <div class="mobile">
-                
-                    <div class="icon-item search search-popup-trigger"><i class="fa-solid fa-magnifying-glass"></i>
-                    </div>
-                
-                <div class="icon-item navbar-bar">
-                    <div class="navbar-bar-middle"></div>
-                </div>
-            </div>
-        </div>
+    <div class="catalog-list-item" id="/categories/資安課程/">
+      <a href="/categories/資安課程/">
+        資安課程
+      </a>
     </div>
-
-    <!-- Mobile sheet -->
-    <div class="navbar-drawer h-screen w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
-        <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
-            
-                
-                    
-
-                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
-                        
-                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
-                           href="/"
-                        >
-                            <span>
-                                首頁
-                            </span>
-                            
-                                <i class="fa-regular fa-house fa-sm fa-fw"></i>
-                            
-                        </a>
-                        
-
-                        
-                    </li>
-            
-                
-                    
-
-                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
-                        
-                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
-                           href="/archives"
-                        >
-                            <span>
-                                歸檔
-                            </span>
-                            
-                                <i class="fa-regular fa-archive fa-sm fa-fw"></i>
-                            
-                        </a>
-                        
-
-                        
-                    </li>
-            
-                
-                    
-
-                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
-                        
-                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
-                           href="/categories"
-                        >
-                            <span>
-                                分類
-                            </span>
-                            
-                                <i class="fa-regular fa-folder fa-sm fa-fw"></i>
-                            
-                        </a>
-                        
-
-                        
-                    </li>
-            
-                
-                    
-
-                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
-                        
-                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
-                           href="/tags"
-                        >
-                            <span>
-                                標籤
-                            </span>
-                            
-                                <i class="fa-regular fa-tags fa-sm fa-fw"></i>
-                            
-                        </a>
-                        
-
-                        
-                    </li>
-            
-                
-                    
-
-                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
-                        
-                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
-                           href="/about"
-                        >
-                            <span>
-                                關於
-                            </span>
-                            
-                                <i class="fa-regular fa-user fa-sm fa-fw"></i>
-                            
-                        </a>
-                        
-
-                        
-                    </li>
-            
-                
-                    
-
-                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
-                        
-                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
-                           href="/masonry"
-                        >
-                            <span>
-                                相冊
-                            </span>
-                            
-                                <i class="fa-solid fa-image fa-sm fa-fw"></i>
-                            
-                        </a>
-                        
-
-                        
-                    </li>
-            
-                
-                    
-
-                    <li class="drawer-navbar-item-sub text-base my-1.5 flex flex-col w-full">
-                        
-                        <div class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary cursor-pointer text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
-                             navbar-data-toggle="submenu-Links"
-                        >
-                            <span>
-                                鏈接
-                            </span>
-                            
-                                <i class="fa-solid fa-chevron-right fa-sm fa-fw transition-all"></i>
-                            
-                        </div>
-                        
-
-                        
-                            <div class="flex-col items-start px-2 py-2 hidden" data-target="submenu-Links">
-                                
-                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
-                                        <a class=" text-third-text-color text-xl"
-                                           target="_blank" rel="noopener" href="https://kimi.moonshot.cn/">KIMI</a>
-                                    </div>
-                                
-                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
-                                        <a class=" text-third-text-color text-xl"
-                                           target="_blank" rel="noopener" href="https://gamma.app/">GAMMA</a>
-                                    </div>
-                                
-                                    <div class="drawer-navbar-item text-base flex flex-col justify-center items-start hover:underline active:underline hover:underline-offset-1 rounded-3xl">
-                                        <a class=" text-third-text-color text-xl"
-                                           target="_blank" rel="noopener" href="https://ai-bot.cn/">AIBOT</a>
-                                    </div>
-                                
-                            </div>
-                        
-                    </li>
-            
-
-            
-            
-        </ul>
-
-        <div class="statistics flex justify-around my-2.5">
-    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">6</div>
-        <div class="label text-third-text-color text-sm">標籤</div>
-    </a>
-    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">5</div>
-        <div class="label text-third-text-color text-sm">分類</div>
-    </a>
-    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">28</div>
-        <div class="label text-third-text-color text-sm">文章</div>
-    </a>
-</div>
-    </div>
-
-    <div class="window-mask"></div>
-
-</header>
-
-
-        </div>
-
-        <div class="main-content-body">
-
-            
-                <div class="home-sidebar-container">
-    <div class="sticky-container sticky">
-        
-        
-            
-            <div class="sidebar-content" >
-                <div class="avatar flex justify-center">
-    <img src="https://i.imgur.com/h51F2ow.jpg">
-</div>
-                <div class="author flex flex-col justify-center my-2.5 mx-0">
-    <div class="name">Brianlien</div>
     
-</div>
-                <div class="statistics flex justify-around my-2.5">
-    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">6</div>
-        <div class="label text-third-text-color text-sm">標籤</div>
-    </a>
-    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">5</div>
-        <div class="label text-third-text-color text-sm">分類</div>
-    </a>
-    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">28</div>
-        <div class="label text-third-text-color text-sm">文章</div>
-    </a>
-</div>
-            </div>
-        
-
+    <div class="catalog-list-item" id="/categories/FinTech-Summer-CAMP/">
+      <a href="/categories/FinTech-Summer-CAMP/">
+        FinTech Summer CAMP
+      </a>
     </div>
-</div>
-
-            
-
-            <div class="main-content">
-
-                
-                    <div class="home-content-container">
-    <ul class="home-article-list">
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/2024/08/18/AIS3-junior-DAY1-%E7%B6%B2%E8%B7%AF%E6%A6%82%E8%AB%96/">
-                            AIS3 junior DAY1-網路概論
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                            甚麼是資訊安全
+    
+    <div class="catalog-list-item" id="/categories/線上資安課程/">
+      <a href="/categories/線上資安課程/">
+        線上資安課程
+      </a>
+    </div>
+    </div><div class="category-bar-next" id="category-bar-next" onclick="anzhiyu.scrollCategoryBarToRight()"><i class="anzhiyufont anzhiyu-icon-angle-double-right"></i></div><a class="catalog-more" href="/categories/">更多</a></div></div></div><div class="recent-post-item lastestpost-item" onclick="pjax.loadUrl('/2024/08/18/AIS3-junior-DAY1-%E7%B6%B2%E8%B7%AF%E6%A6%82%E8%AB%96/')"><div class="recent-post-info no-cover"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">2024 AIS3 junior</div><span class="newPost">最新</span><a class="unvisited-post" href="/2024/08/18/AIS3-junior-DAY1-%E7%B6%B2%E8%B7%AF%E6%A6%82%E8%AB%96/" title="AIS3 junior DAY1-網路概論">未读</a></div><a class="article-title" href="/2024/08/18/AIS3-junior-DAY1-%E7%B6%B2%E8%B7%AF%E6%A6%82%E8%AB%96/" title="AIS3 junior DAY1-網路概論">AIS3 junior DAY1-網路概論</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">發表於</span><time datetime="2024-08-18T06:28:43.000Z" title="發表於 2024-08-18 14:28:43" time="2024-08-18 14:28:43">2024-08-18</time><time class="time_hidden" datetime="2024-08-18T06:29:04.296Z" title="更新於 2024-08-18 14:29:04" time="2024-08-18 14:29:04">2024-08-18</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E5%85%B1%E7%AD%86%E7%AD%86%E8%A8%98/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>共筆筆記</span></a></span></div><div class="content">甚麼是資訊安全
 資安三要素
 C 機密性
 看到不該看的
@@ -835,75 +273,54 @@ A 可用性
 商業利益
 好玩 &#x2F; 挑戰性
 政治因素
-研究目...
-                        
-                    </div>
+研究目的
+個資
 
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Sun Aug 18 2024 14:28:43 GMT+0800">
-                
-                    2024-08-18
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/2024-AIS3-junior/">2024 AIS3 junior</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/%E5%85%B1%E7%AD%86%E7%AD%86%E8%A8%98/">共筆筆記</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
 
-    <a href="/2024/08/18/AIS3-junior-DAY1-%E7%B6%B2%E8%B7%AF%E6%A6%82%E8%AB%96/">繼續閱讀...<span class="seo-reader-text">AIS3 junior DAY1-網路概論</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
+駭客的攻擊目標
+人
+社交工程：針對人性漏洞造成的危害
+例如：釣魚、詐騙
 
-                </div>
-            </li>
-        
-            <li class="home-article-item">
 
-                
+系統
 
-                
 
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/2024/08/18/AIS3-junior-DAY2-%E7%B6%B2%E9%A0%81%E5%AE%89%E5%85%A8/">
-                            AIS3 junior DAY2-網頁安全
-                        </a>
-                    </h3>
+被攻擊後的影響
+資料外洩 &#x2F; 系統受損
+名聲受損
 
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                            Basic Web Securityintro
+
+
+資安事件烏俄戰爭
+展現出了第四大戰場 – 資訊 ( 史上最大規模 )
+情報戰
+輿情戰
+資訊攻擊戰
+
+
+
+免費線上真人直播http://insecam.org
+
+沒有修改預設的 webcam 帳號密碼
+
+每天的網路生活
+瀏覽網站 –&gt; 釣魚網站
+收發信件 –&gt; 釣魚信件
+中華郵政又欠費
+
+
+通訊與文書
+惡意檔案
+資料外洩
+社交工程，股票推銷、測試遊戲
+
+
+影音娛樂 –&gt; 病毒、詐騙
+
+怎麼利用個資
+家
+家人的身分證、生日 ...</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/2024/08/18/AIS3-junior-DAY2-%E7%B6%B2%E9%A0%81%E5%AE%89%E5%85%A8/')"><div class="recent-post-info no-cover"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">2024 AIS3 junior</div><a class="unvisited-post" href="/2024/08/18/AIS3-junior-DAY2-%E7%B6%B2%E9%A0%81%E5%AE%89%E5%85%A8/" title="AIS3 junior DAY2-網頁安全">未读</a></div><a class="article-title" href="/2024/08/18/AIS3-junior-DAY2-%E7%B6%B2%E9%A0%81%E5%AE%89%E5%85%A8/" title="AIS3 junior DAY2-網頁安全">AIS3 junior DAY2-網頁安全</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">發表於</span><time datetime="2024-08-18T06:27:01.000Z" title="發表於 2024-08-18 14:27:01" time="2024-08-18 14:27:01">2024-08-18</time><time class="time_hidden" datetime="2024-08-18T06:28:09.412Z" title="更新於 2024-08-18 14:28:09" time="2024-08-18 14:28:09">2024-08-18</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E5%85%B1%E7%AD%86%E7%AD%86%E8%A8%98/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>共筆筆記</span></a></span></div><div class="content">Basic Web Securityintro
 網頁的表達方式
 router based
 透過程式控制頁面切換，不重新加載整個網站
@@ -920,78 +337,32 @@ Broken Access Control網頁未成功執行身份驗證機制就是 Broken Access
 
 影響：影響完整性、RCE
 
-RCE(Remote Code&...
-                        
-                    </div>
+RCE(Remote Code&#x2F;Command Execution)Webshell透過網頁執行系統命令達成RCE
 
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Sun Aug 18 2024 14:27:01 GMT+0800">
-                
-                    2024-08-18
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/2024-AIS3-junior/">2024 AIS3 junior</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/%E5%85%B1%E7%AD%86%E7%AD%86%E8%A8%98/">共筆筆記</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
+體積小、隱蔽性高
+功能強大、易植入
+透過上傳檔案來部屬
+常見的繞過方式
+使用未禁止的副檔名
+PHP: pht, pthm, phtml, php5, php6…
+ASP: config, inc, ashx, axd, rem…
+JSP: jsw, wss, do, action, jspf…
 
-    <a href="/2024/08/18/AIS3-junior-DAY2-%E7%B6%B2%E9%A0%81%E5%AE%89%E5%85%A8/">繼續閱讀...<span class="seo-reader-text">AIS3 junior DAY2-網頁安全</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
 
-                </div>
-            </li>
-        
-            <li class="home-article-item">
+副檔名大小寫混淆 
+Php, PhP, pHP…
 
-                
 
-                
+更改 Content-Type 
+image&#x2F;jpg
+image&#x2F;jpeg
+image&#x2F;png
 
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/2024/08/18/AIS3%20junior%20DAY1%20AI-%E6%87%89%E7%94%A8%E5%AE%89%E5%85%A8%E5%AF%A6%E5%8B%99-%E5%85%B1%E7%AD%86/">
-                            AIS3 junior DAY3-AI 應用安全實務
-                        </a>
-                    </h3>
 
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                            LLM &amp; transformer
+改變file header ...</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/2024/08/18/AIS3%20junior%20DAY1%20AI-%E6%87%89%E7%94%A8%E5%AE%89%E5%85%A8%E5%AF%A6%E5%8B%99-%E5%85%B1%E7%AD%86/')"><div class="recent-post-info no-cover"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">2024 AIS3 junior</div><a class="unvisited-post" href="/2024/08/18/AIS3%20junior%20DAY1%20AI-%E6%87%89%E7%94%A8%E5%AE%89%E5%85%A8%E5%AF%A6%E5%8B%99-%E5%85%B1%E7%AD%86/" title="AIS3 junior DAY3-AI 應用安全實務">未读</a></div><a class="article-title" href="/2024/08/18/AIS3%20junior%20DAY1%20AI-%E6%87%89%E7%94%A8%E5%AE%89%E5%85%A8%E5%AF%A6%E5%8B%99-%E5%85%B1%E7%AD%86/" title="AIS3 junior DAY3-AI 應用安全實務">AIS3 junior DAY3-AI 應用安全實務</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">發表於</span><time datetime="2024-08-18T06:18:59.000Z" title="發表於 2024-08-18 14:18:59" time="2024-08-18 14:18:59">2024-08-18</time><time class="time_hidden" datetime="2024-08-18T06:24:29.869Z" title="更新於 2024-08-18 14:24:29" time="2024-08-18 14:24:29">2024-08-18</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E5%85%B1%E7%AD%86%E7%AD%86%E8%A8%98/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>共筆筆記</span></a></span></div><div class="content">LLM &amp; transformer
 LLM:大型語言模型
 無監督學習
-利用注意力機制預訓練模型Attention Is All You Need  
+利用注意力機制預訓練模型Attention Is All You Need 
 transformer
 一開始是用來翻譯
 Input –&gt; Encoder(編碼) –&gt; Decoder(解碼) –&gt; Output
@@ -999,290 +370,38 @@ Input –&gt; Encoder(編碼) –&gt; Decoder(解碼) –&gt; Output
 
 
 transformer
-原始文本 –&gt; token –&gt; toke...
-                        
-                    </div>
+原始文本 –&gt; token –&gt; token ID
+詞向量（Word vector）：每個詞彙都以一個向量表示，利用不同詞彙在向量空間中的距離，賦予詞彙相關性
+例如 king 就和 man 比較近， queen 和 woman 比較近
 
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Sun Aug 18 2024 14:18:59 GMT+0800">
-                
-                    2024-08-18
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/2024-AIS3-junior/">2024 AIS3 junior</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/%E5%85%B1%E7%AD%86%E7%AD%86%E8%A8%98/">共筆筆記</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
 
-    <a href="/2024/08/18/AIS3%20junior%20DAY1%20AI-%E6%87%89%E7%94%A8%E5%AE%89%E5%85%A8%E5%AF%A6%E5%8B%99-%E5%85%B1%E7%AD%86/">繼續閱讀...<span class="seo-reader-text">AIS3 junior DAY3-AI 應用安全實務</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
 
-                </div>
-            </li>
-        
-            <li class="home-article-item">
+Self Attention
+word Vector –&gt; Position Vector –&gt; 理解每個單字順序
+每個字都會去偵測跟其他字之間的相關性
+相關性有權重之分
+Multi-Head Attention 多頭注意力機制
 
-                
+Decoder 處理
+透過已生成文字預測下一個文字(文字接龍)
 
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/2024/08/18/AIS3-junior-DAY2-%E4%B8%8A%E5%8D%88-%E7%B6%B2%E9%A0%81%E5%AE%89%E5%85%A8/">
-                            AIS3 junior DAY2 上午 網頁安全
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                            01 - Broken Access ControlBAC01隨便打一個名子login查看url http://ctfd-ais3.crazyfirelee.tw:9001/user 將user改成adminimage
-
-AIS3_Junior{FirstBROKENAccessControl;)}
-
-BAC02到Product List裡面觀察每個 View Details的 url 發現...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Sun Aug 18 2024 14:01:40 GMT+0800">
-                
-                    2024-08-18
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/2024-AIS3-junior/">2024 AIS3 junior</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/writeup/">writeup</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/2024/08/18/AIS3-junior-DAY2-%E4%B8%8A%E5%8D%88-%E7%B6%B2%E9%A0%81%E5%AE%89%E5%85%A8/">繼續閱讀...<span class="seo-reader-text">AIS3 junior DAY2 上午 網頁安全</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/2024/08/18/AIS3-junior-DAY3-%E4%B8%8B%E5%8D%88-AI-%E6%87%89%E7%94%A8%E5%AE%89%E5%85%A8%E5%AF%A6%E5%8B%99/">
-                            AIS3 junior DAY3 下午-AI 應用安全實務
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                            LLM 探討說話的藝術感受GPTㄉ魔力吧code: 
-123456789101112131415161718192021222324252627282930#!/usr/bin/env python3import osimport stringFLAG = open(&#x27;./flag&#x27;, &#x27;r&#x27;).read()def meowmeow_encode(by...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Sun Aug 18 2024 13:55:22 GMT+0800">
-                
-                    2024-08-18
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/2024-AIS3-junior/">2024 AIS3 junior</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/writeup/">writeup</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/2024/08/18/AIS3-junior-DAY3-%E4%B8%8B%E5%8D%88-AI-%E6%87%89%E7%94%A8%E5%AE%89%E5%85%A8%E5%AF%A6%E5%8B%99/">繼續閱讀...<span class="seo-reader-text">AIS3 junior DAY3 下午-AI 應用安全實務</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/2024/08/07/FinTech-Summer-CAMP-%E9%87%91%E8%9E%8D%E7%94%A2%E6%A5%AD%E8%B3%87%E5%AE%89%E5%AF%A6%E5%8B%99%E7%A0%94%E7%BF%92%E7%87%9F-Day1-%E4%B8%8B%E5%8D%88/">
-                            FinTech Summer CAMP 金融產業資安實務研習營 Day1 下午
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                            目錄
+Hallucinations 幻覺
+回答非真實的東西
+可能因訓練資料造成:::spoiler 例子 ...</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/2024/08/18/AIS3-junior-DAY3-%E4%B8%8B%E5%8D%88-AI-%E6%87%89%E7%94%A8%E5%AE%89%E5%85%A8%E5%AF%A6%E5%8B%99/')"><div class="recent-post-info no-cover"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">2024 AIS3 junior</div><a class="unvisited-post" href="/2024/08/18/AIS3-junior-DAY3-%E4%B8%8B%E5%8D%88-AI-%E6%87%89%E7%94%A8%E5%AE%89%E5%85%A8%E5%AF%A6%E5%8B%99/" title="AIS3 junior DAY3 下午-AI 應用安全實務">未读</a></div><a class="article-title" href="/2024/08/18/AIS3-junior-DAY3-%E4%B8%8B%E5%8D%88-AI-%E6%87%89%E7%94%A8%E5%AE%89%E5%85%A8%E5%AF%A6%E5%8B%99/" title="AIS3 junior DAY3 下午-AI 應用安全實務">AIS3 junior DAY3 下午-AI 應用安全實務</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">發表於</span><time datetime="2024-08-18T05:55:22.000Z" title="發表於 2024-08-18 13:55:22" time="2024-08-18 13:55:22">2024-08-18</time><time class="time_hidden" datetime="2024-09-23T14:14:28.634Z" title="更新於 2024-09-23 22:14:28" time="2024-09-23 22:14:28">2024-09-23</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/writeup/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>writeup</span></a></span></div><div class="content">LLM 探討說話的藝術感受GPTㄉ魔力吧code: 
+#!/usr/bin/env python3import osimport stringFLAG = open(&#x27;./flag&#x27;, &#x27;r&#x27;).read()def meowmeow_encode(byte):    binary_string = bin(byte)[2:].zfill(8)    meow  = &quot;meowmeow&quot;    meowmeow = &quot;&quot;        for bit in range(8) :        if binary_string[bit] == &#x27;0&#x27; :            meowmeow += meow[bit]        else :            meowmeow += meow[bit].upper()    return meowmeow def main() :     res = &#x27;&#x27;    for i in FLAG :        re ...</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/2024/08/07/FinTech-Summer-CAMP-%E9%87%91%E8%9E%8D%E7%94%A2%E6%A5%AD%E8%B3%87%E5%AE%89%E5%AF%A6%E5%8B%99%E7%A0%94%E7%BF%92%E7%87%9F-Day1-%E4%B8%8B%E5%8D%88/')"><div class="recent-post-info no-cover"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">FinTech Summer CAMP</div><a class="unvisited-post" href="/2024/08/07/FinTech-Summer-CAMP-%E9%87%91%E8%9E%8D%E7%94%A2%E6%A5%AD%E8%B3%87%E5%AE%89%E5%AF%A6%E5%8B%99%E7%A0%94%E7%BF%92%E7%87%9F-Day1-%E4%B8%8B%E5%8D%88/" title="FinTech Summer CAMP 金融產業資安實務研習營 Day1 下午">未读</a></div><a class="article-title" href="/2024/08/07/FinTech-Summer-CAMP-%E9%87%91%E8%9E%8D%E7%94%A2%E6%A5%AD%E8%B3%87%E5%AE%89%E5%AF%A6%E5%8B%99%E7%A0%94%E7%BF%92%E7%87%9F-Day1-%E4%B8%8B%E5%8D%88/" title="FinTech Summer CAMP 金融產業資安實務研習營 Day1 下午">FinTech Summer CAMP 金融產業資安實務研習營 Day1 下午</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">發表於</span><time datetime="2024-08-07T12:46:52.000Z" title="發表於 2024-08-07 20:46:52" time="2024-08-07 20:46:52">2024-08-07</time><time class="time_hidden" datetime="2024-08-07T12:49:01.050Z" title="更新於 2024-08-07 20:49:01" time="2024-08-07 20:49:01">2024-08-07</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E9%87%91%E8%9E%8D/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>金融</span></a></span></div><div class="content">目錄
 貨幣型態演進及代幣問世
 央行貨幣政策對經濟金融之影響
 臺灣金融市場之類型、功能及架構
 銀行授信、貸款項目與審查原則
 
-貨幣型態演進及代幣問世貨幣型態演進及代幣問世-1遠古人類最初過著自給自足的經濟生活，隨著生產力提高和社會分工的需要，出現了「以物易物」的行為，解決物資供需。交易媒介包括珠玉、皮革、齒角、金屬、穀類、布帛、飾品、牲畜等，這種以物品作為交易媒介的稱為「商品貨幣」或「實體貨幣...
-                        
-                    </div>
+貨幣型態演進及代幣問世貨幣型態演進及代幣問世-1遠古人類最初過著自給自足的經濟生活，隨著生產力提高和社會分工的需要，出現了「以物易物」的行為，解決物資供需。交易媒介包括珠玉、皮革、齒角、金屬、穀類、布帛、飾品、牲畜等，這種以物品作為交易媒介的稱為「商品貨幣」或「實體貨幣」。
+隨著交易活動頻繁，部分物品發揮貨幣功能，如中國的海貝（貝幣）、美索不達米亞和埃及的金、銀、青銅等貴金屬。商品貨幣因來源無法有效控制、數量有限、不便計數等因素，逐漸被金、銀、銅、鐵等金屬取代。金屬貨幣未統一，需測定成色和秤重，後來發展成較先進的貨幣制度。
 
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Wed Aug 07 2024 20:46:52 GMT+0800">
-                
-                    2024-08-07
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/FinTech-Summer-CAMP/">FinTech Summer CAMP</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/%E9%87%91%E8%9E%8D/">金融</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
+春秋戰國時期：青銅製造的「布幣」、「刀幣」、「圜錢」等。
+秦至漢武帝初年：標準化貨幣時期，嚴禁私鑄幣，確立中央專鑄權。
+唐高祖武德：「開元通寶」，開啟新紀元。
 
-    <a href="/2024/08/07/FinTech-Summer-CAMP-%E9%87%91%E8%9E%8D%E7%94%A2%E6%A5%AD%E8%B3%87%E5%AE%89%E5%AF%A6%E5%8B%99%E7%A0%94%E7%BF%92%E7%87%9F-Day1-%E4%B8%8B%E5%8D%88/">繼續閱讀...<span class="seo-reader-text">FinTech Summer CAMP 金融產業資安實務研習營 Day1 下午</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/2024/08/05/CyberSecurity-Summer-Camp-2024-%E8%B3%87%E8%A8%8A%E5%AE%89%E5%85%A8%E6%9A%91%E8%A8%93%E7%87%9F-%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/">
-                            CyberSecurity Summer Camp 2024 資訊安全暑訓營-逆向工程
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                            enter image description here
+貨幣型態演進及代幣問世-2為避免攜帶金屬貨幣的不便，發明了紙幣，如北宋的「交子」和十八世紀英格蘭銀行的銀行券，這些是現代紙幣的起源。早期紙幣可換黃金或白銀，後來發行數量受限，演變至1 ...</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/2024/08/05/CyberSecurity-Summer-Camp-2024-%E8%B3%87%E8%A8%8A%E5%AE%89%E5%85%A8%E6%9A%91%E8%A8%93%E7%87%9F-%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/')"><div class="recent-post-info no-cover"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">資安課程</div><a class="unvisited-post" href="/2024/08/05/CyberSecurity-Summer-Camp-2024-%E8%B3%87%E8%A8%8A%E5%AE%89%E5%85%A8%E6%9A%91%E8%A8%93%E7%87%9F-%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/" title="CyberSecurity Summer Camp 2024 資訊安全暑訓營-逆向工程">未读</a></div><a class="article-title" href="/2024/08/05/CyberSecurity-Summer-Camp-2024-%E8%B3%87%E8%A8%8A%E5%AE%89%E5%85%A8%E6%9A%91%E8%A8%93%E7%87%9F-%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/" title="CyberSecurity Summer Camp 2024 資訊安全暑訓營-逆向工程">CyberSecurity Summer Camp 2024 資訊安全暑訓營-逆向工程</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">發表於</span><time datetime="2024-08-05T13:26:38.000Z" title="發表於 2024-08-05 21:26:38" time="2024-08-05 21:26:38">2024-08-05</time><time class="time_hidden" datetime="2024-08-05T13:33:15.938Z" title="更新於 2024-08-05 21:33:15" time="2024-08-05 21:33:15">2024-08-05</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>逆向工程</span></a></span></div><div class="content">
 課程筆記基礎 Linux 操作終端機基礎操作
 
 打開終端：通常可以通過快捷鍵 Ctrl + Alt + T。
@@ -1298,75 +417,24 @@ BAC02到Product List裡面觀察每個 View Details的 url 發現...
 快捷鍵操作
 
 自動補全：輸入命令時按 Tab 鍵。
-歷史指令：使用上箭頭鍵訪問之...
-                        
-                    </div>
+歷史指令：使用上箭頭鍵訪問之前輸入的命令。
 
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Mon Aug 05 2024 21:26:38 GMT+0800">
-                
-                    2024-08-05
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/%E8%B3%87%E5%AE%89%E8%AA%B2%E7%A8%8B/">資安課程</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/">逆向工程</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
+常用Linux命令示例
 
-    <a href="/2024/08/05/CyberSecurity-Summer-Camp-2024-%E8%B3%87%E8%A8%8A%E5%AE%89%E5%85%A8%E6%9A%91%E8%A8%93%E7%87%9F-%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/">繼續閱讀...<span class="seo-reader-text">CyberSecurity Summer Camp 2024 資訊安全暑訓營-逆向工程</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
+列出當前目錄下的文件和文件夾：ls
+更改文件權限，例如給予所有用戶對文件的讀寫執行權限：chmod 777 filename
+查看文件類型：file filename
+下載文件：wget http://example.com/file.txt
+顯示文件內容：cat filename
+切換目錄：cd /path/to/directory
+複製文件：cp source_file destination_file
+移動或重命名文件：mv old_name new_name
+刪除文件：rm filename
+使用管道連接命令：ls | grep &quot;pattern&quot;
 
-                </div>
-            </li>
-        
-            <li class="home-article-item">
+文本編輯器 vim 使用
 
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/2024/08/04/%E8%B3%87%E6%96%99%E4%BF%9D%E8%AD%B7/">
-                            資料保護
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                            
+打開 ...</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/2024/08/04/%E8%B3%87%E6%96%99%E4%BF%9D%E8%AD%B7/')"><div class="recent-post-info no-cover"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">安全達人養成計劃研習</div><a class="unvisited-post" href="/2024/08/04/%E8%B3%87%E6%96%99%E4%BF%9D%E8%AD%B7/" title="資料保護">未读</a></div><a class="article-title" href="/2024/08/04/%E8%B3%87%E6%96%99%E4%BF%9D%E8%AD%B7/" title="資料保護">資料保護</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">發表於</span><time datetime="2024-08-04T09:36:06.000Z" title="發表於 2024-08-04 17:36:06" time="2024-08-04 17:36:06">2024-08-04</time><time class="time_hidden" datetime="2024-08-04T09:36:55.242Z" title="更新於 2024-08-04 17:36:55" time="2024-08-04 17:36:55">2024-08-04</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E7%B6%B2%E8%B7%AF%E6%BC%8F%E6%B4%9E/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>網路漏洞</span></a></span></div><div class="content">
 數據保護定義：設計良好的應用程序應實施安全控制，以確保敏感信息的保護和完整性。
 數據保護示例：
 PayBuddy公司：一個網絡支付公司，採取措施保護客戶免受信用卡盜竊。
@@ -1379,75 +447,24 @@ PayBuddy公司：一個網絡支付公司，採取措施保護客戶免受信用
 
 
 未採取預防措施的數據保護漏洞：
-如果PayBuddy公...
-                        
-                    </div>
+如果PayBuddy公司未採取適當措施，通訊可能未受保護，攻擊者可以輕易嗅探流量，竊取信用卡號等敏感信息。
+信用卡號在應用中完整顯示，增加了被肩窺的風險。
+數據庫中信用卡號未加密，攻擊者可讀取明文信息。
 
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Sun Aug 04 2024 17:36:06 GMT+0800">
-                
-                    2024-08-04
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/%E5%AE%89%E5%85%A8%E9%81%94%E4%BA%BA%E9%A4%8A%E6%88%90%E8%A8%88%E5%8A%83%E7%A0%94%E7%BF%92/">安全達人養成計劃研習</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/%E7%B6%B2%E8%B7%AF%E6%BC%8F%E6%B4%9E/">網路漏洞</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
 
-    <a href="/2024/08/04/%E8%B3%87%E6%96%99%E4%BF%9D%E8%AD%B7/">繼續閱讀...<span class="seo-reader-text">資料保護</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
+源代碼保護：
+一個軟件公司非常小心地保護其移動應用的源代碼。
+源代碼存儲在加密硬體上，位於安全的服務器室。
+僅限內部網絡訪問源代碼庫。
+訪問權限僅限於具有適當許可權的開發人員。
+生產環境中對應用程序應用了重混淆技術。
 
-                </div>
-            </li>
-        
-            <li class="home-article-item">
 
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/2024/08/04/%E6%95%B8%E6%93%9A%E8%BD%89%E7%BE%A9%E4%B8%8D%E8%B6%B3/">
-                            數據轉義不足
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                            資料轉義是什麼？
+未實施源代碼保護的後果：
+存儲在物理可訪問的服務器上的源代碼庫。
+本地攻擊者可以複製明文存儲的代碼。
+源代碼庫公開可訪問，容易被攻擊者攻擊。
+未混淆的應用程序可被用戶反編譯，源代碼可能被修改和重新打 ...</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/2024/08/04/%E6%95%B8%E6%93%9A%E8%BD%89%E7%BE%A9%E4%B8%8D%E8%B6%B3/')"><div class="recent-post-info no-cover"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">安全達人養成計劃研習</div><a class="unvisited-post" href="/2024/08/04/%E6%95%B8%E6%93%9A%E8%BD%89%E7%BE%A9%E4%B8%8D%E8%B6%B3/" title="數據轉義不足">未读</a></div><a class="article-title" href="/2024/08/04/%E6%95%B8%E6%93%9A%E8%BD%89%E7%BE%A9%E4%B8%8D%E8%B6%B3/" title="數據轉義不足">數據轉義不足</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">發表於</span><time datetime="2024-08-04T08:37:10.000Z" title="發表於 2024-08-04 16:37:10" time="2024-08-04 16:37:10">2024-08-04</time><time class="time_hidden" datetime="2024-08-04T08:37:30.939Z" title="更新於 2024-08-04 16:37:30" time="2024-08-04 16:37:30">2024-08-04</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E7%B6%B2%E8%B7%AF%E6%BC%8F%E6%B4%9E/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>網路漏洞</span></a></span></div><div class="content">資料轉義是什麼？
 資料轉義是將特定字符轉換成一種表現形式，這種形式保留了字符的意義，但確保它們在應用程序上下文中被解釋為純數據，而不是指令。
 例如，將小於號（&lt;）和大於號（&gt;）轉換成&lt;和&gt;，以防止瀏覽器在頁面上顯示時將它們解釋為HTML。
 
@@ -1455,443 +472,207 @@ PayBuddy公司：一個網絡支付公司，採取措施保護客戶免受信用
 當資料完全沒有被編碼，或者某些可能被解釋的特殊字符沒有被轉義時，就可能發生這類漏洞。
 
 示例：
-XPath...
-                        
-                    </div>
+XPath注入：攻擊者通過操縱XML查詢來嘗試執行XPath注入，繞過認證機制。
+跨站腳本攻擊（XSS）：攻擊者發送包含惡意腳本的電子郵件，利用未轉義的腳本在用戶瀏覽器中執行，重定向到釣魚網站。
 
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Sun Aug 04 2024 16:37:10 GMT+0800">
-                
-                    2024-08-04
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/%E5%AE%89%E5%85%A8%E9%81%94%E4%BA%BA%E9%A4%8A%E6%88%90%E8%A8%88%E5%8A%83%E7%A0%94%E7%BF%92/">安全達人養成計劃研習</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/%E7%B6%B2%E8%B7%AF%E6%BC%8F%E6%B4%9E/">網路漏洞</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
+資料轉義漏洞的潛在影響：
+輸入編碼不足可能導致SQL注入，進而導致認證繞過和欺詐行為。
+代碼注入可能導致進一步的升級，例如在應用程序服務器上執行命令注入。
 
-    <a href="/2024/08/04/%E6%95%B8%E6%93%9A%E8%BD%89%E7%BE%A9%E4%B8%8D%E8%B6%B3/">繼續閱讀...<span class="seo-reader-text">數據轉義不足</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/2024/08/04/%E6%95%85%E9%9A%9C%E6%99%82%E7%9A%84%E5%AE%89%E5%85%A8%E6%80%A7/">
-                            故障時的安全性
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            
-                            什麼是「故障時的安全性」的概念？「故障時的安全性」是指當應用程式遇到意外情況時，應該如何正確地處理。
+預防措施：
+對所有來自外部來源的資料執行編碼和轉義。
+確定將使用資料的解釋器類型，以及應該編碼哪些字符。
+作為一般規則，永遠不要信任用戶輸入。
+對所有外部資料始終應用應用程序範圍的編碼。
+開發者應該：
+確定使用資料的解釋器。
+在不同的框架中存在庫。
+最後，始終 ...</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/2024/08/04/%E6%95%85%E9%9A%9C%E6%99%82%E7%9A%84%E5%AE%89%E5%85%A8%E6%80%A7/')"><div class="recent-post-info no-cover"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">安全達人養成計劃研習</div><a class="unvisited-post" href="/2024/08/04/%E6%95%85%E9%9A%9C%E6%99%82%E7%9A%84%E5%AE%89%E5%85%A8%E6%80%A7/" title="故障時的安全性">未读</a></div><a class="article-title" href="/2024/08/04/%E6%95%85%E9%9A%9C%E6%99%82%E7%9A%84%E5%AE%89%E5%85%A8%E6%80%A7/" title="故障時的安全性">故障時的安全性</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">發表於</span><time datetime="2024-08-04T08:32:08.000Z" title="發表於 2024-08-04 16:32:08" time="2024-08-04 16:32:08">2024-08-04</time><time class="time_hidden" datetime="2024-08-04T08:36:03.610Z" title="更新於 2024-08-04 16:36:03" time="2024-08-04 16:36:03">2024-08-04</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E7%B6%B2%E8%B7%AF%E6%BC%8F%E6%B4%9E/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>網路漏洞</span></a></span></div><div class="content">什麼是「故障時的安全性」的概念？「故障時的安全性」是指當應用程式遇到意外情況時，應該如何正確地處理。
 安全控制失敗案例：假設一名用戶想要登入使用雙重認證的網上郵件應用程式。這意味著用戶需要先輸入他的密碼，然後輸入一個有效的一次性權杖才能獲取訪問權限。
 
 用戶首先成功輸入他的密碼。
 接下來，用戶需要輸入發送到他手機的一次性有效權杖。
 如果提供了正確的權杖，用戶將被重定向到他的個人資料頁面。
-如...
-                        
-                    </div>
+如果權杖不正確，用戶會看到錯誤頁面，並不被允許登入。
 
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Sun Aug 04 2024 16:32:08 GMT+0800">
-                
-                    2024-08-04
-                
-            </span>
-        </span>
+攻擊案例：一名攻擊者已經能夠確定另一名用戶的密碼，並企圖訪問該用戶的網上郵件。
+
+攻擊者成功輸入密碼並繼續下一步。
+攻擊者被要求輸入一次性權杖，但他沒有，並輸入了錯誤的權杖。
+由於登入失敗機制的故障，攻擊者仍然可以強行瀏覽到個人資料頁面，從而破壞了安全性。
+
+TLS驗證失敗案例：一名用戶在免費WiFi環境下想要瀏覽他的銀行移動應用程式。
+
+攻擊者進行中間人攻擊，截獲用戶通訊。
+應用程式執行SSL固定，並無法驗證服務器證書的真實性。
+如果失敗被正確處理，用戶會收到警告並不能繼續使用應用程式。
+
+未正確處理失敗的情況：
+攻擊者再次進行中間人攻擊，截獲 ...</div></div></div><div class="recent-post-item" onclick="pjax.loadUrl('/2024/08/04/CSP%EF%BC%88%E5%85%A7%E5%AE%B9%E5%AE%89%E5%85%A8%E7%AD%96%E7%95%A5%EF%BC%89%E3%80%81SOP%EF%BC%88%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5%EF%BC%89%E5%92%8CCORS%EF%BC%88%E8%B7%A8%E6%BA%90%E8%B3%87%E6%BA%90%E5%85%B1%E4%BA%AB%EF%BC%89/')"><div class="recent-post-info no-cover"><div class="recent-post-info-top"><div class="recent-post-info-top-tips"><div class="article-categories-original">安全達人養成計劃研習</div><a class="unvisited-post" href="/2024/08/04/CSP%EF%BC%88%E5%85%A7%E5%AE%B9%E5%AE%89%E5%85%A8%E7%AD%96%E7%95%A5%EF%BC%89%E3%80%81SOP%EF%BC%88%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5%EF%BC%89%E5%92%8CCORS%EF%BC%88%E8%B7%A8%E6%BA%90%E8%B3%87%E6%BA%90%E5%85%B1%E4%BA%AB%EF%BC%89/" title="CSP（內容安全策略）、SOP（同源策略）和CORS（跨源資源共享）">未读</a></div><a class="article-title" href="/2024/08/04/CSP%EF%BC%88%E5%85%A7%E5%AE%B9%E5%AE%89%E5%85%A8%E7%AD%96%E7%95%A5%EF%BC%89%E3%80%81SOP%EF%BC%88%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5%EF%BC%89%E5%92%8CCORS%EF%BC%88%E8%B7%A8%E6%BA%90%E8%B3%87%E6%BA%90%E5%85%B1%E4%BA%AB%EF%BC%89/" title="CSP（內容安全策略）、SOP（同源策略）和CORS（跨源資源共享）">CSP（內容安全策略）、SOP（同源策略）和CORS（跨源資源共享）</a></div><div class="article-meta-wrap"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days" style="font-size: 15px; display:none"></i><span class="article-meta-label">發表於</span><time datetime="2024-08-04T08:30:25.000Z" title="發表於 2024-08-04 16:30:25" time="2024-08-04 16:30:25">2024-08-04</time><time class="time_hidden" datetime="2024-08-04T08:30:48.510Z" title="更新於 2024-08-04 16:30:48" time="2024-08-04 16:30:48">2024-08-04</time></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E7%B6%B2%E8%B7%AF%E6%BC%8F%E6%B4%9E/" event.cancelbubble onclick="window.event.cancelBubble=true;"><span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>網路漏洞</span></a></span></div><div class="content">1. CSP（內容安全策略）
+定義：CSP允許應用程序定義允許加載的內容來源，例如JavaScript、HTML框架和小程序。
+作用：防止跨站腳本攻擊、點擊劫持和其他內容注入。
+指令示例：
+script-src：定義可以執行的腳本。
+form-action：列出表單提交的有效端點。
+child-src：定義嵌入框架允許的內容。
+object-src：限制Flash和其他插件的加載來源。
+
+
+
+2. SOP（同源策略）
+定義：SOP是一個安全機制，用於隔離不同來源的資源。
+工作原則：腳本在一個網站上執行時不能訪問另一個網站上的某些資源，例如Cookie。
+同源定義：協議、主機、端口的組合。
+
+3. CORS（跨源資源共享）
+定義：CORS是一個允許通過特定的HTTP頭來覆蓋SOP的機制，使得資源（如API）可以跨域訪問。
+請求頭：客戶端在調用服務器時自動設置。
+響應頭示例：
+Access-Control-Allow-Origin：指定可以訪問資源的URL。
+Access-Control-Allow-Methods：指定訪問資源時允許的方法。
+
+
+
+4. 安全漏洞的原因
+CORS配置不當： ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><a class="page-number" href="/page/3/#content-inner">3</a><a class="extend next" rel="next" href="/page/2/#content-inner"><div class="pagination_tips_next">下页</div><i style="font-weight: inherit; font-size: 1rem;" class="anzhiyufont anzhiyu-icon-chevron-right fa-fw"></i></a><div class="toPageGroup"><input id="toPageText" oninput="value=value.replace(/[^0-9]/g,'')" maxlength="3" onkeyup="this.value=this.value.replace(/[^u4e00-u9fa5w]/g,'')" aria-label="toPage"><a id="toPageButton" onclick="anzhiyu.toPage()"><i class="anzhiyufont anzhiyu-icon-angles-right" style="font-weight: inherit; font-size: 1rem;"></i></a></div></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info__sayhi" id="author-info__sayhi" onclick="anzhiyu.changeSayHelloText()"></div><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://i.imgur.com/h51F2ow.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-status"><img class="g-status" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/08/24/64e6ce9c507bb.png" alt="status"/></div></div><div class="author-info__description"></div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/"><h1 class="author-info__name">Brianlien</h1><div class="author-info__desc">命裡有劫保時捷</div></a><div class="card-info-social-icons is-center"><a class="social-icon faa-parent animated-hover" href="https://github.com/brianlien95/brianlien95.github.io" target="_blank" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a><a class="social-icon faa-parent animated-hover" href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSDbFfcLkrcwlqjChMfcVvKSvmjFRhwGmGRJjxtjlfkMWQBXsnDkSzpvMKkxpnTDlxNctmxL" target="_blank" title="BiliBili"><i class="anzhiyufont anzhiyu-icon-envelope"></i></a></div></div></div></div><div class="sticky_layout"><div class="card-widget"><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/writeup/" style="font-size: 1.05rem;">writeup<sup>1</sup></a><a href="/tags/%E5%85%B1%E7%AD%86%E7%AD%86%E8%A8%98/" style="font-size: 1.05rem;">共筆筆記<sup>3</sup></a><a href="/tags/%E5%AF%86%E7%A2%BC%E5%AD%B8/" style="font-size: 1.05rem;">密碼學<sup>2</sup></a><a href="/tags/%E7%B6%B2%E8%B7%AF%E6%BC%8F%E6%B4%9E/" style="font-size: 1.05rem;">網路漏洞<sup>19</sup></a><a href="/tags/%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/" style="font-size: 1.05rem;">逆向工程<sup>1</sup></a><a href="/tags/%E9%87%91%E8%9E%8D/" style="font-size: 1.05rem;">金融<sup>1</sup></a></div></div><hr/><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>歸檔</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/08/"><span class="card-archive-list-date">八月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">27</span><span>篇</span></div></a></li></ul></div><hr/><div class="card-webinfo"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-chart-line"></i><span>網站資訊</span></div><div class="webinfo"><div class="webinfo-item"><div class="webinfo-item-title"><i class="anzhiyufont anzhiyu-icon-file-lines"></i><div class="item-name">文章數目 :</div></div><div class="item-count">27</div></div><div class="webinfo-item"><div class="webinfo-item-title"><i class="anzhiyufont anzhiyu-icon-stopwatch"></i><div class="item-name">已執行時間 :</div></div><div class="item-count" id="runtimeshow" data-publishDate="2024-09-22T16:00:00.000Z"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-spin"></i></div></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2020 - 2024 By <a class="footer-bar-link" href="/" title="Brianlien" target="_blank">Brianlien</a></div></div><div id="footer-type-tips"></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="主题">主题</a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">27</div></a><a href="/tags/" title="tag"><div class="headline">標籤</div><div class="length-num">6</div></a><a href="/categories/" title="category"><div class="headline">分類</div><div class="length-num">5</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="顯示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>顯示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">網頁</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://brianlien95.github.io/" title="部落格"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://i.imgur.com/h51F2ow.jpg" alt="部落格"/><span class="back-menu-item-text">部落格</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">AI工具</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://askmanyai.cn/index" title="AskmanyAI"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://ama-static.floatai.cn/askmanyai/prod/img/logo.f01cc1bc.svg" alt="AskmanyAI"/><span class="back-menu-item-text">AskmanyAI</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://ai-bot.cn/wp-content/uploads/2024/08/Photoroom-logo.png" title="AI工具集"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://ama-static.floatai.cn/askmanyai/prod/img/logo.f01cc1bc.svg" alt="AI工具集"/><span class="back-menu-item-text">AI工具集</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://notebooklm.google/" title="NotebookLM"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.woshipm.com/2024/09/19/9d75db98-7648-11ef-abf0-00163e0b5ff3.jpg" alt="NotebookLM"/><span class="back-menu-item-text">NotebookLM</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://kimi.moonshot.cn/" title="Kimi"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://gongwenguan.com/wp-content/uploads/2024/06/1717665098-Kimi-LOGO.jpg" alt="Kimi"/><span class="back-menu-item-text">Kimi</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分類</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 標籤</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 關於</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 關於本人</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/writeup/" style="font-size: 0.88rem;">writeup<sup>1</sup></a><a href="/tags/%E5%85%B1%E7%AD%86%E7%AD%86%E8%A8%98/" style="font-size: 0.88rem;">共筆筆記<sup>3</sup></a><a href="/tags/%E5%AF%86%E7%A2%BC%E5%AD%B8/" style="font-size: 0.88rem;">密碼學<sup>2</sup></a><a href="/tags/%E7%B6%B2%E8%B7%AF%E6%BC%8F%E6%B4%9E/" style="font-size: 0.88rem;">網路漏洞<sup>19</sup></a><a href="/tags/%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/" style="font-size: 0.88rem;">逆向工程<sup>1</sup></a><a href="/tags/%E9%87%91%E8%9E%8D/" style="font-size: 0.88rem;">金融<sup>1</sup></a></div></div><hr/></div></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="簡繁轉換">繁</button><button id="darkmode" type="button" title="淺色和深色模式轉換"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="單欄和雙欄切換"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="設定"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button id="go-up" type="button" title="回到頂部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="8152976493" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random" volume="0.7"></meting-js></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜尋</span><span id="loading-status"></span><button class="search-close-button"><i class="anzhiyufont anzhiyu-icon-xmark"></i></button></nav><div class="is-center" id="loading-database"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-pulse-icon"></i><span>  資料庫載入中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜尋文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@17.8.5/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("04/01/2021 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
         
-            <span class="home-article-category">
-                <i class="fa-solid fa-folders"></i>&nbsp;
-            <ul>
-                
-                
-                    
-                        
-                        <li>
-                            <a href="/categories/%E5%AE%89%E5%85%A8%E9%81%94%E4%BA%BA%E9%A4%8A%E6%88%90%E8%A8%88%E5%8A%83%E7%A0%94%E7%BF%92/">安全達人養成計劃研習</a>&nbsp;
-                        </li>
-                    
-                    
-                
-            </ul>
-        </span>
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
         
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/%E7%B6%B2%E8%B7%AF%E6%BC%8F%E6%B4%9E/">網路漏洞</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/2024/08/04/%E6%95%85%E9%9A%9C%E6%99%82%E7%9A%84%E5%AE%89%E5%85%A8%E6%80%A7/">繼續閱讀...<span class="seo-reader-text">故障時的安全性</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-    </ul>
-
-    <div class="home-paginator px-7 py-5">
-        <div class="paginator">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa-regular fa-angle-right"></i></a>
-</div>
-
-    </div>
-</div>
-
-                    <div class="comment-container pjax"></div>
-                
-
-            </div>
-
-            
-
-        </div>
-
-        <div class="main-content-footer">
-            <footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
-    <div class="info-container py-3 text-center">
-        
-        <div class="text-center">
-            &copy;
-            
-              <span>2024</span>
-              -
-            
-            2024&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">Brianlien</a>
-            
-                
-                <p class="post-count space-x-0.5">
-                    <span>
-                        共 28 篇文章
-                    </span>
-                    
-                        <span>
-                            共 18.3k 字
-                        </span>
-                    
-                </p>
-            
-        </div>
-        
-            <script data-swup-reload-script src="https://cn.vercount.one/js"></script>
-            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
-                
-                    <span id="busuanzi_container_site_uv" class="lg:!block">
-                        <span class="text-sm">讀者</span>
-                        <span id="busuanzi_value_site_uv"></span>
-                    </span>
-                
-                
-                    <span id="busuanzi_container_site_pv" class="lg:!block">
-                        <span class="text-sm">閱覽</span>
-                        <span id="busuanzi_value_site_pv"></span>
-                    </span>
-                
-            </div>
-        
-        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
-            <span class="lg:block text-sm"><?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a> 框架</span>
-            <span class="text-sm lg:block">主題&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.7.1</a></span>
-        </div>
-        
-        
-            <div>
-                博客已運行 <span class="odometer" id="runtime_days" ></span> 天 <span class="odometer" id="runtime_hours"></span> 小時 <span class="odometer" id="runtime_minutes"></span> 分鐘 <span class="odometer" id="runtime_seconds"></span> 秒
-            </div>
-        
-        
-            <script data-swup-reload-script>
-                try {
-                    function odometer_init() {
-                    const elements = document.querySelectorAll('.odometer');
-                    elements.forEach(el => {
-                        new Odometer({
-                            el,
-                            format: '( ddd).dd',
-                            duration: 200
-                        });
-                    });
-                    }
-                    odometer_init();
-                } catch (error) {}
-            </script>
-        
-        
-        
-    </div>  
-</footer>
-        </div>
-    </div>
-
-    
-
-    <div class="right-side-tools-container">
-        <div class="side-tools-container">
-    <ul class="hidden-tools-list">
-        <li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
-            <i class="fa-regular fa-magnifying-glass-plus"></i>
-        </li>
-
-        <li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
-            <i class="fa-regular fa-magnifying-glass-minus"></i>
-        </li>
-
-        <li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
-            <i class="fa-regular fa-moon"></i>
-        </li>
-
-        <!-- rss -->
-        
-            <li class="right-bottom-tools rss flex justify-center items-center">
-                <a class="flex justify-center items-center"
-                   href="/atom.xml"
-                   target="_blank"
-                >
-                <i class="fa-regular fa-rss"></i>
-                </a>
-            </li>
-        
-
-        
-
-        <li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
-            <i class="fa-regular fa-arrow-down"></i>
-        </li>
-    </ul>
-
-    <ul class="visible-tools-list">
-        <li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
-            <i class="fa-regular fa-cog fa-spin"></i>
-        </li>
-        
-            <li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
-                <i class="arrow-up fas fa-arrow-up"></i>
-                <span class="percent"></span>
-            </li>
-        
-        
-    </ul>
-</div>
-
-    </div>
-
-    <div class="image-viewer-container">
-    <img src="">
-</div>
-
-
-    
-        <div class="search-pop-overlay">
-    <div class="popup search-popup">
-        <div class="search-header">
-          <span class="search-input-field-pre">
-            <i class="fa-solid fa-keyboard"></i>
-          </span>
-            <div class="search-input-container">
-                <input autocomplete="off"
-                       autocorrect="off"
-                       autocapitalize="off"
-                       placeholder="站內搜尋您想要的內容..."
-                       spellcheck="false"
-                       type="search"
-                       class="search-input"
-                >
-            </div>
-            <span class="popup-btn-close">
-                <i class="fa-solid fa-times"></i>
-            </span>
-        </div>
-        <div id="search-result">
-            <div id="no-result">
-                <i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
-            </div>
-        </div>
-    </div>
-</div>
-
-    
-
-</main>
-
-
-    
-<script src="/js/libs/Swup.min.js"></script>
-
-<script src="/js/libs/SwupSlideTheme.min.js"></script>
-
-<script src="/js/libs/SwupScriptsPlugin.min.js"></script>
-
-<script src="/js/libs/SwupProgressPlugin.min.js"></script>
-
-<script src="/js/libs/SwupScrollPlugin.min.js"></script>
-
-<script src="/js/libs/SwupPreloadPlugin.min.js"></script>
-
-<script>
-    const swup = new Swup({
-        plugins: [
-            new SwupScriptsPlugin({
-                optin: true,
-            }),
-            new SwupProgressPlugin(),
-            new SwupScrollPlugin({
-                offset: 80,
-            }),
-            new SwupSlideTheme({
-                mainElement: ".main-content-body",
-            }),
-            new SwupPreloadPlugin(),
-        ],
-        containers: ["#swup"],
-    });
-</script>
-
-
-
-
-
-
-
-
-<script src="/js/tools/imageViewer.js" type="module"></script>
-
-<script src="/js/utils.js" type="module"></script>
-
-<script src="/js/main.js" type="module"></script>
-
-<script src="/js/layouts/navbarShrink.js" type="module"></script>
-
-<script src="/js/tools/scrollTopBottom.js" type="module"></script>
-
-<script src="/js/tools/lightDarkSwitch.js" type="module"></script>
-
-<script src="/js/layouts/categoryList.js" type="module"></script>
-
-
-
-    
-<script src="/js/tools/localSearch.js" type="module"></script>
-
-
-
-
-    
-<script src="/js/tools/codeBlock.js" type="module"></script>
-
-
-
-
-    
-<script src="/js/layouts/lazyload.js" type="module"></script>
-
-
-
-
-    
-<script src="/js/tools/runtime.js"></script>
-
-    
-<script src="/js/libs/odometer.min.js"></script>
-
-    
-<link rel="stylesheet" href="/assets/odometer-theme-minimal.css">
-
-
-
-
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2020 By 安知鱼 V1.6.12",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 Brianlien 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>if (typeof gsap === "object") {
+  getScript("/js/anzhiyu/people.js", {defer:true})
+} else {
+  getScript("https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/gsap/gsap.min.js").then(()=>{
+    getScript("/js/anzhiyu/people.js", {defer:true})
+  });
+}</script><input type="hidden" name="page-type" id="page-type" value="anzhiyu"></div><script>var visitorMail = "";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
   
-<script src="/js/libs/Typed.min.js"></script>
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
 
-  
-<script src="/js/plugins/typed.js" type="module"></script>
+  typeof typed === 'object' && typed.destroy()
 
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
 
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
 
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
 
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
 
+  typeof panguInit === 'function' && panguInit()
 
-    
-<script src="/js/libs/minimasonry.min.js"></script>
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
 
-    
-<script src="/js/plugins/masonry.js" type="module"></script>
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
 
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
 
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
 
-
-
-<div class="post-scripts" data-swup-reload-script>
-    
-        
-<script src="/js/tools/tocToggle.js" type="module"></script>
-
-<script src="/js/layouts/toc.js" type="module"></script>
-
-<script src="/js/plugins/tabs.js" type="module"></script>
-
-    
-</div>
-
-
-    <div id="aplayer"></div>
-
-<script src="/js/libs/APlayer.min.js"></script>
-
-
-<script src="/js/plugins/aplayer.js"></script>
-
-
-</body>
-</html>
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>
