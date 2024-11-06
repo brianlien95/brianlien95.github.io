@@ -275,11 +275,11 @@ articles:
     line_height: 1.5 # Line height
     image_border_radius: 14px # image border radius
     image_alignment: center # image alignment. left, center
-    image_caption: false # Whether to display image caption
+    image_caption: true # Whether to display image caption
     link_icon: true # Whether to display link ico8
-    title_alignment: left # Title alignment. left, center
+    title_alignment: center # Title alignment. left, center
     headings_top_spacing: # Top spacing for headings from h1-h6
-      h1: 3.2rem
+      h1: 2.8rem
       h2: 2.4rem
       h3: 1.9rem
       h4: 1.6rem
@@ -445,10 +445,10 @@ plugins:
       #   url: https://file.notion.so/f/f/dabcec09-e49e-4a3d-830d-753e8a8d3894/9d648d70-83df-4094-94d9-9655077ad01e/%E5%8D%95%E4%BE%9D%E7%BA%AF%E3%80%8A%E8%B8%AE%E8%B5%B7%E8%84%9A%E5%B0%96%E7%88%B1%E3%80%8B_(2).mp3?table=block&id=a372c67a-76ae-47e8-8524-a70c852c18c5&spaceId=dabcec09-e49e-4a3d-830d-753e8a8d3894&expirationTimestamp=1723377600000&signature=9s2gNoxu0Dv5kEIn4VdBo6M6rCqAe8phCdODM7JiNRQ # audio url
       #   cover: https://i.ytimg.com/vi/_hFt_ei9wr0/hqdefault.jpg
 
-      - name: フィナーレ。 # audio name
-        artist: eill # audio artist
-        url: music/eill _ フィナーレ.mp3 # audio url
-        cover: https://i.ytimg.com/vi/1lYb9nLO_FY/maxresdefault.jpg
+      # - name: フィナーレ。 # audio name
+      #   artist: eill # audio artist
+      #   url: music/eill _ フィナーレ.mp3 # audio url
+      #   cover: https://i.ytimg.com/vi/1lYb9nLO_FY/maxresdefault.jpg
 
       # - name: 逾期 # audio name
       #   artist: 云汐 # audio artist

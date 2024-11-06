@@ -18,15 +18,22 @@
     "hexo-generator-category": "^2.0.0",
     "hexo-generator-feed": "^3.0.0",
     "hexo-generator-index": "^4.0.0",
+    "hexo-generator-search": "^2.4.3",
     "hexo-generator-searchdb": "^1.4.1",
+    "hexo-generator-sitemap": "^3.0.1",
     "hexo-generator-tag": "^2.0.0",
+    "hexo-git-backup": "^0.1.3",
+    "hexo-offline": "^3.0.0",
     "hexo-renderer-ejs": "^2.0.0",
     "hexo-renderer-marked": "^6.3.0",
+    "hexo-renderer-pug": "^3.0.0",
     "hexo-renderer-stylus": "^3.0.1",
     "hexo-server": "^3.0.0",
     "hexo-tag-aplayer": "^3.0.4",
+    "hexo-theme-fluid": "^1.9.8",
     "hexo-theme-landscape": "^1.0.0",
-    "hexo-theme-redefine": "^2.6.4",
-    "hexo-wordcount": "^6.0.1"
+    "hexo-theme-redefine": "^2.7.1",
+    "hexo-wordcount": "^6.0.1",
+    "pwa-asset-generator": "^6.3.2"
   }
 }
