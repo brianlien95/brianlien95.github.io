@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-12-13T08:12:23.383Z</updated>
+  <updated>2024-12-19T01:10:35.648Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>老莊選讀</title>
+    <link href="http://example.com/2024/12/19/%E8%80%81%E8%8E%8A%E9%81%B8%E8%AE%80/"/>
+    <id>http://example.com/2024/12/19/%E8%80%81%E8%8E%8A%E9%81%B8%E8%AE%80/</id>
+    <published>2024-12-19T01:03:41.000Z</published>
+    <updated>2024-12-19T01:10:35.648Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="江海所以能為百谷王-老子"><a href="#江海所以能為百谷王-老子" class="headerlink" title="江海所以能為百谷王&#x2F;老子"></a>江海所以能為百谷王&#x2F;老子</h1><h3 id="主旨-江海之所以能為百谷王，以其…"><a href="#主旨-江海之所以能為百谷王，以其…" class="headerlink" title="主旨: 江海之所以能為百谷王，以其…"></a>主旨: 江海之所以能為百谷王，以其…</h3><p><font color=#FF6600>手法:興(聯想)</font> </p><h3 id="論據-闡述優劣"><a href="#論據-闡述優劣" class="headerlink" title="論據(闡述優劣):"></a>論據(闡述優劣):</h3><h4 id="聖人"><a href="#聖人" class="headerlink" title="聖人"></a>聖人</h4><ul><li>言語謙卑</li><li>行為不爭搶、不炫耀<br>&#x3D;&gt;<font color=#FF6600>利處: 不重(負擔)、不害(妨害)、不厭(厭棄)</font></li></ul><h3 id="論點-呼應論據-不爭"><a href="#論點-呼應論據-不爭" class="headerlink" title="論點(呼應論據): 不爭"></a>論點(呼應論據): <font color=#FF6600>不爭</font></h3><h2 id="莊子-南華真人"><a href="#莊子-南華真人" class="headerlink" title="莊子 (南華真人)"></a>莊子 (南華真人)</h2><h3 id="思想"><a href="#思想" class="headerlink" title="思想"></a>思想</h3><ul><li>順應自然</li><li>萬物其一</li><li>逍遙、忘我</li><li>追求絕對精神自由</li></ul><h3 id="莊子-同名專輯"><a href="#莊子-同名專輯" class="headerlink" title="莊子 (同名專輯)"></a><em>莊子</em> (同名專輯)</h3><h4 id="別稱-南華真經"><a href="#別稱-南華真經" class="headerlink" title="別稱: 南華真經"></a>別稱: 南華真經</h4><p><font color=#FF6600>寓言、譬喻、文采麗</font></p><ul><li><p>內: 莊子本人寫<br>篇名: 逍遙遊&#x3D;&gt;<font color=#FF6600>忘我</font>、 齊物論&#x3D;&gt;<font color=#FF6600>人物並生(赤壁賦)</font> 、養生主 、人世間 、德充符&#x3D;&gt;<font color=#FF6600>傷殘人士發揮潛能的精神</font> 、大宗師&#x3D;&gt;<font color=#FF6600>順應自然</font> 、 應帝王&#x3D;&gt;<font color=#FF6600>混沌之死</font></p></li><li><p>外: 莊子後學</p></li><li><p>雜: 莊子後學</p></li></ul><h3 id="濠梁之辯-惠施-名家-vs-莊子"><a href="#濠梁之辯-惠施-名家-vs-莊子" class="headerlink" title="濠梁之辯: 惠施(名家) vs 莊子"></a>濠梁之辯: 惠施(名家) vs 莊子</h3><h4 id="名家-哲學"><a href="#名家-哲學" class="headerlink" title="名家: 哲學"></a>名家: 哲學</h4><ul><li>白馬非馬</li><li>堅白石</li><li>雞三足</li></ul><h2 id="先秦散文"><a href="#先秦散文" class="headerlink" title="先秦散文"></a>先秦散文</h2><ul><li>歷史散文<br>ex: 史傳</li><li>哲理(諸子)散文<br>ex: <font color=#FF6600>莊子</font></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;江海所以能為百谷王-老子&quot;&gt;&lt;a href=&quot;#江海所以能為百谷王-老子&quot; class=&quot;headerlink&quot; title=&quot;江海所以能為百谷王&amp;#x2F;老子&quot;&gt;&lt;/a&gt;江海所以能為百谷王&amp;#x2F;老子&lt;/h1&gt;&lt;h3 id=&quot;主旨-江海之所以能為百谷王，以</summary>
+      
+    
+    
+    
+    <category term="隨堂筆記" scheme="http://example.com/categories/%E9%9A%A8%E5%A0%82%E7%AD%86%E8%A8%98/"/>
+    
+    
+    <category term="國文" scheme="http://example.com/tags/%E5%9C%8B%E6%96%87/"/>
+    
+  </entry>
   
   <entry>
     <title>英文單字L3、4</title>
@@ -514,36 +538,6 @@
     <summary type="html">&lt;ol&gt;
 &lt;li&gt;什麼是大量賦值漏洞？&lt;br&gt;大量賦值漏洞是一種安全漏洞，當API端點允許用戶修改其相關對象的所有屬性時就可能發生。&lt;/li&gt;
 &lt;li&gt;漏洞如何發生？&lt;br&gt;當HTTP請求中表示的對象直接綁定到用於存儲的數據模型上，並且沒有區分哪些字段應該是可賦值的，哪些是不可變</summary>
-      
-    
-    
-    
-    <category term="安全達人養成計劃研習" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E9%81%94%E4%BA%BA%E9%A4%8A%E6%88%90%E8%A8%88%E5%8A%83%E7%A0%94%E7%BF%92/"/>
-    
-    
-    <category term="網路漏洞" scheme="http://example.com/tags/%E7%B6%B2%E8%B7%AF%E6%BC%8F%E6%B4%9E/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>不安全的密碼術 - 隨機性不安全</title>
-    <link href="http://example.com/2024/08/04/%E4%B8%8D%E5%AE%89%E5%85%A8%E7%9A%84%E5%AF%86%E7%A2%BC%E8%A1%93-%E9%9A%A8%E6%A9%9F%E6%80%A7%E4%B8%8D%E5%AE%89%E5%85%A8/"/>
-    <id>http://example.com/2024/08/04/%E4%B8%8D%E5%AE%89%E5%85%A8%E7%9A%84%E5%AF%86%E7%A2%BC%E8%A1%93-%E9%9A%A8%E6%A9%9F%E6%80%A7%E4%B8%8D%E5%AE%89%E5%85%A8/</id>
-    <published>2024-08-04T08:13:38.000Z</published>
-    <updated>2024-08-04T08:14:49.460Z</updated>
-    
-    <content type="html"><![CDATA[<ol><li>什麼是不安全隨機性？<ul><li>不安全隨機性是指在需要不可預測性的情境下，卻生成了可預測的值（“種子”）。</li></ul></li><li>不安全隨機性的成因：<ul><li>當用於安全敏感環境的函數能夠生成可預測的值時，就會發生不安全隨機性錯誤。</li></ul></li><li>不安全隨機性的示例：<ul><li>假設一個程序用於生成用戶密碼重置的隨機字符串，如果這個函數輸出的值是可預測的，攻擊者就能夠猜測或計算出用於用戶帳戶的值，進而重置密碼並訪問用戶帳戶。</li></ul></li><li>不安全隨機性的潛在風險：<ul><li>攻擊者可能利用這些漏洞來計算或猜測應該保持秘密的任何序列，例如未經授權訪問敏感信息。</li></ul></li><li>如何防止不安全隨機性漏洞：<ul><li>開發人員應使用加密安全的隨機數生成器（Cryptographically Secure Pseudo-Random Number Generator，CSPRNG）。</li><li>總是選擇經過充分測試、具有適當隨機性和不可預測種子長度的實現。</li></ul></li></ol><h4 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">n = sr.choice(xrange(<span class="number">0</span>, <span class="number">10000</span>))</span><br></pre></td></tr></table></figure><p>SystemRandom 類別用於產生隨機數來設定密碼值。雖然涉及加密安全的 PRNG 演算法，但它只是一個 4 位數值。這樣的密碼太弱並且不能提供足夠的安全性。它既沒有字母數字也沒有特殊字符，也沒有足夠的長度。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;ol&gt;
-&lt;li&gt;什麼是不安全隨機性？&lt;ul&gt;
-&lt;li&gt;不安全隨機性是指在需要不可預測性的情境下，卻生成了可預測的值（“種子”）。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;不安全隨機性的成因：&lt;ul&gt;
-&lt;li&gt;當用於安全敏感環境的函數能夠生成可預測的值時，就會發生不安全隨機性錯</summary>
       
     
     
