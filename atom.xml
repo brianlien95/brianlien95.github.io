@@ -6,7 +6,7 @@
   <link href="https://brianlien95.github.io/atom.xml" rel="self"/>
   
   <link href="https://brianlien95.github.io/"/>
-  <updated>2024-12-20T14:54:11.129Z</updated>
+  <updated>2024-12-20T15:02:37.773Z</updated>
   <id>https://brianlien95.github.io/</id>
   
   <author>
@@ -21,15 +21,12 @@
     <link href="https://brianlien95.github.io/2024/12/20/%E4%B8%80%E8%A1%8C%E5%91%BD%E4%BB%A4%E6%B0%B8%E4%B9%85%E6%BF%80%E6%B4%BBoffice/"/>
     <id>https://brianlien95.github.io/2024/12/20/%E4%B8%80%E8%A1%8C%E5%91%BD%E4%BB%A4%E6%B0%B8%E4%B9%85%E6%BF%80%E6%B4%BBoffice/</id>
     <published>2024-12-20T14:22:13.000Z</published>
-    <updated>2024-12-20T14:54:11.129Z</updated>
+    <updated>2024-12-20T15:02:37.773Z</updated>
     
     <content type="html"><![CDATA[<h2 id="開啟-window-powershell"><a href="#開啟-window-powershell" class="headerlink" title="開啟 window powershell"></a>開啟 window powershell</h2><ol><li>按下 Windows 鍵 </li><li>輸入 powershell </li><li>以<strong>系統管理員身份</strong>執行 powershell</li></ol><h2 id="執行以下命令"><a href="#執行以下命令" class="headerlink" title="執行以下命令"></a>執行以下命令</h2><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">irm</span> https://get.activated.win | <span class="built_in">iex</span></span><br></pre></td></tr></table></figure><h2 id="激活頁面"><a href="#激活頁面" class="headerlink" title="激活頁面"></a>激活頁面</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[1] HWID # 數位許可證永久啟動Windows，需要連網</span><br><span class="line">[2] Ohook # 透過修改一個啟動dll,實現離線永久啟動Office</span><br><span class="line">[3] KMS38 # KMS方式離線啟動Windows/Server 漏洞啟動到2038年</span><br><span class="line">[4] Online KMS # KMS方式啟動Windows/Server/Office 一次180天，到期自動續，需連網</span><br><span class="line"></span><br><span class="line">介面翻譯：</span><br><span class="line"> Activation Methods:</span><br><span class="line"></span><br><span class="line"> [1] HWID | Windows | Permanent 永久</span><br><span class="line"> [2] 俄亥俄州 | Office | Permanent 永久</span><br><span class="line"> [3] KMS38 | Windows | Year 2038 到2038年</span><br><span class="line"> [4] Online KMS | Windows / Office | 180 Days 180天</span><br><span class="line"> __________________________________________________</span><br><span class="line"></span><br><span class="line"> [5] Check Activation Status 檢查啟動狀態</span><br><span class="line"> [6] Change Windows Edition 改Windows版本</span><br><span class="line"> [7] Change Office Edition 改Office版本</span><br><span class="line"> __________________________________________________</span><br><span class="line"></span><br><span class="line"> [8] Troubleshoot 疑難排解</span><br><span class="line"> [9] Extras 附加選項</span><br><span class="line"> [H] Help 幫助</span><br><span class="line"> [0] Exit 退出</span><br><span class="line"> ______________________________________________________</span><br><span class="line"></span><br><span class="line"> 用鍵盤輸入選擇項，方括號中為可選項 [1,2,3,4,5,6,7,8,9,H,0] :</span><br></pre></td></tr></table></figure><h2 id="選擇激活方式-點擊-2-激活離線版Office"><a href="#選擇激活方式-點擊-2-激活離線版Office" class="headerlink" title="選擇激活方式-點擊[2] 激活離線版Office"></a>選擇激活方式-點擊[2] 激活離線版Office</h2><p>參考文件: <a href="https://www.cnblogs.com/jopny/p/window_office_onekey_activate_free.html">https://www.cnblogs.com/jopny/p/window_office_onekey_activate_free.html</a></p>]]></content>
     
     
-      
-      
-    <summary type="html">&lt;h2 id=&quot;開啟-window-powershell&quot;&gt;&lt;a href=&quot;#開啟-window-powershell&quot; class=&quot;headerlink&quot; title=&quot;開啟 window powershell&quot;&gt;&lt;/a&gt;開啟 window powershell&lt;/h2&gt;&lt;</summary>
-      
+    <summary type="html">白嫖免費office</summary>
     
     
     
