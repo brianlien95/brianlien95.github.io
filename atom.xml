@@ -3,11 +3,11 @@
   <title>Brian Blog</title>
   
   <subtitle>命裡有劫保時捷</subtitle>
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="https://brianlien95.github.io/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
-  <updated>2024-12-19T01:10:35.648Z</updated>
-  <id>http://example.com/</id>
+  <link href="https://brianlien95.github.io/"/>
+  <updated>2024-12-20T14:54:11.129Z</updated>
+  <id>https://brianlien95.github.io/</id>
   
   <author>
     <name>Brianlien</name>
@@ -17,9 +17,33 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>一行命令永久激活office</title>
+    <link href="https://brianlien95.github.io/2024/12/20/%E4%B8%80%E8%A1%8C%E5%91%BD%E4%BB%A4%E6%B0%B8%E4%B9%85%E6%BF%80%E6%B4%BBoffice/"/>
+    <id>https://brianlien95.github.io/2024/12/20/%E4%B8%80%E8%A1%8C%E5%91%BD%E4%BB%A4%E6%B0%B8%E4%B9%85%E6%BF%80%E6%B4%BBoffice/</id>
+    <published>2024-12-20T14:22:13.000Z</published>
+    <updated>2024-12-20T14:54:11.129Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="開啟-window-powershell"><a href="#開啟-window-powershell" class="headerlink" title="開啟 window powershell"></a>開啟 window powershell</h2><ol><li>按下 Windows 鍵 </li><li>輸入 powershell </li><li>以<strong>系統管理員身份</strong>執行 powershell</li></ol><h2 id="執行以下命令"><a href="#執行以下命令" class="headerlink" title="執行以下命令"></a>執行以下命令</h2><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">irm</span> https://get.activated.win | <span class="built_in">iex</span></span><br></pre></td></tr></table></figure><h2 id="激活頁面"><a href="#激活頁面" class="headerlink" title="激活頁面"></a>激活頁面</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[1] HWID # 數位許可證永久啟動Windows，需要連網</span><br><span class="line">[2] Ohook # 透過修改一個啟動dll,實現離線永久啟動Office</span><br><span class="line">[3] KMS38 # KMS方式離線啟動Windows/Server 漏洞啟動到2038年</span><br><span class="line">[4] Online KMS # KMS方式啟動Windows/Server/Office 一次180天，到期自動續，需連網</span><br><span class="line"></span><br><span class="line">介面翻譯：</span><br><span class="line"> Activation Methods:</span><br><span class="line"></span><br><span class="line"> [1] HWID | Windows | Permanent 永久</span><br><span class="line"> [2] 俄亥俄州 | Office | Permanent 永久</span><br><span class="line"> [3] KMS38 | Windows | Year 2038 到2038年</span><br><span class="line"> [4] Online KMS | Windows / Office | 180 Days 180天</span><br><span class="line"> __________________________________________________</span><br><span class="line"></span><br><span class="line"> [5] Check Activation Status 檢查啟動狀態</span><br><span class="line"> [6] Change Windows Edition 改Windows版本</span><br><span class="line"> [7] Change Office Edition 改Office版本</span><br><span class="line"> __________________________________________________</span><br><span class="line"></span><br><span class="line"> [8] Troubleshoot 疑難排解</span><br><span class="line"> [9] Extras 附加選項</span><br><span class="line"> [H] Help 幫助</span><br><span class="line"> [0] Exit 退出</span><br><span class="line"> ______________________________________________________</span><br><span class="line"></span><br><span class="line"> 用鍵盤輸入選擇項，方括號中為可選項 [1,2,3,4,5,6,7,8,9,H,0] :</span><br></pre></td></tr></table></figure><h2 id="選擇激活方式-點擊-2-激活離線版Office"><a href="#選擇激活方式-點擊-2-激活離線版Office" class="headerlink" title="選擇激活方式-點擊[2] 激活離線版Office"></a>選擇激活方式-點擊[2] 激活離線版Office</h2><p>參考文件: <a href="https://www.cnblogs.com/jopny/p/window_office_onekey_activate_free.html">https://www.cnblogs.com/jopny/p/window_office_onekey_activate_free.html</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;開啟-window-powershell&quot;&gt;&lt;a href=&quot;#開啟-window-powershell&quot; class=&quot;headerlink&quot; title=&quot;開啟 window powershell&quot;&gt;&lt;/a&gt;開啟 window powershell&lt;/h2&gt;&lt;</summary>
+      
+    
+    
+    
+    <category term="office" scheme="https://brianlien95.github.io/categories/office/"/>
+    
+    
+    <category term="office激活" scheme="https://brianlien95.github.io/tags/office%E6%BF%80%E6%B4%BB/"/>
+    
+  </entry>
+  
+  <entry>
     <title>老莊選讀</title>
-    <link href="http://example.com/2024/12/19/%E8%80%81%E8%8E%8A%E9%81%B8%E8%AE%80/"/>
-    <id>http://example.com/2024/12/19/%E8%80%81%E8%8E%8A%E9%81%B8%E8%AE%80/</id>
+    <link href="https://brianlien95.github.io/2024/12/19/%E8%80%81%E8%8E%8A%E9%81%B8%E8%AE%80/"/>
+    <id>https://brianlien95.github.io/2024/12/19/%E8%80%81%E8%8E%8A%E9%81%B8%E8%AE%80/</id>
     <published>2024-12-19T01:03:41.000Z</published>
     <updated>2024-12-19T01:10:35.648Z</updated>
     
@@ -33,17 +57,17 @@
     
     
     
-    <category term="隨堂筆記" scheme="http://example.com/categories/%E9%9A%A8%E5%A0%82%E7%AD%86%E8%A8%98/"/>
+    <category term="隨堂筆記" scheme="https://brianlien95.github.io/categories/%E9%9A%A8%E5%A0%82%E7%AD%86%E8%A8%98/"/>
     
     
-    <category term="國文" scheme="http://example.com/tags/%E5%9C%8B%E6%96%87/"/>
+    <category term="國文" scheme="https://brianlien95.github.io/tags/%E5%9C%8B%E6%96%87/"/>
     
   </entry>
   
   <entry>
     <title>英文單字L3、4</title>
-    <link href="http://example.com/2024/12/13/%E8%8B%B1%E6%96%87%E5%96%AE%E5%AD%97L3%E3%80%814/"/>
-    <id>http://example.com/2024/12/13/%E8%8B%B1%E6%96%87%E5%96%AE%E5%AD%97L3%E3%80%814/</id>
+    <link href="https://brianlien95.github.io/2024/12/13/%E8%8B%B1%E6%96%87%E5%96%AE%E5%AD%97L3%E3%80%814/"/>
+    <id>https://brianlien95.github.io/2024/12/13/%E8%8B%B1%E6%96%87%E5%96%AE%E5%AD%97L3%E3%80%814/</id>
     <published>2024-12-13T08:09:08.000Z</published>
     <updated>2024-12-13T08:12:23.383Z</updated>
     
@@ -61,17 +85,17 @@
     
     
     
-    <category term="English" scheme="http://example.com/categories/English/"/>
+    <category term="English" scheme="https://brianlien95.github.io/categories/English/"/>
     
     
-    <category term="English" scheme="http://example.com/tags/English/"/>
+    <category term="English" scheme="https://brianlien95.github.io/tags/English/"/>
     
   </entry>
   
   <entry>
     <title>AIS3 junior DAY2 網頁安全 writeup</title>
-    <link href="http://example.com/2024/10/07/AIS3%20junior%20DAY2%20%E7%B6%B2%E9%A0%81%E5%AE%89%E5%85%A8%20writeup/"/>
-    <id>http://example.com/2024/10/07/AIS3%20junior%20DAY2%20%E7%B6%B2%E9%A0%81%E5%AE%89%E5%85%A8%20writeup/</id>
+    <link href="https://brianlien95.github.io/2024/10/07/AIS3%20junior%20DAY2%20%E7%B6%B2%E9%A0%81%E5%AE%89%E5%85%A8%20writeup/"/>
+    <id>https://brianlien95.github.io/2024/10/07/AIS3%20junior%20DAY2%20%E7%B6%B2%E9%A0%81%E5%AE%89%E5%85%A8%20writeup/</id>
     <published>2024-10-06T17:15:33.000Z</published>
     <updated>2024-10-06T17:21:54.343Z</updated>
     
@@ -85,17 +109,17 @@
     
     
     
-    <category term="2024 AIS3 junior" scheme="http://example.com/categories/2024-AIS3-junior/"/>
+    <category term="2024 AIS3 junior" scheme="https://brianlien95.github.io/categories/2024-AIS3-junior/"/>
     
     
-    <category term="writeup" scheme="http://example.com/tags/writeup/"/>
+    <category term="writeup" scheme="https://brianlien95.github.io/tags/writeup/"/>
     
   </entry>
   
   <entry>
     <title>AIS3 junior DAY1-網路概論</title>
-    <link href="http://example.com/2024/08/18/AIS3-junior-DAY1-%E7%B6%B2%E8%B7%AF%E6%A6%82%E8%AB%96/"/>
-    <id>http://example.com/2024/08/18/AIS3-junior-DAY1-%E7%B6%B2%E8%B7%AF%E6%A6%82%E8%AB%96/</id>
+    <link href="https://brianlien95.github.io/2024/08/18/AIS3-junior-DAY1-%E7%B6%B2%E8%B7%AF%E6%A6%82%E8%AB%96/"/>
+    <id>https://brianlien95.github.io/2024/08/18/AIS3-junior-DAY1-%E7%B6%B2%E8%B7%AF%E6%A6%82%E8%AB%96/</id>
     <published>2024-08-18T06:28:43.000Z</published>
     <updated>2024-10-06T17:37:36.597Z</updated>
     
@@ -113,17 +137,17 @@
     
     
     
-    <category term="2024 AIS3 junior" scheme="http://example.com/categories/2024-AIS3-junior/"/>
+    <category term="2024 AIS3 junior" scheme="https://brianlien95.github.io/categories/2024-AIS3-junior/"/>
     
     
-    <category term="共筆筆記" scheme="http://example.com/tags/%E5%85%B1%E7%AD%86%E7%AD%86%E8%A8%98/"/>
+    <category term="共筆筆記" scheme="https://brianlien95.github.io/tags/%E5%85%B1%E7%AD%86%E7%AD%86%E8%A8%98/"/>
     
   </entry>
   
   <entry>
     <title>AIS3 junior DAY2-網頁安全</title>
-    <link href="http://example.com/2024/08/18/AIS3-junior-DAY2-%E7%B6%B2%E9%A0%81%E5%AE%89%E5%85%A8/"/>
-    <id>http://example.com/2024/08/18/AIS3-junior-DAY2-%E7%B6%B2%E9%A0%81%E5%AE%89%E5%85%A8/</id>
+    <link href="https://brianlien95.github.io/2024/08/18/AIS3-junior-DAY2-%E7%B6%B2%E9%A0%81%E5%AE%89%E5%85%A8/"/>
+    <id>https://brianlien95.github.io/2024/08/18/AIS3-junior-DAY2-%E7%B6%B2%E9%A0%81%E5%AE%89%E5%85%A8/</id>
     <published>2024-08-18T06:27:01.000Z</published>
     <updated>2024-10-06T17:37:28.605Z</updated>
     
@@ -137,17 +161,17 @@
     
     
     
-    <category term="2024 AIS3 junior" scheme="http://example.com/categories/2024-AIS3-junior/"/>
+    <category term="2024 AIS3 junior" scheme="https://brianlien95.github.io/categories/2024-AIS3-junior/"/>
     
     
-    <category term="共筆筆記" scheme="http://example.com/tags/%E5%85%B1%E7%AD%86%E7%AD%86%E8%A8%98/"/>
+    <category term="共筆筆記" scheme="https://brianlien95.github.io/tags/%E5%85%B1%E7%AD%86%E7%AD%86%E8%A8%98/"/>
     
   </entry>
   
   <entry>
     <title>AIS3 junior DAY3-AI 應用安全實務</title>
-    <link href="http://example.com/2024/08/18/AIS3%20junior%20DAY1%20AI-%E6%87%89%E7%94%A8%E5%AE%89%E5%85%A8%E5%AF%A6%E5%8B%99-%E5%85%B1%E7%AD%86/"/>
-    <id>http://example.com/2024/08/18/AIS3%20junior%20DAY1%20AI-%E6%87%89%E7%94%A8%E5%AE%89%E5%85%A8%E5%AF%A6%E5%8B%99-%E5%85%B1%E7%AD%86/</id>
+    <link href="https://brianlien95.github.io/2024/08/18/AIS3%20junior%20DAY1%20AI-%E6%87%89%E7%94%A8%E5%AE%89%E5%85%A8%E5%AF%A6%E5%8B%99-%E5%85%B1%E7%AD%86/"/>
+    <id>https://brianlien95.github.io/2024/08/18/AIS3%20junior%20DAY1%20AI-%E6%87%89%E7%94%A8%E5%AE%89%E5%85%A8%E5%AF%A6%E5%8B%99-%E5%85%B1%E7%AD%86/</id>
     <published>2024-08-18T06:18:59.000Z</published>
     <updated>2024-08-18T06:24:29.869Z</updated>
     
@@ -162,17 +186,17 @@
     
     
     
-    <category term="2024 AIS3 junior" scheme="http://example.com/categories/2024-AIS3-junior/"/>
+    <category term="2024 AIS3 junior" scheme="https://brianlien95.github.io/categories/2024-AIS3-junior/"/>
     
     
-    <category term="共筆筆記" scheme="http://example.com/tags/%E5%85%B1%E7%AD%86%E7%AD%86%E8%A8%98/"/>
+    <category term="共筆筆記" scheme="https://brianlien95.github.io/tags/%E5%85%B1%E7%AD%86%E7%AD%86%E8%A8%98/"/>
     
   </entry>
   
   <entry>
     <title>AIS3 junior DAY3 下午-AI 應用安全實務 writeup</title>
-    <link href="http://example.com/2024/08/18/AIS3-junior-DAY3-%E4%B8%8B%E5%8D%88-AI-%E6%87%89%E7%94%A8%E5%AE%89%E5%85%A8%E5%AF%A6%E5%8B%99/"/>
-    <id>http://example.com/2024/08/18/AIS3-junior-DAY3-%E4%B8%8B%E5%8D%88-AI-%E6%87%89%E7%94%A8%E5%AE%89%E5%85%A8%E5%AF%A6%E5%8B%99/</id>
+    <link href="https://brianlien95.github.io/2024/08/18/AIS3-junior-DAY3-%E4%B8%8B%E5%8D%88-AI-%E6%87%89%E7%94%A8%E5%AE%89%E5%85%A8%E5%AF%A6%E5%8B%99/"/>
+    <id>https://brianlien95.github.io/2024/08/18/AIS3-junior-DAY3-%E4%B8%8B%E5%8D%88-AI-%E6%87%89%E7%94%A8%E5%AE%89%E5%85%A8%E5%AF%A6%E5%8B%99/</id>
     <published>2024-08-18T05:55:22.000Z</published>
     <updated>2024-10-06T17:22:11.659Z</updated>
     
@@ -186,17 +210,17 @@
     
     
     
-    <category term="2024 AIS3 junior" scheme="http://example.com/categories/2024-AIS3-junior/"/>
+    <category term="2024 AIS3 junior" scheme="https://brianlien95.github.io/categories/2024-AIS3-junior/"/>
     
     
-    <category term="writeup" scheme="http://example.com/tags/writeup/"/>
+    <category term="writeup" scheme="https://brianlien95.github.io/tags/writeup/"/>
     
   </entry>
   
   <entry>
     <title>FinTech Summer CAMP 金融產業資安實務研習營 Day1 下午</title>
-    <link href="http://example.com/2024/08/07/FinTech-Summer-CAMP-%E9%87%91%E8%9E%8D%E7%94%A2%E6%A5%AD%E8%B3%87%E5%AE%89%E5%AF%A6%E5%8B%99%E7%A0%94%E7%BF%92%E7%87%9F-Day1-%E4%B8%8B%E5%8D%88/"/>
-    <id>http://example.com/2024/08/07/FinTech-Summer-CAMP-%E9%87%91%E8%9E%8D%E7%94%A2%E6%A5%AD%E8%B3%87%E5%AE%89%E5%AF%A6%E5%8B%99%E7%A0%94%E7%BF%92%E7%87%9F-Day1-%E4%B8%8B%E5%8D%88/</id>
+    <link href="https://brianlien95.github.io/2024/08/07/FinTech-Summer-CAMP-%E9%87%91%E8%9E%8D%E7%94%A2%E6%A5%AD%E8%B3%87%E5%AE%89%E5%AF%A6%E5%8B%99%E7%A0%94%E7%BF%92%E7%87%9F-Day1-%E4%B8%8B%E5%8D%88/"/>
+    <id>https://brianlien95.github.io/2024/08/07/FinTech-Summer-CAMP-%E9%87%91%E8%9E%8D%E7%94%A2%E6%A5%AD%E8%B3%87%E5%AE%89%E5%AF%A6%E5%8B%99%E7%A0%94%E7%BF%92%E7%87%9F-Day1-%E4%B8%8B%E5%8D%88/</id>
     <published>2024-08-07T12:46:52.000Z</published>
     <updated>2024-08-07T12:49:01.050Z</updated>
     
@@ -213,17 +237,17 @@
     
     
     
-    <category term="FinTech Summer CAMP" scheme="http://example.com/categories/FinTech-Summer-CAMP/"/>
+    <category term="FinTech Summer CAMP" scheme="https://brianlien95.github.io/categories/FinTech-Summer-CAMP/"/>
     
     
-    <category term="金融" scheme="http://example.com/tags/%E9%87%91%E8%9E%8D/"/>
+    <category term="金融" scheme="https://brianlien95.github.io/tags/%E9%87%91%E8%9E%8D/"/>
     
   </entry>
   
   <entry>
     <title>CyberSecurity Summer Camp 2024 資訊安全暑訓營-逆向工程</title>
-    <link href="http://example.com/2024/08/05/CyberSecurity-Summer-Camp-2024-%E8%B3%87%E8%A8%8A%E5%AE%89%E5%85%A8%E6%9A%91%E8%A8%93%E7%87%9F-%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/"/>
-    <id>http://example.com/2024/08/05/CyberSecurity-Summer-Camp-2024-%E8%B3%87%E8%A8%8A%E5%AE%89%E5%85%A8%E6%9A%91%E8%A8%93%E7%87%9F-%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/</id>
+    <link href="https://brianlien95.github.io/2024/08/05/CyberSecurity-Summer-Camp-2024-%E8%B3%87%E8%A8%8A%E5%AE%89%E5%85%A8%E6%9A%91%E8%A8%93%E7%87%9F-%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/"/>
+    <id>https://brianlien95.github.io/2024/08/05/CyberSecurity-Summer-Camp-2024-%E8%B3%87%E8%A8%8A%E5%AE%89%E5%85%A8%E6%9A%91%E8%A8%93%E7%87%9F-%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/</id>
     <published>2024-08-05T13:26:38.000Z</published>
     <updated>2024-08-05T13:33:15.938Z</updated>
     
@@ -238,17 +262,17 @@
     
     
     
-    <category term="資安課程" scheme="http://example.com/categories/%E8%B3%87%E5%AE%89%E8%AA%B2%E7%A8%8B/"/>
+    <category term="資安課程" scheme="https://brianlien95.github.io/categories/%E8%B3%87%E5%AE%89%E8%AA%B2%E7%A8%8B/"/>
     
     
-    <category term="逆向工程" scheme="http://example.com/tags/%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/"/>
+    <category term="逆向工程" scheme="https://brianlien95.github.io/tags/%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/"/>
     
   </entry>
   
   <entry>
     <title>資料保護</title>
-    <link href="http://example.com/2024/08/04/%E8%B3%87%E6%96%99%E4%BF%9D%E8%AD%B7/"/>
-    <id>http://example.com/2024/08/04/%E8%B3%87%E6%96%99%E4%BF%9D%E8%AD%B7/</id>
+    <link href="https://brianlien95.github.io/2024/08/04/%E8%B3%87%E6%96%99%E4%BF%9D%E8%AD%B7/"/>
+    <id>https://brianlien95.github.io/2024/08/04/%E8%B3%87%E6%96%99%E4%BF%9D%E8%AD%B7/</id>
     <published>2024-08-04T09:36:06.000Z</published>
     <updated>2024-08-04T09:36:55.242Z</updated>
     
@@ -266,17 +290,17 @@
     
     
     
-    <category term="安全達人養成計劃研習" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E9%81%94%E4%BA%BA%E9%A4%8A%E6%88%90%E8%A8%88%E5%8A%83%E7%A0%94%E7%BF%92/"/>
+    <category term="安全達人養成計劃研習" scheme="https://brianlien95.github.io/categories/%E5%AE%89%E5%85%A8%E9%81%94%E4%BA%BA%E9%A4%8A%E6%88%90%E8%A8%88%E5%8A%83%E7%A0%94%E7%BF%92/"/>
     
     
-    <category term="網路漏洞" scheme="http://example.com/tags/%E7%B6%B2%E8%B7%AF%E6%BC%8F%E6%B4%9E/"/>
+    <category term="網路漏洞" scheme="https://brianlien95.github.io/tags/%E7%B6%B2%E8%B7%AF%E6%BC%8F%E6%B4%9E/"/>
     
   </entry>
   
   <entry>
     <title>數據轉義不足</title>
-    <link href="http://example.com/2024/08/04/%E6%95%B8%E6%93%9A%E8%BD%89%E7%BE%A9%E4%B8%8D%E8%B6%B3/"/>
-    <id>http://example.com/2024/08/04/%E6%95%B8%E6%93%9A%E8%BD%89%E7%BE%A9%E4%B8%8D%E8%B6%B3/</id>
+    <link href="https://brianlien95.github.io/2024/08/04/%E6%95%B8%E6%93%9A%E8%BD%89%E7%BE%A9%E4%B8%8D%E8%B6%B3/"/>
+    <id>https://brianlien95.github.io/2024/08/04/%E6%95%B8%E6%93%9A%E8%BD%89%E7%BE%A9%E4%B8%8D%E8%B6%B3/</id>
     <published>2024-08-04T08:37:10.000Z</published>
     <updated>2024-08-04T08:37:30.939Z</updated>
     
@@ -291,17 +315,17 @@
     
     
     
-    <category term="安全達人養成計劃研習" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E9%81%94%E4%BA%BA%E9%A4%8A%E6%88%90%E8%A8%88%E5%8A%83%E7%A0%94%E7%BF%92/"/>
+    <category term="安全達人養成計劃研習" scheme="https://brianlien95.github.io/categories/%E5%AE%89%E5%85%A8%E9%81%94%E4%BA%BA%E9%A4%8A%E6%88%90%E8%A8%88%E5%8A%83%E7%A0%94%E7%BF%92/"/>
     
     
-    <category term="網路漏洞" scheme="http://example.com/tags/%E7%B6%B2%E8%B7%AF%E6%BC%8F%E6%B4%9E/"/>
+    <category term="網路漏洞" scheme="https://brianlien95.github.io/tags/%E7%B6%B2%E8%B7%AF%E6%BC%8F%E6%B4%9E/"/>
     
   </entry>
   
   <entry>
     <title>故障時的安全性</title>
-    <link href="http://example.com/2024/08/04/%E6%95%85%E9%9A%9C%E6%99%82%E7%9A%84%E5%AE%89%E5%85%A8%E6%80%A7/"/>
-    <id>http://example.com/2024/08/04/%E6%95%85%E9%9A%9C%E6%99%82%E7%9A%84%E5%AE%89%E5%85%A8%E6%80%A7/</id>
+    <link href="https://brianlien95.github.io/2024/08/04/%E6%95%85%E9%9A%9C%E6%99%82%E7%9A%84%E5%AE%89%E5%85%A8%E6%80%A7/"/>
+    <id>https://brianlien95.github.io/2024/08/04/%E6%95%85%E9%9A%9C%E6%99%82%E7%9A%84%E5%AE%89%E5%85%A8%E6%80%A7/</id>
     <published>2024-08-04T08:32:08.000Z</published>
     <updated>2024-08-04T08:36:03.610Z</updated>
     
@@ -315,17 +339,17 @@
     
     
     
-    <category term="安全達人養成計劃研習" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E9%81%94%E4%BA%BA%E9%A4%8A%E6%88%90%E8%A8%88%E5%8A%83%E7%A0%94%E7%BF%92/"/>
+    <category term="安全達人養成計劃研習" scheme="https://brianlien95.github.io/categories/%E5%AE%89%E5%85%A8%E9%81%94%E4%BA%BA%E9%A4%8A%E6%88%90%E8%A8%88%E5%8A%83%E7%A0%94%E7%BF%92/"/>
     
     
-    <category term="網路漏洞" scheme="http://example.com/tags/%E7%B6%B2%E8%B7%AF%E6%BC%8F%E6%B4%9E/"/>
+    <category term="網路漏洞" scheme="https://brianlien95.github.io/tags/%E7%B6%B2%E8%B7%AF%E6%BC%8F%E6%B4%9E/"/>
     
   </entry>
   
   <entry>
     <title>CSP（內容安全策略）、SOP（同源策略）和CORS（跨源資源共享）</title>
-    <link href="http://example.com/2024/08/04/CSP%EF%BC%88%E5%85%A7%E5%AE%B9%E5%AE%89%E5%85%A8%E7%AD%96%E7%95%A5%EF%BC%89%E3%80%81SOP%EF%BC%88%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5%EF%BC%89%E5%92%8CCORS%EF%BC%88%E8%B7%A8%E6%BA%90%E8%B3%87%E6%BA%90%E5%85%B1%E4%BA%AB%EF%BC%89/"/>
-    <id>http://example.com/2024/08/04/CSP%EF%BC%88%E5%85%A7%E5%AE%B9%E5%AE%89%E5%85%A8%E7%AD%96%E7%95%A5%EF%BC%89%E3%80%81SOP%EF%BC%88%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5%EF%BC%89%E5%92%8CCORS%EF%BC%88%E8%B7%A8%E6%BA%90%E8%B3%87%E6%BA%90%E5%85%B1%E4%BA%AB%EF%BC%89/</id>
+    <link href="https://brianlien95.github.io/2024/08/04/CSP%EF%BC%88%E5%85%A7%E5%AE%B9%E5%AE%89%E5%85%A8%E7%AD%96%E7%95%A5%EF%BC%89%E3%80%81SOP%EF%BC%88%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5%EF%BC%89%E5%92%8CCORS%EF%BC%88%E8%B7%A8%E6%BA%90%E8%B3%87%E6%BA%90%E5%85%B1%E4%BA%AB%EF%BC%89/"/>
+    <id>https://brianlien95.github.io/2024/08/04/CSP%EF%BC%88%E5%85%A7%E5%AE%B9%E5%AE%89%E5%85%A8%E7%AD%96%E7%95%A5%EF%BC%89%E3%80%81SOP%EF%BC%88%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5%EF%BC%89%E5%92%8CCORS%EF%BC%88%E8%B7%A8%E6%BA%90%E8%B3%87%E6%BA%90%E5%85%B1%E4%BA%AB%EF%BC%89/</id>
     <published>2024-08-04T08:30:25.000Z</published>
     <updated>2024-08-04T08:30:48.510Z</updated>
     
@@ -340,17 +364,17 @@
     
     
     
-    <category term="安全達人養成計劃研習" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E9%81%94%E4%BA%BA%E9%A4%8A%E6%88%90%E8%A8%88%E5%8A%83%E7%A0%94%E7%BF%92/"/>
+    <category term="安全達人養成計劃研習" scheme="https://brianlien95.github.io/categories/%E5%AE%89%E5%85%A8%E9%81%94%E4%BA%BA%E9%A4%8A%E6%88%90%E8%A8%88%E5%8A%83%E7%A0%94%E7%BF%92/"/>
     
     
-    <category term="網路漏洞" scheme="http://example.com/tags/%E7%B6%B2%E8%B7%AF%E6%BC%8F%E6%B4%9E/"/>
+    <category term="網路漏洞" scheme="https://brianlien95.github.io/tags/%E7%B6%B2%E8%B7%AF%E6%BC%8F%E6%B4%9E/"/>
     
   </entry>
   
   <entry>
     <title>存取控制 - 不安全的直接物件引用</title>
-    <link href="http://example.com/2024/08/04/%E5%AD%98%E5%8F%96%E6%8E%A7%E5%88%B6-%E4%B8%8D%E5%AE%89%E5%85%A8%E7%9A%84%E7%9B%B4%E6%8E%A5%E7%89%A9%E4%BB%B6%E5%BC%95%E7%94%A8/"/>
-    <id>http://example.com/2024/08/04/%E5%AD%98%E5%8F%96%E6%8E%A7%E5%88%B6-%E4%B8%8D%E5%AE%89%E5%85%A8%E7%9A%84%E7%9B%B4%E6%8E%A5%E7%89%A9%E4%BB%B6%E5%BC%95%E7%94%A8/</id>
+    <link href="https://brianlien95.github.io/2024/08/04/%E5%AD%98%E5%8F%96%E6%8E%A7%E5%88%B6-%E4%B8%8D%E5%AE%89%E5%85%A8%E7%9A%84%E7%9B%B4%E6%8E%A5%E7%89%A9%E4%BB%B6%E5%BC%95%E7%94%A8/"/>
+    <id>https://brianlien95.github.io/2024/08/04/%E5%AD%98%E5%8F%96%E6%8E%A7%E5%88%B6-%E4%B8%8D%E5%AE%89%E5%85%A8%E7%9A%84%E7%9B%B4%E6%8E%A5%E7%89%A9%E4%BB%B6%E5%BC%95%E7%94%A8/</id>
     <published>2024-08-04T08:28:36.000Z</published>
     <updated>2024-08-04T08:29:39.042Z</updated>
     
@@ -367,17 +391,17 @@
     
     
     
-    <category term="安全達人養成計劃研習" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E9%81%94%E4%BA%BA%E9%A4%8A%E6%88%90%E8%A8%88%E5%8A%83%E7%A0%94%E7%BF%92/"/>
+    <category term="安全達人養成計劃研習" scheme="https://brianlien95.github.io/categories/%E5%AE%89%E5%85%A8%E9%81%94%E4%BA%BA%E9%A4%8A%E6%88%90%E8%A8%88%E5%8A%83%E7%A0%94%E7%BF%92/"/>
     
     
-    <category term="網路漏洞" scheme="http://example.com/tags/%E7%B6%B2%E8%B7%AF%E6%BC%8F%E6%B4%9E/"/>
+    <category term="網路漏洞" scheme="https://brianlien95.github.io/tags/%E7%B6%B2%E8%B7%AF%E6%BC%8F%E6%B4%9E/"/>
     
   </entry>
   
   <entry>
     <title>路徑穿越</title>
-    <link href="http://example.com/2024/08/04/%E8%B7%AF%E5%BE%91%E7%A9%BF%E8%B6%8A/"/>
-    <id>http://example.com/2024/08/04/%E8%B7%AF%E5%BE%91%E7%A9%BF%E8%B6%8A/</id>
+    <link href="https://brianlien95.github.io/2024/08/04/%E8%B7%AF%E5%BE%91%E7%A9%BF%E8%B6%8A/"/>
+    <id>https://brianlien95.github.io/2024/08/04/%E8%B7%AF%E5%BE%91%E7%A9%BF%E8%B6%8A/</id>
     <published>2024-08-04T08:23:00.000Z</published>
     <updated>2024-08-04T08:23:19.006Z</updated>
     
@@ -394,17 +418,17 @@
     
     
     
-    <category term="安全達人養成計劃研習" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E9%81%94%E4%BA%BA%E9%A4%8A%E6%88%90%E8%A8%88%E5%8A%83%E7%A0%94%E7%BF%92/"/>
+    <category term="安全達人養成計劃研習" scheme="https://brianlien95.github.io/categories/%E5%AE%89%E5%85%A8%E9%81%94%E4%BA%BA%E9%A4%8A%E6%88%90%E8%A8%88%E5%8A%83%E7%A0%94%E7%BF%92/"/>
     
     
-    <category term="網路漏洞" scheme="http://example.com/tags/%E7%B6%B2%E8%B7%AF%E6%BC%8F%E6%B4%9E/"/>
+    <category term="網路漏洞" scheme="https://brianlien95.github.io/tags/%E7%B6%B2%E8%B7%AF%E6%BC%8F%E6%B4%9E/"/>
     
   </entry>
   
   <entry>
     <title>不安全的密碼更改功能</title>
-    <link href="http://example.com/2024/08/04/%E4%B8%8D%E5%AE%89%E5%85%A8%E7%9A%84%E5%AF%86%E7%A2%BC%E6%9B%B4%E6%94%B9%E5%8A%9F%E8%83%BD/"/>
-    <id>http://example.com/2024/08/04/%E4%B8%8D%E5%AE%89%E5%85%A8%E7%9A%84%E5%AF%86%E7%A2%BC%E6%9B%B4%E6%94%B9%E5%8A%9F%E8%83%BD/</id>
+    <link href="https://brianlien95.github.io/2024/08/04/%E4%B8%8D%E5%AE%89%E5%85%A8%E7%9A%84%E5%AF%86%E7%A2%BC%E6%9B%B4%E6%94%B9%E5%8A%9F%E8%83%BD/"/>
+    <id>https://brianlien95.github.io/2024/08/04/%E4%B8%8D%E5%AE%89%E5%85%A8%E7%9A%84%E5%AF%86%E7%A2%BC%E6%9B%B4%E6%94%B9%E5%8A%9F%E8%83%BD/</id>
     <published>2024-08-04T08:22:14.000Z</published>
     <updated>2024-08-04T08:22:28.389Z</updated>
     
@@ -425,17 +449,17 @@
     
     
     
-    <category term="安全達人養成計劃研習" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E9%81%94%E4%BA%BA%E9%A4%8A%E6%88%90%E8%A8%88%E5%8A%83%E7%A0%94%E7%BF%92/"/>
+    <category term="安全達人養成計劃研習" scheme="https://brianlien95.github.io/categories/%E5%AE%89%E5%85%A8%E9%81%94%E4%BA%BA%E9%A4%8A%E6%88%90%E8%A8%88%E5%8A%83%E7%A0%94%E7%BF%92/"/>
     
     
-    <category term="網路漏洞" scheme="http://example.com/tags/%E7%B6%B2%E8%B7%AF%E6%BC%8F%E6%B4%9E/"/>
+    <category term="網路漏洞" scheme="https://brianlien95.github.io/tags/%E7%B6%B2%E8%B7%AF%E6%BC%8F%E6%B4%9E/"/>
     
   </entry>
   
   <entry>
     <title>不當身份驗證</title>
-    <link href="http://example.com/2024/08/04/%E4%B8%8D%E7%95%B6%E8%BA%AB%E4%BB%BD%E9%A9%97%E8%AD%89/"/>
-    <id>http://example.com/2024/08/04/%E4%B8%8D%E7%95%B6%E8%BA%AB%E4%BB%BD%E9%A9%97%E8%AD%89/</id>
+    <link href="https://brianlien95.github.io/2024/08/04/%E4%B8%8D%E7%95%B6%E8%BA%AB%E4%BB%BD%E9%A9%97%E8%AD%89/"/>
+    <id>https://brianlien95.github.io/2024/08/04/%E4%B8%8D%E7%95%B6%E8%BA%AB%E4%BB%BD%E9%A9%97%E8%AD%89/</id>
     <published>2024-08-04T08:20:50.000Z</published>
     <updated>2024-08-04T08:21:04.386Z</updated>
     
@@ -455,17 +479,17 @@
     
     
     
-    <category term="安全達人養成計劃研習" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E9%81%94%E4%BA%BA%E9%A4%8A%E6%88%90%E8%A8%88%E5%8A%83%E7%A0%94%E7%BF%92/"/>
+    <category term="安全達人養成計劃研習" scheme="https://brianlien95.github.io/categories/%E5%AE%89%E5%85%A8%E9%81%94%E4%BA%BA%E9%A4%8A%E6%88%90%E8%A8%88%E5%8A%83%E7%A0%94%E7%BF%92/"/>
     
     
-    <category term="網路漏洞" scheme="http://example.com/tags/%E7%B6%B2%E8%B7%AF%E6%BC%8F%E6%B4%9E/"/>
+    <category term="網路漏洞" scheme="https://brianlien95.github.io/tags/%E7%B6%B2%E8%B7%AF%E6%BC%8F%E6%B4%9E/"/>
     
   </entry>
   
   <entry>
     <title>明文儲存敏感資訊</title>
-    <link href="http://example.com/2024/08/04/%E6%98%8E%E6%96%87%E5%84%B2%E5%AD%98%E6%95%8F%E6%84%9F%E8%B3%87%E8%A8%8A/"/>
-    <id>http://example.com/2024/08/04/%E6%98%8E%E6%96%87%E5%84%B2%E5%AD%98%E6%95%8F%E6%84%9F%E8%B3%87%E8%A8%8A/</id>
+    <link href="https://brianlien95.github.io/2024/08/04/%E6%98%8E%E6%96%87%E5%84%B2%E5%AD%98%E6%95%8F%E6%84%9F%E8%B3%87%E8%A8%8A/"/>
+    <id>https://brianlien95.github.io/2024/08/04/%E6%98%8E%E6%96%87%E5%84%B2%E5%AD%98%E6%95%8F%E6%84%9F%E8%B3%87%E8%A8%8A/</id>
     <published>2024-08-04T08:19:13.000Z</published>
     <updated>2024-08-04T08:20:15.830Z</updated>
     
@@ -485,17 +509,17 @@
     
     
     
-    <category term="安全達人養成計劃研習" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E9%81%94%E4%BA%BA%E9%A4%8A%E6%88%90%E8%A8%88%E5%8A%83%E7%A0%94%E7%BF%92/"/>
+    <category term="安全達人養成計劃研習" scheme="https://brianlien95.github.io/categories/%E5%AE%89%E5%85%A8%E9%81%94%E4%BA%BA%E9%A4%8A%E6%88%90%E8%A8%88%E5%8A%83%E7%A0%94%E7%BF%92/"/>
     
     
-    <category term="網路漏洞" scheme="http://example.com/tags/%E7%B6%B2%E8%B7%AF%E6%BC%8F%E6%B4%9E/"/>
+    <category term="網路漏洞" scheme="https://brianlien95.github.io/tags/%E7%B6%B2%E8%B7%AF%E6%BC%8F%E6%B4%9E/"/>
     
   </entry>
   
   <entry>
     <title>不安全的密碼術 - 對憑證的保護不足</title>
-    <link href="http://example.com/2024/08/04/%E4%B8%8D%E5%AE%89%E5%85%A8%E7%9A%84%E5%AF%86%E7%A2%BC%E8%A1%93-%E5%B0%8D%E6%86%91%E8%AD%89%E7%9A%84%E4%BF%9D%E8%AD%B7%E4%B8%8D%E8%B6%B3/"/>
-    <id>http://example.com/2024/08/04/%E4%B8%8D%E5%AE%89%E5%85%A8%E7%9A%84%E5%AF%86%E7%A2%BC%E8%A1%93-%E5%B0%8D%E6%86%91%E8%AD%89%E7%9A%84%E4%BF%9D%E8%AD%B7%E4%B8%8D%E8%B6%B3/</id>
+    <link href="https://brianlien95.github.io/2024/08/04/%E4%B8%8D%E5%AE%89%E5%85%A8%E7%9A%84%E5%AF%86%E7%A2%BC%E8%A1%93-%E5%B0%8D%E6%86%91%E8%AD%89%E7%9A%84%E4%BF%9D%E8%AD%B7%E4%B8%8D%E8%B6%B3/"/>
+    <id>https://brianlien95.github.io/2024/08/04/%E4%B8%8D%E5%AE%89%E5%85%A8%E7%9A%84%E5%AF%86%E7%A2%BC%E8%A1%93-%E5%B0%8D%E6%86%91%E8%AD%89%E7%9A%84%E4%BF%9D%E8%AD%B7%E4%B8%8D%E8%B6%B3/</id>
     <published>2024-08-04T08:18:25.000Z</published>
     <updated>2024-08-04T08:18:39.093Z</updated>
     
@@ -516,36 +540,10 @@
     
     
     
-    <category term="安全達人養成計劃研習" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E9%81%94%E4%BA%BA%E9%A4%8A%E6%88%90%E8%A8%88%E5%8A%83%E7%A0%94%E7%BF%92/"/>
+    <category term="安全達人養成計劃研習" scheme="https://brianlien95.github.io/categories/%E5%AE%89%E5%85%A8%E9%81%94%E4%BA%BA%E9%A4%8A%E6%88%90%E8%A8%88%E5%8A%83%E7%A0%94%E7%BF%92/"/>
     
     
-    <category term="網路漏洞" scheme="http://example.com/tags/%E7%B6%B2%E8%B7%AF%E6%BC%8F%E6%B4%9E/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>大量賦值漏洞</title>
-    <link href="http://example.com/2024/08/04/%E5%A4%A7%E9%87%8F%E8%B3%A6%E5%80%BC%E6%BC%8F%E6%B4%9E/"/>
-    <id>http://example.com/2024/08/04/%E5%A4%A7%E9%87%8F%E8%B3%A6%E5%80%BC%E6%BC%8F%E6%B4%9E/</id>
-    <published>2024-08-04T08:17:07.000Z</published>
-    <updated>2024-08-04T08:17:26.177Z</updated>
-    
-    <content type="html"><![CDATA[<ol><li>什麼是大量賦值漏洞？<br>大量賦值漏洞是一種安全漏洞，當API端點允許用戶修改其相關對象的所有屬性時就可能發生。</li><li>漏洞如何發生？<br>當HTTP請求中表示的對象直接綁定到用於存儲的數據模型上，並且沒有區分哪些字段應該是可賦值的，哪些是不可變的時，就可能發生大量賦值漏洞。這可能是由於某些框架的默認設置或開發者為了特定情況而有意作出的決定。</li><li>示例：<ul><li>黑客注意到應用程序使用同一個端點來檢索和更新用戶詳細信息。</li><li>黑客發現他們檢索的用戶信息還包括了他們的角色信息，於是他們嘗試在更新請求中添加該字段。</li></ul></li><li>漏洞利用：<ul><li>黑客通過修改請求體，將自己的角色設置為管理員（IsAdmin: true），服務器接受了所有字段，更新了黑客的角色，從而使黑客獲得了管理員權限。</li></ul></li><li>如何防止大量賦值漏洞：<ul><li>解析請求值，而不是直接綁定到一個對象。</li><li>使用簡化的數據傳輸對象（Data Transfer Object, DTO），而不是直接綁定到一個對象。</li><li>確保敏感屬性被拒絕列表（denylist）或只允許安全的屬性被允許列表（allowlist）直接綁定到對象。</li></ul></li></ol>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;ol&gt;
-&lt;li&gt;什麼是大量賦值漏洞？&lt;br&gt;大量賦值漏洞是一種安全漏洞，當API端點允許用戶修改其相關對象的所有屬性時就可能發生。&lt;/li&gt;
-&lt;li&gt;漏洞如何發生？&lt;br&gt;當HTTP請求中表示的對象直接綁定到用於存儲的數據模型上，並且沒有區分哪些字段應該是可賦值的，哪些是不可變</summary>
-      
-    
-    
-    
-    <category term="安全達人養成計劃研習" scheme="http://example.com/categories/%E5%AE%89%E5%85%A8%E9%81%94%E4%BA%BA%E9%A4%8A%E6%88%90%E8%A8%88%E5%8A%83%E7%A0%94%E7%BF%92/"/>
-    
-    
-    <category term="網路漏洞" scheme="http://example.com/tags/%E7%B6%B2%E8%B7%AF%E6%BC%8F%E6%B4%9E/"/>
+    <category term="網路漏洞" scheme="https://brianlien95.github.io/tags/%E7%B6%B2%E8%B7%AF%E6%BC%8F%E6%B4%9E/"/>
     
   </entry>
   
