@@ -52,13 +52,25 @@
 - class_name: 我的日常     
   path_name: /dailyPhoto
   type: 1
-  description: 這裡存放的是有關我自己的一些沙雕生活與有趣的事情。
+  description: 這裡存放的是有關我日常生活照。
   top_link: /album
   top_btn_text: 返回
   top_background: https://i.imgur.com/oUjrV1K.jpeg
   cover: https://i.imgur.com/oUjrV1K.jpeg
   album_list:
-    - date: 2022-10-24
-      content: 老妹的画
+    - date: 2024-10-10
+      content: 台中行
       image:
-        - https://bu.dusays.com/2023/04/09/643293997b92b.jpeg
+        - https://i.imgur.com/brAgx8c.jpeg
+        - https://i.imgur.com/VI7oFTo.jpeg
+    - date: 2024-09-20
+      content: 18歲生日家庭聚餐
+      image:
+        - https://i.imgur.com/nnoJ6Ku.jpeg
+        - https://i.imgur.com/h3e9fx7.jpeg
+    - date: 2024-07-16
+      content: 暑假一日遊
+      image:
+        - https://i.imgur.com/3BgH8VE.jpeg
+        - https://i.imgur.com/ZyiQUwE.jpeg
+        - https://i.imgur.com/ZNEElQa.jpeg

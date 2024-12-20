@@ -38,8 +38,8 @@ nav:
           icon: https://ama-static.floatai.cn/askmanyai/prod/img/logo.f01cc1bc.svg
 
         - name: AI工具集
-          link: https://ai-bot.cn/wp-content/uploads/2024/08/Photoroom-logo.png
-          icon: https://ama-static.floatai.cn/askmanyai/prod/img/logo.f01cc1bc.svg
+          link: https://ai-bot.cn/
+          icon: https://ai-bot.cn/wp-content/uploads/2024/08/Photoroom-logo.png
 
         - name: NotebookLM
           link: https://notebooklm.google/
@@ -174,7 +174,7 @@ cover:
   position: left
   # When cover is not set, the default cover is displayed (当没有设置cover时，默认的封面显示)
   default_cover:
-    - https://file.crazywong.com/gh/jerryc127/CDN@latest/cover/default_bg.png
+    - /img/cover.gif
 
 # Replace Broken Images (替换无法显示的图片)
 error_img:
@@ -779,7 +779,7 @@ subtitle:
 
 # Loading Animation (加载动画)
 preloader:
-  enable: true
+  enable: false
   # source
   # 1. fullpage-loading
   # 2. pace (progress bar)

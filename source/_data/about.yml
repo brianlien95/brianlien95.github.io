@@ -5,13 +5,11 @@
     left:
       - 🤖️ AI工具愛好者
       - 🔍 分享與熱心幫助
-      - 🏠 智能家居小能手
       - 🔨 設計開發學習者
     right:
       - 學習程式與資安 💻
       - 追求速度效率派 🏃
-      - 團隊小組發動機 🧱
-      - 壯漢人狠話不多 💢
+      - 宅男社恐話不多 👨‍💻
   name: 連柏鈞
   description: 是一名 程式設計學習者、資安小白、學生
   aboutsiteTips:
@@ -50,7 +48,7 @@
     selfInfoContentYear: 2006
     selfInfoTips2: 明倫高中
     selfInfoContent2: 普通科
-    selfInfoTips3: 现在職業
+    selfInfoTips3: 現在職業
     selfInfoContent3: 高三學生👨‍🎓
   personalities:
     author_name: 鑒賞家
@@ -60,12 +58,12 @@
     name_url: https://www.16personalities.com/ch/esfj-%E4%BA%BA%E6%A0%BC
   maxim:
     maxim_tips: 座右铭
-    maxim_top: 生活明朗，
-    maxim_bottom: 萬物可爱。
+    maxim_top: 規劃我的路，一步一步走
+    maxim_bottom: 不去用嘴說，而是用心做
   buff:
-    buff_tips: 特长
-    buff_top: 脑回路新奇的 酸菜鱼
-    buff_bottom: 二次元指数 MAX
+    buff_tips: 特長
+    buff_top: 追求效率的 宅男
+    buff_bottom: 宅男指数 MAX
   game:
     game_tips: 爱好游戏
     game_title: 重返未來1999
@@ -91,10 +89,10 @@
         href: https://www.bilibili.com/bangumi/media/md135652/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
         cover: https://bu.dusays.com/2023/05/30/64760e38d651a.webp
   like:
-    like_tips: 关注偏好
-    like_title: 数码科技
+    like_tips: 關注偏好
+    like_title: 資訊科技
     like_bg: https://bu.dusays.com/2022/12/06/638f5f05ce1f7.jpg
-    like_bottom: 手机、电脑软硬件
+    like_bottom: AI、科技小工具
   music:
     music_tips: 音樂偏好
     music_title: 薛之謙、華語流行
