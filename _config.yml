@@ -115,3 +115,7 @@ aplayer:
 sitemap:
     path: sitemap.xml
 
+backup:
+    type: git
+    repository:
+      backup: git@github.com:brianlien95/brianlien95.github.io,backup
