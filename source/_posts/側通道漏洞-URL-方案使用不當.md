@@ -1,8 +1,9 @@
 ---
 title: 側通道漏洞 - URL 方案使用不當
-date: 2024-08-04 16:11:14
 tags: 網路漏洞
-categories: 安全達人養成計劃研習
+categories: development plan study
+abbrlink: 2773257752
+date: 2024-08-04 16:11:14
 ---
 1. 漏洞概述：
 	- 當敏感信息被傳送到第三方服務時，可能會產生安全漏洞。

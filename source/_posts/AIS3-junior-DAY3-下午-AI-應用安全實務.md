@@ -1,11 +1,12 @@
 ---
 title: AIS3 junior DAY3 下午-AI 應用安全實務 writeup
-date: 2024-08-18 13:55:22
 tags: writeup
 categories: 2024 AIS3 junior
 swiper_index: 1
 top_group_index: 1
-background: "#fff"
+background: '#fff'
+abbrlink: 1959086707
+date: 2024-08-18 13:55:22
 ---
 ## LLM 探討說話的藝術
 ### 感受GPTㄉ魔力吧

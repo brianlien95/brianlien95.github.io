@@ -1,8 +1,9 @@
 ---
 title: CSRF 攻擊
-date: 2024-08-04 15:52:43
 tags: 網路漏洞
-categories: 安全達人養成計劃研習
+categories: development plan study
+abbrlink: 3731081070
+date: 2024-08-04 15:52:43
 ---
 # 跨站點請求偽造(CSRF 攻擊)
 1. CSRF 攻擊定義：

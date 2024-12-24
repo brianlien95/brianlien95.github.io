@@ -1,11 +1,12 @@
 ---
 title: AIS3 junior DAY2 網頁安全 writeup
-date: 2024-10-07 01:15:33
 tags: writeup
 categories: 2024 AIS3 junior
 swiper_index: 1
 top_group_index: 1
-background: "#fff"
+background: '#fff'
+abbrlink: 3482195068
+date: 2024-10-07 01:15:33
 ---
 # AIS3 junior DAY2 上午 網頁安全
 [TOC]

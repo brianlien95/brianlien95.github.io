@@ -1,8 +1,9 @@
 ---
 title: Url 快取漏洞
-date: 2024-08-04 15:47:43
 tags: 網路漏洞
-categories: 安全達人養成計劃研習
+categories: development plan study
+abbrlink: 1141489070
+date: 2024-08-04 15:47:43
 ---
 # Url 快取漏洞
 

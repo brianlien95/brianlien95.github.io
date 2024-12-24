@@ -1,9 +1,10 @@
 ---
 title: AIS3 junior DAY1-網路概論
-date: 2024-08-18 14:28:43
 tags: 共筆筆記
 categories: 2024 AIS3 junior
 copyright: false
+abbrlink: 3116610850
+date: 2024-08-18 14:28:43
 ---
 ## 甚麼是資訊安全
 - 資安三要素

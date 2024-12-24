@@ -1,9 +1,10 @@
 ---
 title: AIS3 junior DAY2-網頁安全
-date: 2024-08-18 14:27:01
 tags: 共筆筆記
 categories: 2024 AIS3 junior
 copyright: false
+abbrlink: 2558445555
+date: 2024-08-18 14:27:01
 ---
 ## Basic Web Security
 

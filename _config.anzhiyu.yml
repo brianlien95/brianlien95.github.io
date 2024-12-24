@@ -267,7 +267,7 @@ reward:
 # Post edit
 # Easily browse and edit blog source code online.
 post_edit: # 目前仅可选择一个平台在线编辑
-  enable: true
+  enable: false
   # github: https://github.com/user-name/repo-name/edit/branch-name/subdirectory-name/
   github: https://github.com/brianlien95/brianlien95.github.io/edit/main/source/
   # github: false

@@ -1,8 +1,9 @@
 ---
 title: CSP（內容安全策略）、SOP（同源策略）和CORS（跨源資源共享）
-date: 2024-08-04 16:30:25
 tags: 網路漏洞
-categories: 安全達人養成計劃研習
+categories: development plan study
+abbrlink: 1104221922
+date: 2024-08-04 16:30:25
 ---
 #### 1. CSP（內容安全策略）
 - 定義：CSP允許應用程序定義允許加載的內容來源，例如JavaScript、HTML框架和小程序。

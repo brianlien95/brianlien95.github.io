@@ -1,8 +1,9 @@
 ---
 title: 整數溢出（Integer Overflow）
-date: 2024-08-04 16:12:24
 tags: 網路漏洞
-categories: 安全達人養成計劃研習
+categories: development plan study
+abbrlink: 922213511
+date: 2024-08-04 16:12:24
 ---
 1. 整數溢出是什麼？
 	- 整數溢出是試圖將一個較大的數字放入給定整數數據類型的內存位置時所發生的結果。

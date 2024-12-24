@@ -1,8 +1,9 @@
 ---
 title: CyberSecurity Summer Camp 2024 資訊安全暑訓營-逆向工程
-date: 2024-08-05 21:26:38
 tags: 逆向工程
-categories: 資安課程
+categories: security class
+abbrlink: 2835330838
+date: 2024-08-05 21:26:38
 ---
 ![enter image description here](https://i.imgur.com/fK2cMA6.png)
 ## 課程筆記

@@ -1,8 +1,9 @@
 ---
 title: FinTech Summer CAMP 金融產業資安實務研習營 Day1 下午
-date: 2024-08-07 20:46:52
 tags: 金融
 categories: FinTech Summer CAMP
+abbrlink: 2573885561
+date: 2024-08-07 20:46:52
 ---
 
 ## 目錄

@@ -1,8 +1,9 @@
 ---
 title: AIS3 junior DAY3-AI 應用安全實務
-date: 2024-08-18 14:18:59
 tags: 共筆筆記
 categories: 2024 AIS3 junior
+abbrlink: 2511373762
+date: 2024-08-18 14:18:59
 ---
 
 
