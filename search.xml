@@ -113,159 +113,6 @@
       </tags>
   </entry>
   <entry>
-    <title>AIS3 junior DAY2-網頁安全</title>
-    <url>/2024-AIS3-junior/20240818/2558445555/</url>
-    <content><![CDATA[<h2 id="Basic-Web-Security"><a href="#Basic-Web-Security" class="headerlink" title="Basic Web Security"></a>Basic Web Security</h2><h3 id="intro"><a href="#intro" class="headerlink" title="intro"></a>intro</h3><ul>
-<li>網頁的表達方式<ul>
-<li>router based<ul>
-<li>透過程式控制頁面切換，不重新加載整個網站</li>
-</ul>
-</li>
-<li>file based<ul>
-<li>每個網頁文件對應一個 URL</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="Broken-Access-Control"><a href="#Broken-Access-Control" class="headerlink" title="Broken Access Control"></a>Broken Access Control</h3><p>網頁未成功執行身份驗證機制就是 Broken Access Control（訪問控制破壞）</p>
-<ul>
-<li>影響：影響完整性、RCE</li>
-</ul>
-<h3 id="RCE-Remote-Code-Command-Execution"><a href="#RCE-Remote-Code-Command-Execution" class="headerlink" title="RCE(Remote Code&#x2F;Command Execution)"></a>RCE(Remote Code&#x2F;Command Execution)</h3><h3 id="Webshell"><a href="#Webshell" class="headerlink" title="Webshell"></a>Webshell</h3><p>透過網頁執行系統命令達成RCE</p>
-<ul>
-<li>體積小、隱蔽性高</li>
-<li>功能強大、易植入</li>
-<li>透過上傳檔案來部屬</li>
-<li>常見的繞過方式<ul>
-<li>使用未禁止的副檔名<ul>
-<li>PHP: pht, pthm, phtml, php5, php6…</li>
-<li>ASP: config, inc, ashx, axd, rem…</li>
-<li>JSP: jsw, wss, do, action, jspf…</li>
-</ul>
-</li>
-<li>副檔名大小寫混淆 <ul>
-<li>Php, PhP, pHP…</li>
-</ul>
-</li>
-<li>更改 Content-Type <ul>
-<li>image&#x2F;jpg</li>
-<li>image&#x2F;jpeg</li>
-<li>image&#x2F;png</li>
-</ul>
-</li>
-<li>改變file header</li>
-</ul>
-</li>
-</ul>
-<h3 id="Local-file-inclusion"><a href="#Local-file-inclusion" class="headerlink" title="Local file inclusion"></a>Local file inclusion</h3><ul>
-<li>PHP wrapper protocol - filter<ul>
-<li>將php引入為base64來逃避php解析</li>
-<li><code>php://filter/read=convert.base64-encode/resource=index.php</code></li>
-</ul>
-</li>
-</ul>
-<h3 id="RFI"><a href="#RFI" class="headerlink" title="RFI"></a>RFI</h3><h3 id="XSS"><a href="#XSS" class="headerlink" title="XSS"></a>XSS</h3><ul>
-<li>反射型 (較容易攻擊</li>
-<li>儲存型 (更具威脅性</li>
-<li>DOM型</li>
-</ul>
-<h2 id="Command-Injection"><a href="#Command-Injection" class="headerlink" title="Command Injection"></a>Command Injection</h2><p>injection  : 改變原始的語意</p>
-<ul>
-<li><p>Bash Operator</p>
-<ul>
-<li>;  – 結束指令並開始下一個指令</li>
-<li>|  – 將輸出傳遞給下一個指令</li>
-<li>&amp;  – 同時執行兩個指令(Windows)</li>
-<li>|| – 如果前一個指令執型失敗則執行</li>
-<li>&amp;&amp; – 如果前一個指令執行成功才執行</li>
-</ul>
-</li>
-<li><p>得知 injection 結果</p>
-<ul>
-<li>利用錯誤訊息得知 injection 結果</li>
-<li>利用 C2 Server 得知 injection 結果</li>
-</ul>
-</li>
-<li><p>Blackllist Evasion</p>
-<ul>
-<li>Space Evasion<ul>
-<li>cat${IFS}meow</li>
-</ul>
-</li>
-<li>CLRF Evasion<ul>
-<li>cat%0d%0ameow</li>
-</ul>
-</li>
-<li>Spilt Evasion<ul>
-<li>who$()ami</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>Command Substitution</p>
-<ul>
-<li>&#96;&#96; – 命令替換 可以執行一個命令 並作為參數輸出給外層命令</li>
-</ul>
-</li>
-</ul>
-<h2 id="SQL-Injection"><a href="#SQL-Injection" class="headerlink" title="SQL Injection"></a>SQL Injection</h2><h3 id="MySQL-Injection-必備語法知識-101"><a href="#MySQL-Injection-必備語法知識-101" class="headerlink" title="MySQL Injection 必備語法知識 101"></a>MySQL Injection 必備語法知識 101</h3><ul>
-<li>Information_schema：MySQL裡面的Wikipedia，存了所有相關DB, TABLE, COLUMNS的資訊</li>
-<li>SELECT 選取資料：像是 SELECT password FROM meow_table</li>
-<li>UNION 聯集選取：像是 SELECT fox FROM whale_table UNION SELECT password FROM meow_table，這樣的語法如果前面成立後面就不選，但如果是UNION ALL SELECT 就會強制執行，然後一起噴出來</li>
-<li>group_concat 串接資料：SELECT group_concat(password) FROM meow_table</li>
-</ul>
-<h3 id="一個最基礎的-SQL-Injection"><a href="#一個最基礎的-SQL-Injection" class="headerlink" title="一個最基礎的 SQL Injection"></a>一個最基礎的 SQL Injection</h3><blockquote>
-<p>WHERE username&#x3D;’<font color="FF0000">admin’ or 1&#x3D;1 --</font>‘ and password&#x3D;</p>
-</blockquote>
-<p>白色的部分是原本網站寫的驗證語法，紅色的部分代表攻擊者輸入的 Injection</p>
-<h3 id="Arbitrary-File-Read"><a href="#Arbitrary-File-Read" class="headerlink" title="Arbitrary File Read"></a>Arbitrary File Read</h3><ul>
-<li>MySQL - LOAD_FILE<ul>
-<li>SELECT “AAA” INTRO DUMPFILE “&#x2F;tmp&#x2F;a”</li>
-</ul>
-</li>
-</ul>
-<h3 id="BlackList-Evasion"><a href="#BlackList-Evasion" class="headerlink" title="BlackList Evasion"></a>BlackList Evasion</h3><ul>
-<li>Space Evasion<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">SELECT/**/1</span><br><span class="line">	SELECT(1),2,3</span><br><span class="line">	--%0F</span><br></pre></td></tr></table></figure></li>
-<li>Case Evasion<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">UNION -&gt; union</span><br><span class="line">SELECT -&gt; select</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h2 id="Server-Side-Template-Injection"><a href="#Server-Side-Template-Injection" class="headerlink" title="Server-Side Template Injection"></a>Server-Side Template Injection</h2><p>伺服器端模板注入</p>
-<ul>
-<li>攻擊影響<ul>
-<li>所有網站的使用者</li>
-</ul>
-</li>
-</ul>
-<h3 id="What-is-Template"><a href="#What-is-Template" class="headerlink" title="What is Template"></a>What is Template</h3><p>讓網站的伺服器可以根據變數或資料，動態生成網頁內容</p>
-<h2 id="SSRF"><a href="#SSRF" class="headerlink" title="SSRF"></a>SSRF</h2><p>伺服器請求偽造</p>
-<blockquote>
-<p>攻擊者對伺服器外網送 payload，透過外網取得內網的資訊。</p>
-</blockquote>
-<h3 id="HTTP-HTTPS"><a href="#HTTP-HTTPS" class="headerlink" title="HTTP&#x2F;HTTPS"></a>HTTP&#x2F;HTTPS</h3><p>發出一般的 HTTP 請求<br>企業開發軟體，wiki&#x2F;docs 放在內網</p>
-<h3 id="File"><a href="#File" class="headerlink" title="File"></a>File</h3><p>存取本地檔案<br>網站原始碼</p>
-<h3 id="Gopher"><a href="#Gopher" class="headerlink" title="Gopher"></a>Gopher</h3><p>送出 TCP Stream</p>
-<h2 id="Bind-Shell"><a href="#Bind-Shell" class="headerlink" title="Bind Shell"></a>Bind Shell</h2><p>攻擊者連接到受害者系統並執行命令</p>
-<h1 id="LLM"><a href="#LLM" class="headerlink" title="LLM"></a>LLM</h1><h2 id="transformer"><a href="#transformer" class="headerlink" title="transformer"></a>transformer</h2><p>encoder discoder<br><img src="https://hackmd.io/_uploads/SJnZQYn90.png" alt="image"></p>
-<h2 id="有名的LLM"><a href="#有名的LLM" class="headerlink" title="有名的LLM"></a>有名的LLM</h2><ul>
-<li>LLAMA</li>
-<li>百度-文言一心</li>
-</ul>
-<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><ul>
-<li>向量維度</li>
-<li>position encoding</li>
-<li>self-attention：知道每個詞之間的相關性</li>
-<li>multiple attention：越多層AI越準確?</li>
-</ul>
-<p>透過已知文本猜測後面的結果</p>
-]]></content>
-      <categories>
-        <category>2024 AIS3 junior</category>
-      </categories>
-      <tags>
-        <tag>共筆筆記</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>AIS3 junior DAY2 網頁安全 writeup</title>
     <url>/2024-AIS3-junior/20241007/3482195068/</url>
     <content><![CDATA[<h1 id="AIS3-junior-DAY2-上午-網頁安全"><a href="#AIS3-junior-DAY2-上午-網頁安全" class="headerlink" title="AIS3 junior DAY2 上午 網頁安全"></a>AIS3 junior DAY2 上午 網頁安全</h1><p>[TOC]</p>
@@ -777,6 +624,159 @@
       </tags>
   </entry>
   <entry>
+    <title>AIS3 junior DAY2-網頁安全</title>
+    <url>/2024-AIS3-junior/20240818/2558445555/</url>
+    <content><![CDATA[<h2 id="Basic-Web-Security"><a href="#Basic-Web-Security" class="headerlink" title="Basic Web Security"></a>Basic Web Security</h2><h3 id="intro"><a href="#intro" class="headerlink" title="intro"></a>intro</h3><ul>
+<li>網頁的表達方式<ul>
+<li>router based<ul>
+<li>透過程式控制頁面切換，不重新加載整個網站</li>
+</ul>
+</li>
+<li>file based<ul>
+<li>每個網頁文件對應一個 URL</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Broken-Access-Control"><a href="#Broken-Access-Control" class="headerlink" title="Broken Access Control"></a>Broken Access Control</h3><p>網頁未成功執行身份驗證機制就是 Broken Access Control（訪問控制破壞）</p>
+<ul>
+<li>影響：影響完整性、RCE</li>
+</ul>
+<h3 id="RCE-Remote-Code-Command-Execution"><a href="#RCE-Remote-Code-Command-Execution" class="headerlink" title="RCE(Remote Code&#x2F;Command Execution)"></a>RCE(Remote Code&#x2F;Command Execution)</h3><h3 id="Webshell"><a href="#Webshell" class="headerlink" title="Webshell"></a>Webshell</h3><p>透過網頁執行系統命令達成RCE</p>
+<ul>
+<li>體積小、隱蔽性高</li>
+<li>功能強大、易植入</li>
+<li>透過上傳檔案來部屬</li>
+<li>常見的繞過方式<ul>
+<li>使用未禁止的副檔名<ul>
+<li>PHP: pht, pthm, phtml, php5, php6…</li>
+<li>ASP: config, inc, ashx, axd, rem…</li>
+<li>JSP: jsw, wss, do, action, jspf…</li>
+</ul>
+</li>
+<li>副檔名大小寫混淆 <ul>
+<li>Php, PhP, pHP…</li>
+</ul>
+</li>
+<li>更改 Content-Type <ul>
+<li>image&#x2F;jpg</li>
+<li>image&#x2F;jpeg</li>
+<li>image&#x2F;png</li>
+</ul>
+</li>
+<li>改變file header</li>
+</ul>
+</li>
+</ul>
+<h3 id="Local-file-inclusion"><a href="#Local-file-inclusion" class="headerlink" title="Local file inclusion"></a>Local file inclusion</h3><ul>
+<li>PHP wrapper protocol - filter<ul>
+<li>將php引入為base64來逃避php解析</li>
+<li><code>php://filter/read=convert.base64-encode/resource=index.php</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="RFI"><a href="#RFI" class="headerlink" title="RFI"></a>RFI</h3><h3 id="XSS"><a href="#XSS" class="headerlink" title="XSS"></a>XSS</h3><ul>
+<li>反射型 (較容易攻擊</li>
+<li>儲存型 (更具威脅性</li>
+<li>DOM型</li>
+</ul>
+<h2 id="Command-Injection"><a href="#Command-Injection" class="headerlink" title="Command Injection"></a>Command Injection</h2><p>injection  : 改變原始的語意</p>
+<ul>
+<li><p>Bash Operator</p>
+<ul>
+<li>;  – 結束指令並開始下一個指令</li>
+<li>|  – 將輸出傳遞給下一個指令</li>
+<li>&amp;  – 同時執行兩個指令(Windows)</li>
+<li>|| – 如果前一個指令執型失敗則執行</li>
+<li>&amp;&amp; – 如果前一個指令執行成功才執行</li>
+</ul>
+</li>
+<li><p>得知 injection 結果</p>
+<ul>
+<li>利用錯誤訊息得知 injection 結果</li>
+<li>利用 C2 Server 得知 injection 結果</li>
+</ul>
+</li>
+<li><p>Blackllist Evasion</p>
+<ul>
+<li>Space Evasion<ul>
+<li>cat${IFS}meow</li>
+</ul>
+</li>
+<li>CLRF Evasion<ul>
+<li>cat%0d%0ameow</li>
+</ul>
+</li>
+<li>Spilt Evasion<ul>
+<li>who$()ami</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Command Substitution</p>
+<ul>
+<li>&#96;&#96; – 命令替換 可以執行一個命令 並作為參數輸出給外層命令</li>
+</ul>
+</li>
+</ul>
+<h2 id="SQL-Injection"><a href="#SQL-Injection" class="headerlink" title="SQL Injection"></a>SQL Injection</h2><h3 id="MySQL-Injection-必備語法知識-101"><a href="#MySQL-Injection-必備語法知識-101" class="headerlink" title="MySQL Injection 必備語法知識 101"></a>MySQL Injection 必備語法知識 101</h3><ul>
+<li>Information_schema：MySQL裡面的Wikipedia，存了所有相關DB, TABLE, COLUMNS的資訊</li>
+<li>SELECT 選取資料：像是 SELECT password FROM meow_table</li>
+<li>UNION 聯集選取：像是 SELECT fox FROM whale_table UNION SELECT password FROM meow_table，這樣的語法如果前面成立後面就不選，但如果是UNION ALL SELECT 就會強制執行，然後一起噴出來</li>
+<li>group_concat 串接資料：SELECT group_concat(password) FROM meow_table</li>
+</ul>
+<h3 id="一個最基礎的-SQL-Injection"><a href="#一個最基礎的-SQL-Injection" class="headerlink" title="一個最基礎的 SQL Injection"></a>一個最基礎的 SQL Injection</h3><blockquote>
+<p>WHERE username&#x3D;’<font color="FF0000">admin’ or 1&#x3D;1 --</font>‘ and password&#x3D;</p>
+</blockquote>
+<p>白色的部分是原本網站寫的驗證語法，紅色的部分代表攻擊者輸入的 Injection</p>
+<h3 id="Arbitrary-File-Read"><a href="#Arbitrary-File-Read" class="headerlink" title="Arbitrary File Read"></a>Arbitrary File Read</h3><ul>
+<li>MySQL - LOAD_FILE<ul>
+<li>SELECT “AAA” INTRO DUMPFILE “&#x2F;tmp&#x2F;a”</li>
+</ul>
+</li>
+</ul>
+<h3 id="BlackList-Evasion"><a href="#BlackList-Evasion" class="headerlink" title="BlackList Evasion"></a>BlackList Evasion</h3><ul>
+<li>Space Evasion<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">SELECT/**/1</span><br><span class="line">	SELECT(1),2,3</span><br><span class="line">	--%0F</span><br></pre></td></tr></table></figure></li>
+<li>Case Evasion<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">UNION -&gt; union</span><br><span class="line">SELECT -&gt; select</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="Server-Side-Template-Injection"><a href="#Server-Side-Template-Injection" class="headerlink" title="Server-Side Template Injection"></a>Server-Side Template Injection</h2><p>伺服器端模板注入</p>
+<ul>
+<li>攻擊影響<ul>
+<li>所有網站的使用者</li>
+</ul>
+</li>
+</ul>
+<h3 id="What-is-Template"><a href="#What-is-Template" class="headerlink" title="What is Template"></a>What is Template</h3><p>讓網站的伺服器可以根據變數或資料，動態生成網頁內容</p>
+<h2 id="SSRF"><a href="#SSRF" class="headerlink" title="SSRF"></a>SSRF</h2><p>伺服器請求偽造</p>
+<blockquote>
+<p>攻擊者對伺服器外網送 payload，透過外網取得內網的資訊。</p>
+</blockquote>
+<h3 id="HTTP-HTTPS"><a href="#HTTP-HTTPS" class="headerlink" title="HTTP&#x2F;HTTPS"></a>HTTP&#x2F;HTTPS</h3><p>發出一般的 HTTP 請求<br>企業開發軟體，wiki&#x2F;docs 放在內網</p>
+<h3 id="File"><a href="#File" class="headerlink" title="File"></a>File</h3><p>存取本地檔案<br>網站原始碼</p>
+<h3 id="Gopher"><a href="#Gopher" class="headerlink" title="Gopher"></a>Gopher</h3><p>送出 TCP Stream</p>
+<h2 id="Bind-Shell"><a href="#Bind-Shell" class="headerlink" title="Bind Shell"></a>Bind Shell</h2><p>攻擊者連接到受害者系統並執行命令</p>
+<h1 id="LLM"><a href="#LLM" class="headerlink" title="LLM"></a>LLM</h1><h2 id="transformer"><a href="#transformer" class="headerlink" title="transformer"></a>transformer</h2><p>encoder discoder<br><img src="https://hackmd.io/_uploads/SJnZQYn90.png" alt="image"></p>
+<h2 id="有名的LLM"><a href="#有名的LLM" class="headerlink" title="有名的LLM"></a>有名的LLM</h2><ul>
+<li>LLAMA</li>
+<li>百度-文言一心</li>
+</ul>
+<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><ul>
+<li>向量維度</li>
+<li>position encoding</li>
+<li>self-attention：知道每個詞之間的相關性</li>
+<li>multiple attention：越多層AI越準確?</li>
+</ul>
+<p>透過已知文本猜測後面的結果</p>
+]]></content>
+      <categories>
+        <category>2024 AIS3 junior</category>
+      </categories>
+      <tags>
+        <tag>共筆筆記</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>AIS3 junior DAY3 下午-AI 應用安全實務 writeup</title>
     <url>/2024-AIS3-junior/20240818/1959086707/</url>
     <content><![CDATA[<h2 id="LLM-探討說話的藝術"><a href="#LLM-探討說話的藝術" class="headerlink" title="LLM 探討說話的藝術"></a>LLM 探討說話的藝術</h2><h3 id="感受GPTㄉ魔力吧"><a href="#感受GPTㄉ魔力吧" class="headerlink" title="感受GPTㄉ魔力吧"></a>感受GPTㄉ魔力吧</h3><p>code: </p>
@@ -964,45 +964,6 @@
       </tags>
   </entry>
   <entry>
-    <title>CSRF 攻擊</title>
-    <url>/development-plan-study/20240804/3731081070/</url>
-    <content><![CDATA[<h1 id="跨站點請求偽造-CSRF-攻擊"><a href="#跨站點請求偽造-CSRF-攻擊" class="headerlink" title="跨站點請求偽造(CSRF 攻擊)"></a>跨站點請求偽造(CSRF 攻擊)</h1><ol>
-<li>CSRF 攻擊定義：<ul>
-<li>跨站請求偽造（CSRF）發生在第三方能夠欺騙用戶的網絡瀏覽器執行用戶當前已經驗證的網站上的操作。</li>
-</ul>
-</li>
-<li>CSRF 攻擊原因：<ul>
-<li>當具有可預測輸入欄位的網絡應用程序未檢查來自用戶瀏覽器的操作是否實際上是由用戶意圖的時候，就會發生 CSRF。</li>
-</ul>
-</li>
-<li>CSRF 攻擊後果：<ul>
-<li>成功的 CSRF 攻擊影響取決於應用程序的功能以及驗證受害者被允許執行的操作：更改密碼、購買商品、轉移資金、發布消息等。</li>
-</ul>
-</li>
-<li>CSRF 攻擊示例：<ul>
-<li>受害者登錄銀行網站，瀏覽器中設置了 bank.com 的 cookie。當受害者在未登出狀態下瀏覽攻擊者控制的網站時，該網站包含惡意腳本，利用受害者的當前會話執行惡意請求，銀行將錢轉移到攻擊者的帳戶中。</li>
-</ul>
-</li>
-<li>CSRF 攻擊預防措施：<ul>
-<li>應保護狀態改變操作，使用 CSRF 令牌。該令牌是一個安全、隨機的值，與用戶和會話相關聯。應作為隱藏字段添加到表單中，並在提交時由服務器檢查。或者，可以在敏感操作中實現重新驗證。</li>
-</ul>
-</li>
-<li>CSRF 攻擊預防錯誤：<ul>
-<li>驗證請求是否由用戶意圖執行。</li>
-<li>為每個請求附加 CSRF 令牌。令牌應該是長、獨特、隨機的，每個用戶和每個會話都不同。</li>
-<li>另外，對敏感操作實施挑戰-響應機制，如 CAPTCHA、一次性密碼或重新驗證。</li>
-</ul>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>development plan study</category>
-      </categories>
-      <tags>
-        <tag>網路漏洞</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>CyberSecurity Summer Camp 2024 資訊安全暑訓營-逆向工程</title>
     <url>/security-class/20240805/2835330838/</url>
     <content><![CDATA[<p><img src="https://i.imgur.com/fK2cMA6.png" alt="enter image description here"></p>
@@ -1075,61 +1036,33 @@
       </tags>
   </entry>
   <entry>
-    <title>Url 快取漏洞</title>
-    <url>/development-plan-study/20240804/1141489070/</url>
-    <content><![CDATA[<h1 id="Url-快取漏洞"><a href="#Url-快取漏洞" class="headerlink" title="Url 快取漏洞"></a>Url 快取漏洞</h1><h4 id="URL-緩存漏洞（Cache-Leak）："><a href="#URL-緩存漏洞（Cache-Leak）：" class="headerlink" title="URL 緩存漏洞（Cache Leak）："></a>URL 緩存漏洞（Cache Leak）：</h4><ul>
-<li>當應用程序允許瀏覽器在本地 HTTPS 緩存中存儲應用程序的響應時，就會發生這種漏洞。</li>
-<li>緩存可以提高應用程序的性能，但如果響應包含敏感數據，也可能帶來問題。</li>
-</ul>
-<h4 id="漏洞示例："><a href="#漏洞示例：" class="headerlink" title="漏洞示例："></a>漏洞示例：</h4><ul>
-<li>如果應用程序的響應在公共設備或代理服務器上被緩存，那麼在同一設備或服務器上的任何用戶都可以在之後檢索這些數據。</li>
-</ul>
-<h4 id="漏洞風險："><a href="#漏洞風險：" class="headerlink" title="漏洞風險："></a>漏洞風險：</h4><ul>
-<li>例如，在辦公室中，一個用戶在頁面上輸入了他們的地址信息後，如果該信息被緩存，之後使用同一台電腦的另一個用戶可以通過點擊瀏覽器的「後退」按鈕來查看之前用戶留下的地址信息。</li>
-</ul>
-<h4 id="預防措施："><a href="#預防措施：" class="headerlink" title="預防措施："></a>預防措施：</h4><ul>
-<li>開發者應該：<ol>
-<li>避免在緩存中不必要地存儲敏感信息。</li>
-<li>如果必須存儲敏感數據，考慮使用加密。</li>
-<li>始終使用適當的緩存控制頭部（cache-control headers）。</li>
-</ol>
-</li>
-</ul>
-<h4 id="緩存控制頭部示例："><a href="#緩存控制頭部示例：" class="headerlink" title="緩存控制頭部示例："></a>緩存控制頭部示例：</h4><ul>
-<li>頁面的緩存控制頭部設置為 “public” 且沒有指定過期時間（max-age&#x3D;14400），這可能導致敏感信息被緩存。</li>
-</ul>
-]]></content>
-      <categories>
-        <category>development plan study</category>
-      </categories>
-      <tags>
-        <tag>網路漏洞</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>不安全的密碼更改功能</title>
-    <url>/development-plan-study/20240804/3228624429/</url>
-    <content><![CDATA[<ol>
-<li>漏洞定義：<ul>
-<li>不安全的密碼更改功能是一種認證漏洞，影響需要通過自助「更改密碼」功能創建新密碼的用戶。</li>
+    <title>CSRF 攻擊</title>
+    <url>/development-plan-study/20240804/3731081070/</url>
+    <content><![CDATA[<h1 id="跨站點請求偽造-CSRF-攻擊"><a href="#跨站點請求偽造-CSRF-攻擊" class="headerlink" title="跨站點請求偽造(CSRF 攻擊)"></a>跨站點請求偽造(CSRF 攻擊)</h1><ol>
+<li>CSRF 攻擊定義：<ul>
+<li>跨站請求偽造（CSRF）發生在第三方能夠欺騙用戶的網絡瀏覽器執行用戶當前已經驗證的網站上的操作。</li>
 </ul>
 </li>
-<li>風險解釋：<ul>
-<li>這種漏洞可能導致未經授權的密碼更改，從而導致帳戶被入侵。</li>
+<li>CSRF 攻擊原因：<ul>
+<li>當具有可預測輸入欄位的網絡應用程序未檢查來自用戶瀏覽器的操作是否實際上是由用戶意圖的時候，就會發生 CSRF。</li>
 </ul>
 </li>
-<li>漏洞風險：<ul>
-<li>當應用程序未能適當驗證用戶身份時，或者管理密碼更改功能被濫用，或者密碼更改過程中存在其他弱點時，就可能發生未經授權的密碼更改。</li>
+<li>CSRF 攻擊後果：<ul>
+<li>成功的 CSRF 攻擊影響取決於應用程序的功能以及驗證受害者被允許執行的操作：更改密碼、購買商品、轉移資金、發布消息等。</li>
 </ul>
 </li>
-<li>漏洞示例：<ul>
-<li>攻擊者通過會話劫持獲得了受害者帳戶的訪問權限，並決定更改用戶的密碼。由於應用程序設計不安全，攻擊者不需要輸入當前密碼就可以更改並確認新密碼，從而輕易地獲得了受害者帳戶的控制權。</li>
+<li>CSRF 攻擊示例：<ul>
+<li>受害者登錄銀行網站，瀏覽器中設置了 bank.com 的 cookie。當受害者在未登出狀態下瀏覽攻擊者控制的網站時，該網站包含惡意腳本，利用受害者的當前會話執行惡意請求，銀行將錢轉移到攻擊者的帳戶中。</li>
 </ul>
 </li>
-<li>預防措施：<ul>
-<li>開發人員應該檢查用戶ID是否未包含在請求中，並確保應用程序不使用此值來選擇將發生密碼更改的用戶。</li>
-<li>確保允許管理員更改用戶密碼的頁面需要適當的權限才能使用該功能。</li>
-<li>在進行密碼更改時要求身份驗證，要求用戶輸入他們當前的密碼以及新密碼。</li>
+<li>CSRF 攻擊預防措施：<ul>
+<li>應保護狀態改變操作，使用 CSRF 令牌。該令牌是一個安全、隨機的值，與用戶和會話相關聯。應作為隱藏字段添加到表單中，並在提交時由服務器檢查。或者，可以在敏感操作中實現重新驗證。</li>
+</ul>
+</li>
+<li>CSRF 攻擊預防錯誤：<ul>
+<li>驗證請求是否由用戶意圖執行。</li>
+<li>為每個請求附加 CSRF 令牌。令牌應該是長、獨特、隨機的，每個用戶和每個會話都不同。</li>
+<li>另外，對敏感操作實施挑戰-響應機制，如 CAPTCHA、一次性密碼或重新驗證。</li>
 </ul>
 </li>
 </ol>
@@ -1351,6 +1284,108 @@
       </tags>
   </entry>
   <entry>
+    <title>Url 快取漏洞</title>
+    <url>/development-plan-study/20240804/1141489070/</url>
+    <content><![CDATA[<h1 id="Url-快取漏洞"><a href="#Url-快取漏洞" class="headerlink" title="Url 快取漏洞"></a>Url 快取漏洞</h1><h4 id="URL-緩存漏洞（Cache-Leak）："><a href="#URL-緩存漏洞（Cache-Leak）：" class="headerlink" title="URL 緩存漏洞（Cache Leak）："></a>URL 緩存漏洞（Cache Leak）：</h4><ul>
+<li>當應用程序允許瀏覽器在本地 HTTPS 緩存中存儲應用程序的響應時，就會發生這種漏洞。</li>
+<li>緩存可以提高應用程序的性能，但如果響應包含敏感數據，也可能帶來問題。</li>
+</ul>
+<h4 id="漏洞示例："><a href="#漏洞示例：" class="headerlink" title="漏洞示例："></a>漏洞示例：</h4><ul>
+<li>如果應用程序的響應在公共設備或代理服務器上被緩存，那麼在同一設備或服務器上的任何用戶都可以在之後檢索這些數據。</li>
+</ul>
+<h4 id="漏洞風險："><a href="#漏洞風險：" class="headerlink" title="漏洞風險："></a>漏洞風險：</h4><ul>
+<li>例如，在辦公室中，一個用戶在頁面上輸入了他們的地址信息後，如果該信息被緩存，之後使用同一台電腦的另一個用戶可以通過點擊瀏覽器的「後退」按鈕來查看之前用戶留下的地址信息。</li>
+</ul>
+<h4 id="預防措施："><a href="#預防措施：" class="headerlink" title="預防措施："></a>預防措施：</h4><ul>
+<li>開發者應該：<ol>
+<li>避免在緩存中不必要地存儲敏感信息。</li>
+<li>如果必須存儲敏感數據，考慮使用加密。</li>
+<li>始終使用適當的緩存控制頭部（cache-control headers）。</li>
+</ol>
+</li>
+</ul>
+<h4 id="緩存控制頭部示例："><a href="#緩存控制頭部示例：" class="headerlink" title="緩存控制頭部示例："></a>緩存控制頭部示例：</h4><ul>
+<li>頁面的緩存控制頭部設置為 “public” 且沒有指定過期時間（max-age&#x3D;14400），這可能導致敏感信息被緩存。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>development plan study</category>
+      </categories>
+      <tags>
+        <tag>網路漏洞</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo移機教學</title>
+    <url>/hexo/20241226/949953052/</url>
+    <content><![CDATA[<h2 id="第一步：安裝-將之前在github備份的原始碼下載下來"><a href="#第一步：安裝-將之前在github備份的原始碼下載下來" class="headerlink" title="第一步：安裝 將之前在github備份的原始碼下載下來"></a>第一步：安裝 將之前在github備份的原始碼下載下來</h2><h2 id="第二步：安裝-Node-js-、Git"><a href="#第二步：安裝-Node-js-、Git" class="headerlink" title="第二步：安裝 Node.js 、Git"></a>第二步：安裝 Node.js 、Git</h2><ul>
+<li>點選<a href="https://nodejs.org/en/">Node.js</a>官網，點選安裝最新版本的Node.js</li>
+<li>點選<a href="https://git-scm.com/downloads">Git</a>官網，點選安裝最新版本的Git</li>
+<li>安裝完畢後，開啟命令提示字元<strong>node -v</strong>，<strong>git –version</strong>，，輸入以下指令，確認Node.js和Git是否安裝成功</li>
+</ul>
+<h3 id="ps-需要將git與github帳號綁定，才能使用git指令"><a href="#ps-需要將git與github帳號綁定，才能使用git指令" class="headerlink" title="ps 需要將git與github帳號綁定，才能使用git指令"></a>ps 需要將git與github帳號綁定，才能使用git指令</h3><ul>
+<li>詳情請閱讀<a href="https://vercel.blog.cmliussss.com/p/HexoBlogNo1/">CM喂飯 部落格文章</a></li>
+</ul>
+<h2 id="第三步：安裝-Hexo"><a href="#第三步：安裝-Hexo" class="headerlink" title="第三步：安裝 Hexo"></a>第三步：安裝 Hexo</h2><ul>
+<li>開啟命令提示字元，輸入以下指令：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure></li>
+<li>安裝完畢後，輸入<strong>hexo -v</strong>，確認Hexo是否安裝成功</li>
+</ul>
+<h2 id="第四步：設定-Hexo"><a href="#第四步：設定-Hexo" class="headerlink" title="第四步：設定 Hexo"></a>第四步：設定 Hexo</h2><ul>
+<li>開啟命令提示字元，輸入以下指令：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo init blog</span><br></pre></td></tr></table></figure></li>
+<li>輸入完指令後，會在當前目錄下建立一個名為blog的資料夾，這是Hexo的專案資料夾</li>
+<li>將第一步下載的原始碼複製到blog資料夾中：</li>
+</ul>
+<h2 id="第五步：重新安裝-theme-anzhiyu"><a href="#第五步：重新安裝-theme-anzhiyu" class="headerlink" title="第五步：重新安裝 theme anzhiyu"></a>第五步：重新安裝 theme anzhiyu</h2><ul>
+<li>開啟命令提示字元，輸入以下指令：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> -b main https://github.com/anzhiyu-c/hexo-theme-anzhiyu.git themes/anzhiyu</span><br></pre></td></tr></table></figure></li>
+</ul>
+<hr>
+<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ul>
+<li><a href="https://vercel.blog.cmliussss.com/p/HexoBlogNo1/">搭建Hexo博客，快速简洁高效，零成本搭建个人博客：Hexo + GitHub Pages + Cloudflare Pages 完整指南</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>不安全的密碼更改功能</title>
+    <url>/development-plan-study/20240804/3228624429/</url>
+    <content><![CDATA[<ol>
+<li>漏洞定義：<ul>
+<li>不安全的密碼更改功能是一種認證漏洞，影響需要通過自助「更改密碼」功能創建新密碼的用戶。</li>
+</ul>
+</li>
+<li>風險解釋：<ul>
+<li>這種漏洞可能導致未經授權的密碼更改，從而導致帳戶被入侵。</li>
+</ul>
+</li>
+<li>漏洞風險：<ul>
+<li>當應用程序未能適當驗證用戶身份時，或者管理密碼更改功能被濫用，或者密碼更改過程中存在其他弱點時，就可能發生未經授權的密碼更改。</li>
+</ul>
+</li>
+<li>漏洞示例：<ul>
+<li>攻擊者通過會話劫持獲得了受害者帳戶的訪問權限，並決定更改用戶的密碼。由於應用程序設計不安全，攻擊者不需要輸入當前密碼就可以更改並確認新密碼，從而輕易地獲得了受害者帳戶的控制權。</li>
+</ul>
+</li>
+<li>預防措施：<ul>
+<li>開發人員應該檢查用戶ID是否未包含在請求中，並確保應用程序不使用此值來選擇將發生密碼更改的用戶。</li>
+<li>確保允許管理員更改用戶密碼的頁面需要適當的權限才能使用該功能。</li>
+<li>在進行密碼更改時要求身份驗證，要求用戶輸入他們當前的密碼以及新密碼。</li>
+</ul>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>development plan study</category>
+      </categories>
+      <tags>
+        <tag>網路漏洞</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>不安全的密碼術 - 對憑證的保護不足</title>
     <url>/development-plan-study/20240804/2738207586/</url>
     <content><![CDATA[<ol>
@@ -1381,42 +1416,6 @@
 </ul>
 </li>
 </ol>
-]]></content>
-      <categories>
-        <category>development plan study</category>
-      </categories>
-      <tags>
-        <tag>網路漏洞</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>不安全的密碼術 - 隨機性不安全</title>
-    <url>/development-plan-study/20240804/219339943/</url>
-    <content><![CDATA[<ol>
-<li>什麼是不安全隨機性？<ul>
-<li>不安全隨機性是指在需要不可預測性的情境下，卻生成了可預測的值（“種子”）。</li>
-</ul>
-</li>
-<li>不安全隨機性的成因：<ul>
-<li>當用於安全敏感環境的函數能夠生成可預測的值時，就會發生不安全隨機性錯誤。</li>
-</ul>
-</li>
-<li>不安全隨機性的示例：<ul>
-<li>假設一個程序用於生成用戶密碼重置的隨機字符串，如果這個函數輸出的值是可預測的，攻擊者就能夠猜測或計算出用於用戶帳戶的值，進而重置密碼並訪問用戶帳戶。</li>
-</ul>
-</li>
-<li>不安全隨機性的潛在風險：<ul>
-<li>攻擊者可能利用這些漏洞來計算或猜測應該保持秘密的任何序列，例如未經授權訪問敏感信息。</li>
-</ul>
-</li>
-<li>如何防止不安全隨機性漏洞：<ul>
-<li>開發人員應使用加密安全的隨機數生成器（Cryptographically Secure Pseudo-Random Number Generator，CSPRNG）。</li>
-<li>總是選擇經過充分測試、具有適當隨機性和不可預測種子長度的實現。</li>
-</ul>
-</li>
-</ol>
-<h4 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">n = sr.choice(xrange(<span class="number">0</span>, <span class="number">10000</span>))</span><br></pre></td></tr></table></figure>
-<p>SystemRandom 類別用於產生隨機數來設定密碼值。雖然涉及加密安全的 PRNG 演算法，但它只是一個 4 位數值。這樣的密碼太弱並且不能提供足夠的安全性。它既沒有字母數字也沒有特殊字符，也沒有足夠的長度。</p>
 ]]></content>
       <categories>
         <category>development plan study</category>
@@ -1463,35 +1462,33 @@
       </tags>
   </entry>
   <entry>
-    <title>傳輸層保護不足 - 對憑證傳輸無保護措施</title>
-    <url>/development-plan-study/20240804/1071407613/</url>
+    <title>不安全的密碼術 - 隨機性不安全</title>
+    <url>/development-plan-study/20240804/219339943/</url>
     <content><![CDATA[<ol>
-<li>未受保護的憑證傳輸定義：<ul>
-<li>當應用程序在保護網絡通信方面未採取足夠措施時，就會發生未受保護的憑證傳輸。</li>
+<li>什麼是不安全隨機性？<ul>
+<li>不安全隨機性是指在需要不可預測性的情境下，卻生成了可預測的值（“種子”）。</li>
 </ul>
 </li>
-<li>問題常見原因：<ul>
-<li>用戶名和密碼通過HTTP或明文協議提交，導致憑證在傳輸過程中不安全。</li>
+<li>不安全隨機性的成因：<ul>
+<li>當用於安全敏感環境的函數能夠生成可預測的值時，就會發生不安全隨機性錯誤。</li>
 </ul>
 </li>
-<li>風險：<ul>
-<li>以明文形式發送的憑證可能被竊聽攻擊者捕獲。</li>
+<li>不安全隨機性的示例：<ul>
+<li>假設一個程序用於生成用戶密碼重置的隨機字符串，如果這個函數輸出的值是可預測的，攻擊者就能夠猜測或計算出用於用戶帳戶的值，進而重置密碼並訪問用戶帳戶。</li>
 </ul>
 </li>
-<li>實際案例：<ul>
-<li>一個網站的登錄頁面的SSL證書過期，用戶在登錄時，其憑證以明文形式發送，容易受到中間人攻擊。</li>
+<li>不安全隨機性的潛在風險：<ul>
+<li>攻擊者可能利用這些漏洞來計算或猜測應該保持秘密的任何序列，例如未經授權訪問敏感信息。</li>
 </ul>
 </li>
-<li>預防措施：<ul>
-<li>使用強大的TLS協議保護所有登錄頁面。</li>
-<li>確保有強大的加密算法到位。</li>
-<li>使用有效的證書保護會話令牌，並監視證書有效性以確保不中斷的保護。</li>
-<li>不允許在未建立安全通道的情況下提交敏感數據。</li>
+<li>如何防止不安全隨機性漏洞：<ul>
+<li>開發人員應使用加密安全的隨機數生成器（Cryptographically Secure Pseudo-Random Number Generator，CSPRNG）。</li>
+<li>總是選擇經過充分測試、具有適當隨機性和不可預測種子長度的實現。</li>
 </ul>
 </li>
 </ol>
-<h4 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">SECURE_REDIRECT_EXEMPT = [<span class="string">&#x27;api/login/&#x27;</span>, <span class="string">&#x27;user/login/&#x27;</span>]</span><br></pre></td></tr></table></figure>
-<p>將 [“api&#x2F;login&#x2F;,” “user&#x2F;login&#x2F;“] 清單設定為 SECURE_REDIRECT_EXEMPT 生產設定變數允許以純文字形式傳輸登入驗證憑證，從而使應用程式容易受到中間人或網路釣魚攻擊。</p>
+<h4 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">n = sr.choice(xrange(<span class="number">0</span>, <span class="number">10000</span>))</span><br></pre></td></tr></table></figure>
+<p>SystemRandom 類別用於產生隨機數來設定密碼值。雖然涉及加密安全的 PRNG 演算法，但它只是一個 4 位數值。這樣的密碼太弱並且不能提供足夠的安全性。它既沒有字母數字也沒有特殊字符，也沒有足夠的長度。</p>
 ]]></content>
       <categories>
         <category>development plan study</category>
@@ -1600,6 +1597,59 @@
       </tags>
   </entry>
   <entry>
+    <title>故障時的安全性</title>
+    <url>/development-plan-study/20240804/661704589/</url>
+    <content><![CDATA[<h4 id="什麼是「故障時的安全性」的概念？"><a href="#什麼是「故障時的安全性」的概念？" class="headerlink" title="什麼是「故障時的安全性」的概念？"></a>什麼是「故障時的安全性」的概念？</h4><p>「故障時的安全性」是指當應用程式遇到意外情況時，應該如何正確地處理。</p>
+<h4 id="安全控制失敗案例："><a href="#安全控制失敗案例：" class="headerlink" title="安全控制失敗案例："></a>安全控制失敗案例：</h4><p>假設一名用戶想要登入使用雙重認證的網上郵件應用程式。這意味著用戶需要先輸入他的密碼，然後輸入一個有效的一次性權杖才能獲取訪問權限。</p>
+<ol>
+<li>用戶首先成功輸入他的密碼。</li>
+<li>接下來，用戶需要輸入發送到他手機的一次性有效權杖。</li>
+<li>如果提供了正確的權杖，用戶將被重定向到他的個人資料頁面。</li>
+<li>如果權杖不正確，用戶會看到錯誤頁面，並不被允許登入。</li>
+</ol>
+<h4 id="攻擊案例："><a href="#攻擊案例：" class="headerlink" title="攻擊案例："></a>攻擊案例：</h4><p>一名攻擊者已經能夠確定另一名用戶的密碼，並企圖訪問該用戶的網上郵件。</p>
+<ul>
+<li>攻擊者成功輸入密碼並繼續下一步。</li>
+<li>攻擊者被要求輸入一次性權杖，但他沒有，並輸入了錯誤的權杖。</li>
+<li>由於登入失敗機制的故障，攻擊者仍然可以強行瀏覽到個人資料頁面，從而破壞了安全性。</li>
+</ul>
+<h4 id="TLS驗證失敗案例："><a href="#TLS驗證失敗案例：" class="headerlink" title="TLS驗證失敗案例："></a>TLS驗證失敗案例：</h4><p>一名用戶在免費WiFi環境下想要瀏覽他的銀行移動應用程式。</p>
+<ul>
+<li>攻擊者進行中間人攻擊，截獲用戶通訊。</li>
+<li>應用程式執行SSL固定，並無法驗證服務器證書的真實性。</li>
+<li>如果失敗被正確處理，用戶會收到警告並不能繼續使用應用程式。</li>
+</ul>
+<h4 id="未正確處理失敗的情況："><a href="#未正確處理失敗的情況：" class="headerlink" title="未正確處理失敗的情況："></a>未正確處理失敗的情況：</h4><ul>
+<li>攻擊者再次進行中間人攻擊，截獲用戶通訊。</li>
+<li>應用程式無法驗證服務器證書，但失敗未被正確處理。</li>
+<li>應用程式繼續使用HTTP進行通訊，允許攻擊者完全控制流量。</li>
+</ul>
+<h4 id="如果安全防護失敗，影響可能很大："><a href="#如果安全防護失敗，影響可能很大：" class="headerlink" title="如果安全防護失敗，影響可能很大："></a>如果安全防護失敗，影響可能很大：</h4><ul>
+<li>執行時的錯誤可能會中斷執行並導致失敗，威脅到應用程式的安全性。</li>
+<li>認證或授權期間的失敗可能會讓用戶獲得比允許的更高權限。</li>
+<li>這可能導致敏感數據的損失、品牌損害以及相關的財務後果。</li>
+</ul>
+<h4 id="為了預防「安全防護失敗」類別的漏洞，開發人員應該在設計時識別失敗區域："><a href="#為了預防「安全防護失敗」類別的漏洞，開發人員應該在設計時識別失敗區域：" class="headerlink" title="為了預防「安全防護失敗」類別的漏洞，開發人員應該在設計時識別失敗區域："></a>為了預防「安全防護失敗」類別的漏洞，開發人員應該在設計時識別失敗區域：</h4><ul>
+<li>除非用戶明確獲得訪問應用程式某部分的許可，否則應該拒絕訪問。</li>
+<li>所有操作都應有確定的結果，異常必須使用通用錯誤消息來處理。</li>
+<li>換句話說，每個代碼塊只應該有三個確定的結果：<ul>
+<li>如果用戶被授權，則執行操作。</li>
+<li>如果用戶未被授權，則不執行操作。</li>
+<li>如果發生異常，則回滾操作並顯示錯誤消息。</li>
+</ul>
+</li>
+<li>開發人員應始終實施強大的錯誤處理。為了確保安全，應在異常情況下使用通用錯誤消息。</li>
+<li>最後，確保系統在失敗後處於安全狀態。這包括審查全局異常處理行為。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>development plan study</category>
+      </categories>
+      <tags>
+        <tag>網路漏洞</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>對憑證的保護不足</title>
     <url>/development-plan-study/20240803/4150029420/</url>
     <content><![CDATA[<p>硬編碼秘密是一種常見的安全漏洞，可能會暴露關鍵信息並損害系統完整性。適當的秘密管理對於維持安全的開發和運營環境至關重要。</p>
@@ -1660,49 +1710,34 @@
       </tags>
   </entry>
   <entry>
-    <title>故障時的安全性</title>
-    <url>/development-plan-study/20240804/661704589/</url>
-    <content><![CDATA[<h4 id="什麼是「故障時的安全性」的概念？"><a href="#什麼是「故障時的安全性」的概念？" class="headerlink" title="什麼是「故障時的安全性」的概念？"></a>什麼是「故障時的安全性」的概念？</h4><p>「故障時的安全性」是指當應用程式遇到意外情況時，應該如何正確地處理。</p>
-<h4 id="安全控制失敗案例："><a href="#安全控制失敗案例：" class="headerlink" title="安全控制失敗案例："></a>安全控制失敗案例：</h4><p>假設一名用戶想要登入使用雙重認證的網上郵件應用程式。這意味著用戶需要先輸入他的密碼，然後輸入一個有效的一次性權杖才能獲取訪問權限。</p>
-<ol>
-<li>用戶首先成功輸入他的密碼。</li>
-<li>接下來，用戶需要輸入發送到他手機的一次性有效權杖。</li>
-<li>如果提供了正確的權杖，用戶將被重定向到他的個人資料頁面。</li>
-<li>如果權杖不正確，用戶會看到錯誤頁面，並不被允許登入。</li>
+    <title>數據轉義不足</title>
+    <url>/development-plan-study/20240804/1145725608/</url>
+    <content><![CDATA[<h4 id="資料轉義是什麼？"><a href="#資料轉義是什麼？" class="headerlink" title="資料轉義是什麼？"></a>資料轉義是什麼？</h4><ul>
+<li>資料轉義是將特定字符轉換成一種表現形式，這種形式保留了字符的意義，但確保它們在應用程序上下文中被解釋為純數據，而不是指令。</li>
+<li>例如，將小於號（&lt;）和大於號（&gt;）轉換成&lt;和&gt;，以防止瀏覽器在頁面上顯示時將它們解釋為HTML。</li>
+</ul>
+<h4 id="資料轉義漏洞的原因："><a href="#資料轉義漏洞的原因：" class="headerlink" title="資料轉義漏洞的原因："></a>資料轉義漏洞的原因：</h4><ul>
+<li>當資料完全沒有被編碼，或者某些可能被解釋的特殊字符沒有被轉義時，就可能發生這類漏洞。</li>
+</ul>
+<h4 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h4><ol>
+<li>XPath注入：攻擊者通過操縱XML查詢來嘗試執行XPath注入，繞過認證機制。</li>
+<li>跨站腳本攻擊（XSS）：攻擊者發送包含惡意腳本的電子郵件，利用未轉義的腳本在用戶瀏覽器中執行，重定向到釣魚網站。</li>
 </ol>
-<h4 id="攻擊案例："><a href="#攻擊案例：" class="headerlink" title="攻擊案例："></a>攻擊案例：</h4><p>一名攻擊者已經能夠確定另一名用戶的密碼，並企圖訪問該用戶的網上郵件。</p>
-<ul>
-<li>攻擊者成功輸入密碼並繼續下一步。</li>
-<li>攻擊者被要求輸入一次性權杖，但他沒有，並輸入了錯誤的權杖。</li>
-<li>由於登入失敗機制的故障，攻擊者仍然可以強行瀏覽到個人資料頁面，從而破壞了安全性。</li>
+<h4 id="資料轉義漏洞的潛在影響："><a href="#資料轉義漏洞的潛在影響：" class="headerlink" title="資料轉義漏洞的潛在影響："></a>資料轉義漏洞的潛在影響：</h4><ul>
+<li>輸入編碼不足可能導致SQL注入，進而導致認證繞過和欺詐行為。</li>
+<li>代碼注入可能導致進一步的升級，例如在應用程序服務器上執行命令注入。</li>
 </ul>
-<h4 id="TLS驗證失敗案例："><a href="#TLS驗證失敗案例：" class="headerlink" title="TLS驗證失敗案例："></a>TLS驗證失敗案例：</h4><p>一名用戶在免費WiFi環境下想要瀏覽他的銀行移動應用程式。</p>
-<ul>
-<li>攻擊者進行中間人攻擊，截獲用戶通訊。</li>
-<li>應用程式執行SSL固定，並無法驗證服務器證書的真實性。</li>
-<li>如果失敗被正確處理，用戶會收到警告並不能繼續使用應用程式。</li>
-</ul>
-<h4 id="未正確處理失敗的情況："><a href="#未正確處理失敗的情況：" class="headerlink" title="未正確處理失敗的情況："></a>未正確處理失敗的情況：</h4><ul>
-<li>攻擊者再次進行中間人攻擊，截獲用戶通訊。</li>
-<li>應用程式無法驗證服務器證書，但失敗未被正確處理。</li>
-<li>應用程式繼續使用HTTP進行通訊，允許攻擊者完全控制流量。</li>
-</ul>
-<h4 id="如果安全防護失敗，影響可能很大："><a href="#如果安全防護失敗，影響可能很大：" class="headerlink" title="如果安全防護失敗，影響可能很大："></a>如果安全防護失敗，影響可能很大：</h4><ul>
-<li>執行時的錯誤可能會中斷執行並導致失敗，威脅到應用程式的安全性。</li>
-<li>認證或授權期間的失敗可能會讓用戶獲得比允許的更高權限。</li>
-<li>這可能導致敏感數據的損失、品牌損害以及相關的財務後果。</li>
-</ul>
-<h4 id="為了預防「安全防護失敗」類別的漏洞，開發人員應該在設計時識別失敗區域："><a href="#為了預防「安全防護失敗」類別的漏洞，開發人員應該在設計時識別失敗區域：" class="headerlink" title="為了預防「安全防護失敗」類別的漏洞，開發人員應該在設計時識別失敗區域："></a>為了預防「安全防護失敗」類別的漏洞，開發人員應該在設計時識別失敗區域：</h4><ul>
-<li>除非用戶明確獲得訪問應用程式某部分的許可，否則應該拒絕訪問。</li>
-<li>所有操作都應有確定的結果，異常必須使用通用錯誤消息來處理。</li>
-<li>換句話說，每個代碼塊只應該有三個確定的結果：<ul>
-<li>如果用戶被授權，則執行操作。</li>
-<li>如果用戶未被授權，則不執行操作。</li>
-<li>如果發生異常，則回滾操作並顯示錯誤消息。</li>
+<h4 id="預防措施："><a href="#預防措施：" class="headerlink" title="預防措施："></a>預防措施：</h4><ul>
+<li>對所有來自外部來源的資料執行編碼和轉義。</li>
+<li>確定將使用資料的解釋器類型，以及應該編碼哪些字符。</li>
+<li>作為一般規則，永遠不要信任用戶輸入。</li>
+<li>對所有外部資料始終應用應用程序範圍的編碼。</li>
+<li>開發者應該：<ul>
+<li>確定使用資料的解釋器。</li>
+<li>在不同的框架中存在庫。</li>
+<li>最後，始終考慮輸入和輸出。</li>
 </ul>
 </li>
-<li>開發人員應始終實施強大的錯誤處理。為了確保安全，應在異常情況下使用通用錯誤消息。</li>
-<li>最後，確保系統在失敗後處於安全狀態。這包括審查全局異常處理行為。</li>
 </ul>
 ]]></content>
       <categories>
@@ -1740,44 +1775,6 @@
 </ul>
 </li>
 </ol>
-]]></content>
-      <categories>
-        <category>development plan study</category>
-      </categories>
-      <tags>
-        <tag>網路漏洞</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>數據轉義不足</title>
-    <url>/development-plan-study/20240804/1145725608/</url>
-    <content><![CDATA[<h4 id="資料轉義是什麼？"><a href="#資料轉義是什麼？" class="headerlink" title="資料轉義是什麼？"></a>資料轉義是什麼？</h4><ul>
-<li>資料轉義是將特定字符轉換成一種表現形式，這種形式保留了字符的意義，但確保它們在應用程序上下文中被解釋為純數據，而不是指令。</li>
-<li>例如，將小於號（&lt;）和大於號（&gt;）轉換成&lt;和&gt;，以防止瀏覽器在頁面上顯示時將它們解釋為HTML。</li>
-</ul>
-<h4 id="資料轉義漏洞的原因："><a href="#資料轉義漏洞的原因：" class="headerlink" title="資料轉義漏洞的原因："></a>資料轉義漏洞的原因：</h4><ul>
-<li>當資料完全沒有被編碼，或者某些可能被解釋的特殊字符沒有被轉義時，就可能發生這類漏洞。</li>
-</ul>
-<h4 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h4><ol>
-<li>XPath注入：攻擊者通過操縱XML查詢來嘗試執行XPath注入，繞過認證機制。</li>
-<li>跨站腳本攻擊（XSS）：攻擊者發送包含惡意腳本的電子郵件，利用未轉義的腳本在用戶瀏覽器中執行，重定向到釣魚網站。</li>
-</ol>
-<h4 id="資料轉義漏洞的潛在影響："><a href="#資料轉義漏洞的潛在影響：" class="headerlink" title="資料轉義漏洞的潛在影響："></a>資料轉義漏洞的潛在影響：</h4><ul>
-<li>輸入編碼不足可能導致SQL注入，進而導致認證繞過和欺詐行為。</li>
-<li>代碼注入可能導致進一步的升級，例如在應用程序服務器上執行命令注入。</li>
-</ul>
-<h4 id="預防措施："><a href="#預防措施：" class="headerlink" title="預防措施："></a>預防措施：</h4><ul>
-<li>對所有來自外部來源的資料執行編碼和轉義。</li>
-<li>確定將使用資料的解釋器類型，以及應該編碼哪些字符。</li>
-<li>作為一般規則，永遠不要信任用戶輸入。</li>
-<li>對所有外部資料始終應用應用程序範圍的編碼。</li>
-<li>開發者應該：<ul>
-<li>確定使用資料的解釋器。</li>
-<li>在不同的框架中存在庫。</li>
-<li>最後，始終考慮輸入和輸出。</li>
-</ul>
-</li>
-</ul>
 ]]></content>
       <categories>
         <category>development plan study</category>
@@ -2712,6 +2709,41 @@
       </tags>
   </entry>
   <entry>
+    <title>資訊曝露 - 敏感性資料曝露</title>
+    <url>/development-plan-study/20240804/1445033/</url>
+    <content><![CDATA[<ol>
+<li>敏感數據暴露定義：<ul>
+<li>開發人員在應用程序和系統中未經授權地暴露敏感用戶數據，例如駭客或其他第三方可能訪問的數據。</li>
+</ul>
+</li>
+<li>敏感用戶數據類型：<ul>
+<li>包括個人可識別信息（PII）、支付卡行業（PCI）數據，以及受隱私法規（如通用數據保護辦法GDPR）保護的任何數據。</li>
+</ul>
+</li>
+<li>敏感數據暴露常見情況：<ul>
+<li>開發人員未能注意數據在其應用程序和系統中的使用和結合方式。</li>
+</ul>
+</li>
+<li>實際案例：<ul>
+<li>一個約會應用程序的服務器向客戶端發送響應，其中包含用戶的地理定位和個人信息。即使這些數據沒有直接顯示給用戶，敵手仍然可以檢查響應並發現每個用戶的坐標。</li>
+</ul>
+</li>
+<li>避免敏感數據暴露的建議：<ul>
+<li>確定數據的使用和結合位置。</li>
+<li>防止向用戶發送不必要的數據。</li>
+<li>通過加密確保GDPR、PCI和PII數據的安全。</li>
+</ul>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>development plan study</category>
+      </categories>
+      <tags>
+        <tag>網路漏洞</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>資料保護</title>
     <url>/development-plan-study/20240804/2488948160/</url>
     <content><![CDATA[<ol>
@@ -2771,41 +2803,6 @@
 <li>安全地存儲所有敏感的用戶信息。</li>
 <li>通過安全的通訊渠道傳送流量。</li>
 <li>最後，告知用戶已經實施的隱私政策。</li>
-</ul>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>development plan study</category>
-      </categories>
-      <tags>
-        <tag>網路漏洞</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>資訊曝露 - 敏感性資料曝露</title>
-    <url>/development-plan-study/20240804/1445033/</url>
-    <content><![CDATA[<ol>
-<li>敏感數據暴露定義：<ul>
-<li>開發人員在應用程序和系統中未經授權地暴露敏感用戶數據，例如駭客或其他第三方可能訪問的數據。</li>
-</ul>
-</li>
-<li>敏感用戶數據類型：<ul>
-<li>包括個人可識別信息（PII）、支付卡行業（PCI）數據，以及受隱私法規（如通用數據保護辦法GDPR）保護的任何數據。</li>
-</ul>
-</li>
-<li>敏感數據暴露常見情況：<ul>
-<li>開發人員未能注意數據在其應用程序和系統中的使用和結合方式。</li>
-</ul>
-</li>
-<li>實際案例：<ul>
-<li>一個約會應用程序的服務器向客戶端發送響應，其中包含用戶的地理定位和個人信息。即使這些數據沒有直接顯示給用戶，敵手仍然可以檢查響應並發現每個用戶的坐標。</li>
-</ul>
-</li>
-<li>避免敏感數據暴露的建議：<ul>
-<li>確定數據的使用和結合位置。</li>
-<li>防止向用戶發送不必要的數據。</li>
-<li>通過加密確保GDPR、PCI和PII數據的安全。</li>
 </ul>
 </li>
 </ol>
@@ -2886,6 +2883,44 @@
 </ul>
 </li>
 </ol>
+]]></content>
+      <categories>
+        <category>development plan study</category>
+      </categories>
+      <tags>
+        <tag>網路漏洞</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>傳輸層保護不足 - 對憑證傳輸無保護措施</title>
+    <url>/development-plan-study/20240804/1071407613/</url>
+    <content><![CDATA[<ol>
+<li>未受保護的憑證傳輸定義：<ul>
+<li>當應用程序在保護網絡通信方面未採取足夠措施時，就會發生未受保護的憑證傳輸。</li>
+</ul>
+</li>
+<li>問題常見原因：<ul>
+<li>用戶名和密碼通過HTTP或明文協議提交，導致憑證在傳輸過程中不安全。</li>
+</ul>
+</li>
+<li>風險：<ul>
+<li>以明文形式發送的憑證可能被竊聽攻擊者捕獲。</li>
+</ul>
+</li>
+<li>實際案例：<ul>
+<li>一個網站的登錄頁面的SSL證書過期，用戶在登錄時，其憑證以明文形式發送，容易受到中間人攻擊。</li>
+</ul>
+</li>
+<li>預防措施：<ul>
+<li>使用強大的TLS協議保護所有登錄頁面。</li>
+<li>確保有強大的加密算法到位。</li>
+<li>使用有效的證書保護會話令牌，並監視證書有效性以確保不中斷的保護。</li>
+<li>不允許在未建立安全通道的情況下提交敏感數據。</li>
+</ul>
+</li>
+</ol>
+<h4 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">SECURE_REDIRECT_EXEMPT = [<span class="string">&#x27;api/login/&#x27;</span>, <span class="string">&#x27;user/login/&#x27;</span>]</span><br></pre></td></tr></table></figure>
+<p>將 [“api&#x2F;login&#x2F;,” “user&#x2F;login&#x2F;“] 清單設定為 SECURE_REDIRECT_EXEMPT 生產設定變數允許以純文字形式傳輸登入驗證憑證，從而使應用程式容易受到中間人或網路釣魚攻擊。</p>
 ]]></content>
       <categories>
         <category>development plan study</category>
