@@ -4,17 +4,15 @@
 
 # Site
 title: 'Brian Blog'
-subtitle: '命裡有劫保時捷'
-description: ''
+subtitle: '夏夜'
+description: 'Hello! 我是Brian，我會在這裡紀錄一些關於資訊相關的學習內容和高中課程的隨堂筆記。'
 keywords:
 author: Brianlien
 language: zh-TW
 timezone: ''
 
-# URL
-## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://brianlien95.github.io/
-permalink: :category/:year:month:day/:abbrlink/
+permalink: :category/:year:month/:abbrlink
 permalink_defaults:
 pretty_urls:
   trailing_index: false # Set to false to remove trailing 'index.html' from permalinks

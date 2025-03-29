@@ -1,5 +1,5 @@
 ---
-title: FinTech Summer CAMP 金融產業資安實務研習營 Day1 下午
+title: FinTech Summer CAMP Day1 金融基礎知識
 tags: 金融
 categories: FinTech Summer CAMP
 abbrlink: 2573885561
