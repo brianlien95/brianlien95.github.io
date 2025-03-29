@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>BrianlienのBlog</title>
+  <title>Brian Blog</title>
   
-  <subtitle>命裡有劫保時捷</subtitle>
+  <subtitle>夏夜</subtitle>
   <link href="https://brianlien95.github.io/atom.xml" rel="self"/>
   
   <link href="https://brianlien95.github.io/"/>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>hexo移機教學</title>
-    <link href="https://brianlien95.github.io/hexo/20241226/949953052/"/>
-    <id>https://brianlien95.github.io/hexo/20241226/949953052/</id>
+    <link href="https://brianlien95.github.io/hexo/202412/949953052"/>
+    <id>https://brianlien95.github.io/hexo/202412/949953052</id>
     <published>2024-12-26T02:45:49.000Z</published>
     <updated>2024-12-29T08:52:47.826Z</updated>
     
@@ -42,8 +42,8 @@
   
   <entry>
     <title>老莊選讀</title>
-    <link href="https://brianlien95.github.io/class-note/20241219/3214263100/"/>
-    <id>https://brianlien95.github.io/class-note/20241219/3214263100/</id>
+    <link href="https://brianlien95.github.io/class-note/202412/3214263100"/>
+    <id>https://brianlien95.github.io/class-note/202412/3214263100</id>
     <published>2024-12-19T01:03:41.000Z</published>
     <updated>2024-12-24T14:27:25.559Z</updated>
     
@@ -65,37 +65,9 @@
   </entry>
   
   <entry>
-    <title>英文單字L3、4</title>
-    <link href="https://brianlien95.github.io/English-vocabulary/20241213/1584650327/"/>
-    <id>https://brianlien95.github.io/English-vocabulary/20241213/1584650327/</id>
-    <published>2024-12-13T08:09:08.000Z</published>
-    <updated>2024-12-24T14:27:25.560Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="A-開頭單字"><a href="#A-開頭單字" class="headerlink" title="A 開頭單字"></a>A 開頭單字</h2><table><thead><tr><th align="center">英文</th><th align="center">詞性</th><th align="center">中文</th></tr></thead><tbody><tr><td align="center">accurately</td><td align="center">adv</td><td align="center">準確地</td></tr><tr><td align="center">ache</td><td align="center">n、v</td><td align="center">疼痛</td></tr><tr><td align="center">admire</td><td align="center">v</td><td align="center">欣賞、欽佩</td></tr><tr><td align="center">advanced</td><td align="center">adj</td><td align="center">先進的、進階的、年長的</td></tr><tr><td align="center">adventure</td><td align="center">n</td><td align="center">冒險</td></tr><tr><td align="center">adventurous</td><td align="center">adj</td><td align="center">大膽的、驚險的</td></tr><tr><td align="center">advantage</td><td align="center">n</td><td align="center">優勢、益處、便利</td></tr><tr><td align="center">advertise</td><td align="center">v</td><td align="center">登廣告</td></tr><tr><td align="center">advertisement</td><td align="center">n</td><td align="center">廣告</td></tr><tr><td align="center">agriculture</td><td align="center">n</td><td align="center">農業</td></tr><tr><td align="center">alley</td><td align="center">n</td><td align="center">巷弄</td></tr><tr><td align="center">ambassador</td><td align="center">n</td><td align="center">大使</td></tr><tr><td align="center">appeal + <strong>to</strong></td><td align="center">v</td><td align="center">呼籲、吸引、上訴</td></tr><tr><td align="center">approve</td><td align="center">v</td><td align="center">批准、認可</td></tr><tr><td align="center">armed</td><td align="center">adj</td><td align="center">武裝的</td></tr><tr><td align="center">assume</td><td align="center">v</td><td align="center">假設、承擔、擔任</td></tr><tr><td align="center">avenue</td><td align="center">n</td><td align="center">大道(路)、方法</td></tr><tr><td align="center">awkward</td><td align="center">adj</td><td align="center">笨拙的、不熟練的</td></tr><tr><td align="center">abandon</td><td align="center">v</td><td align="center">放棄</td></tr><tr><td align="center">abdomen</td><td align="center">n</td><td align="center">腹部</td></tr><tr><td align="center">absolute</td><td align="center">adj</td><td align="center">絕對的、完全的</td></tr><tr><td align="center">absolutely</td><td align="center">adv</td><td align="center">絕對地、完全地</td></tr><tr><td align="center">abstract</td><td align="center">adj</td><td align="center">抽象的</td></tr><tr><td align="center">academy</td><td align="center">n</td><td align="center">大學、學院</td></tr><tr><td align="center">academic</td><td align="center">adj、n</td><td align="center">學術的;學者</td></tr><tr><td align="center">accent</td><td align="center">n</td><td align="center">口音</td></tr><tr><td align="center"><strong>accept</strong>ance</td><td align="center">n</td><td align="center">接受、答應</td></tr><tr><td align="center">access</td><td align="center">n、v</td><td align="center">權限、途徑 ; 訪問、讀取</td></tr><tr><td align="center">accompany</td><td align="center">v</td><td align="center">陪伴</td></tr><tr><td align="center">accomplish</td><td align="center">v</td><td align="center">完成(任務)、達到(目標)</td></tr><tr><td align="center">accomplished</td><td align="center">adj</td><td align="center">熟練的、有造詣的</td></tr><tr><td align="center">accomplish<strong>ment</strong></td><td align="center">n</td><td align="center">完成、成就、才華</td></tr><tr><td align="center"><strong>account</strong>ant</td><td align="center">n</td><td align="center">會計師</td></tr><tr><td align="center">accuracy</td><td align="center">n</td><td align="center">準確性</td></tr><tr><td align="center">accused + <strong>of</strong></td><td align="center">v</td><td align="center">被指控</td></tr><tr><td align="center">acid</td><td align="center">adj、n</td><td align="center">酸性的、刻薄的 ; 酸性</td></tr><tr><td align="center">acquaint</td><td align="center">v</td><td align="center">認識</td></tr><tr><td align="center">acquaintance</td><td align="center">n</td><td align="center">相識的人、認識、了解</td></tr><tr><td align="center">acquire</td><td align="center">v</td><td align="center">獲得</td></tr><tr><td align="center"><strong>adapt</strong></td><td align="center">v</td><td align="center">適應、改編、調整</td></tr><tr><td align="center"><strong>adjust</strong></td><td align="center">v</td><td align="center">調整、調節、適應</td></tr><tr><td align="center"><strong>adopt</strong></td><td align="center">v</td><td align="center">採用、收養</td></tr><tr><td align="center">adjustment</td><td align="center">n</td><td align="center">調整、調節、適應</td></tr><tr><td align="center">addict</td><td align="center">v、n</td><td align="center">上癮(的人)</td></tr><tr><td align="center">adequate</td><td align="center">adj</td><td align="center">充分的、適當的</td></tr><tr><td align="center">admission</td><td align="center">n</td><td align="center">入學(考試)、入場費、承認(錯誤)</td></tr><tr><td align="center">agency</td><td align="center">n</td><td align="center">代辦處’機關</td></tr><tr><td align="center">agent</td><td align="center">n</td><td align="center">代理商、經紀人</td></tr><tr><td align="center">aggressive</td><td align="center">adj</td><td align="center">有侵略性的、積極進取的</td></tr><tr><td align="center">aging</td><td align="center">adj</td><td align="center">逐漸年邁的、老年化的</td></tr><tr><td align="center"><strong>aging society</strong></td><td align="center"></td><td align="center">老年化社會</td></tr><tr><td align="center"><strong>agree</strong>able</td><td align="center">adj</td><td align="center">贊成的、<strong>令人愉悅的、和藹可親的</strong></td></tr><tr><td align="center"><strong>allow</strong>ance</td><td align="center">n</td><td align="center">津貼、零用錢</td></tr><tr><td align="center">alternative</td><td align="center"><strong>n</strong>、adj</td><td align="center">選擇、替代方案 ; 替代的</td></tr><tr><td align="center">amateur</td><td align="center">n、adj</td><td align="center">業餘(的)</td></tr><tr><td align="center">ambitious</td><td align="center">adj</td><td align="center">模稜兩可的、 含糊不清的</td></tr><tr><td align="center">ambitious</td><td align="center">adj</td><td align="center">有野心的、有抱負的</td></tr><tr><td align="center"><strong>amuse</strong>ment</td><td align="center">n</td><td align="center">娛樂(場)、消遣</td></tr><tr><td align="center"><strong>amus</strong>ing</td><td align="center">adj</td><td align="center">好笑的、有趣的</td></tr><tr><td align="center">analyze</td><td align="center"><strong>v</strong></td><td align="center">分析</td></tr><tr><td align="center">analy<strong>sis</strong></td><td align="center"><strong>n</strong></td><td align="center">分析</td></tr><tr><td align="center">ancestor</td><td align="center">n</td><td align="center">祖先、原種、原型</td></tr><tr><td align="center"><strong>ann</strong>iversary</td><td align="center">n</td><td align="center">週年紀念日</td></tr><tr><td align="center">annually</td><td align="center">adv</td><td align="center">每年</td></tr><tr><td align="center">apparent</td><td align="center">adj</td><td align="center">明顯的、表面的</td></tr><tr><td align="center"><strong>appoint … to</strong></td><td align="center">v</td><td align="center">指定、指派、約定</td></tr><tr><td align="center"><strong>assign … to</strong></td><td align="center">v</td><td align="center">分配、指派</td></tr><tr><td align="center">appointment</td><td align="center">n</td><td align="center">約定、(公務)約會、職位、任命</td></tr><tr><td align="center">assignment</td><td align="center">n</td><td align="center">任命、指派的工作&#x2F;作業</td></tr><tr><td align="center">appreciation</td><td align="center">n</td><td align="center">感激</td></tr><tr><td align="center">appropriate</td><td align="center">adj、<strong>v</strong></td><td align="center">適當的 ; <strong>挪用、盜用</strong></td></tr><tr><td align="center">approval</td><td align="center">n</td><td align="center">贊成</td></tr><tr><td align="center">aquarium</td><td align="center">n</td><td align="center">水族館、魚缸</td></tr><tr><td align="center">arise</td><td align="center">v</td><td align="center">產生</td></tr><tr><td align="center">artificial</td><td align="center">adj</td><td align="center">人造的、虛偽的’不自然的</td></tr><tr><td align="center">ashamed + <strong>of</strong></td><td align="center">adj</td><td align="center">羞恥的、羞愧的</td></tr><tr><td align="center">assemble</td><td align="center">v</td><td align="center">集合、聚集、組裝</td></tr><tr><td align="center">assembly</td><td align="center">n</td><td align="center">集會、組裝</td></tr><tr><td align="center">association</td><td align="center">n</td><td align="center">協會、關聯</td></tr><tr><td align="center">assure</td><td align="center">v</td><td align="center">向…保證</td></tr><tr><td align="center">assurance</td><td align="center">n</td><td align="center">保證、自信、把握</td></tr><tr><td align="center"><strong>athletic</strong></td><td align="center">adj</td><td align="center">運動的</td></tr><tr><td align="center"><strong>authentic</strong></td><td align="center">adj</td><td align="center">真正的</td></tr><tr><td align="center">atom</td><td align="center">n</td><td align="center">原子</td></tr><tr><td align="center">atomic</td><td align="center">adj</td><td align="center">原子的</td></tr><tr><td align="center"><strong>atmo</strong>sphere</td><td align="center">n</td><td align="center">大氣、空氣、氣氛</td></tr><tr><td align="center">attach</td><td align="center">v</td><td align="center">繫住、連接</td></tr><tr><td align="center">attach</td><td align="center">n</td><td align="center">附件、配件、<strong>愛慕</strong></td></tr><tr><td align="center">authority</td><td align="center">n</td><td align="center">權力、權威人士、<strong>當局</strong></td></tr><tr><td align="center"><strong>auto</strong>biography</td><td align="center">n</td><td align="center">自傳</td></tr><tr><td align="center"><strong>auto</strong>graph</td><td align="center">n</td><td align="center">親筆簽名</td></tr><tr><td align="center"><strong>aux</strong>iliary</td><td align="center">adj、n</td><td align="center">輔助的 ; 助動詞</td></tr><tr><td align="center">avenge + <strong>on</strong></td><td align="center">v</td><td align="center">報仇</td></tr></tbody></table><h2 id="B-開頭"><a href="#B-開頭" class="headerlink" title="B 開頭"></a>B 開頭</h2><table><thead><tr><th align="center">英文</th><th align="center">詞性</th><th align="center">中文</th></tr></thead><tbody><tr><td align="center">bacteria</td><td align="center">n</td><td align="center">細菌</td></tr><tr><td align="center">badly</td><td align="center">adj</td><td align="center">拙劣的、差勁的、<strong>嚴重的、非常</strong></td></tr><tr><td align="center">barely</td><td align="center">adv</td><td align="center"><strong>僅僅、幾乎不</strong>、勉強</td></tr><tr><td align="center">barrel</td><td align="center">n</td><td align="center">桶</td></tr><tr><td align="center"><strong>bar</strong>tender</td><td align="center">n</td><td align="center">酒保</td></tr><tr><td align="center">bay</td><td align="center">n</td><td align="center">海灣</td></tr><tr><td align="center">bead</td><td align="center">n</td><td align="center">(水)珠、珠子</td></tr><tr><td align="center"><strong>beam</strong></td><td align="center">v、n</td><td align="center">微笑、播送、播報 ; 光線、微笑</td></tr><tr><td align="center">beast</td><td align="center">n</td><td align="center">野獸</td></tr><tr><td align="center">beetle</td><td align="center">n、<strong>v</strong></td><td align="center">甲蟲 ; 匆忙趕往</td></tr><tr><td align="center">go beetling</td><td align="center"></td><td align="center">飛奔</td></tr><tr><td align="center">belly</td><td align="center">n</td><td align="center">肚子</td></tr><tr><td align="center">beneath</td><td align="center">prep</td><td align="center">在…下方</td></tr><tr><td align="center">bet + (that)</td><td align="center">v</td><td align="center">打賭</td></tr><tr><td align="center">bible</td><td align="center">n</td><td align="center">聖經</td></tr><tr><td align="center">bind</td><td align="center">v、<strong>n</strong></td><td align="center">綑綁、裝訂 ; <strong>困境</strong></td></tr><tr><td align="center">bold</td><td align="center">adj</td><td align="center">大膽的、勇敢的、粗體的</td></tr><tr><td align="center">brake</td><td align="center">n</td><td align="center">煞車、制動器</td></tr><tr><td align="center">brass</td><td align="center">n</td><td align="center">黃銅</td></tr><tr><td align="center">breeze</td><td align="center">n</td><td align="center">微風</td></tr><tr><td align="center">brick</td><td align="center">n</td><td align="center">磚頭</td></tr><tr><td align="center">bride</td><td align="center">n</td><td align="center">新娘</td></tr><tr><td align="center"><strong>bride</strong>groom</td><td align="center">n</td><td align="center">新郎 &#x3D;&gt; groom</td></tr><tr><td align="center">broadcast</td><td align="center">v、n</td><td align="center">廣播</td></tr><tr><td align="center">brow</td><td align="center">n</td><td align="center">額頭、眉毛</td></tr><tr><td align="center">bud</td><td align="center"><strong>n、v</strong></td><td align="center">芽、花苞 ; 發苞、節苞</td></tr><tr><td align="center">budget</td><td align="center">n、v</td><td align="center">預算 ; 訂製預算</td></tr><tr><td align="center">buffalo</td><td align="center">n</td><td align="center">水牛</td></tr><tr><td align="center">bull</td><td align="center">n</td><td align="center">公牛</td></tr><tr><td align="center">bulb</td><td align="center">n</td><td align="center">電燈泡</td></tr><tr><td align="center"><strong>light bulb</strong></td><td align="center"></td><td align="center">電燈泡</td></tr><tr><td align="center">bunch</td><td align="center">n</td><td align="center">一束(花)、一串(香蕉)、一群(人)</td></tr><tr><td align="center">bundle</td><td align="center">n、v</td><td align="center">一束(花)、一捆 ; <strong>捆起來</strong></td></tr><tr><td align="center">bury</td><td align="center">v</td><td align="center">埋、埋葬</td></tr><tr><td align="center">bush(es)</td><td align="center">n</td><td align="center">灌木(叢)</td></tr><tr><td align="center">bald</td><td align="center">adj</td><td align="center">禿頭的</td></tr><tr><td align="center">bandage</td><td align="center">n、v</td><td align="center">繃帶；包紮</td></tr><tr><td align="center"><strong>bank</strong>rupt</td><td align="center">adj</td><td align="center">破產的</td></tr><tr><td align="center"><strong>bankruptcy</strong></td><td align="center">n</td><td align="center">破產</td></tr><tr><td align="center"><strong>broke</strong></td><td align="center">adj</td><td align="center">破產的、一文不值的</td></tr><tr><td align="center">bargain</td><td align="center">n、v</td><td align="center">划算品 ; 講價、討價還價</td></tr><tr><td align="center">basin</td><td align="center">n</td><td align="center">盆地、臉盆</td></tr><tr><td align="center">beak</td><td align="center">n</td><td align="center">鳥嘴、<strong>喙</strong></td></tr><tr><td align="center">beggar</td><td align="center">n</td><td align="center">乞丐</td></tr><tr><td align="center">biography</td><td align="center">n</td><td align="center">傳體</td></tr><tr><td align="center">biology</td><td align="center">n</td><td align="center">生物學</td></tr><tr><td align="center">blade</td><td align="center">n</td><td align="center">刀片</td></tr><tr><td align="center">blend</td><td align="center">n、v</td><td align="center">混合 ; 混合物</td></tr><tr><td align="center"><strong>bloom</strong></td><td align="center">n、v</td><td align="center">開花 ; 綻放、<strong>興盛</strong></td></tr><tr><td align="center"><strong>blossom</strong></td><td align="center">n、v</td><td align="center">開花</td></tr><tr><td align="center"><strong>boast</strong></td><td align="center">v、n</td><td align="center">自誇、自吹自擂 ; 誇耀</td></tr><tr><td align="center"><strong>brag</strong></td><td align="center">v</td><td align="center">吹噓、自誇</td></tr><tr><td align="center">bond</td><td align="center">n、v</td><td align="center">關係、債券 ; 結合、聯合</td></tr><tr><td align="center">bounce</td><td align="center">v、n</td><td align="center">彈跳 ; 反彈、彈性、彈力</td></tr><tr><td align="center">breed</td><td align="center">v、n</td><td align="center">繁殖、<strong>產生(惡果)</strong> ; <strong>品種</strong></td></tr><tr><td align="center">buddhism</td><td align="center">n</td><td align="center">佛教</td></tr><tr><td align="center">bulletin</td><td align="center">n</td><td align="center">告示、公告、新聞快報</td></tr><tr><td align="center">burgar</td><td align="center">n</td><td align="center">竊賊</td></tr></tbody></table>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;A-開頭單字&quot;&gt;&lt;a href=&quot;#A-開頭單字&quot; class=&quot;headerlink&quot; title=&quot;A 開頭單字&quot;&gt;&lt;/a&gt;A 開頭單字&lt;/h2&gt;&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th align=&quot;center&quot;&gt;英文&lt;/th&gt;
-&lt;th align</summary>
-      
-    
-    
-    
-    <category term="English vocabulary" scheme="https://brianlien95.github.io/categories/English-vocabulary/"/>
-    
-    
-    <category term="English" scheme="https://brianlien95.github.io/tags/English/"/>
-    
-  </entry>
-  
-  <entry>
     <title>AIS3 junior DAY2 網頁安全 writeup</title>
-    <link href="https://brianlien95.github.io/2024-AIS3-junior/20241007/3482195068/"/>
-    <id>https://brianlien95.github.io/2024-AIS3-junior/20241007/3482195068/</id>
+    <link href="https://brianlien95.github.io/2024-AIS3-junior/202410/3482195068"/>
+    <id>https://brianlien95.github.io/2024-AIS3-junior/202410/3482195068</id>
     <published>2024-10-06T17:15:33.000Z</published>
     <updated>2024-12-24T14:27:25.543Z</updated>
     
@@ -118,8 +90,8 @@
   
   <entry>
     <title>AIS3 junior DAY1-網路概論</title>
-    <link href="https://brianlien95.github.io/2024-AIS3-junior/20240818/3116610850/"/>
-    <id>https://brianlien95.github.io/2024-AIS3-junior/20240818/3116610850/</id>
+    <link href="https://brianlien95.github.io/2024-AIS3-junior/202408/3116610850"/>
+    <id>https://brianlien95.github.io/2024-AIS3-junior/202408/3116610850</id>
     <published>2024-08-18T06:28:43.000Z</published>
     <updated>2024-12-24T14:27:25.542Z</updated>
     
@@ -146,8 +118,8 @@
   
   <entry>
     <title>AIS3 junior DAY2-網頁安全</title>
-    <link href="https://brianlien95.github.io/2024-AIS3-junior/20240818/2558445555/"/>
-    <id>https://brianlien95.github.io/2024-AIS3-junior/20240818/2558445555/</id>
+    <link href="https://brianlien95.github.io/2024-AIS3-junior/202408/2558445555"/>
+    <id>https://brianlien95.github.io/2024-AIS3-junior/202408/2558445555</id>
     <published>2024-08-18T06:27:01.000Z</published>
     <updated>2024-12-24T14:27:25.545Z</updated>
     
@@ -170,8 +142,8 @@
   
   <entry>
     <title>AIS3 junior DAY3-AI 應用安全實務</title>
-    <link href="https://brianlien95.github.io/2024-AIS3-junior/20240818/2511373762/"/>
-    <id>https://brianlien95.github.io/2024-AIS3-junior/20240818/2511373762/</id>
+    <link href="https://brianlien95.github.io/2024-AIS3-junior/202408/2511373762"/>
+    <id>https://brianlien95.github.io/2024-AIS3-junior/202408/2511373762</id>
     <published>2024-08-18T06:18:59.000Z</published>
     <updated>2024-12-24T14:27:25.540Z</updated>
     
@@ -195,8 +167,8 @@
   
   <entry>
     <title>AIS3 junior DAY3 下午-AI 應用安全實務 writeup</title>
-    <link href="https://brianlien95.github.io/2024-AIS3-junior/20240818/1959086707/"/>
-    <id>https://brianlien95.github.io/2024-AIS3-junior/20240818/1959086707/</id>
+    <link href="https://brianlien95.github.io/2024-AIS3-junior/202408/1959086707"/>
+    <id>https://brianlien95.github.io/2024-AIS3-junior/202408/1959086707</id>
     <published>2024-08-18T05:55:22.000Z</published>
     <updated>2024-12-24T14:27:25.544Z</updated>
     
@@ -218,11 +190,11 @@
   </entry>
   
   <entry>
-    <title>FinTech Summer CAMP 金融產業資安實務研習營 Day1 下午</title>
-    <link href="https://brianlien95.github.io/FinTech-Summer-CAMP/20240807/2573885561/"/>
-    <id>https://brianlien95.github.io/FinTech-Summer-CAMP/20240807/2573885561/</id>
+    <title>FinTech Summer CAMP Day1 金融基礎知識</title>
+    <link href="https://brianlien95.github.io/FinTech-Summer-CAMP/202408/2573885561"/>
+    <id>https://brianlien95.github.io/FinTech-Summer-CAMP/202408/2573885561</id>
     <published>2024-08-07T12:46:52.000Z</published>
-    <updated>2024-12-24T14:27:25.549Z</updated>
+    <updated>2025-03-29T15:34:49.262Z</updated>
     
     <content type="html"><![CDATA[<h2 id="目錄"><a href="#目錄" class="headerlink" title="目錄"></a>目錄</h2><ul><li>貨幣型態演進及代幣問世</li><li>央行貨幣政策對經濟金融之影響</li><li>臺灣金融市場之類型、功能及架構</li><li>銀行授信、貸款項目與審查原則</li></ul><h1 id="貨幣型態演進及代幣問世"><a href="#貨幣型態演進及代幣問世" class="headerlink" title="貨幣型態演進及代幣問世"></a>貨幣型態演進及代幣問世</h1><h2 id="貨幣型態演進及代幣問世-1"><a href="#貨幣型態演進及代幣問世-1" class="headerlink" title="貨幣型態演進及代幣問世-1"></a>貨幣型態演進及代幣問世-1</h2><p>遠古人類最初過著自給自足的經濟生活，隨著生產力提高和社會分工的需要，出現了「以物易物」的行為，解決物資供需。交易媒介包括珠玉、皮革、齒角、金屬、穀類、布帛、飾品、牲畜等，這種以物品作為交易媒介的稱為「商品貨幣」或「實體貨幣」。</p><p>隨著交易活動頻繁，部分物品發揮貨幣功能，如中國的海貝（貝幣）、美索不達米亞和埃及的金、銀、青銅等貴金屬。商品貨幣因來源無法有效控制、數量有限、不便計數等因素，逐漸被金、銀、銅、鐵等金屬取代。金屬貨幣未統一，需測定成色和秤重，後來發展成較先進的貨幣制度。</p><ul><li>春秋戰國時期：青銅製造的「布幣」、「刀幣」、「圜錢」等。</li><li>秦至漢武帝初年：標準化貨幣時期，嚴禁私鑄幣，確立中央專鑄權。</li><li>唐高祖武德：「開元通寶」，開啟新紀元。</li></ul><h2 id="貨幣型態演進及代幣問世-2"><a href="#貨幣型態演進及代幣問世-2" class="headerlink" title="貨幣型態演進及代幣問世-2"></a>貨幣型態演進及代幣問世-2</h2><p>為避免攜帶金屬貨幣的不便，發明了紙幣，如北宋的「交子」和十八世紀英格蘭銀行的銀行券，這些是現代紙幣的起源。早期紙幣可換黃金或白銀，後來發行數量受限，演變至1930年代後，貨幣不再可換金銀，改由政府依國家信用印製，開啟信用貨幣時代。</p><p>貨幣作為支付工具，其發展過程建立在信任基礎上，從無中心化商品貨幣到私部門信用貨幣，貨幣流通或被接受取決於大眾對其內含價值或發行者的信任。信任機制崩潰時，貨幣價值可能歸零。</p><ul><li>1867年巴黎會議：採用金本位制度。</li><li>1922年熱那亞會議：確立金匯兌本位制度。</li><li>1944年布雷頓森林會議：確立美元為國際結算貨幣。</li><li>1976年牙買加會議：廢除黃金作為貨幣定值標準，提高SDRs國際儲備地位。</li></ul><h2 id="貨幣型態演進及代幣問世-3"><a href="#貨幣型態演進及代幣問世-3" class="headerlink" title="貨幣型態演進及代幣問世-3"></a>貨幣型態演進及代幣問世-3</h2><p>信任機制是貨幣制度存續的根本，貨幣應具備交易媒介、計價單位、價值儲藏功能。貨幣分為現金和非現金支付工具，如票據、金融卡、信用卡、貸項撥轉、電子貨幣等。</p><p>貨幣發展軌跡：</p><ul><li>商品貨幣</li><li>信用貨幣（可兌換紙幣→不可兌換紙幣→支票）</li><li>塑膠貨幣（金融卡、信用卡）</li><li>電子貨幣（儲值工具、電子支付）</li><li>2008年Satoshi Nakamoto提出P2P電子現金系統，引導貨幣型態再次演進，包括工作量證明、時間戳記、支付驗證、隱私等，比特幣建立在區塊鏈技術上，與法定貨幣不同。</li></ul><h2 id="貨幣型態演進及代幣問世-4"><a href="#貨幣型態演進及代幣問世-4" class="headerlink" title="貨幣型態演進及代幣問世-4"></a>貨幣型態演進及代幣問世-4</h2><p>貨幣形式包括電子形式和實體形式，技術以網路為主。區塊鏈技術使電子貨幣以更高層次數位形式出現。虛擬貨幣（虛擬資產）是私部門發行的數位形式儲存價值資產，非中央銀行發行，無法償貨幣地位。</p><h2 id="貨幣型態演進及代幣問世-5"><a href="#貨幣型態演進及代幣問世-5" class="headerlink" title="貨幣型態演進及代幣問世-5"></a>貨幣型態演進及代幣問世-5</h2><p>支付工具型態：</p><ul><li><strong>實體形式</strong>：紙鈔、硬幣（法定貨幣地位）</li><li><strong>數位形式</strong>：<ul><li>電子貨幣、電子支付</li><li>儲值工具（前身電子票證）</li><li>數位資產（私部門發行，虛擬資產，無法幣地位）</li><li>功能型代幣：交換用途支付用途（密碼學或DLT之加密貨幣）</li><li>證券型代幣：穩定幣、法定貨幣掛鉤、相關資產掛鉤</li></ul></li><li><strong>公部門發行</strong>：央行數位貨幣（CBDC，法定貨幣地位）</li></ul><h1 id="央行貨幣政策對經濟金融之影響"><a href="#央行貨幣政策對經濟金融之影響" class="headerlink" title="央行貨幣政策對經濟金融之影響"></a>央行貨幣政策對經濟金融之影響</h1><h2 id="央行貨幣政策對經濟金融之影響-1"><a href="#央行貨幣政策對經濟金融之影響-1" class="headerlink" title="央行貨幣政策對經濟金融之影響-1"></a>央行貨幣政策對經濟金融之影響-1</h2><p>貨幣政策是中央銀行為了維持通膨穩定和勞動力市場穩定而使用的工具，用以協助經濟穩定。主要通過控制貨幣供給量影響其他經濟活動，措施包括：</p><ul><li><strong>貼現窗口制度</strong>：金融機構資金短絀時，可向中央銀行申請融通，包括重貼現、短期融通及擔保放款再融通。</li><li><strong>銀行存款準備金制度</strong>：中央銀行要求金融機構對其負債提存一定比率的準備金，以應支付需求。</li><li><strong>公開市場操作</strong>：中央銀行在公開市場與金融機構進行有價證券買賣或發行央行存單交易，包括發行央行存單（沖銷資金）、進行債券附買回與買斷交易（挹注資金）。</li></ul><h2 id="央行貨幣政策對經濟金融之影響-2"><a href="#央行貨幣政策對經濟金融之影響-2" class="headerlink" title="央行貨幣政策對經濟金融之影響-2"></a>央行貨幣政策對經濟金融之影響-2</h2><p>中央銀行根據經濟情況調整貨幣政策：</p><ul><li><p><strong>寬鬆貨幣政策</strong>：在市場資金不足或信用過度緊縮時，增加貨幣供給量，促進投資及消費。</p><ul><li>時機：經濟衰退時期。</li><li>目的：促進投資及消費。</li><li>方式：調降利率、購債。</li></ul></li><li><p><strong>緊縮貨幣政策</strong>：在市場資金充裕或信用過度擴充時，降低貨幣供給量，降低通膨。</p><ul><li>時機：經濟過熱時期。</li><li>目的：降低通膨。</li><li>方式：調升利率、縮表。</li></ul></li><li><p>**量化寬鬆貨幣政策(QE)**：經濟低迷或衰退期間，利率接近零時，刺激經濟增長的非傳統政策工具。</p></li><li><p><strong>選擇性信用管制</strong>：中央銀行對信用種類及用途管制，著重對某類貸款加以抑制，收縮信用。</p><ul><li>保證金比率：金融機構對證券質借申請貸款時，保留一部分保證金。</li><li>消費者信用管制：限制消費性貸款的分期付款條件，調整首次還款最低金額與償還期限。</li><li>不動產信用管制：與消費者信用管制類似，但影響較大，因為不動產信用多屬長期。</li></ul></li></ul><h1 id="臺灣金融市場之類型、功能及架構"><a href="#臺灣金融市場之類型、功能及架構" class="headerlink" title="臺灣金融市場之類型、功能及架構"></a>臺灣金融市場之類型、功能及架構</h1><h2 id="臺灣金融市場之類型、功能及架構-1"><a href="#臺灣金融市場之類型、功能及架構-1" class="headerlink" title="臺灣金融市場之類型、功能及架構-1"></a>臺灣金融市場之類型、功能及架構-1</h2><p>金融市場是資金需求者與供給者間的資金融通場所。資金的融通主要是透過金融機構進行各種金融工具的買賣，將資金供給者的剩餘資金移轉至資金需求者。金融市場也稱為各種金融工具的供給者與需求者共同決定價格並進行交易的場所。</p><p>金融市場提供各種長期或短期的金融工具，讓資金供給者有選擇的餘地，不必直接將資金投入實質資產，而可以通過具孳息功能的金融工具來獲取未來的投資收益。這不僅提高了金融工具的流動性，還使金融工具持有者在必要時能以較低的代價換取現金。</p><h3 id="金融市場的功能："><a href="#金融市場的功能：" class="headerlink" title="金融市場的功能："></a>金融市場的功能：</h3><ol><li>降低交易成本：使資金供給者的閒置資金轉移至資金需求者更有效率。</li><li>提供金融資訊：包括交易數量、價格等，讓市場參與者能掌握市場環境的變化。</li><li>促進經濟效率：資金供給者通過犧牲目前的消費提高未來的所得水準；資金需求者則可將所籌集的資金進行實質投資活動提高生產力。</li></ol><h2 id="臺灣金融市場之類型、功能及架構-2"><a href="#臺灣金融市場之類型、功能及架構-2" class="headerlink" title="臺灣金融市場之類型、功能及架構-2"></a>臺灣金融市場之類型、功能及架構-2</h2><p>金融市場可以按不同的方式進行分類：</p><ol><li><p><strong>以期限長短區分</strong>：</p><ul><li>貨幣市場：到期期限為一年以下的金融工具。</li><li>資本市場：到期期限為一年以上的金融工具。</li></ul></li><li><p><strong>以商品性質區分</strong>：</p><ul><li>權益市場：交易股票、共同基金、台灣存託憑證(TDR)等。</li><li>債務市場：交易公司債、政府公債、國庫券等。</li></ul></li><li><p><strong>以流通順序區分</strong>：</p><ul><li>初級(發行)市場：有價證券首次發行的市場。</li><li>次級(流通)市場：已發行證券的再流通市場。</li></ul></li><li><p><strong>以交割時間區分</strong>：</p><ul><li>即期(現貨)市場：成交後立即或短時間內完成交割。</li><li>遠期市場：成交後於未來特定時間以約定價格交割。</li></ul></li></ol><h2 id="臺灣金融市場之類型、功能及架構-3"><a href="#臺灣金融市場之類型、功能及架構-3" class="headerlink" title="臺灣金融市場之類型、功能及架構-3"></a>臺灣金融市場之類型、功能及架構-3</h2><p>金融市場還可以分為直接金融和間接金融：</p><ul><li><strong>直接金融</strong>：資金需求者發行有價證券直接向投資大眾募集資金。</li><li><strong>間接金融</strong>：資金需求者經由金融中介機構向大眾取得資金，如銀行貸款。</li></ul><h2 id="臺灣金融市場之類型、功能及架構-4"><a href="#臺灣金融市場之類型、功能及架構-4" class="headerlink" title="臺灣金融市場之類型、功能及架構-4"></a>臺灣金融市場之類型、功能及架構-4</h2><p>我國直接金融與間接金融的存量規模（2023.12）：</p><ul><li>間接金融佔80.50%，直接金融佔19.50%。</li></ul><h2 id="臺灣金融市場之類型、功能及架構-5"><a href="#臺灣金融市場之類型、功能及架構-5" class="headerlink" title="臺灣金融市場之類型、功能及架構-5"></a>臺灣金融市場之類型、功能及架構-5</h2><p>金融市場的其他組成部分包括：</p><ul><li>郵政儲金</li><li>基層金融，如信用合作社、農漁會信用部</li><li>保險市場，包括人身保險和財產保險</li><li>衍生性金融商品，如遠期契約、期貨契約、選擇權、交換契約</li></ul><h2 id="臺灣金融市場之類型、功能及架構-6"><a href="#臺灣金融市場之類型、功能及架構-6" class="headerlink" title="臺灣金融市場之類型、功能及架構-6"></a>臺灣金融市場之類型、功能及架構-6</h2><p>金融市場的主要參與者包括：</p><ul><li>證券商</li><li>證券金融公司</li><li>證券投資暨顧問公司</li><li>銀行，包括商业银行、專業銀行、信託投資公司</li><li>兼營票券業務之銀行、證券商及票券金融公司</li></ul><p>以上是PDF文件中关于臺灣金融市場之類型、功能及架構的详细内容，已翻译成繁体中文并使用Markdown格式整理。如果需要进一步的信息或有其他特定需求，请告知。</p><p>以下是整理并翻译成繁体中文的“銀行授信、貸款項目與審查原則”部分的详细内容，使用Markdown格式输出：</p><h1 id="銀行授信、貸款項目與審查原則"><a href="#銀行授信、貸款項目與審查原則" class="headerlink" title="銀行授信、貸款項目與審查原則"></a>銀行授信、貸款項目與審查原則</h1><h2 id="何謂銀行授信？-1"><a href="#何謂銀行授信？-1" class="headerlink" title="何謂銀行授信？-1"></a>何謂銀行授信？-1</h2><p>銀行傳統經濟機能包括信用中介、支付中介、創造信用等三者。現代經濟機能方面，銀行扮演金融服務與調節經濟的功能，透過提供各類金融服務滿足國人與企業的資金運用需求。</p><h3 id="銀行功能："><a href="#銀行功能：" class="headerlink" title="銀行功能："></a>銀行功能：</h3><ul><li><strong>信用中介</strong>：銀行集中社會閒置資金，再放款給資金需求者。</li><li><strong>支付中介</strong>：銀行辦理貨幣結算、收付、兌換等業務。</li><li><strong>創造信用</strong>：銀行通過吸存與放款增加資金來源，擴大社會貨幣供給量。</li></ul><h2 id="何謂銀行授信？-2"><a href="#何謂銀行授信？-2" class="headerlink" title="何謂銀行授信？-2"></a>何謂銀行授信？-2</h2><p>所謂授信是銀行辦理放款、透支、貼現、保證、承兌等業務。依據有無擔保品，分為擔保授信和無擔保授信。</p><h3 id="授信類型："><a href="#授信類型：" class="headerlink" title="授信類型："></a>授信類型：</h3><ol><li><strong>放款</strong>：金錢消費借貸，銀行將金錢轉給借款人。</li><li><strong>透支</strong>：銀行與客戶間信用契約，銀行在一定額度內墊款。</li><li><strong>貼現</strong>：銀行對遠期匯票或本票以折扣方式預收利息購入。</li><li><strong>保證</strong>：包括民法上保證、票據上保證、關稅保證等。</li><li><strong>承兌</strong>：銀行擔任商業匯票的承兌，包括買方委託承兌和賣方委託承兌。</li></ol><h2 id="何謂銀行授信？-3"><a href="#何謂銀行授信？-3" class="headerlink" title="何謂銀行授信？-3"></a>何謂銀行授信？-3</h2><p>擔保授信是提供以下擔保之一的授信：</p><ul><li>不動產抵押權</li><li>動產抵押權</li><li>動產或權利質權</li><li>應收票據、銀行或信用保證機構之保證</li></ul><p>無擔保授信則沒有任何抵押品的貸款方式，銀行依個人信用狀況進行評估。</p><h2 id="何謂銀行授信？-4"><a href="#何謂銀行授信？-4" class="headerlink" title="何謂銀行授信？-4"></a>何謂銀行授信？-4</h2><p>無擔保授信主要依個人信用狀況，適合信用紀錄良好、無瑕疵、負債比重不超過月收入22倍，且工作收入穩定的人。</p><h3 id="貸款方式："><a href="#貸款方式：" class="headerlink" title="貸款方式："></a>貸款方式：</h3><ul><li>信用貸款：以申貸人信用作為擔保的貸款方式。</li><li>民間代書貸款：與非銀行機構申辦的貸款，提供相關證明即可申貸。</li><li>現金卡：可貸款額度小、利率高，申貸門檻低且可隨借隨還。</li></ul><h2 id="銀行貸款項目之類型-1"><a href="#銀行貸款項目之類型-1" class="headerlink" title="銀行貸款項目之類型-1"></a>銀行貸款項目之類型-1</h2><p>銀行辦理的各式貸款項目，包括企業貸款、消費者貸款和政府及非營利團體貸款。</p><h3 id="企業貸款："><a href="#企業貸款：" class="headerlink" title="企業貸款："></a>企業貸款：</h3><ol><li>週轉金貸款：維持企業經常營業活動所需資金。</li><li>資本支出貸款：購置機器、設備、土地等資本性支出。</li></ol><h3 id="消費者貸款："><a href="#消費者貸款：" class="headerlink" title="消費者貸款："></a>消費者貸款：</h3><ol><li>自用住宅貸款：購置自住住宅的貸款。</li><li>一般房屋貸款：購屋、修繕或理財需求的貸款。</li></ol><h3 id="政府及非營利團體貸款："><a href="#政府及非營利團體貸款：" class="headerlink" title="政府及非營利團體貸款："></a>政府及非營利團體貸款：</h3><p>以政府機關或非營利團體名義所為的貸款。</p><h2 id="銀行貸款項目之類型-2-數據統計"><a href="#銀行貸款項目之類型-2-數據統計" class="headerlink" title="銀行貸款項目之類型-2 (數據統計)"></a>銀行貸款項目之類型-2 (數據統計)</h2><p>提供了2021年至2023年不同貸款項目的餘額和比重，包括個人、製造業、不動產業及營造業等多個領域的貸款情況。</p><h2 id="貸款案件審查原則及流程-1"><a href="#貸款案件審查原則及流程-1" class="headerlink" title="貸款案件審查原則及流程-1"></a>貸款案件審查原則及流程-1</h2><p>銀行辦理授信業務時，應本於安全性、流動性、公益性、收益性、成長性等五項基本原則，並依借款戶、資金用途、償還來源、債權保障、授信展望等五項審核原則進行。</p><h3 id="審核原則："><a href="#審核原則：" class="headerlink" title="審核原則："></a>審核原則：</h3><ol><li>安全性：確保存款戶及股東權益。</li><li>流動性：維持適度流動性，與銀行資本適足率有關。</li><li>公益性：促進經濟發展，配合國家金融政策。</li><li>收益性：合理收益，銀行獲利結構包括利息收入、手續費收入及交易收入。</li><li>成長性：促進業務成長，追求永續經營。</li></ol><h2 id="貸款案件審查原則及流程-2"><a href="#貸款案件審查原則及流程-2" class="headerlink" title="貸款案件審查原則及流程-2"></a>貸款案件審查原則及流程-2</h2><p>銀行授信審核原則（5P原則）和信用風險分析原則（5C原則）。</p><h3 id="5P原則："><a href="#5P原則：" class="headerlink" title="5P原則："></a>5P原則：</h3><ol><li>借款戶（People）：借款戶及企業需具備良好信譽及財務狀況。</li><li>資金用途（Purpose）：確保貸款用於合理、合法目的。</li><li>償還來源（Payment）：借款戶及企業的償還計畫。</li><li>債權保障（Protection）：適當的保障措施。</li><li>授信展望（Perspective）：借款戶及企業的未來發展性。</li></ol><h3 id="5C原則："><a href="#5C原則：" class="headerlink" title="5C原則："></a>5C原則：</h3><ol><li>品格（Character）：借款人的信用紀錄和誠實度。</li><li>能力（Capacity）：借款人的收入和負債情況。</li><li>資本（Capital）：借款人的資產和負債。</li><li>擔保品（Collateral）：借款人無法償還貸款時的權益保障。</li><li>經營條件（Condition）：利率、貸款期限等影響償還的因素。</li></ol>]]></content>
     
@@ -246,8 +218,8 @@
   
   <entry>
     <title>CyberSecurity Summer Camp 2024 資訊安全暑訓營-逆向工程</title>
-    <link href="https://brianlien95.github.io/security-class/20240805/2835330838/"/>
-    <id>https://brianlien95.github.io/security-class/20240805/2835330838/</id>
+    <link href="https://brianlien95.github.io/security-class/202408/2835330838"/>
+    <id>https://brianlien95.github.io/security-class/202408/2835330838</id>
     <published>2024-08-05T13:26:38.000Z</published>
     <updated>2024-12-24T14:27:25.548Z</updated>
     
@@ -271,8 +243,8 @@
   
   <entry>
     <title>資料保護</title>
-    <link href="https://brianlien95.github.io/development-plan-study/20240804/2488948160/"/>
-    <id>https://brianlien95.github.io/development-plan-study/20240804/2488948160/</id>
+    <link href="https://brianlien95.github.io/development-plan-study/202408/2488948160"/>
+    <id>https://brianlien95.github.io/development-plan-study/202408/2488948160</id>
     <published>2024-08-04T09:36:06.000Z</published>
     <updated>2024-12-24T14:27:25.562Z</updated>
     
@@ -299,8 +271,8 @@
   
   <entry>
     <title>數據轉義不足</title>
-    <link href="https://brianlien95.github.io/development-plan-study/20240804/1145725608/"/>
-    <id>https://brianlien95.github.io/development-plan-study/20240804/1145725608/</id>
+    <link href="https://brianlien95.github.io/development-plan-study/202408/1145725608"/>
+    <id>https://brianlien95.github.io/development-plan-study/202408/1145725608</id>
     <published>2024-08-04T08:37:10.000Z</published>
     <updated>2024-12-24T14:27:25.558Z</updated>
     
@@ -324,8 +296,8 @@
   
   <entry>
     <title>故障時的安全性</title>
-    <link href="https://brianlien95.github.io/development-plan-study/20240804/661704589/"/>
-    <id>https://brianlien95.github.io/development-plan-study/20240804/661704589/</id>
+    <link href="https://brianlien95.github.io/development-plan-study/202408/661704589"/>
+    <id>https://brianlien95.github.io/development-plan-study/202408/661704589</id>
     <published>2024-08-04T08:32:08.000Z</published>
     <updated>2024-12-24T14:27:25.556Z</updated>
     
@@ -348,8 +320,8 @@
   
   <entry>
     <title>CSP（內容安全策略）、SOP（同源策略）和CORS（跨源資源共享）</title>
-    <link href="https://brianlien95.github.io/development-plan-study/20240804/1104221922/"/>
-    <id>https://brianlien95.github.io/development-plan-study/20240804/1104221922/</id>
+    <link href="https://brianlien95.github.io/development-plan-study/202408/1104221922"/>
+    <id>https://brianlien95.github.io/development-plan-study/202408/1104221922</id>
     <published>2024-08-04T08:30:25.000Z</published>
     <updated>2024-12-24T14:27:25.546Z</updated>
     
@@ -373,8 +345,8 @@
   
   <entry>
     <title>存取控制 - 不安全的直接物件引用</title>
-    <link href="https://brianlien95.github.io/development-plan-study/20240804/1622524640/"/>
-    <id>https://brianlien95.github.io/development-plan-study/20240804/1622524640/</id>
+    <link href="https://brianlien95.github.io/development-plan-study/202408/1622524640"/>
+    <id>https://brianlien95.github.io/development-plan-study/202408/1622524640</id>
     <published>2024-08-04T08:28:36.000Z</published>
     <updated>2024-12-24T14:27:25.554Z</updated>
     
@@ -400,8 +372,8 @@
   
   <entry>
     <title>路徑穿越</title>
-    <link href="https://brianlien95.github.io/development-plan-study/20240804/3400113813/"/>
-    <id>https://brianlien95.github.io/development-plan-study/20240804/3400113813/</id>
+    <link href="https://brianlien95.github.io/development-plan-study/202408/3400113813"/>
+    <id>https://brianlien95.github.io/development-plan-study/202408/3400113813</id>
     <published>2024-08-04T08:23:00.000Z</published>
     <updated>2024-12-24T14:27:25.561Z</updated>
     
@@ -427,8 +399,8 @@
   
   <entry>
     <title>不安全的密碼更改功能</title>
-    <link href="https://brianlien95.github.io/development-plan-study/20240804/3228624429/"/>
-    <id>https://brianlien95.github.io/development-plan-study/20240804/3228624429/</id>
+    <link href="https://brianlien95.github.io/development-plan-study/202408/3228624429"/>
+    <id>https://brianlien95.github.io/development-plan-study/202408/3228624429</id>
     <published>2024-08-04T08:22:14.000Z</published>
     <updated>2024-12-24T14:27:25.550Z</updated>
     
@@ -458,8 +430,8 @@
   
   <entry>
     <title>不當身份驗證</title>
-    <link href="https://brianlien95.github.io/development-plan-study/20240804/2949654091/"/>
-    <id>https://brianlien95.github.io/development-plan-study/20240804/2949654091/</id>
+    <link href="https://brianlien95.github.io/development-plan-study/202408/2949654091"/>
+    <id>https://brianlien95.github.io/development-plan-study/202408/2949654091</id>
     <published>2024-08-04T08:20:50.000Z</published>
     <updated>2024-12-24T14:27:25.552Z</updated>
     
@@ -488,8 +460,8 @@
   
   <entry>
     <title>明文儲存敏感資訊</title>
-    <link href="https://brianlien95.github.io/development-plan-study/20240804/947027972/"/>
-    <id>https://brianlien95.github.io/development-plan-study/20240804/947027972/</id>
+    <link href="https://brianlien95.github.io/development-plan-study/202408/947027972"/>
+    <id>https://brianlien95.github.io/development-plan-study/202408/947027972</id>
     <published>2024-08-04T08:19:13.000Z</published>
     <updated>2024-12-24T14:27:25.558Z</updated>
     
@@ -518,8 +490,8 @@
   
   <entry>
     <title>不安全的密碼術 - 對憑證的保護不足</title>
-    <link href="https://brianlien95.github.io/development-plan-study/20240804/2738207586/"/>
-    <id>https://brianlien95.github.io/development-plan-study/20240804/2738207586/</id>
+    <link href="https://brianlien95.github.io/development-plan-study/202408/2738207586"/>
+    <id>https://brianlien95.github.io/development-plan-study/202408/2738207586</id>
     <published>2024-08-04T08:18:25.000Z</published>
     <updated>2024-12-24T14:27:25.551Z</updated>
     
@@ -536,6 +508,32 @@
 &lt;li&gt;漏洞風險：&lt;ul&gt;
 &lt;li&gt;如果攻擊者能夠訪問存儲憑證的地方，他們就能恢復這些憑證。&lt;/li&gt;
 </summary>
+      
+    
+    
+    
+    <category term="development plan study" scheme="https://brianlien95.github.io/categories/development-plan-study/"/>
+    
+    
+    <category term="網路漏洞" scheme="https://brianlien95.github.io/tags/%E7%B6%B2%E8%B7%AF%E6%BC%8F%E6%B4%9E/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>大量賦值漏洞</title>
+    <link href="https://brianlien95.github.io/development-plan-study/202408/4071265999"/>
+    <id>https://brianlien95.github.io/development-plan-study/202408/4071265999</id>
+    <published>2024-08-04T08:17:07.000Z</published>
+    <updated>2024-12-24T14:27:25.555Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li>什麼是大量賦值漏洞？<br>大量賦值漏洞是一種安全漏洞，當API端點允許用戶修改其相關對象的所有屬性時就可能發生。</li><li>漏洞如何發生？<br>當HTTP請求中表示的對象直接綁定到用於存儲的數據模型上，並且沒有區分哪些字段應該是可賦值的，哪些是不可變的時，就可能發生大量賦值漏洞。這可能是由於某些框架的默認設置或開發者為了特定情況而有意作出的決定。</li><li>示例：<ul><li>黑客注意到應用程序使用同一個端點來檢索和更新用戶詳細信息。</li><li>黑客發現他們檢索的用戶信息還包括了他們的角色信息，於是他們嘗試在更新請求中添加該字段。</li></ul></li><li>漏洞利用：<ul><li>黑客通過修改請求體，將自己的角色設置為管理員（IsAdmin: true），服務器接受了所有字段，更新了黑客的角色，從而使黑客獲得了管理員權限。</li></ul></li><li>如何防止大量賦值漏洞：<ul><li>解析請求值，而不是直接綁定到一個對象。</li><li>使用簡化的數據傳輸對象（Data Transfer Object, DTO），而不是直接綁定到一個對象。</li><li>確保敏感屬性被拒絕列表（denylist）或只允許安全的屬性被允許列表（allowlist）直接綁定到對象。</li></ul></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;什麼是大量賦值漏洞？&lt;br&gt;大量賦值漏洞是一種安全漏洞，當API端點允許用戶修改其相關對象的所有屬性時就可能發生。&lt;/li&gt;
+&lt;li&gt;漏洞如何發生？&lt;br&gt;當HTTP請求中表示的對象直接綁定到用於存儲的數據模型上，並且沒有區分哪些字段應該是可賦值的，哪些是不可變</summary>
       
     
     
